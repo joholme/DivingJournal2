@@ -1,0 +1,5 @@
+c:\users\jonas\documents\visual studio 2015\Projects\Divingjournal\DiverLibrary\bin\Debug\DiverLibrary.dll
+c:\users\jonas\documents\visual studio 2015\Projects\Divingjournal\DiverLibrary\bin\Debug\DiverLibrary.pdb
+c:\users\jonas\documents\visual studio 2015\Projects\Divingjournal\DiverLibrary\obj\Debug\DiverLibrary.csprojResolveAssemblyReference.cache
+c:\users\jonas\documents\visual studio 2015\Projects\Divingjournal\DiverLibrary\obj\Debug\DiverLibrary.dll
+c:\users\jonas\documents\visual studio 2015\Projects\Divingjournal\DiverLibrary\obj\Debug\DiverLibrary.pdb
