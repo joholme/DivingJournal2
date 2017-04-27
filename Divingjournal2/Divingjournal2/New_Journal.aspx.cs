@@ -22,8 +22,7 @@ namespace Divingjournal
             divertest.Of_type = DiverLibrary.OF_Type.OF_Heavy;
             journaltest.Subject = DiverLibrary.Subject.DYK600_Safety;
 
-            //endring!!
-            string t;
+           
 
 
             if (!IsPostBack)
