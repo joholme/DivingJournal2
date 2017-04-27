@@ -8,7 +8,7 @@ using System.Diagnostics;
 
 namespace Divingjournal
 {
-    public partial class Contact : Page
+    public partial class New_Journal : Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {

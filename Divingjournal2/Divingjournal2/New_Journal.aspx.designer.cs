@@ -10,7 +10,7 @@
 namespace Divingjournal {
     
     
-    public partial class Contact {
+    public partial class New_Journal {
         
         /// <summary>
         /// Image1 control.
