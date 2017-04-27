@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Divingjournal", "Divingjour
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DiverLibrary", "DiverLibrary\DiverLibrary.csproj", "{D5BB7D50-7C9E-4312-AEC5-86D6F575EA93}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DivingApp", "..\..\..\DivingApp\DivingApp\DivingApp.csproj", "{0106DF43-6326-4428-BC56-F761328C9DC9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{D5BB7D50-7C9E-4312-AEC5-86D6F575EA93}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D5BB7D50-7C9E-4312-AEC5-86D6F575EA93}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D5BB7D50-7C9E-4312-AEC5-86D6F575EA93}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0106DF43-6326-4428-BC56-F761328C9DC9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0106DF43-6326-4428-BC56-F761328C9DC9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0106DF43-6326-4428-BC56-F761328C9DC9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0106DF43-6326-4428-BC56-F761328C9DC9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
