@@ -27,9 +27,7 @@ namespace Divingjournal
             journaltest.Subject = Subject.DYK600_Safety;
 
             
-            //for (int i; i<4; i++)
             
-              //  subjectDropdown.Items.Insert(0, new ListItem("DYK602"));
             
 
             if (!IsPostBack)

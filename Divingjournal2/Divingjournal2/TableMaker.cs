@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI.WebControls;
 using DiverLibrary;
+using System.Web.UI.HtmlControls;
 
 namespace Divingjournal2
 {
@@ -18,6 +19,8 @@ namespace Divingjournal2
 
         }
 
+        /*These three methods are for automatically table with x*y set of rows and columns
+         *We might not need them, but they were used for testing. */
         public void addTable(Panel panel, int numberOfRows, int numberOfColumns)
         {
             Table table = new Table();
@@ -62,6 +65,7 @@ namespace Divingjournal2
             return cell;
         }
 
+        //Used to apply default style to cells
         public void applyMyStyle(WebControl webcontrol)
         {
             TableItemStyle itemstyle = new TableItemStyle();
@@ -91,6 +95,8 @@ namespace Divingjournal2
 
             return row;
         }
+
+        
         //THIS METHOD GATHERS ALL TABLE-MAKING METHODS TOGETHER AND SENDS THEM TO PANEL
         public void journalTableMaster(Panel panel)
         {
@@ -98,10 +104,14 @@ namespace Divingjournal2
 
             //**FIRST, TABLE COMMON FOR ALL DIVES**
             panel.Controls.Add(tableFirstInfo());
-            
 
+            panel.Controls.Add(tableSecondInfo());
 
+            panel.Controls.Add(tableCrewInfo());
 
+            panel.Controls.Add(tableAirInfo("Luftsystem", "Hovedforsyning", "Sekundærforsyning"));
+            panel.Controls.Add(tableAirInfo("Oksygen til kammer", "I bruk", "Klar til bruk"));
+            panel.Controls.Add(tableAirInfo("Nødgass", "Våtklokke", "Dykkekurv"));
         }
 
         /*For these variables (3 rows):
@@ -113,50 +123,28 @@ namespace Divingjournal2
         {
             
             Table table = new Table();
+            table.CellPadding = PADDINGSIZE;
 
-            TableRow IDRow = new TableRow();
-            TableRow courseRow = new TableRow();
+            table.Rows.Add(makeRowWithTextbox("Journal nr"));
+            table.Rows.Add(makeRowWithTextbox("Kurs nr"));
+
             TableRow subjectRow = new TableRow();
-
-            TableCell IDRowCell1 = new TableCell();
-            TableCell IDRowCell2 = new TableCell();
-            applyMyStyle(IDRowCell1);
-            applyMyStyle(IDRowCell2);
-
-            TableCell courseRowCell1 = new TableCell();
-            TableCell courseRowCell2 = new TableCell();
-            applyMyStyle(courseRowCell1);
-            applyMyStyle(courseRowCell2);
-
             TableCell subjectRowCell1 = new TableCell();
             TableCell subjectRowCell2 = new TableCell();
             applyMyStyle(subjectRowCell1);
             applyMyStyle(subjectRowCell1);
-
-            IDRowCell1.Text = "Journal nr";
-            IDRowCell2.Controls.Add(new TextBox());
-
-            courseRowCell1.Text = "Kurs nr";
-            courseRowCell2.Controls.Add(new TextBox());
-
             subjectRowCell1.Text = "Fag";
-            subjectRowCell2.Controls.Add(new DropDownList());
 
-            IDRow.Cells.Add(IDRowCell1);
-            IDRow.Cells.Add(IDRowCell2);
+            DropDownList subjectList = new DropDownList();
+            //FORTSETT HER!
+            subjectList.Items.Insert(0, new ListItem("DYK600 - Sikkerhetsopplæring i dykking", ""));
 
-            courseRow.Cells.Add(courseRowCell1);
-            courseRow.Cells.Add(courseRowCell2);
-
+            subjectRowCell2.Controls.Add(subjectList);
             subjectRow.Cells.Add(subjectRowCell1);
             subjectRow.Cells.Add(subjectRowCell2);
 
-
-            table.Rows.Add(makeRowWithTextbox("Journal nr"));
-            table.Rows.Add(courseRow);
             table.Rows.Add(subjectRow);
 
-            
             return table;
         }
 
@@ -170,6 +158,13 @@ namespace Divingjournal2
         {
 
             Table table = new Table();
+            table.CellPadding = PADDINGSIZE;
+
+            table.Rows.Add(makeRowWithTextbox("Dato"));
+            table.Rows.Add(makeRowWithTextbox("Sted"));
+            table.Rows.Add(makeRowWithTextbox("Dykkepost"));
+            table.Rows.Add(makeRowWithTextbox("Annet"));
+
             return table;
         }
 
@@ -180,10 +175,52 @@ namespace Divingjournal2
         {
 
             Table table = new Table();
+            table.CellPadding = PADDINGSIZE;
+
+            table.Rows.Add(makeRowWithTextbox("Dykkesjef"));
+            table.Rows.Add(makeRowWithTextbox("Dykkeleder (instruktør)"));
+            table.Rows.Add(makeRowWithTextbox("Dykkeleder (student)"));
+            table.Rows.Add(makeRowWithTextbox("Dykker 1"));
+            table.Rows.Add(makeRowWithTextbox("Dykker 2"));
+            table.Rows.Add(makeRowWithTextbox("Standby-/beredskapsdykker"));
+            table.Rows.Add(makeRowWithTextbox("Hjelpemann"));
+            table.Rows.Add(makeRowWithTextbox("Assisterende hjelpemann"));
+            table.Rows.Add(makeRowWithTextbox("Linemann 1"));
+            table.Rows.Add(makeRowWithTextbox("Linemann 2"));
+            table.Rows.Add(makeRowWithTextbox("Andre"));
+            
+
             return table;
         }
 
-        
+        /*For these variables (9(?) rows):
+         * - 
+         */
+        public Table tableAirInfo(string title, string textRow1, string textRow2)
+        {
+
+            Table table = new Table();
+            table.CellPadding = PADDINGSIZE;
+
+            TableRow airRow = new TableRow();
+            TableCell airCell = new TableCell();
+
+            var h3 = new HtmlGenericControl("h3");
+            h3.InnerHtml = title;
+
+            airCell.Controls.Add(h3);
+            airRow.Controls.Add(airCell);
+
+            table.Controls.Add(airRow);
+            
+            table.Rows.Add(makeRowWithTextbox(textRow1));
+            table.Rows.Add(makeRowWithTextbox(textRow2));
+            
+
+            return table;
+        }
+
+
     }
 
     
