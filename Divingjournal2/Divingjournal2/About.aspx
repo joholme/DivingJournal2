@@ -4,6 +4,8 @@
     <h2>Stopwatch Test
     </h2>
    
+    <asp:Button ID="DateButton" runat="server" Text="Date" OnClick="DateButton_Click" />
+    <asp:Label ID="DateLabel" runat="server" Text="Dato" BorderStyle="Solid" BorderWidth="1px"></asp:Label>
    
     <asp:Label ID="Label2" runat="server" Text="Label"></asp:Label>
     <asp:UpdatePanel ID="UpdatePanel1" runat="server">

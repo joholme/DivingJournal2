@@ -14,6 +14,11 @@ namespace Divingjournal2
         Stopwatch stopwatch = new Stopwatch();
         int hour, min, sec, ms;
 
+        protected void DateButton_Click(object sender, EventArgs e)
+        {
+            DateLabel.Text = DateTime.Now.Hour + ":" + DateTime.Now.Minute;
+        }
+
         protected void Timer1_Tick(object sender, EventArgs e)
         {
             Label1.Text = "Panel refreshed at: " + DateTime.Now.ToLongTimeString();
