@@ -387,7 +387,10 @@ namespace DiverLibrary
             }
         }
 
+     
         
+        
+           
     }
     public class journalB : Journal
     {
@@ -396,24 +399,5 @@ namespace DiverLibrary
         }
     }
 
-    public sealed class AuthenticationMethod
-    {
-        private readonly string name;
-        private readonly int value;
-
-        public static readonly AuthenticationMethod DYK600 = new AuthenticationMethod(0, "DYK600 - Sikkerhetsopplæring i dykking");
-        public static readonly AuthenticationMethod DYK601_1 = new AuthenticationMethod(0, "DYK601 - Fagopplæring i anlegg");
-
-        private AuthenticationMethod(int value, string name)
-        {
-            this.name = name;
-            this.value = value;
-        }
-
-        public override string ToString()
-        {
-            return name;
-        }
-
-    }
+   
 }

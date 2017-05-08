@@ -10,9 +10,9 @@ using DiverLibrary;
 namespace Divingjournal
 {
     public partial class New_Journal : Page
-    {   
+    {
 
-        
+        Divingjournal2.TableMaker tm = new Divingjournal2.TableMaker();
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -70,13 +70,17 @@ namespace Divingjournal
 
         protected void largeButton_Click(object sender, EventArgs e)
         {
-            Divingjournal2.TableMaker tm = new Divingjournal2.TableMaker();
+            
             // tm.addTable(Panel1, 2, 2);
             tm.journalTableMaster(Panel1);
             
         }
 
-        
+        protected void submitButton_Click(object sender, EventArgs e)
+        {
+            
+            
+        }
     }
 
 }

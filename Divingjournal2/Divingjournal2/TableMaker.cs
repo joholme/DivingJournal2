@@ -79,6 +79,30 @@ namespace Divingjournal2
 
         /* This method needs another parameter for deciding
          * where the text written in the textbox should go. */
+        public TableRow makeRowWithTextbox(string text, string id)
+        {
+            TableRow row = new TableRow();
+            TableCell cell1 = new TableCell();
+            TableCell cell2 = new TableCell();
+            
+            applyMyStyle(cell1);
+            applyMyStyle(cell2);
+            cell1.Text = text;
+            TextBox textbox = new TextBox();
+            textbox.ID = id;
+            textbox.AutoPostBack = true;
+            cell2.ID = id + "Cell";
+            cell2.Controls.Add(textbox);
+            
+            
+            
+
+            row.Controls.Add(cell1);
+            row.Controls.Add(cell2);
+
+            return row;
+        }
+
         public TableRow makeRowWithTextbox(string text)
         {
             TableRow row = new TableRow();
@@ -88,12 +112,22 @@ namespace Divingjournal2
             applyMyStyle(cell1);
             applyMyStyle(cell2);
             cell1.Text = text;
-            cell2.Controls.Add(new TextBox());
+            TextBox textbox = new TextBox();
+            textbox.AutoPostBack = true;
+            cell2.Controls.Add(textbox);
+
+
+
 
             row.Controls.Add(cell1);
             row.Controls.Add(cell2);
 
             return row;
+        }
+
+        public void assignTextFromTextbox(Panel panel,string id)
+        {
+           
         }
 
         
@@ -103,15 +137,21 @@ namespace Divingjournal2
 
 
             //**FIRST, TABLE COMMON FOR ALL DIVES**
-            panel.Controls.Add(tableFirstInfo());
+              panel.Controls.Add(tableFirstInfo());
 
-            panel.Controls.Add(tableSecondInfo());
 
-            panel.Controls.Add(tableCrewInfo());
 
-            panel.Controls.Add(tableAirInfo("Luftsystem", "Hovedforsyning", "Sekundærforsyning"));
-            panel.Controls.Add(tableAirInfo("Oksygen til kammer", "I bruk", "Klar til bruk"));
-            panel.Controls.Add(tableAirInfo("Nødgass", "Våtklokke", "Dykkekurv"));
+              panel.Controls.Add(tableSecondInfo());
+
+              panel.Controls.Add(tableCrewInfo());
+
+              panel.Controls.Add(tableAirInfo("Luftsystem", "Hovedforsyning", "Sekundærforsyning"));
+              panel.Controls.Add(tableAirInfo("Oksygen til kammer", "I bruk", "Klar til bruk"));
+              panel.Controls.Add(tableAirInfo("Nødgass", "Våtklokke", "Dykkekurv"));
+
+            //**SECOND TABLE COMMON FOR ALL DIVES, BUT ONE TABLE PER DIVER**
+
+
         }
 
         /*For these variables (3 rows):
@@ -125,20 +165,24 @@ namespace Divingjournal2
             Table table = new Table();
             table.CellPadding = PADDINGSIZE;
 
-            table.Rows.Add(makeRowWithTextbox("Journal nr"));
-            table.Rows.Add(makeRowWithTextbox("Kurs nr"));
+            table.Rows.Add(makeRowWithTextbox("Journal nr", "journalTextboxID"));
+            table.Rows.Add(makeRowWithTextbox("Kurs nr", "subjectTextboxID"));
+
+            
 
             TableRow subjectRow = new TableRow();
             TableCell subjectRowCell1 = new TableCell();
             TableCell subjectRowCell2 = new TableCell();
             applyMyStyle(subjectRowCell1);
-            applyMyStyle(subjectRowCell1);
+            applyMyStyle(subjectRowCell2);
             subjectRowCell1.Text = "Fag";
 
             DropDownList subjectList = new DropDownList();
-            //FORTSETT HER!
             subjectList.Items.Insert(0, new ListItem("DYK600 - Sikkerhetsopplæring i dykking", ""));
-
+            subjectList.Items.Insert(1, new ListItem("DYK601 - Fagopplæring i anlegg", ""));
+            subjectList.Items.Insert(2, new ListItem("DYK601 - Fagopplæring i rørlegging", ""));
+            subjectList.Items.Insert(3, new ListItem("DYK601 - Fagopplæring i berging", ""));
+            subjectList.Items.Insert(4, new ListItem("RED110 - Redningsdykking", ""));
             subjectRowCell2.Controls.Add(subjectList);
             subjectRow.Cells.Add(subjectRowCell1);
             subjectRow.Cells.Add(subjectRowCell2);
@@ -154,7 +198,7 @@ namespace Divingjournal2
          * - Divingspot
          * - Other
          */
-        public Table tableSecondInfo()
+       public Table tableSecondInfo()
         {
 
             Table table = new Table();
@@ -166,32 +210,32 @@ namespace Divingjournal2
             table.Rows.Add(makeRowWithTextbox("Annet"));
 
             return table;
-        }
+        } 
 
         /*For these variables (11 rows):
          * - Diving Crew
          */
-        public Table tableCrewInfo()
-        {
+           public Table tableCrewInfo()
+         {
 
-            Table table = new Table();
-            table.CellPadding = PADDINGSIZE;
+              Table table = new Table();
+              table.CellPadding = PADDINGSIZE;
 
-            table.Rows.Add(makeRowWithTextbox("Dykkesjef"));
-            table.Rows.Add(makeRowWithTextbox("Dykkeleder (instruktør)"));
-            table.Rows.Add(makeRowWithTextbox("Dykkeleder (student)"));
-            table.Rows.Add(makeRowWithTextbox("Dykker 1"));
-            table.Rows.Add(makeRowWithTextbox("Dykker 2"));
-            table.Rows.Add(makeRowWithTextbox("Standby-/beredskapsdykker"));
-            table.Rows.Add(makeRowWithTextbox("Hjelpemann"));
-            table.Rows.Add(makeRowWithTextbox("Assisterende hjelpemann"));
-            table.Rows.Add(makeRowWithTextbox("Linemann 1"));
-            table.Rows.Add(makeRowWithTextbox("Linemann 2"));
-            table.Rows.Add(makeRowWithTextbox("Andre"));
-            
+              table.Rows.Add(makeRowWithTextbox("Dykkesjef"));
+              table.Rows.Add(makeRowWithTextbox("Dykkeleder (instruktør)"));
+              table.Rows.Add(makeRowWithTextbox("Dykkeleder (student)"));
+              table.Rows.Add(makeRowWithTextbox("Dykker 1"));
+              table.Rows.Add(makeRowWithTextbox("Dykker 2"));
+              table.Rows.Add(makeRowWithTextbox("Standby-/beredskapsdykker"));
+              table.Rows.Add(makeRowWithTextbox("Hjelpemann"));
+              table.Rows.Add(makeRowWithTextbox("Assisterende hjelpemann"));
+              table.Rows.Add(makeRowWithTextbox("Linemann 1"));
+              table.Rows.Add(makeRowWithTextbox("Linemann 2"));
+              table.Rows.Add(makeRowWithTextbox("Andre"));
 
-            return table;
-        }
+
+              return table;
+          } 
 
         /*For these variables (9(?) rows):
          * - 
@@ -218,7 +262,7 @@ namespace Divingjournal2
             
 
             return table;
-        }
+        } 
 
 
     }

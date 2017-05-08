@@ -4,19 +4,17 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using DiverLibrary;
 
 namespace Divingjournal2
 {
-    public partial class _Default : Page
+    public partial class TestWebForm_stopwatch : System.Web.UI.Page
     {
+        
         protected void Page_Load(object sender, EventArgs e)
         {
-
-            
-
-
             
         }
+
+        
     }
 }

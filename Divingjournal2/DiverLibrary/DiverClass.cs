@@ -8,7 +8,7 @@ namespace DiverLibrary
 {
     //Enums for Radiobuttons in journal
 
-    public enum OF_Type { OF_Heavy, OF_Light, scuba};
+    public enum OF_Type { OF_Heavy, OF_Light, scuba };
     public enum Direct { direct, d_Stopp, OD_O2}
     public enum AirType { air, nitrox}
     public enum Transport { divingBasket, divingBell}
@@ -57,6 +57,10 @@ namespace DiverLibrary
 
 
         //Constructor
+        public Diver()
+        {
+            
+        }
 
         public Diver(string _name)
         {

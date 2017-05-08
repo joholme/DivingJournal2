@@ -1,3 +1,4 @@
+C:\Users\Jonas\Desktop\DivingJournalGithub\DivingJournal2\Divingjournal2\Divingjournal2\obj\Debug\Divingjournal.csprojResolveAssemblyReference.cache
 C:\Users\Jonas\Desktop\DivingJournalGithub\DivingJournal2\Divingjournal2\Divingjournal2\bin\ApplicationInsights.config
 C:\Users\Jonas\Desktop\DivingJournalGithub\DivingJournal2\Divingjournal2\Divingjournal2\bin\roslyn\csc.exe
 C:\Users\Jonas\Desktop\DivingJournalGithub\DivingJournal2\Divingjournal2\Divingjournal2\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
@@ -78,4 +79,3 @@ C:\Users\Jonas\Desktop\DivingJournalGithub\DivingJournal2\Divingjournal2\Divingj
 C:\Users\Jonas\Desktop\DivingJournalGithub\DivingJournal2\Divingjournal2\Divingjournal2\bin\Microsoft.Owin.Security.OAuth.xml
 C:\Users\Jonas\Desktop\DivingJournalGithub\DivingJournal2\Divingjournal2\Divingjournal2\obj\Debug\Divingjournal2.dll
 C:\Users\Jonas\Desktop\DivingJournalGithub\DivingJournal2\Divingjournal2\Divingjournal2\obj\Debug\Divingjournal2.pdb
-C:\Users\Jonas\Desktop\DivingJournalGithub\DivingJournal2\Divingjournal2\Divingjournal2\obj\Debug\Divingjournal.csprojResolveAssemblyReference.cache

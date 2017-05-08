@@ -198,6 +198,10 @@
     <Content Include="Account\ResetPasswordConfirmation.aspx" />
     <Content Include="Account\TwoFactorAuthenticationSignIn.aspx" />
     <Content Include="Account\VerifyPhoneNumber.aspx" />
+    <Content Include="images\calendar-128.png" />
+    <Content Include="images\Clock_alt.png" />
+    <Content Include="images\hvl_logo.jpg" />
+    <Content Include="MyStyle.css" />
     <Content Include="New_Journal.aspx" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
@@ -212,6 +216,7 @@
     </Content>
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="MainPage.aspx" />
+    <Content Include="New_Journal_Test.aspx" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
@@ -246,6 +251,8 @@
     <Content Include="Global.asax" />
     <Content Include="Site.Master" />
     <Content Include="StartPage.aspx" />
+    <Content Include="Stopwatch.js" />
+    <Content Include="TestWebForm_stopwatch.aspx" />
     <Content Include="ViewSwitcher.ascx" />
     <Content Include="Web.config" />
     <Content Include="Bundle.config" />
@@ -377,6 +384,13 @@
     <Compile Include="App_Start\IdentityConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
+    <Compile Include="New_Journal_Test.aspx.cs">
+      <DependentUpon>New_Journal_Test.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="New_Journal_Test.aspx.designer.cs">
+      <DependentUpon>New_Journal_Test.aspx</DependentUpon>
+    </Compile>
     <Compile Include="TableMaker.cs" />
     <Compile Include="New_Journal.aspx.cs">
       <DependentUpon>New_Journal.aspx</DependentUpon>
@@ -426,6 +440,14 @@
       <DependentUpon>StartPage.aspx</DependentUpon>
     </Compile>
     <Compile Include="Startup.cs" />
+    <Compile Include="TestClass.cs" />
+    <Compile Include="TestWebForm_stopwatch.aspx.cs">
+      <DependentUpon>TestWebForm_stopwatch.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TestWebForm_stopwatch.aspx.designer.cs">
+      <DependentUpon>TestWebForm_stopwatch.aspx</DependentUpon>
+    </Compile>
     <Compile Include="ViewSwitcher.ascx.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
