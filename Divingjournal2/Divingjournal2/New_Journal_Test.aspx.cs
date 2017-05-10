@@ -15,7 +15,8 @@ namespace Divingjournal2
         Diver d1 = new Diver();
         Diver d2 = new Diver();
         Diver sb = new Diver();
-        StopWatch myWatch = new StopWatch();
+        
+        
 
 
         protected override void OnInit(EventArgs e)
@@ -36,7 +37,7 @@ namespace Divingjournal2
 
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            
         }
 
        
@@ -194,19 +195,9 @@ namespace Divingjournal2
             Calendar1.Visible = false;
         }
 
-        protected void D1LeftSurfaceButton_Click(object sender, EventArgs e)
+        protected void Start_Click(object sender, EventArgs e)
         {
-            myWatch.Start();
-            
-        }
-
-       
-
-        protected void D2LeftSurfaceButton_Click(object sender, EventArgs e)
-        {
-            myWatch.Stop();
-            D1LeftSurfaceLabel.Text = myWatch.GetElapsedTimeSecs().ToString();
-
+           
         }
     }
         

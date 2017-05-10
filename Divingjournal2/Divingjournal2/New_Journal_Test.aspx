@@ -737,6 +737,50 @@
         </asp:TableRow>
         </asp:Table>
 
+
+
+    <script type = "text/javascript">
+    /* Stop, Clear and Pause the timer displayed under the pause buttons  */
+    var h1 = document.getElementsByTagName('h1')[0],
+        start = document.getElementById('start'),
+        stop = document.getElementById('stop'),
+        clear = document.getElementById('clear'),
+        seconds = 0, minutes = 0, hours = 0,
+        t;
+
+    function add() {
+        seconds++;
+        if (seconds >= 60) {
+            seconds = 0;
+            minutes++;
+            if (minutes >= 60) {
+                minutes = 0;
+                hours++;
+            }
+        }
+
+        document.getElementById('<%=h1.ClientID%>').innerText = (hours ? (hours > 9 ? hours : "0" + hours) : "00") + ":" + (minutes ? (minutes > 9 ? minutes : "0" + minutes) : "00") + ":" + (seconds > 9 ? seconds : "0" + seconds);;
+        timer();
+    }
+    function timer() {
+        t = setTimeout(add, 1000);
+    }
+
+    function stp() {
+        clearTimeout(t);
+    }
+
+    function clr() {
+        document.getElementById('<%=h1.ClientID%>').innerText = "00:00:00";
+        seconds = 0; minutes = 0; hours = 0;  
+    }
+</script>
+
+
+
+
+    <asp:UpdatePanel ID="UpdatePanelTest" runat="server">
+                        <ContentTemplate>
    
     <div style="text-align:center;">
 
@@ -750,12 +794,20 @@
             </asp:TableRow>
             <asp:TableRow runat="server">
                 <asp:TableCell runat="server">
-                    <asp:Label ID="D1LeftSurfaceLabel" runat="server"></asp:Label>
+                    
+                    <asp:Label ID="h1" runat="server"><time>00:00:00</time></asp:Label>
+                            <script src="Stopwatch2.js"></script>
+                        
                 </asp:TableCell>
                 <asp:TableCell runat="server">
-                    <asp:Button ID="D1LeftSurfaceButton" runat="server" Text="Button" OnClick="D1LeftSurfaceButton_Click" />Forlot overflaten
-                    <asp:Button ID="D2LeftSurfaceButton" runat="server" Text="Button" OnClick="D2LeftSurfaceButton_Click"/>
+                    <asp:Button ID="Start" runat="server" Text="Button" OnClick="Start_Click" OnClientClick="stp();" />
                    
+                    Forlot overflaten
+			        
+
+                   
+
+
                 </asp:TableCell>
                 <asp:TableCell runat="server"></asp:TableCell>
                 <asp:TableCell runat="server"></asp:TableCell>
@@ -899,7 +951,8 @@
         </asp:Table>
     </div>
 
-
+</ContentTemplate>
+                            </asp:UpdatePanel>
     
 
     <div style="text-align:center;">

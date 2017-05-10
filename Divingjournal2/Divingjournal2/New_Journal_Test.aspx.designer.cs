@@ -1453,6 +1453,15 @@ namespace Divingjournal2 {
         protected global::System.Web.UI.WebControls.TextBox TextBox12;
         
         /// <summary>
+        /// UpdatePanelTest control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.UpdatePanel UpdatePanelTest;
+        
+        /// <summary>
         /// StandardDiveTable control.
         /// </summary>
         /// <remarks>
@@ -1462,31 +1471,22 @@ namespace Divingjournal2 {
         protected global::System.Web.UI.WebControls.Table StandardDiveTable;
         
         /// <summary>
-        /// D1LeftSurfaceLabel control.
+        /// h1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label D1LeftSurfaceLabel;
+        protected global::System.Web.UI.WebControls.Label h1;
         
         /// <summary>
-        /// D1LeftSurfaceButton control.
+        /// Start control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button D1LeftSurfaceButton;
-        
-        /// <summary>
-        /// D2LeftSurfaceButton control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button D2LeftSurfaceButton;
+        protected global::System.Web.UI.WebControls.Button Start;
         
         /// <summary>
         /// SurfaceCompressionDiveTable control.

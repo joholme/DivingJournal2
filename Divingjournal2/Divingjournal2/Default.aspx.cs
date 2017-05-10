@@ -12,8 +12,8 @@ namespace Divingjournal2
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
-            
+            string s = (string)Session["timeLabel"];
+            Label2.Text = s;
 
 
             
