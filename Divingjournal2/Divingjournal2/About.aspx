@@ -3,15 +3,22 @@
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
     <h2>Stopwatch Test
     </h2>
-   
-    <asp:Button ID="DateButton" runat="server" Text="Date" OnClick="DateButton_Click" />
-    <asp:Label ID="DateLabel" runat="server" Text="Dato" BorderStyle="Solid" BorderWidth="1px"></asp:Label>
-   
-    <asp:Label ID="Label2" runat="server" Text="Label"></asp:Label>
+    
     <asp:UpdatePanel ID="UpdatePanel1" runat="server">
         <ContentTemplate>
-             <asp:Label ID="Label1" runat="server" Text="Panel not refreshed yet"></asp:Label>
-            <asp:Timer ID="Timer1" runat="server" OnTick="Timer1_Tick"></asp:Timer>
+            <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
+            <asp:Timer ID="Timer1" runat="server" OnTick="Timer1_Tick" Interval="1000">
+            </asp:Timer>
         </ContentTemplate>
+        <Triggers>
+            <asp:AsyncPostBackTrigger ControlID="Timer1" EventName="Tick" />
+        </Triggers>
+        
     </asp:UpdatePanel>
+
+
+    <asp:Button ID="StartButton" runat="server" Text="Start" OnClick="StartButton_Click" />
+
+
+
 </asp:Content>
