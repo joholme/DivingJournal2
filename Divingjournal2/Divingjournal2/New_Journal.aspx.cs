@@ -5,25 +5,30 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Diagnostics;
+using DiverLibrary;
 
 namespace Divingjournal
 {
     public partial class New_Journal : Page
     {
+
+        Divingjournal2.TableMaker tm = new Divingjournal2.TableMaker();
+
         protected void Page_Load(object sender, EventArgs e)
         {
             
-            DiverLibrary.Diver divertest = new DiverLibrary.Diver("Jonas Holme");
-            DiverLibrary.Journal journaltest = new DiverLibrary.Journal(12);
+            Diver divertest = new Diver("Jonas Holme");
+            Journal journaltest = new Journal(12);
             divertest.CourseDive = "Test";
             // diver2Row.Visible = false;
 
             othersTextbox.Text = journaltest.JournalID.ToString();
-            divertest.Of_type = DiverLibrary.OF_Type.OF_Heavy;
-            journaltest.Subject = DiverLibrary.Subject.DYK600_Safety;
+            divertest.Of_type = OF_Type.OF_Heavy;
+            journaltest.Subject = Subject.DYK600_Safety;
 
-           
-
+            
+            
+            
 
             if (!IsPostBack)
             {
@@ -63,5 +68,19 @@ namespace Divingjournal
             }
         }
 
+        protected void largeButton_Click(object sender, EventArgs e)
+        {
+            
+            // tm.addTable(Panel1, 2, 2);
+            tm.journalTableMaster(Panel1);
+            
+        }
+
+        protected void submitButton_Click(object sender, EventArgs e)
+        {
+            
+            
+        }
     }
+
 }

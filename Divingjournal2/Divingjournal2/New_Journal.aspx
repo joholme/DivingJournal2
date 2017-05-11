@@ -3,10 +3,22 @@
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
     
     <asp:Image ID="Image1" runat="server" ImageUrl="~/images/hvl_logo.jpg" />
+            <asp:Button ID="largeButton" runat="server" Height="78px" Text="Button" Width="347px" OnClick="largeButton_Click" />
+            <asp:Button ID="submitButton" runat="server" Text="Submit" Height="78px" OnClick="submitButton_Click" Width="209px" />
             <h2>
                 Dykkerjournal-tabell
                 </h2>
-
+    <asp:Panel ID="Panel1" runat="server">
+        <asp:Table ID="Table3" runat="server">
+            <asp:TableRow ID="TableRow3" runat="server">
+                <asp:TableCell ID="TableCell3" runat="server">
+                    <asp:TextBox ID="TextBox3" runat="server">
+                        
+                    </asp:TextBox>
+                </asp:TableCell>
+            </asp:TableRow>
+        </asp:Table>
+    </asp:Panel>
            
 <asp:UpdatePanel ID="UpdatePanel1" runat="server">
   <ContentTemplate>
@@ -45,9 +57,10 @@
                         <asp:TableCell runat="server">Fag</asp:TableCell>
                         <asp:TableCell runat="server">
                             <asp:DropDownList ID="subjectDropdown"  Width="200" runat="server">
+
                                 <asp:ListItem Text="DYK600" Value="0"></asp:ListItem>
                                 <asp:ListItem Text="DYK601" Selected="True" Value="0"></asp:ListItem>
-
+                               
                             </asp:DropDownList>
 
                         </asp:TableCell>

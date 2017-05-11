@@ -11,12 +11,14 @@ namespace DiverLibrary
 
     public class Journal
     {
+
+        
         int journalID;
         Subject subject;
         JournalType journalType;
         string courseNumber;
         string other;
-
+        
         string date;
         string location;
         string divingSpot;
@@ -40,6 +42,7 @@ namespace DiverLibrary
         {
             journalID = _journalID;
         }
+        
 
         public void test()
         {
@@ -384,7 +387,10 @@ namespace DiverLibrary
             }
         }
 
+     
         
+        
+           
     }
     public class journalB : Journal
     {
@@ -392,4 +398,6 @@ namespace DiverLibrary
         {
         }
     }
+
+   
 }
