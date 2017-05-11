@@ -7,7 +7,9 @@ namespace Divingjournal2.Models
 {
     public class Dykker
     {
-        int Id { get; set; }
+        //PK
+        public int Id { get; set; }
+        public string Navn { get; set; }
 
         //Links - to many
         public virtual ICollection<Dykkerjournal> Dykkerjornaler_1 { get; set; }

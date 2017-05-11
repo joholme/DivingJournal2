@@ -390,6 +390,8 @@
     <Compile Include="App_Start\IdentityConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
+    <Compile Include="DAL\DykkerjournalContext.cs" />
+    <Compile Include="DAL\DykkerjournalInitializer.cs" />
     <Compile Include="Models\DirekteOgDekompStopp.cs" />
     <Compile Include="Models\Dykker.cs" />
     <Compile Include="Models\Dykkerjournal.cs" />
