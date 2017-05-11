@@ -390,7 +390,11 @@
     <Compile Include="App_Start\IdentityConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
+    <Compile Include="Models\DirekteOgDekompStopp.cs" />
+    <Compile Include="Models\Dykker.cs" />
     <Compile Include="Models\Dykkerjournal.cs" />
+    <Compile Include="Models\Overflatekompresjon.cs" />
+    <Compile Include="Models\Utstyr.cs" />
     <Compile Include="New_Journal_Test.aspx.cs">
       <DependentUpon>New_Journal_Test.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
