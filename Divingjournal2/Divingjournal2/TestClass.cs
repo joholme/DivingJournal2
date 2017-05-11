@@ -6,6 +6,7 @@ using System.Web;
 
 namespace Divingjournal2
     //githuborjaneide
+    //hei og ho
 {
     public class TestClass
     {
