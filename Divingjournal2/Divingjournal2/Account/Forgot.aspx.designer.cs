@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace DivingApp.Account {
+namespace Divingjournal2.Account {
     
     
     public partial class Forgot {

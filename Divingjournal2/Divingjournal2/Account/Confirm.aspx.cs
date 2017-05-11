@@ -5,7 +5,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace DivingApp.Account
+namespace Divingjournal2.Account
 {
     public partial class Confirm : System.Web.UI.Page
     {

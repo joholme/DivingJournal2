@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="StartPage.aspx.cs" Inherits="DivingApp.StartPage" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="StartPage.aspx.cs" Inherits="Divingjournal2.StartPage" %>
 
 <!DOCTYPE html>
 
@@ -13,8 +13,7 @@
         Velkommen til Dykkerutdanningens applikasjon for oppretting og lagring av dykkejournaler<br />
         <br />
         <br />
-        <asp:Button ID="Button1" runat="server" href="Account/Login" Text="Ny bruker" Width="175px" OnClick="Button1_Click" />
-        <asp:Button ID="Button2" runat="server" href="Account/Register" OnClick="Button2_Click" style="margin-left: 121px" Text="Eksisterende bruker" Width="175px" />
+        <asp:Button ID="Button1_Click" runat="server" href="Account/Login" Text="Login" Width="175px" OnClick="Button1_Click" />
         <br />
         <br />
         <br />

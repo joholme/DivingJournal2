@@ -3,3 +3,7 @@ C:\Users\Jonas\Desktop\DivingJournalGithub\DivingJournal2\Divingjournal2\DiverLi
 C:\Users\Jonas\Desktop\DivingJournalGithub\DivingJournal2\Divingjournal2\DiverLibrary\obj\Debug\DiverLibrary.csprojResolveAssemblyReference.cache
 C:\Users\Jonas\Desktop\DivingJournalGithub\DivingJournal2\Divingjournal2\DiverLibrary\obj\Debug\DiverLibrary.dll
 C:\Users\Jonas\Desktop\DivingJournalGithub\DivingJournal2\Divingjournal2\DiverLibrary\obj\Debug\DiverLibrary.pdb
+C:\Users\Nils Terje\Documents\Visual Studio 2015\Projects\DivingAppGithub\Divingjournal2\DiverLibrary\bin\Debug\DiverLibrary.dll
+C:\Users\Nils Terje\Documents\Visual Studio 2015\Projects\DivingAppGithub\Divingjournal2\DiverLibrary\bin\Debug\DiverLibrary.pdb
+C:\Users\Nils Terje\Documents\Visual Studio 2015\Projects\DivingAppGithub\Divingjournal2\DiverLibrary\obj\Debug\DiverLibrary.dll
+C:\Users\Nils Terje\Documents\Visual Studio 2015\Projects\DivingAppGithub\Divingjournal2\DiverLibrary\obj\Debug\DiverLibrary.pdb

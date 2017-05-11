@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Confirm.aspx.cs" Inherits="DivingApp.Account.Confirm" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Confirm.aspx.cs" Inherits="Divingjournal2.Account.Confirm" %>
 
 <!DOCTYPE html>
 

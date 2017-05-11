@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Forgot.aspx.cs" Inherits="DivingApp.Account.Forgot" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Forgot.aspx.cs" Inherits="Divingjournal2.Account.Forgot" %>
 
 <!DOCTYPE html>
 

@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Login.aspx.cs" Inherits="DivingApp.Account.Login" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Login.aspx.cs" Inherits="Divingjournal2.Account.Login" %>
 
 <!DOCTYPE html>
 
@@ -10,25 +10,15 @@
     <form id="form1" runat="server">
     <div>
     
-        Logg inn med eksisterende bruker<br />
+        Logg inn her</div>
+        Username&nbsp;&nbsp;&nbsp;&nbsp;
+        <asp:TextBox ID="txt_UserName" runat="server"></asp:TextBox>
         <br />
-        Email:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
-        <br />
-        <br />
-        Passord:&nbsp;&nbsp;&nbsp;
-        <asp:TextBox ID="TextBox2" runat="server"></asp:TextBox>
+        Password&nbsp;&nbsp;&nbsp; 
+        <asp:TextBox ID="txt_Password" runat="server"></asp:TextBox>
         <br />
         <br />
-        Glemt passord? Trykk <a href="Forgot.aspx">her</a>.<br />
-        <br />
-        <asp:Button ID="Button1" runat="server" Text="Logg inn" />
-&nbsp;&nbsp;&nbsp;
-        <asp:Button ID="Button2" runat="server" Text="Avbryt" />
-&nbsp;&nbsp;&nbsp;
-        <asp:Button ID="Button3" runat="server" Text="Reset felter" />
-    
-    </div>
+        <asp:Button ID="btn_Submit" runat="server" Text="Submit" />
     </form>
 </body>
 </html>
