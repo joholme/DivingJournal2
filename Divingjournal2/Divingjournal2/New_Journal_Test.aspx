@@ -1,7 +1,15 @@
 ﻿<%@ Page Title="Ny journal - test" Language="C#"  MasterPageFile="~/Site.Master" AutoEventWireup="True" CodeBehind="New_Journal_Test.aspx.cs" Inherits="Divingjournal2.New_Journal_Test"%>
 
 
+
+
+<%@ Register assembly="AjaxControlToolkit" namespace="AjaxControlToolkit" tagprefix="ajaxToolkit" %>
+
+
+
+
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
+
     
         <asp:Panel ID="Panel1" runat="server">
             <asp:Label ID="HeaderLabel" runat="server"></asp:Label>
@@ -725,56 +733,54 @@
             </asp:TableRow>
 
         </asp:Table>
-      
-           
 
     </asp:Panel>
-
-
-
 
             </asp:TableCell>
         </asp:TableRow>
         </asp:Table>
 
 
+    <!-- Stopwatches -->
 
-    <script type = "text/javascript">
-    /* Stop, Clear and Pause the timer displayed under the pause buttons  */
-    var h1 = document.getElementsByTagName('h1')[0],
-        start = document.getElementById('start'),
-        stop = document.getElementById('stop'),
-        clear = document.getElementById('clear'),
-        seconds = 0, minutes = 0, hours = 0,
-        t;
+    <asp:Table ID="StopWatchTable" runat="server" BorderStyle="Solid" BorderWidth="2px" BackColor="White">
+        <asp:TableRow>
+            <asp:TableCell>Dykker 1</asp:TableCell>
+            <asp:TableCell>Dykker 2</asp:TableCell>
+            <asp:TableCell>Standby</asp:TableCell>
+        </asp:TableRow>
 
-    function add() {
-        seconds++;
-        if (seconds >= 60) {
-            seconds = 0;
-            minutes++;
-            if (minutes >= 60) {
-                minutes = 0;
-                hours++;
-            }
-        }
+        <asp:TableRow>
+            <asp:TableCell>
+                <h3 id="timerLabel1">00:00:00</h3>
+                <br />
+                <input type="button" onclick="start_stop(this)" value="START" id="start1" />
+                <input type="button" onclick="reset(this)" value="RESET" id="reset1" />
+            </asp:TableCell>
+            <asp:TableCell>
+                <h3 id="timerLabel2">00:00:00</h3>
+                <br />
+                <input type="button" onclick="start_stop(this)" value="START" id="start2" />
+                <input type="button" onclick="reset(this)" value="RESET" id="reset2" />
+            </asp:TableCell>
+            <asp:TableCell>
+                <h3 id="timerLabel3">00:00:00</h3>
+                <br />
+                <input type="button" onclick="start_stop(this)" value="START" id="start3" />
+                <input type="button" onclick="reset(this)" value="RESET" id="reset3" />
+            </asp:TableCell>  
+        </asp:TableRow>
+        
+    </asp:Table>
+        
 
-        document.getElementById('<%=h1.ClientID%>').innerText = (hours ? (hours > 9 ? hours : "0" + hours) : "00") + ":" + (minutes ? (minutes > 9 ? minutes : "0" + minutes) : "00") + ":" + (seconds > 9 ? seconds : "0" + seconds);;
-        timer();
-    }
-    function timer() {
-        t = setTimeout(add, 1000);
-    }
+        <ajaxToolkit:AlwaysVisibleControlExtender ID="StopWatchTable_AlwaysVisibleControlExtender" runat="server" BehaviorID="StopWatchTable_AlwaysVisibleControlExtender" TargetControlID="StopWatchTable" HorizontalSide="Right" UseAnimation="True" VerticalOffset="100" />
+        <ajaxToolkit:DropShadowExtender ID="StopWatchTable_DropShadowExtender" runat="server" BehaviorID="StopWatchTable_DropShadowExtender" TargetControlID="StopWatchTable">
+        </ajaxToolkit:DropShadowExtender>
+        
 
-    function stp() {
-        clearTimeout(t);
-    }
+  <script src="Stopwatch3.js"></script>
 
-    function clr() {
-        document.getElementById('<%=h1.ClientID%>').innerText = "00:00:00";
-        seconds = 0; minutes = 0; hours = 0;  
-    }
-</script>
 
 
 
@@ -782,7 +788,7 @@
     <asp:UpdatePanel ID="UpdatePanelTest" runat="server">
                         <ContentTemplate>
    
-    <div style="text-align:center;">
+    <div style="text-align:center; height: 22px; width: 1656px;">
 
         <asp:Table ID="StandardDiveTable" runat="server" Visible="True" HorizontalAlign="Left" GridLines="Both" Width="50%">
 
@@ -800,14 +806,8 @@
                         
                 </asp:TableCell>
                 <asp:TableCell runat="server">
-                    <asp:Button ID="Start" runat="server" Text="Button" OnClick="Start_Click" OnClientClick="stp();" />
-                   
+                    <asp:Button ID="Start" runat="server" Text="Button" OnClick="Start_Click" OnClientClick="stp();" />                
                     Forlot overflaten
-			        
-
-                   
-
-
                 </asp:TableCell>
                 <asp:TableCell runat="server"></asp:TableCell>
                 <asp:TableCell runat="server"></asp:TableCell>
@@ -1173,6 +1173,7 @@
 
    
 
+    
 
 
 

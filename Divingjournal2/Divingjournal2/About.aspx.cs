@@ -40,9 +40,7 @@ namespace Divingjournal2
 
         public void tick()
         {
-            DateTime startTime = DateTime.Now;
-            DateTime startTime2 = DateTime.Now.AddSeconds(1);
-            TimeSpan ts = startTime2.Subtract(startTime.);
+           
 
             Label1.Text = DateTime.Now.ToLongTimeString();
             

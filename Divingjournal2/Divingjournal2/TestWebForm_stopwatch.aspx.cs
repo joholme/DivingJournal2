@@ -14,8 +14,7 @@ namespace Divingjournal2
         protected override void OnInit(EventArgs e)
         {
 
-            Button1.Attributes.Add("onclick", "startTimer(); return false;");
-            SubmitButton.Attributes.Add("onclick", "ConfirmBox(); stopTimer();");
+            
             
             
 
@@ -27,19 +26,10 @@ namespace Divingjournal2
             
         }
 
-        protected void SubmitButton_Click(object sender, EventArgs e)
-        {
-            string s = "finner ikke";
-            
-            
-            Response.Write(s);
-        }
+        
 
 
-        protected void TextBox1Event()
-        {
-            Page.ClientScript.RegisterStartupScript(this.GetType(), "onclick", "startTimer();", true);
-        }
+        
     }
 
 }

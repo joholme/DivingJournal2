@@ -1453,6 +1453,33 @@ namespace Divingjournal2 {
         protected global::System.Web.UI.WebControls.TextBox TextBox12;
         
         /// <summary>
+        /// StopWatchTable control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Table StopWatchTable;
+        
+        /// <summary>
+        /// StopWatchTable_AlwaysVisibleControlExtender control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::AjaxControlToolkit.AlwaysVisibleControlExtender StopWatchTable_AlwaysVisibleControlExtender;
+        
+        /// <summary>
+        /// StopWatchTable_DropShadowExtender control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::AjaxControlToolkit.DropShadowExtender StopWatchTable_DropShadowExtender;
+        
+        /// <summary>
         /// UpdatePanelTest control.
         /// </summary>
         /// <remarks>
