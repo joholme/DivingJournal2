@@ -5,6 +5,14 @@ using System.Web;
 
 namespace Divingjournal2.Models
 {
+    public enum DykkType
+    {
+        DYK600_Sikkerhetsopplæring_i_dykking,
+        DYK601_Fagoppløring_i_annlegg,
+        DYK601_Fagopplæring_i_rørlegging,
+        DYK601_Fagopplæring_i_berging,
+        RED110_Redningsdykking
+    }
     public class Dykkerjournal
     {
         //PK
@@ -13,6 +21,8 @@ namespace Divingjournal2.Models
         public int Dykker1Id { get; set; }
         public int Dykker2Id { get; set; }
         public int StandbyDykkerId { get; set; }
+
+        public DykkType DykkType { get; set; }
 
         //Links - to one
         public virtual Dykker Dykker1 { get; set; }
