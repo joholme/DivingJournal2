@@ -195,9 +195,36 @@ namespace Divingjournal2
             Calendar1.Visible = false;
         }
 
-        protected void Start_Click(object sender, EventArgs e)
+        //Help method for finding textbox by ID. Used in addTime()
+        private Control FindControlRecursive(Control rootControl, string controlID)
         {
-           
+            if (rootControl.ID == controlID) return rootControl;
+
+            foreach (Control controlToSearch in rootControl.Controls)
+            {
+                Control controlToReturn =
+                    FindControlRecursive(controlToSearch, controlID);
+                if (controlToReturn != null) return controlToReturn;
+            }
+            return null;
+        }
+
+
+        public void addTime(TextBox textbox)
+        {
+            
+
+            textbox.Text = "Kl " + DateTime.Now.ToShortTimeString();
+        }
+
+        protected void TimeButton_Click(object sender, EventArgs e)
+        {
+            Button button = (Button)sender;
+            if (button.CommandArgument != null)
+            {
+                TextBox textbox = (TextBox)FindControlRecursive(Page, button.CommandArgument);
+                textbox.Text = "Kl " + DateTime.Now.ToShortTimeString();
+            }
         }
     }
         
