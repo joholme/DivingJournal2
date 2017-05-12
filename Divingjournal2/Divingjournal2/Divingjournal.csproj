@@ -391,7 +391,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="DAL\DivingJournalContext.cs" />
-    <Compile Include="DAL\DykkerjournalInitializer.cs" />
+    <Compile Include="DAL\DivingJournalInitializer.cs" />
     <Compile Include="Models\DirekteOgDekompStopp.cs" />
     <Compile Include="Models\Diver_Compression.cs" />
     <Compile Include="Models\Diver_Pressurechamber.cs" />

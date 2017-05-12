@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using DiverLibrary;
+using System.Diagnostics;
 
 namespace Divingjournal2
 {
@@ -15,7 +16,7 @@ namespace Divingjournal2
             string s = (string)Session["timeLabel"];
             Label2.Text = s;
 
-
+            Debug.Write("Heipådeg");
             
         }
     }
