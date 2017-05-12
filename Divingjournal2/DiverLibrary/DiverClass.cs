@@ -17,22 +17,22 @@ namespace DiverLibrary
     {
         //Common variables for all dives
         
-        public string name;
+        string name;
         
         OF_Type of_type;
         Direct direct;
         AirType airType;
-        string nitroxType;
+        int nitroxType;
         bool repeatedAir;
         Transport transport;
 
         string breathingGear;
 
-        string volume;
-        string pressure;
+        int volume;
+        int pressure;
 
-        string plannedDepth;
-        string plannedTime;
+        int plannedDepth;
+        int plannedTime;
 
         string courseDive;
 
@@ -41,16 +41,16 @@ namespace DiverLibrary
         //These might be available for all dives
         string leftSurface;
         string reachedBottom;
-        string leftBottom_Depth;
+        int leftBottom_Depth;
         string leftBottom_Time;
-        string bottomTime;
-        string maxDepth;
-        string ELD;
-        string additionToBottomTime;
-        string tableUsed_Meter;
-        string tableUsed_Minutes;
+        int bottomTime;
+        int maxDepth;
+        int ELD;
+        int additionToBottomTime;
+        int tableUsed_Meter;
+        int tableUsed_Minutes;
         string ascensionToFirstStop;
-        string timeAtSafetyStop; //Should perhaps be time (string)
+        int timeAtSafetyStop; //Should perhaps be time (string)
 
         //After dive is finished
         bool isEverythingOK;
@@ -124,7 +124,7 @@ namespace DiverLibrary
             }
         }
 
-        public string NitroxType
+        public int NitroxType
         {
             get
             {
@@ -176,7 +176,7 @@ namespace DiverLibrary
             }
         }
 
-        public string Volume
+        public int Volume
         {
             get
             {
@@ -189,7 +189,7 @@ namespace DiverLibrary
             }
         }
 
-        public string Pressure
+        public int Pressure
         {
             get
             {
@@ -202,7 +202,7 @@ namespace DiverLibrary
             }
         }
 
-        public string PlannedDepth
+        public int PlannedDepth
         {
             get
             {
@@ -215,7 +215,7 @@ namespace DiverLibrary
             }
         }
 
-        public string PlannedTime
+        public int PlannedTime
         {
             get
             {
@@ -282,7 +282,7 @@ namespace DiverLibrary
             }
         }
 
-        public string LeftBottom_Depth
+        public int LeftBottom_Depth
         {
             get
             {
@@ -308,7 +308,7 @@ namespace DiverLibrary
             }
         }
 
-        public string BottomTime
+        public int BottomTime
         {
             get
             {
@@ -321,7 +321,7 @@ namespace DiverLibrary
             }
         }
 
-        public string MaxDepth
+        public int MaxDepth
         {
             get
             {
@@ -334,7 +334,7 @@ namespace DiverLibrary
             }
         }
 
-        public string ELD1
+        public int ELD1
         {
             get
             {
@@ -347,7 +347,7 @@ namespace DiverLibrary
             }
         }
 
-        public string AdditionToBottomTime
+        public int AdditionToBottomTime
         {
             get
             {
@@ -360,7 +360,7 @@ namespace DiverLibrary
             }
         }
 
-        public string TableUsed_Meter
+        public int TableUsed_Meter
         {
             get
             {
@@ -373,7 +373,7 @@ namespace DiverLibrary
             }
         }
 
-        public string TableUsed_Minutes
+        public int TableUsed_Minutes
         {
             get
             {
@@ -399,7 +399,7 @@ namespace DiverLibrary
             }
         }
 
-        public string TimeAtSafetyStop
+        public int TimeAtSafetyStop
         {
             get
             {
@@ -431,9 +431,9 @@ namespace DiverLibrary
         string arrived3m, left3m;
 
         string reachedSurface;
-        string ascensionTime;
-        string totalDivingTime;
-        string N2GroupAfterDive; //perhaps string
+        int ascensionTime;
+        int totalDivingTime;
+        char N2GroupAfterDive; //perhaps string
 
         public Diver_Standard(string _name) : base(_name)
         {
@@ -532,7 +532,7 @@ namespace DiverLibrary
             }
         }
 
-        public string AscensionTime
+        public int AscensionTime
         {
             get
             {
@@ -545,7 +545,7 @@ namespace DiverLibrary
             }
         }
 
-        public string TotalDivingTime
+        public int TotalDivingTime
         {
             get
             {
@@ -558,7 +558,7 @@ namespace DiverLibrary
             }
         }
 
-        public string N2GroupAfterDive1
+        public char N2GroupAfterDive1
         {
             get
             {
@@ -583,17 +583,17 @@ namespace DiverLibrary
         string left18m, left15m, left12m;
         string time12_0m;
         string reached15mInChamber;
-        string o2_1, o2_2, o2_3; 
+        int o2_1, o2_2, o2_3; 
         string surfaceInterval;
-        string air_1, air_2, air_3;
+        int air_1, air_2, air_3;
         //Perhaps more variables are needed for timestamp here. 
 
         string left12mWithoutO2;
         string reachedSurface;
-        string timeInChamber;
-        string timeAtSea;
-        string totalDecompression;
-        string totalDivingTime;
+        int timeInChamber;
+        int timeAtSea;
+        int totalDecompression;
+        int totalDivingTime;
 
         public Diver_Compression(string _name) : base(_name)
         {
@@ -665,7 +665,7 @@ namespace DiverLibrary
             }
         }
 
-        public string O2_1
+        public int O2_1
         {
             get
             {
@@ -678,7 +678,7 @@ namespace DiverLibrary
             }
         }
 
-        public string O2_2
+        public int O2_2
         {
             get
             {
@@ -691,7 +691,7 @@ namespace DiverLibrary
             }
         }
 
-        public string O2_3
+        public int O2_3
         {
             get
             {
@@ -717,7 +717,7 @@ namespace DiverLibrary
             }
         }
 
-        public string Air_1
+        public int Air_1
         {
             get
             {
@@ -730,7 +730,7 @@ namespace DiverLibrary
             }
         }
 
-        public string Air_2
+        public int Air_2
         {
             get
             {
@@ -743,7 +743,7 @@ namespace DiverLibrary
             }
         }
 
-        public string Air_3
+        public int Air_3
         {
             get
             {
@@ -782,7 +782,7 @@ namespace DiverLibrary
             }
         }
 
-        public string TimeInChamber
+        public int TimeInChamber
         {
             get
             {
@@ -795,7 +795,7 @@ namespace DiverLibrary
             }
         }
 
-        public string TimeAtSea
+        public int TimeAtSea
         {
             get
             {
@@ -808,7 +808,7 @@ namespace DiverLibrary
             }
         }
 
-        public string TotalDecompression
+        public int TotalDecompression
         {
             get
             {
@@ -821,7 +821,7 @@ namespace DiverLibrary
             }
         }
 
-        public string TotalDivingTime
+        public int TotalDivingTime
         {
             get
             {

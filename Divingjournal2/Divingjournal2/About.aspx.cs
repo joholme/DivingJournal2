@@ -12,49 +12,7 @@ namespace Divingjournal2
     public partial class About : Page
     {
 
-        private DateTime startTime;
-        private DateTime stopTime;
-        private TimeSpan ts;
-        string start = "00:00:00";
-
-        public DateTime StartTime
-        {
-            get
-            {
-                return startTime;
-            }
-
-            set
-            {
-                startTime = value;
-            }
-        }
-
-        public DateTime StopTime
-        {
-            get
-            {
-                return stopTime;
-            }
-
-            set
-            {
-                stopTime = value;
-            }
-        }
-
-        public TimeSpan Ts
-        {
-            get
-            {
-                return ts;
-            }
-
-            set
-            {
-                ts = value;
-            }
-        }
+       
 
         protected override void OnInit(EventArgs e)
         {
@@ -82,11 +40,9 @@ namespace Divingjournal2
 
         public void tick()
         {
+           
 
-            stopTime = DateTime.Now;
-            ts = stopTime.Subtract(startTime);
-            
-            Label1.Text = ts.Hours.ToString() + ":" + ts.Minutes.ToString() + ":" + ts.Seconds.ToString();
+            Label1.Text = DateTime.Now.ToLongTimeString();
             
             Session["timeLabel"] = Label1.Text;
         }
@@ -125,18 +81,11 @@ namespace Divingjournal2
             }
             else
             {
-                
-                Timer1.Enabled = true;
-                startTime = DateTime.Now;
-                StartButton.Text = "Stopp";
 
+                Timer1.Enabled = true;
+                StartButton.Text = "Stopp";
                 
             }
-        }
-
-        public string setStartTime(DateTime time)
-        {
-            return time.ToLongTimeString();
         }
 
         
