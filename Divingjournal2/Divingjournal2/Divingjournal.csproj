@@ -390,11 +390,15 @@
     <Compile Include="App_Start\IdentityConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
-    <Compile Include="DAL\DykkerjournalContext.cs" />
-    <Compile Include="DAL\DykkerjournalInitializer.cs" />
+    <Compile Include="DAL\DivingJournalContext.cs" />
+    <Compile Include="DAL\DivingJournalInitializer.cs" />
     <Compile Include="Models\DirekteOgDekompStopp.cs" />
+    <Compile Include="Models\Diver_Compression.cs" />
+    <Compile Include="Models\Diver_Pressurechamber.cs" />
+    <Compile Include="Models\Diver_Standard.cs" />
     <Compile Include="Models\Dykker.cs" />
     <Compile Include="Models\Dykkerjournal.cs" />
+    <Compile Include="Models\Journal.cs" />
     <Compile Include="Models\Overflatekompresjon.cs" />
     <Compile Include="Models\Utstyr.cs" />
     <Compile Include="New_Journal_Test.aspx.cs">

@@ -774,7 +774,7 @@
     </asp:Table>
         
 
-        <ajaxToolkit:AlwaysVisibleControlExtender ID="StopWatchTable_AlwaysVisibleControlExtender" runat="server" BehaviorID="StopWatchTable_AlwaysVisibleControlExtender" TargetControlID="StopWatchTable" HorizontalSide="Right" UseAnimation="True" VerticalOffset="100" />
+        <ajaxToolkit:AlwaysVisibleControlExtender ID="StopWatchTable_AlwaysVisibleControlExtender" runat="server" BehaviorID="StopWatchTable_AlwaysVisibleControlExtender" TargetControlID="StopWatchTable" HorizontalSide="Right" UseAnimation="True" VerticalOffset="100" VerticalSide="Bottom" />
         <ajaxToolkit:DropShadowExtender ID="StopWatchTable_DropShadowExtender" runat="server" BehaviorID="StopWatchTable_DropShadowExtender" TargetControlID="StopWatchTable">
         </ajaxToolkit:DropShadowExtender>
         
@@ -788,9 +788,9 @@
     <asp:UpdatePanel ID="UpdatePanelTest" runat="server">
                         <ContentTemplate>
    
-    <div style="text-align:center; height: 22px; width: 1656px;">
+    <div style="text-align:center; padding:0px; height: 22px; width: auto;">
 
-        <asp:Table ID="StandardDiveTable" runat="server" Visible="True" HorizontalAlign="Left" GridLines="Both" Width="50%">
+        <asp:Table ID="StandardDiveTable" runat="server" Visible="True" HorizontalAlign="Left" GridLines="Both">
 
             <asp:TableRow runat="server">
                 <asp:TableCell runat="server">Dykker 1</asp:TableCell>
@@ -799,67 +799,131 @@
                 <asp:TableCell runat="server">Standby</asp:TableCell>
             </asp:TableRow>
             <asp:TableRow runat="server">
-                <asp:TableCell runat="server">
-                    
-                    <asp:Label ID="h1" runat="server"><time>00:00:00</time></asp:Label>
-                            <script src="Stopwatch2.js"></script>
-                        
+                <asp:TableCell runat="server">                   
+                    <asp:TextBox ID="D1LeftSurface" runat="server" Width="75"></asp:TextBox>
+                    <asp:Button ID="Button1" runat="server" Text="Sett inn" CommandArgument="D1LeftSurface" OnClick="TimeButton_Click"/>                         
                 </asp:TableCell>
-                <asp:TableCell runat="server">
-                    <asp:Button ID="Start" runat="server" Text="Button" OnClick="Start_Click" OnClientClick="stp();" />                
+                <asp:TableCell runat="server">             
                     Forlot overflaten
                 </asp:TableCell>
-                <asp:TableCell runat="server"></asp:TableCell>
-                <asp:TableCell runat="server"></asp:TableCell>
+                <asp:TableCell runat="server">
+                    <asp:Button ID="Button2" runat="server" Text="Sett inn" CommandArgument="D2LeftSurface" OnClick="TimeButton_Click"/> 
+                    <asp:TextBox ID="D2LeftSurface" runat="server" Width="75"></asp:TextBox>    
+                </asp:TableCell>
+                <asp:TableCell runat="server">
+                    <asp:TextBox ID="SBLeftSurface" runat="server" Width="75"></asp:TextBox>
+                    <asp:Button ID="Button3" runat="server" Text="Sett inn" CommandArgument="SBLeftSurface" OnClick="TimeButton_Click"/>
+                </asp:TableCell>
             </asp:TableRow>
             <asp:TableRow runat="server">
-                <asp:TableCell runat="server"></asp:TableCell>
+                <asp:TableCell runat="server">
+                    <asp:TextBox ID="D1ReachedBottom" runat="server" Width="75"></asp:TextBox>
+                    <asp:Button ID="Button4" runat="server" Text="Sett inn" CommandArgument="D1ReachedBottom" OnClick="TimeButton_Click"/>
+                </asp:TableCell>
                 <asp:TableCell runat="server">På bunn</asp:TableCell>
-                <asp:TableCell runat="server"></asp:TableCell>
-                <asp:TableCell runat="server"></asp:TableCell>
-            </asp:TableRow>
-            <asp:TableRow runat="server">
-                <asp:TableCell runat="server"></asp:TableCell>
-                <asp:TableCell runat="server">Forlot bunn (dybde)</asp:TableCell>
-                <asp:TableCell runat="server"></asp:TableCell>
-                <asp:TableCell runat="server"></asp:TableCell>
+                <asp:TableCell runat="server">
+                    <asp:Button ID="Button5" runat="server" Text="Sett inn" CommandArgument="D2ReachedBottom" OnClick="TimeButton_Click"/>
+                    <asp:TextBox ID="D2ReachedBottom" runat="server" Width="75"></asp:TextBox>
+                    
+                </asp:TableCell>
+                <asp:TableCell runat="server">
+                    <asp:TextBox ID="SBReachedBottom" runat="server" Width="75"></asp:TextBox>
+                    <asp:Button ID="Button6" runat="server" Text="Sett inn" CommandArgument="SBReachedBottom" OnClick="TimeButton_Click"/>
+                </asp:TableCell>
             </asp:TableRow>
 
             <asp:TableRow runat="server">
-                <asp:TableCell runat="server"></asp:TableCell>
+                <asp:TableCell runat="server"> 
+                    <div style="text-align:left;"><asp:TextBox ID="D1leftBottom_Depth" runat="server" Width="75"></asp:TextBox> </div>
+                </asp:TableCell>
+                <asp:TableCell runat="server">Forlot bunn (dybde)</asp:TableCell>
+                <asp:TableCell runat="server">
+                    <div style="text-align:right;">
+                    <asp:TextBox ID="D2leftBottom_Depth" runat="server" Width="75"></asp:TextBox>
+                        </div>
+                    
+                </asp:TableCell>
+                <asp:TableCell runat="server">
+                     <div style="text-align:left;"><asp:TextBox ID="SBleftBottom_Depth" runat="server" Width="75"></asp:TextBox> </div>
+                </asp:TableCell>
+            </asp:TableRow>
+
+            <asp:TableRow runat="server">
+                <asp:TableCell runat="server">
+                    <asp:TextBox ID="D1leftBottom_Time" runat="server" Width="75"></asp:TextBox>
+                    <asp:Button ID="Button7" runat="server" Text="Sett inn" CommandArgument="D1leftBottom_Time" OnClick="TimeButton_Click"/>
+                </asp:TableCell>
                 <asp:TableCell runat="server">Forlot bunn (klokkeslett)</asp:TableCell>
-                <asp:TableCell runat="server"></asp:TableCell>
-                <asp:TableCell runat="server"></asp:TableCell>
+                <asp:TableCell runat="server">
+                    <asp:Button ID="Button9" runat="server" Text="Sett inn" CommandArgument="D2leftBottom_Time" OnClick="TimeButton_Click"/>
+                    <asp:TextBox ID="D2leftBottom_Time" runat="server" Width="75"></asp:TextBox>                    
+                </asp:TableCell>
+                <asp:TableCell runat="server">
+                    <asp:TextBox ID="SBleftBottom_Time" runat="server" Width="75"></asp:TextBox>
+                    <asp:Button ID="Button8" runat="server" Text="Sett inn" CommandArgument="SBleftBottom_Time" OnClick="TimeButton_Click"/>
+                </asp:TableCell>
             </asp:TableRow>
             <asp:TableRow runat="server">
-                <asp:TableCell runat="server"></asp:TableCell>
+                <asp:TableCell runat="server">
+                    		 <div style="text-align:left;"><asp:TextBox ID="D1bottomTime" runat="server" Width="75"></asp:TextBox> </div>
+                </asp:TableCell>
                 <asp:TableCell runat="server">Bunntid</asp:TableCell>
-                <asp:TableCell runat="server"></asp:TableCell>
-                <asp:TableCell runat="server"></asp:TableCell>
+                <asp:TableCell runat="server">
+                    <div style="text-align:right;"><asp:TextBox ID="D2bottomTime" runat="server" Width="75"></asp:TextBox> </div>
+
+                </asp:TableCell>
+                <asp:TableCell runat="server">
+                    		 <div style="text-align:left;"><asp:TextBox ID="SBbottomTime" runat="server" Width="75"></asp:TextBox> </div>
+                </asp:TableCell>
             </asp:TableRow>
             <asp:TableRow runat="server">
-                <asp:TableCell runat="server"></asp:TableCell>
+                <asp:TableCell runat="server">
+                    <asp:TextBox ID="D1maxDepth" runat="server" Width="75"></asp:TextBox>
+                </asp:TableCell>
                 <asp:TableCell runat="server">Maks dybde</asp:TableCell>
-                <asp:TableCell runat="server"></asp:TableCell>
-                <asp:TableCell runat="server"></asp:TableCell>
+                <asp:TableCell runat="server">
+                    <asp:TextBox ID="D2maxDepth" runat="server" Width="75"></asp:TextBox>
+                </asp:TableCell>
+                <asp:TableCell runat="server">
+                    <asp:TextBox ID="SBmaxDepth" runat="server" Width="75"></asp:TextBox>
+                </asp:TableCell>
             </asp:TableRow>
             <asp:TableRow runat="server">
-                <asp:TableCell runat="server"></asp:TableCell>
+                <asp:TableCell runat="server">
+                    <asp:TextBox ID="D1ELD" runat="server" Width="75"></asp:TextBox>
+                </asp:TableCell>
                 <asp:TableCell runat="server">ELD</asp:TableCell>
-                <asp:TableCell runat="server"></asp:TableCell>
-                <asp:TableCell runat="server"></asp:TableCell>
+                <asp:TableCell runat="server">
+                    <asp:TextBox ID="D2ELD" runat="server" Width="75"></asp:TextBox>
+                </asp:TableCell>
+                <asp:TableCell runat="server">
+                    <asp:TextBox ID="SBELD" runat="server" Width="75"></asp:TextBox>
+                </asp:TableCell>
             </asp:TableRow>
             <asp:TableRow runat="server">
-                <asp:TableCell runat="server"></asp:TableCell>
+                <asp:TableCell runat="server">
+                    <asp:TextBox ID="D1additionToBottomTime" runat="server" Width="75"></asp:TextBox>
+                </asp:TableCell>
                 <asp:TableCell runat="server">Tillegg til bunntid</asp:TableCell>
-                <asp:TableCell runat="server"></asp:TableCell>
-                <asp:TableCell runat="server"></asp:TableCell>
+                <asp:TableCell runat="server">
+                    <asp:TextBox ID="D2additionToBottomTime" runat="server" Width="75"></asp:TextBox>
+                </asp:TableCell>
+                <asp:TableCell runat="server">
+                    <asp:TextBox ID="SBadditionToBottomTime" runat="server" Width="75"></asp:TextBox>
+                </asp:TableCell>
             </asp:TableRow>
             <asp:TableRow runat="server">
-                <asp:TableCell runat="server"></asp:TableCell>
+                <asp:TableCell runat="server">
+                    <asp:TextBox ID="D1tableUsed_Meter" runat="server" Width="75"></asp:TextBox>
+
+                </asp:TableCell>
                 <asp:TableCell runat="server">Tabell brukt (meter)</asp:TableCell>
-                <asp:TableCell runat="server"></asp:TableCell>
-                <asp:TableCell runat="server"></asp:TableCell>
+                <asp:TableCell runat="server">
+                    <asp:TextBox ID="D2tableUsed_Meter" runat="server" Width="75"></asp:TextBox>
+                </asp:TableCell>
+                <asp:TableCell runat="server">
+                    <asp:TextBox ID="SBtableUsed_Meter" runat="server" Width="75"></asp:TextBox>
+                </asp:TableCell>
             </asp:TableRow>
             <asp:TableRow runat="server">
                 <asp:TableCell runat="server"></asp:TableCell>
