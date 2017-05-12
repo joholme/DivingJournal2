@@ -9,16 +9,16 @@ using Divingjournal2.Models;
 
 namespace Divingjournal2.DAL
 {
-    public class DykkerjournalContext : DbContext
+    public class DivingJournalContext : DbContext
     {
-        public DykkerjournalContext () : base("DykkerjournalContext")
+        public DivingJournalContext () : base("DivingJournalContext")
             {
             }
-        public DbSet<Dykkerjournal> Dykkerjournals { get; set; }
-        public DbSet<Dykker> Dykkers { get; set; }
-        public DbSet<DirekteOgDekompStopp> DirekteOgDekompStopps { get; set; }
-        public DbSet<Overflatekompresjon> Overflatekompresjons { get; set; }
-        public DbSet<Utstyr> Utstyrs { get; set; }
+        public DbSet<Journal> Journals { get; set; }
+        public DbSet<Diver_Standard> Diver_Standards { get; set; }
+        public DbSet<Diver_Compression> Diver_Compressions { get; set; }
+        public DbSet<Diver_Pressurechamber> Diver_Pressurechambers { get; set; }
+        
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {

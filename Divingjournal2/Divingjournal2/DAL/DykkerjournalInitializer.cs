@@ -7,9 +7,9 @@ using Divingjournal2.Models;
 
 namespace Divingjournal2.DAL
 {
-    public class DykkerjournalInitializer : System.Data.Entity.DropCreateDatabaseIfModelChanges<DykkerjournalContext>
+    public class DykkerjournalInitializer : System.Data.Entity.DropCreateDatabaseIfModelChanges<DivingJournalContext>
     {
-        protected override void Seed(DykkerjournalContext context)
+        protected override void Seed(DivingJournalContext context)
         {
             var dykkere = new List<Dykker>
             {
