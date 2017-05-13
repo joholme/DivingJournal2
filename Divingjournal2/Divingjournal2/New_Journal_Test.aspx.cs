@@ -113,6 +113,7 @@ namespace Divingjournal2
         protected void SessionButton_Click(object sender, EventArgs e)
         {
             writeJournal();
+
         }
 
         protected void SubmitButton_Click(object sender, EventArgs e)

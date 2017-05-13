@@ -14,6 +14,7 @@ namespace Divingjournal2.Models
         public string date { get; set; }
         public string location { get; set; }
         public string divingSpot { get; set; }
+        
 
 
         //Links - to many
