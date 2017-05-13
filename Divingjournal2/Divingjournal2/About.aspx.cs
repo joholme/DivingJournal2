@@ -12,7 +12,49 @@ namespace Divingjournal2
     public partial class About : Page
     {
 
-       
+        private DateTime startTime;
+        private DateTime stopTime;
+        private TimeSpan ts;
+        string start = "00:00:00";
+
+        public DateTime StartTime
+        {
+            get
+            {
+                return startTime;
+            }
+
+            set
+            {
+                startTime = value;
+            }
+        }
+
+        public DateTime StopTime
+        {
+            get
+            {
+                return stopTime;
+            }
+
+            set
+            {
+                stopTime = value;
+            }
+        }
+
+        public TimeSpan Ts
+        {
+            get
+            {
+                return ts;
+            }
+
+            set
+            {
+                ts = value;
+            }
+        }
 
         protected override void OnInit(EventArgs e)
         {
@@ -27,10 +69,10 @@ namespace Divingjournal2
 
         protected void Page_Load(object sender, EventArgs e)
         {
+            
 
 
-            
-            
+
         }
 
         protected void Timer1_Tick(object sender, EventArgs e)
@@ -40,33 +82,42 @@ namespace Divingjournal2
 
         public void tick()
         {
-           
+            stopTime = DateTime.Now;
 
-            Label1.Text = DateTime.Now.ToLongTimeString();
+
+
+            Label1.Text = tickStopWatch(startTime, stopTime);
             
             Session["timeLabel"] = Label1.Text;
         }
 
-        public void tickStopWatch()
+        public string tickStopWatch(DateTime start, DateTime stop)
         {
-            int secs = 0;
-            int mins = 0;
-            int hours = 0;
-            secs++;
-        
-            if (secs>59)
+
+            int secs = stop.Second - start.Second;
+            int mins = stop.Minute - start.Minute;
+            int hours = stop.Hour - start.Hour;
+
+            string secString = secs.ToString();
+            string minString = mins.ToString();
+            string hourString = hours.ToString();
+
+            if (secs < 10)
             {
-                mins++;
-                secs = 0;
-            }
-            if (mins>59)
-            {
-                hours++;
-                mins = 0;
+                secString = "0" + secs.ToString();
             }
 
-            Label1.Text = hours.ToString() + ":" + mins.ToString() + ":" + secs.ToString();
-            secs++;
+            if (mins < 10)
+            {
+                minString = "0" + mins.ToString();
+            }
+
+            if (hours < 10)
+            {
+                hourString = "0" + hours.ToString();
+            }
+
+            return hourString + ":" + minString + ":" + secString;
 
         }
 
@@ -81,7 +132,7 @@ namespace Divingjournal2
             }
             else
             {
-
+                StartTime = DateTime.Now;
                 Timer1.Enabled = true;
                 StartButton.Text = "Stopp";
                 
