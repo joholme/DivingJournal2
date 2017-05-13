@@ -8,7 +8,8 @@ using DiverLibrary;
 
 namespace Divingjournal2
 {
-    //brach ørjan
+   //testing branches
+
     public partial class New_Journal_Test : System.Web.UI.Page
     {
         Journal j = new Journal(1);
