@@ -394,20 +394,10 @@
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="DAL\DivingJournalContext.cs" />
     <Compile Include="DAL\DivingJournalInitializer.cs" />
-    <Compile Include="Migrations\201705131542575_initial.cs" />
-    <Compile Include="Migrations\201705131542575_initial.Designer.cs">
-      <DependentUpon>201705131542575_initial.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\Configuration.cs" />
-    <Compile Include="Models\DirekteOgDekompStopp.cs" />
     <Compile Include="Models\Diver_Compression.cs" />
     <Compile Include="Models\Diver_Pressurechamber.cs" />
     <Compile Include="Models\Diver_Standard.cs" />
-    <Compile Include="Models\Dykker.cs" />
-    <Compile Include="Models\Dykkerjournal.cs" />
     <Compile Include="Models\Journal.cs" />
-    <Compile Include="Models\Overflatekompresjon.cs" />
-    <Compile Include="Models\Utstyr.cs" />
     <Compile Include="New_Journal_Test.aspx.cs">
       <DependentUpon>New_Journal_Test.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -440,7 +430,6 @@
     <Compile Include="MainPage.aspx.designer.cs">
       <DependentUpon>MainPage.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Site.Master.cs">
       <DependentUpon>Site.Master</DependentUpon>
@@ -488,11 +477,6 @@
       <Project>{d5bb7d50-7c9e-4312-aec5-86d6f575ea93}</Project>
       <Name>DiverLibrary</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Migrations\201705131542575_initial.resx">
-      <DependentUpon>201705131542575_initial.cs</DependentUpon>
-    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
