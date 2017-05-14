@@ -14,32 +14,32 @@ namespace Divingjournal2.Models
         //PK
         public int Id { get; set; }
 
-        Subject subject { get; set; }
-        JournalType journalType { get; set; }
-        string courseNumber { get; set; }
-        string other { get; set; }
+        public Subject subject { get; set; }
+        public JournalType journalType { get; set; }
+        public string courseNumber { get; set; }
+        public string other { get; set; }
         public string date { get; set; }
         public string location { get; set; }
         public string divingSpot { get; set; }
-        string divingchief { get; set; }
-        string divingleader_teacher { get; set; }
-        string divingleader_student { get; set; }
-        string diver_1 { get; set; }
-        string diver_2 { get; set; }
-        string standby { get; set; }
-        string lineman_1 { get; set; }
-        string lineman_2 { get; set; }
-        string helpman { get; set; }
-        string helpman_assisting { get; set; }
-        string others { get; set; }
-        string airsystem_main { get; set; }
-        string airsystem_secondary { get; set; }
-        string oxygenForChamber_inUse { get; set; }
-        string oxygenForChamber_readyForUse { get; set; }
-        string emergencyGas_divingBell { get; set; }
-        string emergencyGas_divingBasket { get; set; }
-        string notes { get; set; }
-        string changelog { get; set; }
+        public string divingchief { get; set; }
+        public string divingleader_teacher { get; set; }
+        public string divingleader_student { get; set; }
+        public string diver_1 { get; set; }
+        public string diver_2 { get; set; }
+        public string standby { get; set; }
+        public string lineman_1 { get; set; }
+        public string lineman_2 { get; set; }
+        public string helpman { get; set; }
+        public string helpman_assisting { get; set; }
+        public string others { get; set; }
+        public string airsystem_main { get; set; }
+        public string airsystem_secondary { get; set; }
+        public string oxygenForChamber_inUse { get; set; }
+        public string oxygenForChamber_readyForUse { get; set; }
+        public string emergencyGas_divingBell { get; set; }
+        public string emergencyGas_divingBasket { get; set; }
+        public string notes { get; set; }
+        public string changelog { get; set; }
 
 
         //Links - to many
