@@ -11,7 +11,7 @@ namespace Divingjournal2
 {
     public partial class About : Page
     {
-
+        private Stopwatch stopWatch = new Stopwatch();
         private DateTime startTime;
         private DateTime stopTime;
         private TimeSpan ts;
@@ -56,6 +56,19 @@ namespace Divingjournal2
             }
         }
 
+        public Stopwatch StopWatch
+        {
+            get
+            {
+                return stopWatch;
+            }
+
+            set
+            {
+                stopWatch = value;
+            }
+        }
+
         protected override void OnInit(EventArgs e)
         {
 
@@ -83,8 +96,9 @@ namespace Divingjournal2
         public void tick()
         {
             stopTime = DateTime.Now;
-
-
+            stopWatch.Start();
+            stopWatch.Stop();
+            ts = stopWatch.Elapsed;
 
             Label1.Text = tickStopWatch(startTime, stopTime);
             
@@ -117,7 +131,10 @@ namespace Divingjournal2
                 hourString = "0" + hours.ToString();
             }
 
-            return hourString + ":" + minString + ":" + secString;
+            //return hourString + ":" + minString + ":" + secString;
+            string s = String.Format("{0:00}:{1:00}:{2:00}",
+            ts.Hours, ts.Minutes, ts.Seconds);
+            return s;
 
         }
 
@@ -128,10 +145,13 @@ namespace Divingjournal2
             if (Timer1.Enabled) {
                 Timer1.Enabled = false;
                 StartButton.Text = "Start";
+                stopWatch.Stop();
                 
             }
             else
             {
+                
+                stopWatch.Start();
                 StartTime = DateTime.Now;
                 Timer1.Enabled = true;
                 StartButton.Text = "Stopp";
