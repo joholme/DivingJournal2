@@ -41,6 +41,7 @@ namespace Divingjournal2.Models
         public string tableUsed_Minutes { get; set; }
         public string ascensionToFirstStop { get; set; }
         public string timeAtSafetyStop { get; set; }
+        public string N2GroupAfterDive { get; set; }
         public string isEverythingOK { get; set; }
 
         public string left18m { get; set; }

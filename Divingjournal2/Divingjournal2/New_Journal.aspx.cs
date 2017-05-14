@@ -4,83 +4,233 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using System.Diagnostics;
 using DiverLibrary;
 
-namespace Divingjournal
+namespace Divingjournal2
 {
-    public partial class New_Journal : Page
-    {
+   //testing branches
+   //git
+   //mer testing
 
-        Divingjournal2.TableMaker tm = new Divingjournal2.TableMaker();
+    public partial class New_Journal : System.Web.UI.Page
+    {
+        Journal j = new Journal(1);
+        
+        Diver d1 = new Diver();
+        Diver d2 = new Diver();
+        Diver sb = new Diver();
+        
+        
+
+
+        protected override void OnInit(EventArgs e)
+        {
+            JournalIDLabel.Text = j.JournalID.ToString();
+            StandardDiveButton.Enabled = false;
+            StandardDiveTable.Visible = true;
+            Calendar1.Visible = false;
+            
+
+            writeHeader("Standarddykk");
+
+            
+
+
+            base.OnInit(e);
+        }
 
         protected void Page_Load(object sender, EventArgs e)
         {
             
-            Diver divertest = new Diver("Jonas Holme");
-            Journal journaltest = new Journal(12);
-            divertest.CourseDive = "Test";
-            // diver2Row.Visible = false;
-
-            othersTextbox.Text = journaltest.JournalID.ToString();
-            divertest.Of_type = OF_Type.OF_Heavy;
-            journaltest.Subject = Subject.DYK600_Safety;
-
-            
-            
-            
-
-            if (!IsPostBack)
-            {
-                sw = new Stopwatch();
-                sw.Start();
-            }
-
         }
-
-        public static Stopwatch sw;
 
        
-
-        protected void tm1_Tick(object sender, EventArgs e)
+        
+        public void writeJournal()
         {
-            long sec = sw.Elapsed.Seconds;
-            long min = sw.Elapsed.Minutes;
+            
+            j.CourseNumber = CourseNrTextBox.Text;
+            j.Date = DateTextBox.Text;
+            j.Location = LocationTextBox.Text;
+            j.DivingSpot = DivingSpotTextBox.Text;
+            j.Subject = checkDropDownList();
+            j.Other = OtherTextBox.Text;
 
-            if (min < 60)
+            j.Divingchief = DivingChiefTextBox.Text;
+            j.Divingleader_teacher = Divingleader_teacherTextBox.Text;
+            j.Divingleader_student = Divingleader_studentTextBox.Text;
+            j.Diver_1 = d1.Name = Diver_1TextBox.Text;
+            j.Diver_2 = d2.Name = Diver_2TextBox.Text;
+            j.Standby = sb.Name = StandbyTextBox.Text;
+            j.Helpman = HelpmanTextBox.Text;
+            j.Helpman_assisting = Helpman_assistingTextBox.Text;
+            j.Lineman_1 = Lineman_1TextBox.Text;
+            j.Lineman_2 = Lineman_2TextBox.Text;
+            j.Others = OthersTextBox.Text;
+            j.Airsystem_main = airsystem_mainTextBox.Text;
+            j.Airsystem_secondary = airsystem_secondaryTextBox.Text;
+            j.OxygenForChamber_inUse = oxygenForChamber_inUseTextBox.Text;
+            j.OxygenForChamber_readyForUse = oxygenForChamber_readyForUseTextBox.Text;
+            j.EmergencyGas_divingBell = emergencyGas_divingBellTextBox.Text;
+            j.EmergencyGas_divingBasket = emergencyGas_divingBasketTextBox.Text;
+
+            
+            
+            Session["journal"] = j;
+
+          /*  Journal k = (DiverLibrary.Journal)Session["journal"];
+
+            string str = k.DivingSpot + " " + k.Location;
+            
+            Response.Write(str); */
+            
+
+
+
+
+        }
+
+        public Subject checkDropDownList()
+        {
+            Subject s = Subject.DYK600_Safety;
+           int value = SubjectDropDownList.SelectedIndex;
+            switch (SubjectDropDownList.SelectedIndex)
             {
-                if (min < 10)
-                    Label1.Text = "0" + min;
-                else
-                    Label1.Text = min.ToString();
-
-                Label1.Text += " : ";
-
-                if (sec < 10)
-                    Label1.Text += "0" + sec;
-                else
-                    Label1.Text += sec.ToString();
+                case 1:
+                    s = Subject.DYK601_Facilities;
+                    break;
+                case 2:
+                    s = Subject.DYK601_Plumbing;
+                    break;
+                case 3:
+                    s = Subject.DYK601_Saving;
+                    break;
+                case 4:
+                    s = Subject.RED110_Saving;
+                    break;
+                default:
+                    break;
             }
-            else
+                    return s;
+            }
+
+        protected void SessionButton_Click(object sender, EventArgs e)
+        {
+            writeJournal();
+
+        }
+
+        protected void SubmitButton_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("/Default.aspx");
+        }
+
+        protected void StandardDiveButton_Click(object sender, EventArgs e)
+        {
+            j.JournalType = JournalType.direct;
+            checkJournalID(j.JournalType);
+        }
+
+        protected void SurfaceCompressionDiveButton_Click(object sender, EventArgs e)
+        {
+            j.JournalType = JournalType.surfaceCompression;
+            checkJournalID(j.JournalType);
+
+        }
+
+        protected void PressureChamberDiveButton_Click(object sender, EventArgs e)
+        {
+            j.JournalType = JournalType.pressurechamber;
+            checkJournalID(j.JournalType);
+
+
+        }
+
+        public void writeHeader(string diveType)
+        {
+            HeaderLabel.Text = string.Format("<h1>{0}</h1>", "Dykkerjournal - " + diveType);
+        }
+
+        public void checkJournalID(JournalType journaltype) 
+        {
+            if (journaltype == JournalType.direct)
             {
-                sw.Stop();
-                Response.Redirect("Timeout.aspx");
+                StandardDiveTable.Visible = true;
+                SurfaceCompressionDiveTable.Visible = false;
+
+                StandardDiveButton.Enabled = false;
+                SurfaceCompressionDiveButton.Enabled = true;
+                PressureChamberDiveButton.Enabled = true;
+
+                writeHeader("Standarddykk");
+
+            } else if (journaltype == JournalType.surfaceCompression) {
+
+                StandardDiveTable.Visible = false;
+                SurfaceCompressionDiveTable.Visible = true;
+
+                StandardDiveButton.Enabled = true;
+                SurfaceCompressionDiveButton.Enabled = false;
+                PressureChamberDiveButton.Enabled = true;
+
+                writeHeader("Overflatekompresjon");
+
+            } else //Pressurechamber dive
+            {
+                StandardDiveTable.Visible = false;
+                SurfaceCompressionDiveTable.Visible = false;
+                //PressurechamberDiveTable.Visible = true, when made.
+
+                StandardDiveButton.Enabled = true;
+                SurfaceCompressionDiveButton.Enabled = true;
+                PressureChamberDiveButton.Enabled = false;
+
+                writeHeader("Trykkammer");
             }
         }
 
-        protected void largeButton_Click(object sender, EventArgs e)
+        protected void DateButton_Click(object sender, EventArgs e)
         {
-            
-            // tm.addTable(Panel1, 2, 2);
-            tm.journalTableMaster(Panel1);
-            
+            Calendar1.Visible = true;
         }
 
-        protected void submitButton_Click(object sender, EventArgs e)
+        protected void Calendar1_SelectionChanged(object sender, EventArgs e)
+        {
+            DateTextBox.Text = Calendar1.SelectedDate.ToShortDateString();
+            Calendar1.Visible = false;
+        }
+
+        //Help method for finding textbox by ID. Used in addTime()
+        private Control FindControlRecursive(Control rootControl, string controlID)
+        {
+            if (rootControl.ID == controlID) return rootControl;
+
+            foreach (Control controlToSearch in rootControl.Controls)
+            {
+                Control controlToReturn =
+                    FindControlRecursive(controlToSearch, controlID);
+                if (controlToReturn != null) return controlToReturn;
+            }
+            return null;
+        }
+
+
+        public void addTime(TextBox textbox)
         {
             
-            
+
+            textbox.Text = "Kl " + DateTime.Now.ToShortTimeString();
+        }
+
+        protected void TimeButton_Click(object sender, EventArgs e)
+        {
+            Button button = (Button)sender;
+            if (button.CommandArgument != null)
+            {
+                TextBox textbox = (TextBox)FindControlRecursive(Page, button.CommandArgument);
+                textbox.Text = "Kl " + DateTime.Now.ToShortTimeString();
+            }
         }
     }
-
-}
+        
+    }
