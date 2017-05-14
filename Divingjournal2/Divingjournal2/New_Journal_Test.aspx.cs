@@ -10,6 +10,7 @@ namespace Divingjournal2
 {
    //testing branches
    //git
+   //mer testing
 
     public partial class New_Journal_Test : System.Web.UI.Page
     {
@@ -116,6 +117,7 @@ namespace Divingjournal2
         protected void SessionButton_Click(object sender, EventArgs e)
         {
             writeJournal();
+
         }
 
         protected void SubmitButton_Click(object sender, EventArgs e)

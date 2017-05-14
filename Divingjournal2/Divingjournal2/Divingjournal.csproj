@@ -397,6 +397,7 @@
     <Compile Include="Models\Diver_Compression.cs" />
     <Compile Include="Models\Diver_Pressurechamber.cs" />
     <Compile Include="Models\Diver_Standard.cs" />
+    <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\Journal.cs" />
     <Compile Include="New_Journal_Test.aspx.cs">
       <DependentUpon>New_Journal_Test.aspx</DependentUpon>
