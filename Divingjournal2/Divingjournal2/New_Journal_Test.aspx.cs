@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using DiverLibrary;
+using Divingjournal2.DAL;
 
 namespace Divingjournal2
 {
@@ -116,8 +117,28 @@ namespace Divingjournal2
 
         protected void SessionButton_Click(object sender, EventArgs e)
         {
-            writeJournal();
+            WriteToDatabase();
 
+        }
+
+        private void WriteToDatabase()
+        {
+            using (var db = new DivingJournalContext())
+            {
+                var journal = new Models.Journal {
+                    //map data fra webform til journal
+
+                };
+                db.Journals.Add(journal);
+                db.SaveChanges();
+
+                var diver = new Models.Diver_Standard {
+                    //map data fra webform til diver_standard
+
+                };
+                db.Diver_Standards.Add(diver);
+                db.SaveChanges();
+            }
         }
 
         protected void SubmitButton_Click(object sender, EventArgs e)
