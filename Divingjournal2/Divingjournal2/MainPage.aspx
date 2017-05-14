@@ -7,7 +7,7 @@
     <title></title>
     <style type="text/css">
         #form1 {
-            width: 247px;
+            width: 223px;
         }
     </style>
 </head>
@@ -25,8 +25,6 @@
         <br />
         <asp:Button ID="btn_LogOut" runat="server" Text="Logg ut" Width="200px" />
     
-        <br />
-        <br />
         <br />
     
     </form>

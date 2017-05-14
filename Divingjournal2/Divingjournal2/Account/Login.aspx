@@ -11,7 +11,7 @@
     <div>
     
         Logg inn her</div>
-        Username&nbsp;&nbsp;&nbsp;&nbsp;
+        Username&nbsp; &nbsp;
         <asp:TextBox ID="txt_UserName" runat="server"></asp:TextBox>
         <br />
         Password&nbsp;&nbsp;&nbsp; 

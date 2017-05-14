@@ -4,15 +4,12 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using System;
 
-
-namespace Divingjournal2
+namespace Divingjournal2.Account
 {
-    public partial class MainPage : Page
-
+    public partial class Registration : System.Web.UI.Page
     {
-        public MainPage()
+        protected void Page_Load(object sender, EventArgs e)
         {
 
         }
