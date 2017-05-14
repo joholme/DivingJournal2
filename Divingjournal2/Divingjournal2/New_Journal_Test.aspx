@@ -1144,10 +1144,11 @@
 </ContentTemplate>
                             </asp:UpdatePanel>
     
+   
 
-    <div style="text-align:center;">
+    <div style="text-align:center; padding:0px; height:22px; width:auto;">
 
-        <asp:Table ID="SurfaceCompressionDiveTable" runat="server" Visible="False" GridLines="Both" Width ="50%">
+        <asp:Table ID="SurfaceCompressionDiveTable" runat="server" Visible="False" GridLines="Both" HorizontalAlign="Left">
 
             <asp:TableRow runat="server">
                 <asp:TableCell runat="server">Dykker 1</asp:TableCell>
@@ -1156,16 +1157,34 @@
                 <asp:TableCell runat="server">Standby</asp:TableCell>
             </asp:TableRow>
             <asp:TableRow runat="server">
-                <asp:TableCell runat="server"></asp:TableCell>
+                <asp:TableCell runat="server">
+                    <asp:TextBox ID="D1Comp_leftSurface" runat="server" Width="75"></asp:TextBox>
+                    <asp:Button ID="Button37" runat="server" Text="Sett inn" CommandArgument="D1Comp_leftSurface" OnClick="TimeButton_Click"/>
+                </asp:TableCell>
                 <asp:TableCell runat="server">Forlot overflaten</asp:TableCell>
-                <asp:TableCell runat="server"></asp:TableCell>
-                <asp:TableCell runat="server"></asp:TableCell>
+                <asp:TableCell runat="server">
+                    <asp:Button ID="Button41" runat="server" Text="Sett inn" CommandArgument="D2Comp_leftSurface" OnClick="TimeButton_Click"/>
+                    <asp:TextBox ID="D2Comp_leftSurface" runat="server" Width="75"></asp:TextBox>
+                </asp:TableCell>
+                <asp:TableCell runat="server">
+                    <asp:TextBox ID="SBComp_leftSurface" runat="server" Width="75"></asp:TextBox>
+                    <asp:Button ID="Button38" runat="server" Text="Sett inn" CommandArgument="SBComp_leftSurface" OnClick="TimeButton_Click"/>
+                </asp:TableCell>
             </asp:TableRow>
             <asp:TableRow runat="server">
-                <asp:TableCell runat="server"></asp:TableCell>
+                <asp:TableCell runat="server">
+                    <asp:TextBox ID="TextBox15" runat="server" Width="75"></asp:TextBox>
+                    <asp:Button ID="Button39" runat="server" Text="Sett inn" CommandArgument="SBreachedSurface" OnClick="TimeButton_Click"/>
+                </asp:TableCell>
                 <asp:TableCell runat="server">På bunn</asp:TableCell>
-                <asp:TableCell runat="server"></asp:TableCell>
-                <asp:TableCell runat="server"></asp:TableCell>
+                <asp:TableCell runat="server">
+                    <asp:Button ID="Button42" runat="server" Text="Sett inn" CommandArgument="D2reachedSurface" OnClick="TimeButton_Click"/>
+                    <asp:TextBox ID="TextBox18" runat="server" Width="75"></asp:TextBox>
+                </asp:TableCell>
+                <asp:TableCell runat="server">
+                    <asp:TextBox ID="TextBox16" runat="server" Width="75"></asp:TextBox>
+                    <asp:Button ID="Button40" runat="server" Text="Sett inn" CommandArgument="SBreachedSurface" OnClick="TimeButton_Click"/>
+                </asp:TableCell>
             </asp:TableRow>
             <asp:TableRow runat="server">
                 <asp:TableCell runat="server"></asp:TableCell>

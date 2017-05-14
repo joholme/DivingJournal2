@@ -16,7 +16,7 @@ namespace Divingjournal2.Models
 
         //FK
         public int JournalID { get; set; }
-
+        
         public string name { get; set;}
         public OF_Type of_type { get; set; }
 
