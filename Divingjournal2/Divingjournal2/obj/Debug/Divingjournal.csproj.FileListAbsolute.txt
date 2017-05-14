@@ -161,3 +161,6 @@ C:\Users\Ørjan Magnus Eide\Source\Repos\DivingJournal22\Divingjournal2\Divingjo
 C:\Users\Ørjan Magnus Eide\Source\Repos\DivingJournal22\Divingjournal2\Divingjournal2\obj\Debug\Divingjournal.csprojResolveAssemblyReference.cache
 C:\Users\Ørjan Magnus Eide\Source\Repos\DivingJournal22\Divingjournal2\Divingjournal2\obj\Debug\Divingjournal2.dll
 C:\Users\Ørjan Magnus Eide\Source\Repos\DivingJournal22\Divingjournal2\Divingjournal2\obj\Debug\Divingjournal2.pdb
+C:\Users\Ørjan Magnus Eide\Source\Repos\DivingJournal23\Divingjournal2\Divingjournal2\obj\Debug\Divingjournal.csprojResolveAssemblyReference.cache
+C:\Users\Ørjan Magnus Eide\Source\Repos\DivingJournal23\Divingjournal2\Divingjournal2\obj\Debug\Divingjournal2.dll
+C:\Users\Ørjan Magnus Eide\Source\Repos\DivingJournal23\Divingjournal2\Divingjournal2\obj\Debug\Divingjournal2.pdb
