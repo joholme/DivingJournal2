@@ -126,6 +126,7 @@
 
                     </asp:TableRow>
                 </asp:Table>
+                <asp:Button ID="Button43" runat="server" OnClick="Button43_Click" Text="Lagre" />
            </asp:Panel>
 
 

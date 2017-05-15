@@ -9,9 +9,7 @@ using Divingjournal2.DAL;
 
 namespace Divingjournal2
 {
-   //testing branches
-   //git
-   //mer testing
+  
 
     public partial class New_Journal_Test : System.Web.UI.Page
     {
@@ -251,6 +249,17 @@ namespace Divingjournal2
                 TextBox textbox = (TextBox)FindControlRecursive(Page, button.CommandArgument);
                 textbox.Text = "Kl " + DateTime.Now.ToShortTimeString();
             }
+        }
+
+        protected void Button43_Click(object sender, EventArgs e)
+        {
+            CahceData();
+        }
+
+        private void CahceData()
+        {
+            //Tilnærmet identisk som i WriteToDatabase()
+
         }
     }
         
