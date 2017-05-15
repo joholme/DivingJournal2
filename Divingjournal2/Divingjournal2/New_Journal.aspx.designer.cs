@@ -13,15 +13,6 @@ namespace Divingjournal2 {
     public partial class New_Journal {
         
         /// <summary>
-        /// Panel1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Panel Panel1;
-        
-        /// <summary>
         /// HeaderLabel control.
         /// </summary>
         /// <remarks>
@@ -65,15 +56,6 @@ namespace Divingjournal2 {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button PressureChamberDiveButton;
-        
-        /// <summary>
-        /// FirstAndSecondInfoPanel control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Panel FirstAndSecondInfoPanel;
         
         /// <summary>
         /// FirstInfoTable control.
@@ -148,13 +130,13 @@ namespace Divingjournal2 {
         protected global::System.Web.UI.WebControls.Calendar Calendar1;
         
         /// <summary>
-        /// SecondInfoTable control.
+        /// MainInfoTable control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Table SecondInfoTable;
+        protected global::System.Web.UI.WebControls.Table MainInfoTable;
         
         /// <summary>
         /// DateRow control.
@@ -299,24 +281,6 @@ namespace Divingjournal2 {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox OtherTextBox;
-        
-        /// <summary>
-        /// CrewInfoPanel control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Panel CrewInfoPanel;
-        
-        /// <summary>
-        /// CrewInfoTable control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Table CrewInfoTable;
         
         /// <summary>
         /// TableRow4 control.
@@ -616,24 +580,6 @@ namespace Divingjournal2 {
         protected global::System.Web.UI.WebControls.TextBox OthersTextBox;
         
         /// <summary>
-        /// AirInfoPanel control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Panel AirInfoPanel;
-        
-        /// <summary>
-        /// AirInfoTable control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Table AirInfoTable;
-        
-        /// <summary>
         /// TableRow15 control.
         /// </summary>
         /// <remarks>
@@ -760,22 +706,31 @@ namespace Divingjournal2 {
         protected global::System.Web.UI.WebControls.TextBox oxygenForChamber_readyForUseTextBox;
         
         /// <summary>
-        /// TableRow21 control.
+        /// TransportCheckBoxList control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TableRow TableRow21;
+        protected global::System.Web.UI.WebControls.CheckBoxList TransportCheckBoxList;
         
         /// <summary>
-        /// TableRow22 control.
+        /// EmergencyGasRow1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TableRow TableRow22;
+        protected global::System.Web.UI.WebControls.TableRow EmergencyGasRow1;
+        
+        /// <summary>
+        /// EmergencyGasRow2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TableRow EmergencyGasRow2;
         
         /// <summary>
         /// TableCell12 control.
@@ -796,13 +751,13 @@ namespace Divingjournal2 {
         protected global::System.Web.UI.WebControls.TextBox emergencyGas_divingBellTextBox;
         
         /// <summary>
-        /// TableRow23 control.
+        /// EmergencyGasRow3 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TableRow TableRow23;
+        protected global::System.Web.UI.WebControls.TableRow EmergencyGasRow3;
         
         /// <summary>
         /// TableCell13 control.
@@ -877,22 +832,67 @@ namespace Divingjournal2 {
         protected global::System.Web.UI.WebControls.CheckBox D1RepeatedAirCheckBox;
         
         /// <summary>
-        /// TransportRadioButtonList control.
+        /// D1N2GroupBeforeDiveTable control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButtonList TransportRadioButtonList;
+        protected global::System.Web.UI.WebControls.Table D1N2GroupBeforeDiveTable;
         
         /// <summary>
-        /// VolumeTable control.
+        /// TableRow24 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Table VolumeTable;
+        protected global::System.Web.UI.WebControls.TableRow TableRow24;
+        
+        /// <summary>
+        /// D1N2GroupBeforeDiveTextBox control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox D1N2GroupBeforeDiveTextBox;
+        
+        /// <summary>
+        /// D1NitroxPercentTable control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Table D1NitroxPercentTable;
+        
+        /// <summary>
+        /// NitroxPercentRow control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TableRow NitroxPercentRow;
+        
+        /// <summary>
+        /// D1NitroxPercentTextbox control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox D1NitroxPercentTextbox;
+        
+        /// <summary>
+        /// D1VolumeTable control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Table D1VolumeTable;
         
         /// <summary>
         /// BreathingGearRow control.
@@ -904,13 +904,13 @@ namespace Divingjournal2 {
         protected global::System.Web.UI.WebControls.TableRow BreathingGearRow;
         
         /// <summary>
-        /// BreathingGearTextBox control.
+        /// D1BreathingGearTextBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox BreathingGearTextBox;
+        protected global::System.Web.UI.WebControls.TextBox D1BreathingGearTextBox;
         
         /// <summary>
         /// VolumeTitleRow control.
@@ -931,13 +931,13 @@ namespace Divingjournal2 {
         protected global::System.Web.UI.WebControls.TableRow VolumeRow;
         
         /// <summary>
-        /// VolumeTextBox control.
+        /// D1VolumeTextBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox VolumeTextBox;
+        protected global::System.Web.UI.WebControls.TextBox D1VolumeTextBox;
         
         /// <summary>
         /// PressureRow control.
@@ -949,13 +949,13 @@ namespace Divingjournal2 {
         protected global::System.Web.UI.WebControls.TableRow PressureRow;
         
         /// <summary>
-        /// PressureTextBox control.
+        /// D1PressureTextBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox PressureTextBox;
+        protected global::System.Web.UI.WebControls.TextBox D1PressureTextBox;
         
         /// <summary>
         /// PlannedDepthTitleRow control.
@@ -976,13 +976,13 @@ namespace Divingjournal2 {
         protected global::System.Web.UI.WebControls.TableRow PlannedDepthRow;
         
         /// <summary>
-        /// PlannedDepthTextBox control.
+        /// D1PlannedDepthTextBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox PlannedDepthTextBox;
+        protected global::System.Web.UI.WebControls.TextBox D1PlannedDepthTextBox;
         
         /// <summary>
         /// PlannedTimeRow control.
@@ -994,13 +994,13 @@ namespace Divingjournal2 {
         protected global::System.Web.UI.WebControls.TableRow PlannedTimeRow;
         
         /// <summary>
-        /// PlannedTimeTextBox control.
+        /// D1PlannedTimeTextBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox PlannedTimeTextBox;
+        protected global::System.Web.UI.WebControls.TextBox D1PlannedTimeTextBox;
         
         /// <summary>
         /// CourseDiveRow control.
@@ -1012,13 +1012,13 @@ namespace Divingjournal2 {
         protected global::System.Web.UI.WebControls.TableRow CourseDiveRow;
         
         /// <summary>
-        /// CourseDiveTextBox control.
+        /// D1CourseDiveTextBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox CourseDiveTextBox;
+        protected global::System.Web.UI.WebControls.TextBox D1CourseDiveTextBox;
         
         /// <summary>
         /// Diver2Cell control.
@@ -1030,6 +1030,231 @@ namespace Divingjournal2 {
         protected global::System.Web.UI.WebControls.TableCell Diver2Cell;
         
         /// <summary>
+        /// D2OF_TypeDropDownList control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList D2OF_TypeDropDownList;
+        
+        /// <summary>
+        /// D2DirectDropDownList control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList D2DirectDropDownList;
+        
+        /// <summary>
+        /// D2AirTypeDropDownList control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList D2AirTypeDropDownList;
+        
+        /// <summary>
+        /// D2RepeatedAirCheckBox control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CheckBox D2RepeatedAirCheckBox;
+        
+        /// <summary>
+        /// Table2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Table Table2;
+        
+        /// <summary>
+        /// TableRow21 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TableRow TableRow21;
+        
+        /// <summary>
+        /// D2N2GroupBeforeDiveTextBox control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox D2N2GroupBeforeDiveTextBox;
+        
+        /// <summary>
+        /// D2NitroxPercentTable control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Table D2NitroxPercentTable;
+        
+        /// <summary>
+        /// TableRow22 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TableRow TableRow22;
+        
+        /// <summary>
+        /// D2NitroxPercentTextbox control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox D2NitroxPercentTextbox;
+        
+        /// <summary>
+        /// Table4 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Table Table4;
+        
+        /// <summary>
+        /// TableRow23 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TableRow TableRow23;
+        
+        /// <summary>
+        /// D2BreathingGearTextBox control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox D2BreathingGearTextBox;
+        
+        /// <summary>
+        /// TableRow25 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TableRow TableRow25;
+        
+        /// <summary>
+        /// TableRow26 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TableRow TableRow26;
+        
+        /// <summary>
+        /// D2VolumeTextBox control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox D2VolumeTextBox;
+        
+        /// <summary>
+        /// TableRow27 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TableRow TableRow27;
+        
+        /// <summary>
+        /// D2PressureTextBox control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox D2PressureTextBox;
+        
+        /// <summary>
+        /// TableRow28 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TableRow TableRow28;
+        
+        /// <summary>
+        /// TableRow29 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TableRow TableRow29;
+        
+        /// <summary>
+        /// D2PlannedDepthTextBox control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox D2PlannedDepthTextBox;
+        
+        /// <summary>
+        /// TableRow30 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TableRow TableRow30;
+        
+        /// <summary>
+        /// D2PlannedTimeTextBox control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox D2PlannedTimeTextBox;
+        
+        /// <summary>
+        /// TableRow31 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TableRow TableRow31;
+        
+        /// <summary>
+        /// D2CourseDiveTextBox control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox D2CourseDiveTextBox;
+        
+        /// <summary>
         /// StandbyCell control.
         /// </summary>
         /// <remarks>
@@ -1037,6 +1262,231 @@ namespace Divingjournal2 {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TableCell StandbyCell;
+        
+        /// <summary>
+        /// SBOF_TypeDropDownList control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList SBOF_TypeDropDownList;
+        
+        /// <summary>
+        /// SBDirectDropDownList control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList SBDirectDropDownList;
+        
+        /// <summary>
+        /// SBAirTypeDropDownList control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList SBAirTypeDropDownList;
+        
+        /// <summary>
+        /// SBRepeatedAirCheckBox control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CheckBox SBRepeatedAirCheckBox;
+        
+        /// <summary>
+        /// Table5 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Table Table5;
+        
+        /// <summary>
+        /// TableRow32 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TableRow TableRow32;
+        
+        /// <summary>
+        /// SBN2GroupBeforeDiveTextBox control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox SBN2GroupBeforeDiveTextBox;
+        
+        /// <summary>
+        /// SBNitroxPercentTable control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Table SBNitroxPercentTable;
+        
+        /// <summary>
+        /// TableRow33 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TableRow TableRow33;
+        
+        /// <summary>
+        /// SBNitroxPercentTextbox control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox SBNitroxPercentTextbox;
+        
+        /// <summary>
+        /// Table7 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Table Table7;
+        
+        /// <summary>
+        /// TableRow34 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TableRow TableRow34;
+        
+        /// <summary>
+        /// SBBreathingGearTextBox control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox SBBreathingGearTextBox;
+        
+        /// <summary>
+        /// TableRow35 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TableRow TableRow35;
+        
+        /// <summary>
+        /// TableRow36 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TableRow TableRow36;
+        
+        /// <summary>
+        /// SBVolumeTextBox control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox SBVolumeTextBox;
+        
+        /// <summary>
+        /// TableRow37 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TableRow TableRow37;
+        
+        /// <summary>
+        /// SBPressureTextBox control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox SBPressureTextBox;
+        
+        /// <summary>
+        /// TableRow38 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TableRow TableRow38;
+        
+        /// <summary>
+        /// TableRow39 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TableRow TableRow39;
+        
+        /// <summary>
+        /// SBPlannedDepthTextBox control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox SBPlannedDepthTextBox;
+        
+        /// <summary>
+        /// TableRow40 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TableRow TableRow40;
+        
+        /// <summary>
+        /// SBPlannedTimeTextBox control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox SBPlannedTimeTextBox;
+        
+        /// <summary>
+        /// TableRow41 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TableRow TableRow41;
+        
+        /// <summary>
+        /// SBCourseDiveTextBox control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox SBCourseDiveTextBox;
         
         /// <summary>
         /// StopWatchTable control.
@@ -1066,13 +1516,13 @@ namespace Divingjournal2 {
         protected global::AjaxControlToolkit.DropShadowExtender StopWatchTable_DropShadowExtender;
         
         /// <summary>
-        /// UpdatePanelTest control.
+        /// UpdatePanel1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.UpdatePanel UpdatePanelTest;
+        protected global::System.Web.UI.UpdatePanel UpdatePanel1;
         
         /// <summary>
         /// StandardDiveTable control.
@@ -2713,6 +3163,15 @@ namespace Divingjournal2 {
         protected global::System.Web.UI.WebControls.Button Button56;
         
         /// <summary>
+        /// ChamberSealedButton control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button ChamberSealedButton;
+        
+        /// <summary>
         /// D1Comp_reached15mInChamber control.
         /// </summary>
         /// <remarks>
@@ -3415,13 +3874,85 @@ namespace Divingjournal2 {
         protected global::System.Web.UI.WebControls.DropDownList SBComp_isEverythingOKDropDownList;
         
         /// <summary>
-        /// SessionButton control.
+        /// UpdatePanel2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button SessionButton;
+        protected global::System.Web.UI.UpdatePanel UpdatePanel2;
+        
+        /// <summary>
+        /// PressureChamberDiveTable control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Table PressureChamberDiveTable;
+        
+        /// <summary>
+        /// PopupPanel control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Panel PopupPanel;
+        
+        /// <summary>
+        /// SaveToDatabaseButton control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button SaveToDatabaseButton;
+        
+        /// <summary>
+        /// CancelPopupButton control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button CancelPopupButton;
+        
+        /// <summary>
+        /// Label1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Label1;
+        
+        /// <summary>
+        /// PopupPanel_AlwaysVisibleControlExtender control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::AjaxControlToolkit.AlwaysVisibleControlExtender PopupPanel_AlwaysVisibleControlExtender;
+        
+        /// <summary>
+        /// PopupPanel_DropShadowExtender control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::AjaxControlToolkit.DropShadowExtender PopupPanel_DropShadowExtender;
+        
+        /// <summary>
+        /// PopupPanel_PopupControlExtender control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::AjaxControlToolkit.PopupControlExtender PopupPanel_PopupControlExtender;
         
         /// <summary>
         /// SubmitButton control.
@@ -3431,5 +3962,23 @@ namespace Divingjournal2 {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button SubmitButton;
+        
+        /// <summary>
+        /// NotesTextBox control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox NotesTextBox;
+        
+        /// <summary>
+        /// NotesTextBox_ResizableControlExtender control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::AjaxControlToolkit.ResizableControlExtender NotesTextBox_ResizableControlExtender;
     }
 }

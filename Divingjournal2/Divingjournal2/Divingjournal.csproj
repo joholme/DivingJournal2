@@ -257,7 +257,6 @@
     <Content Include="Stopwatch.js" />
     <Content Include="StopWatch2.js" />
     <Content Include="Stopwatch3.js" />
-    <Content Include="TestWebForm_stopwatch.aspx" />
     <Content Include="ViewSwitcher.ascx" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
@@ -398,6 +397,7 @@
     <Compile Include="Models\Diver_Standard.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\Journal.cs" />
+    <Compile Include="Models\Journal_Pressurechamber.cs" />
     <Compile Include="New_Journal.aspx.cs">
       <DependentUpon>New_Journal.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -446,14 +446,6 @@
       <DependentUpon>StartPage.aspx</DependentUpon>
     </Compile>
     <Compile Include="Startup.cs" />
-    <Compile Include="TestClass.cs" />
-    <Compile Include="TestWebForm_stopwatch.aspx.cs">
-      <DependentUpon>TestWebForm_stopwatch.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="TestWebForm_stopwatch.aspx.designer.cs">
-      <DependentUpon>TestWebForm_stopwatch.aspx</DependentUpon>
-    </Compile>
     <Compile Include="ViewSwitcher.ascx.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

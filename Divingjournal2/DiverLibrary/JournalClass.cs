@@ -394,6 +394,13 @@ namespace DiverLibrary
     }
     public class Journal_chamber : Journal
     {
+        int id;
+        string date;
+        string location;
+
+        string divingChief;
+        string divingLeader;
+        
         string chamber;
         string purpose;
         string chamberOperator;

@@ -10,10 +10,10 @@
     <asp:Button ID="NewJournalButton" runat="server" Text="Opprett journal" Width="300" Height="300" OnClick="NewJournalButton_Click" CssClass="btn-primary" Font-Size="XX-Large" />
     </asp:TableCell>
                 <asp:TableCell>
-    <asp:Button ID="GetJournalButton" runat="server" Text="Hent journal" Width="300" Height="300" OnClick="GetJournalButton_Click" CssClass="btn-primary" Font-Size="XX-Large"/>
+    <asp:Button ID="GetJournalButton" runat="server" Text="Mine journaler" Width="300" Height="300" OnClick="GetJournalButton_Click" CssClass="btn-primary" Font-Size="XX-Large"/>
                     </asp:TableCell>
                 <asp:TableCell>
-    <asp:Button ID="Button2" runat="server" Text="Random knapp" Width="300" Height="300" OnClick="Button2_Click" CssClass="btn-primary" Font-Size="XX-Large"/>
+    <asp:Button ID="Button2" runat="server" Text="Søk etter journal" Width="300" Height="300" OnClick="Button2_Click" CssClass="btn-primary" Font-Size="XX-Large"/>
                     </asp:TableCell>
                 </asp:TableRow>
             </asp:Table>

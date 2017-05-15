@@ -1,4 +1,4 @@
-﻿<%@ Page Title="Ny journal - test" Language="C#"  MasterPageFile="~/Site.Master" AutoEventWireup="True" CodeBehind="New_Journal.aspx.cs" Inherits="Divingjournal2.New_Journal"%>
+﻿<%@ Page Title="Ny journal" Language="C#"  MasterPageFile="~/Site.Master" AutoEventWireup="True" CodeBehind="New_Journal.aspx.cs" Inherits="Divingjournal2.New_Journal"%>
 
 
 
@@ -10,8 +10,8 @@
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
 
-    
-        <asp:Panel ID="Panel1" runat="server">
+    <asp:UpdatePanel runat="server"><ContentTemplate>
+        
             <asp:Label ID="HeaderLabel" runat="server"></asp:Label>
             <h1 id = "h1Title"></h1>
             <asp:Panel ID="JournalTypeButtonPanel" runat="server">
@@ -21,7 +21,7 @@
                 <asp:Button ID="PressureChamberDiveButton" runat="server" Text="Trykkammer" Width ="25%" OnClick="PressureChamberDiveButton_Click"/>
 
             </asp:Panel>
-            <asp:Panel ID="FirstAndSecondInfoPanel" runat="server">
+            
                 <asp:Table ID="FirstInfoTable" runat="server" BorderStyle="None" CellPadding="1" CellSpacing="1" HorizontalAlign="Right" Font-Size="X-Large">
                     <asp:TableRow ID="JournalIDRow" runat="server" >
 
@@ -57,10 +57,14 @@
                     <TodayDayStyle BackColor="#CCCCCC" />
                 </asp:Calendar>
 
+       <asp:Panel runat="server">
 
+                <div style="text-align:right; padding:0px; height: 22px; width: auto;">
+
+                   <asp:Table ID="MainInfoTable" runat="server" Visible="True" HorizontalAlign="Left">
                 
 
-                <asp:Table ID="SecondInfoTable" runat="server" BorderStyle="None" CellPadding="1" CellSpacing="1" >
+                
                     <asp:TableRow ID="DateRow" runat="server" >
 
                         <asp:TableCell runat="server" >
@@ -125,13 +129,13 @@
 </asp:TableCell>
 
                     </asp:TableRow>
-                </asp:Table>
-           </asp:Panel>
+                
+           
 
 
 
-            <asp:Panel ID="CrewInfoPanel" runat="server">
-                <asp:Table ID="CrewInfoTable" runat="server"  CellPadding="1" CellSpacing="1" >
+            
+              
                     <asp:TableRow ID="TableRow4" runat="server" BorderStyle="None" >
 
                         <asp:TableCell runat="server" >Dykkesjef</asp:TableCell>
@@ -255,7 +259,7 @@
                     </asp:TableRow>
 
                     <asp:TableRow ID="TableRow14" runat="server">
-                        <asp:TableCell runat="server" >Andre</asp:TableCell>
+                        <asp:TableCell runat="server">Andre</asp:TableCell>
                         <asp:TableCell ID="TableCell11" runat="server" >
                             <asp:TextBox ID="OthersTextBox" runat="server" ></asp:TextBox>
                         
@@ -265,17 +269,15 @@
 </asp:TableCell>
 
                     </asp:TableRow>
-                </asp:Table>
-            </asp:Panel>
-
-            <asp:Panel ID="AirInfoPanel" runat="server" >
-
-            </asp:Panel>
+                
             
-        </asp:Panel>
+
+            
+            
+      
     
 
-                <asp:Table ID="AirInfoTable" runat="server"  CellPadding="1" CellSpacing="1" >
+          
                     <asp:TableRow ID="TableRow15" runat="server" >
 
                         <asp:TableHeaderCell CssClass="tableCellHeaderStyle">Luftsystem</asp:TableHeaderCell>
@@ -328,13 +330,24 @@
 
                     </asp:TableRow>
 
-                    <asp:TableRow ID="TableRow21" runat="server" >
+                       <asp:TableHeaderRow>
+                           <asp:TableHeaderCell>
+                               <asp:CheckBoxList ID="TransportCheckBoxList" AutoPostBack="true" RepeatDirection="Horizontal" runat="server" OnSelectedIndexChanged="TransportCheckBoxList_SelectedIndexChanged">
+        
+            <asp:ListItem Value="0">Dykkekurv</asp:ListItem>
+            <asp:ListItem Value="1">Våtklokke</asp:ListItem>
+
+                </asp:CheckBoxList>
+                           </asp:TableHeaderCell>
+                       </asp:TableHeaderRow>
+
+                    <asp:TableRow ID="EmergencyGasRow1" runat="server" Visible="false">
 
                         <asp:TableHeaderCell CssClass="tableCellHeaderStyle">Nødgass</asp:TableHeaderCell>
 
                     </asp:TableRow>
 
-                    <asp:TableRow ID="TableRow22" runat="server">
+                    <asp:TableRow ID="EmergencyGasRow2" runat="server" Visible="false">
 
                         <asp:TableCell runat="server" >Våtklokke</asp:TableCell>
                         <asp:TableCell ID="TableCell12" runat="server" >
@@ -344,7 +357,7 @@
 </asp:TableCell>
 
                     </asp:TableRow>
-                    <asp:TableRow ID="TableRow23" runat="server">
+                    <asp:TableRow ID="EmergencyGasRow3" runat="server" Visible="false">
                         <asp:TableCell runat="server" >Dykkekurv</asp:TableCell>
                         <asp:TableCell ID="TableCell13" runat="server" >
                             <asp:TextBox ID="emergencyGas_divingBasketTextBox" runat="server" ></asp:TextBox>
@@ -355,17 +368,23 @@
                     </asp:TableRow>
                  </asp:Table>
 
+                    </div>
+            </asp:Panel>
+    </ContentTemplate></asp:UpdatePanel>
 
 
+
+
+
+    <asp:Panel runat="server">
 
     <div style="width:auto;">
 
-    <asp:Table ID="DiversTable" runat="server">
+    <asp:Table ID="DiversTable" runat="server" HorizontalAlign="Left" CellSpacing="20" CellPadding="20">
         <asp:TableRow runat="server">
             <asp:TableCell ID="Diver1Cell" runat="server">
-                 
 
-
+<asp:UpdatePanel runat="server"><ContentTemplate>
                  
         <h4>Dykker 1</h4>
         <asp:DropDownList ID="D1OF_TypeDropDownList" runat="server">
@@ -394,7 +413,7 @@
         </asp:DropDownList>
 
 
-        <asp:DropDownList ID="D1AirTypeDropDownList" runat="server">
+        <asp:DropDownList ID="D1AirTypeDropDownList" OnSelectedIndexChanged="D1AirTypeDropDownList_SelectedIndexChanged" runat="server" AutoPostBack="true">
             <asp:ListItem Value="0">Luft</asp:ListItem>
 
 
@@ -406,25 +425,40 @@
 
         <asp:CheckBox ID="D1RepeatedAirCheckBox" Text="Gjentatt" runat="server" />
 
+    <br />
+
+    <asp:Table ID="D1N2GroupBeforeDiveTable" HorizontalAlign="Left" runat="server">
+        <asp:TableRow ID="TableRow24" runat="server">
+                <asp:TableCell runat="server">N2-gruppe før dykk</asp:TableCell>
+                <asp:TableCell runat="server">
+                    <asp:TextBox ID="D1N2GroupBeforeDiveTextBox" Width="60" runat="server"></asp:TextBox>
+                </asp:TableCell>
+            </asp:TableRow>
+          </asp:Table>
 
 
-        <asp:RadioButtonList ID="TransportRadioButtonList" RepeatDirection="Horizontal" runat="server">
-            <asp:ListItem Value="0">Dykkekurv</asp:ListItem>
+                
+    <asp:Table ID="D1NitroxPercentTable" HorizontalAlign="Right" Visible="false" runat="server">
+        <asp:TableRow ID="NitroxPercentRow" runat="server">
+                <asp:TableCell runat="server">Nitrox %</asp:TableCell>
+                <asp:TableCell runat="server">
+                    <asp:TextBox ID="D1NitroxPercentTextbox" Width="60" runat="server"></asp:TextBox>
+                </asp:TableCell>
+            </asp:TableRow>
+          </asp:Table>
 
+                
+                
+        </ContentTemplate></asp:UpdatePanel>
 
-            <asp:ListItem Value="1">Våtklokke</asp:ListItem>
-
-
-        </asp:RadioButtonList>
-
-        <asp:Table ID="VolumeTable" runat="server">
+        <asp:Table ID="D1VolumeTable" runat="server">
 
 
 
             <asp:TableRow ID="BreathingGearRow" runat="server">
                 <asp:TableCell runat="server">Pusteutstyr</asp:TableCell>
                 <asp:TableCell runat="server">
-                    <asp:TextBox ID="BreathingGearTextBox" runat="server"></asp:TextBox>
+                    <asp:TextBox ID="D1BreathingGearTextBox" runat="server"></asp:TextBox>
                 </asp:TableCell>
             </asp:TableRow>
             <asp:TableRow ID="VolumeTitleRow" runat="server">
@@ -435,7 +469,7 @@
                     Volum
                 </asp:TableCell>
                 <asp:TableCell runat="server">
-                    <asp:TextBox ID="VolumeTextBox" runat="server"></asp:TextBox>
+                    <asp:TextBox ID="D1VolumeTextBox" runat="server"></asp:TextBox>
                     
                 </asp:TableCell>
             </asp:TableRow>
@@ -445,7 +479,7 @@
 
                 </asp:TableCell>
                 <asp:TableCell runat="server">
-                    <asp:TextBox ID="PressureTextBox" runat="server"></asp:TextBox>
+                    <asp:TextBox ID="D1PressureTextBox" runat="server"></asp:TextBox>
                     
                 </asp:TableCell>
             </asp:TableRow>
@@ -455,13 +489,13 @@
             <asp:TableRow ID="PlannedDepthRow" runat="server">
                 <asp:TableCell runat="server">Plan dybde</asp:TableCell>
                 <asp:TableCell runat="server">
-                    <asp:TextBox ID="PlannedDepthTextBox" runat="server"></asp:TextBox>
+                    <asp:TextBox ID="D1PlannedDepthTextBox" runat="server"></asp:TextBox>
                 </asp:TableCell>
             </asp:TableRow>
             <asp:TableRow ID="PlannedTimeRow" runat="server">
                 <asp:TableCell runat="server">Plan tid</asp:TableCell>
                 <asp:TableCell runat="server">
-                    <asp:TextBox ID="PlannedTimeTextBox" runat="server"></asp:TextBox>
+                    <asp:TextBox ID="D1PlannedTimeTextBox" runat="server"></asp:TextBox>
                 </asp:TableCell>
             </asp:TableRow>
             <asp:TableRow>
@@ -473,29 +507,278 @@
             <asp:TableRow ID="CourseDiveRow" runat="server">
                 <asp:TableCell runat="server">Kursdykk nr./formål</asp:TableCell>
                 <asp:TableCell runat="server">
-                    <asp:TextBox ID="CourseDiveTextBox" runat="server"></asp:TextBox>
+                    <asp:TextBox ID="D1CourseDiveTextBox" runat="server"></asp:TextBox>
                 </asp:TableCell>
             </asp:TableRow>
 
         </asp:Table>
       
-           
-
-    
-
-
-
 
             </asp:TableCell>
             <asp:TableCell ID="Diver2Cell" runat="server">
+                 
+
+<asp:UpdatePanel runat="server"><ContentTemplate>
+                 
+        <h4>Dykker 2</h4>
+        <asp:DropDownList ID="D2OF_TypeDropDownList" runat="server">
+            <asp:ListItem Value="0">OF Tungt</asp:ListItem>
 
 
+            <asp:ListItem Value="1">OF Lett</asp:ListItem>
 
 
+            <asp:ListItem Value="2">Scuba</asp:ListItem>
+
+
+        </asp:DropDownList>
+
+
+        <asp:DropDownList ID="D2DirectDropDownList" runat="server">
+            <asp:ListItem Value="0">Direkte</asp:ListItem>
+
+
+            <asp:ListItem Value="1">D. Stopp</asp:ListItem>
+
+
+            <asp:ListItem Value="2">OD - O2</asp:ListItem>
+
+
+        </asp:DropDownList>
+
+
+        <asp:DropDownList ID="D2AirTypeDropDownList" OnSelectedIndexChanged="D2AirTypeDropDownList_SelectedIndexChanged" runat="server" AutoPostBack="true">
+            <asp:ListItem Value="0">Luft</asp:ListItem>
+
+
+            <asp:ListItem Value="1">Nitrox</asp:ListItem>
+
+
+        </asp:DropDownList>
+
+
+        <asp:CheckBox ID="D2RepeatedAirCheckBox" Text="Gjentatt" runat="server" />
+
+    <br />
+
+    
+        <asp:Table ID="Table2" HorizontalAlign="Left" runat="server">
+        <asp:TableRow ID="TableRow21" runat="server">
+                <asp:TableCell runat="server">N2-gruppe før dykk</asp:TableCell>
+                <asp:TableCell runat="server">
+                    <asp:TextBox ID="D2N2GroupBeforeDiveTextBox" Width="60" runat="server"></asp:TextBox>
                 </asp:TableCell>
-            <asp:TableCell ID="StandbyCell" runat="server">
+            </asp:TableRow>
+          </asp:Table>
+
 
                 
+    <asp:Table ID="D2NitroxPercentTable" HorizontalAlign="Right" Visible="false" runat="server">
+        <asp:TableRow ID="TableRow22" runat="server">
+                <asp:TableCell runat="server">Nitrox %</asp:TableCell>
+                <asp:TableCell runat="server">
+                    <asp:TextBox ID="D2NitroxPercentTextbox" Width="60" runat="server"></asp:TextBox>
+                </asp:TableCell>
+            </asp:TableRow>
+          </asp:Table>
+
+                
+                
+        </ContentTemplate></asp:UpdatePanel>
+
+        <asp:Table ID="Table4" runat="server">
+
+
+
+            <asp:TableRow ID="TableRow23" runat="server">
+                <asp:TableCell runat="server">Pusteutstyr</asp:TableCell>
+                <asp:TableCell runat="server">
+                    <asp:TextBox ID="D2BreathingGearTextBox" runat="server"></asp:TextBox>
+                </asp:TableCell>
+            </asp:TableRow>
+            <asp:TableRow ID="TableRow25" runat="server">
+                <asp:TableHeaderCell ColumnSpan="2">Volum og Trykk</asp:TableHeaderCell>
+            </asp:TableRow>
+            <asp:TableRow ID="TableRow26" runat="server">
+                <asp:TableCell runat="server">
+                    Volum
+                </asp:TableCell>
+                <asp:TableCell runat="server">
+                    <asp:TextBox ID="D2VolumeTextBox" runat="server"></asp:TextBox>
+                    
+                </asp:TableCell>
+            </asp:TableRow>
+            <asp:TableRow ID="TableRow27" runat="server">
+                <asp:TableCell runat="server">
+                    Trykk
+
+                </asp:TableCell>
+                <asp:TableCell runat="server">
+                    <asp:TextBox ID="D2PressureTextBox" runat="server"></asp:TextBox>
+                    
+                </asp:TableCell>
+            </asp:TableRow>
+            <asp:TableRow ID="TableRow28" runat="server">
+                <asp:TableHeaderCell ColumnSpan="2">Plan dybde og Tid</asp:TableHeaderCell>
+            </asp:TableRow>
+            <asp:TableRow ID="TableRow29" runat="server">
+                <asp:TableCell runat="server">Plan dybde</asp:TableCell>
+                <asp:TableCell runat="server">
+                    <asp:TextBox ID="D2PlannedDepthTextBox" runat="server"></asp:TextBox>
+                </asp:TableCell>
+            </asp:TableRow>
+            <asp:TableRow ID="TableRow30" runat="server">
+                <asp:TableCell runat="server">Plan tid</asp:TableCell>
+                <asp:TableCell runat="server">
+                    <asp:TextBox ID="D2PlannedTimeTextBox" runat="server"></asp:TextBox>
+                </asp:TableCell>
+            </asp:TableRow>
+            <asp:TableRow>
+                <asp:TableCell>
+                     <br/>
+                </asp:TableCell>
+            </asp:TableRow>
+           
+            <asp:TableRow ID="TableRow31" runat="server">
+                <asp:TableCell runat="server">Kursdykk nr./formål</asp:TableCell>
+                <asp:TableCell runat="server">
+                    <asp:TextBox ID="D2CourseDiveTextBox" runat="server"></asp:TextBox>
+                </asp:TableCell>
+            </asp:TableRow>
+
+        </asp:Table>
+      
+            </asp:TableCell>
+            <asp:TableCell ID="StandbyCell" runat="server">
+
+                <asp:UpdatePanel runat="server"><ContentTemplate>
+                 
+        <h4>Standby</h4>
+        <asp:DropDownList ID="SBOF_TypeDropDownList" runat="server">
+            <asp:ListItem Value="0">OF Tungt</asp:ListItem>
+
+
+            <asp:ListItem Value="1">OF Lett</asp:ListItem>
+
+
+            <asp:ListItem Value="2">Scuba</asp:ListItem>
+
+
+        </asp:DropDownList>
+
+
+        <asp:DropDownList ID="SBDirectDropDownList" runat="server">
+            <asp:ListItem Value="0">Direkte</asp:ListItem>
+
+
+            <asp:ListItem Value="1">D. Stopp</asp:ListItem>
+
+
+            <asp:ListItem Value="2">OD - O2</asp:ListItem>
+
+
+        </asp:DropDownList>
+
+
+        <asp:DropDownList ID="SBAirTypeDropDownList" OnSelectedIndexChanged="SBAirTypeDropDownList_SelectedIndexChanged" runat="server" AutoPostBack="true">
+            <asp:ListItem Value="0">Luft</asp:ListItem>
+
+
+            <asp:ListItem Value="1">Nitrox</asp:ListItem>
+
+
+        </asp:DropDownList>
+
+
+        <asp:CheckBox ID="SBRepeatedAirCheckBox" Text="Gjentatt" runat="server" />
+
+    <br />
+
+    <asp:Table ID="Table5" HorizontalAlign="Left" runat="server">
+        <asp:TableRow ID="TableRow32" runat="server">
+                <asp:TableCell runat="server">N2-gruppe før dykk</asp:TableCell>
+                <asp:TableCell runat="server">
+                    <asp:TextBox ID="SBN2GroupBeforeDiveTextBox" Width="60" runat="server"></asp:TextBox>
+                </asp:TableCell>
+            </asp:TableRow>
+          </asp:Table>
+
+
+                
+    <asp:Table ID="SBNitroxPercentTable" HorizontalAlign="Right" Visible="false" runat="server">
+        <asp:TableRow ID="TableRow33" runat="server">
+                <asp:TableCell runat="server">Nitrox %</asp:TableCell>
+                <asp:TableCell runat="server">
+                    <asp:TextBox ID="SBNitroxPercentTextbox" Width="60" runat="server"></asp:TextBox>
+                </asp:TableCell>
+            </asp:TableRow>
+          </asp:Table>
+
+                
+                
+        </ContentTemplate></asp:UpdatePanel>
+
+        <asp:Table ID="Table7" runat="server">
+
+
+
+            <asp:TableRow ID="TableRow34" runat="server">
+                <asp:TableCell runat="server">Pusteutstyr</asp:TableCell>
+                <asp:TableCell runat="server">
+                    <asp:TextBox ID="SBBreathingGearTextBox" runat="server"></asp:TextBox>
+                </asp:TableCell>
+            </asp:TableRow>
+            <asp:TableRow ID="TableRow35" runat="server">
+                <asp:TableHeaderCell ColumnSpan="2">Volum og Trykk</asp:TableHeaderCell>
+            </asp:TableRow>
+            <asp:TableRow ID="TableRow36" runat="server">
+                <asp:TableCell runat="server">
+                    Volum
+                </asp:TableCell>
+                <asp:TableCell runat="server">
+                    <asp:TextBox ID="SBVolumeTextBox" runat="server"></asp:TextBox>
+                    
+                </asp:TableCell>
+            </asp:TableRow>
+            <asp:TableRow ID="TableRow37" runat="server">
+                <asp:TableCell runat="server">
+                    Trykk
+
+                </asp:TableCell>
+                <asp:TableCell runat="server">
+                    <asp:TextBox ID="SBPressureTextBox" runat="server"></asp:TextBox>
+                    
+                </asp:TableCell>
+            </asp:TableRow>
+            <asp:TableRow ID="TableRow38" runat="server">
+                <asp:TableHeaderCell ColumnSpan="2">Plan dybde og Tid</asp:TableHeaderCell>
+            </asp:TableRow>
+            <asp:TableRow ID="TableRow39" runat="server">
+                <asp:TableCell runat="server">Plan dybde</asp:TableCell>
+                <asp:TableCell runat="server">
+                    <asp:TextBox ID="SBPlannedDepthTextBox" runat="server"></asp:TextBox>
+                </asp:TableCell>
+            </asp:TableRow>
+            <asp:TableRow ID="TableRow40" runat="server">
+                <asp:TableCell runat="server">Plan tid</asp:TableCell>
+                <asp:TableCell runat="server">
+                    <asp:TextBox ID="SBPlannedTimeTextBox" runat="server"></asp:TextBox>
+                </asp:TableCell>
+            </asp:TableRow>
+            <asp:TableRow>
+                <asp:TableCell>
+                     <br/>
+                </asp:TableCell>
+            </asp:TableRow>
+           
+            <asp:TableRow ID="TableRow41" runat="server">
+                <asp:TableCell runat="server">Kursdykk nr./formål</asp:TableCell>
+                <asp:TableCell runat="server">
+                    <asp:TextBox ID="SBCourseDiveTextBox" runat="server"></asp:TextBox>
+                </asp:TableCell>
+            </asp:TableRow>
+
+        </asp:Table>
             
 
 
@@ -504,6 +787,7 @@
         </asp:Table>
 
         </div>
+        </asp:Panel>
 
     <!-- Stopwatches -->
 
@@ -549,7 +833,7 @@
 
 
 
-    <asp:UpdatePanel ID="UpdatePanelTest" runat="server">
+    <asp:UpdatePanel ID="UpdatePanel1" runat="server">
                         <ContentTemplate>
    
     <div style="text-align:center; padding:0px; height: 22px; width: auto;">
@@ -905,11 +1189,16 @@
         </asp:Table>
     </div>
 
-</ContentTemplate>
-                            </asp:UpdatePanel>
+    </ContentTemplate>
+</asp:UpdatePanel>
     
-   
 
+
+
+
+
+   <asp:UpdatePanel runat="server">
+       <ContentTemplate>
     <div style="text-align:center; padding:0px; height:22px; width:auto;">
 
         <asp:Table ID="SurfaceCompressionDiveTable" runat="server" Visible="False" GridLines="Both" HorizontalAlign="Left">
@@ -1141,7 +1430,9 @@
             </asp:TableRow>
             <asp:TableRow runat="server">
                 <asp:TableCell runat="server"></asp:TableCell>
-                <asp:TableCell runat="server">Kammer forseglet</asp:TableCell>
+                <asp:TableCell runat="server">
+                    <asp:Button ID="ChamberSealedButton" runat="server" Text="Forsegl kammer" OnClick="ChamberSealedButton_Click" />
+                </asp:TableCell>
                 <asp:TableCell runat="server"></asp:TableCell>
                 <asp:TableCell runat="server"></asp:TableCell>
             </asp:TableRow>
@@ -1381,17 +1672,49 @@
 
     </div>
 
+</ContentTemplate>
+   </asp:UpdatePanel>
 
 
-   
+    <asp:UpdatePanel ID="UpdatePanel2" runat="server"><ContentTemplate>
 
-    
+        <div style="text-align:left; padding:0px; height:22px; width:auto;">
 
-
-
-     
+            <asp:Table ID="PressureChamberDiveTable" runat="server"></asp:Table>
 
 
-    <asp:Button ID="SessionButton" runat="server" Text="Save Session" OnClick="SessionButton_Click" />
-    <asp:Button ID="SubmitButton" runat="server" Text="Submit" OnClick="SubmitButton_Click" />
+
+        </div>
+  </ContentTemplate></asp:UpdatePanel>
+
+
+
+
+
+
+
+    <asp:UpdatePanel runat="server"><ContentTemplate>
+
+    <asp:Panel ID="PopupPanel" runat="server" BackColor="White" Width="50%" Height="75%">
+        <asp:Button ID="SaveToDatabaseButton" runat="server" Text="Lagre til database" OnClick="SaveToDatabaseButton_Click" />
+        <asp:Button ID="CancelPopupButton" runat="server" Text="Avbryt" OnClientClick="" />
+        <asp:Label ID="Label1" runat="server" Text="Label">Sikker?</asp:Label>
+    </asp:Panel>
+
+
+
+
+    <ajaxToolkit:AlwaysVisibleControlExtender runat="server" BehaviorID="PopupPanel_AlwaysVisibleControlExtender" UseAnimation="true" HorizontalSide="Center" VerticalSide="Middle" TargetControlID="PopupPanel" ID="PopupPanel_AlwaysVisibleControlExtender"></ajaxToolkit:AlwaysVisibleControlExtender>
+    <ajaxToolkit:DropShadowExtender runat="server" BehaviorID="PopupPanel_DropShadowExtender" TargetControlID="PopupPanel" ID="PopupPanel_DropShadowExtender"></ajaxToolkit:DropShadowExtender>
+    <ajaxToolkit:PopupControlExtender runat="server" PopupControlID="PopupPanel" ExtenderControlID="" BehaviorID="PopupPanel_PopupControlExtender" TargetControlID="SubmitButton" ID="PopupPanel_PopupControlExtender"></ajaxToolkit:PopupControlExtender>
+    <asp:Button ID="SubmitButton" runat="server" Text="Forhåndsvis og lagre" OnClick="SubmitButton_Click" />
+        </ContentTemplate> </asp:UpdatePanel>
+
+            <div>
+                Merknader
+                <asp:TextBox ID="NotesTextBox" runat="server"></asp:TextBox>
+                <ajaxToolkit:ResizableControlExtender HandleCssClass="handlecss" runat="server" BehaviorID="NotesTextBox_ResizableControlExtender" TargetControlID="NotesTextBox" ID="NotesTextBox_ResizableControlExtender"></ajaxToolkit:ResizableControlExtender>
+            </div>
+
+
 </asp:Content>

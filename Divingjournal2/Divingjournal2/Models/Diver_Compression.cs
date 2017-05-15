@@ -17,12 +17,13 @@ namespace Divingjournal2.Models
         public int JournalID { get; set; }
 
         public string name { get; set; }
-        public Transport transport { get; set; }
+        
         public OF_Type of_type { get; set; }
         public Direct direct { get; set; }
         public AirType airType { get; set; }
         public string nitroxType { get; set; }
-        public string repeatedAir { get; set; }
+        public bool repeatedAir { get; set; }
+        public string N2GroupBeforeDive { get; set; }
         public string breathingGear { get; set; }
         public string volume { get; set; }
         public string pressure { get; set; }
@@ -42,7 +43,7 @@ namespace Divingjournal2.Models
         public string ascensionToFirstStop { get; set; }
         public string timeAtSafetyStop { get; set; }
         public string N2GroupAfterDive { get; set; }
-        public string isEverythingOK { get; set; }
+        public bool isEverythingOK { get; set; }
 
         public string left18m { get; set; }
         public string left15m { get; set; }
