@@ -19,5 +19,20 @@ namespace Divingjournal2
             Debug.Write("Heipådeg");
             
         }
+
+        protected void NewJournalButton_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("/new_journal.aspx");
+        }
+
+        protected void GetJournalButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void Button2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

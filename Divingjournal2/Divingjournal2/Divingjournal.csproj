@@ -206,7 +206,6 @@
     <Content Include="images\Clock_alt.png" />
     <Content Include="images\hvl_logo.jpg" />
     <Content Include="MyStyle.css" />
-    <Content Include="New_Journal.aspx" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Site.css" />
@@ -220,7 +219,7 @@
     </Content>
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="MainPage.aspx" />
-    <Content Include="New_Journal_Test.aspx" />
+    <Content Include="New_Journal.aspx" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
@@ -258,7 +257,6 @@
     <Content Include="Stopwatch.js" />
     <Content Include="StopWatch2.js" />
     <Content Include="Stopwatch3.js" />
-    <Content Include="TestWebForm_stopwatch.aspx" />
     <Content Include="ViewSwitcher.ascx" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
@@ -394,29 +392,12 @@
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="DAL\DivingJournalContext.cs" />
     <Compile Include="DAL\DivingJournalInitializer.cs" />
-    <Compile Include="Migrations\201705141502337_init.cs" />
-    <Compile Include="Migrations\201705141502337_init.Designer.cs">
-      <DependentUpon>201705141502337_init.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Diver_Compression.cs" />
-    <Compile Include="Models\Diver_Compression_Cache.cs" />
     <Compile Include="Models\Diver_Pressurechamber.cs" />
-    <Compile Include="Models\Diver_Pressurechamber_Cache.cs" />
     <Compile Include="Models\Diver_Standard.cs" />
-    <Compile Include="Models\Diver_Standard_Cache.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\Journal.cs" />
-    <Compile Include="Models\Journal_Cache.cs" />
-    <Compile Include="Models\User.cs" />
-    <Compile Include="New_Journal_Test.aspx.cs">
-      <DependentUpon>New_Journal_Test.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="New_Journal_Test.aspx.designer.cs">
-      <DependentUpon>New_Journal_Test.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="TableMaker.cs" />
+    <Compile Include="Models\Journal_Pressurechamber.cs" />
     <Compile Include="New_Journal.aspx.cs">
       <DependentUpon>New_Journal.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -424,6 +405,7 @@
     <Compile Include="New_Journal.aspx.designer.cs">
       <DependentUpon>New_Journal.aspx</DependentUpon>
     </Compile>
+    <Compile Include="TableMaker.cs" />
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -464,14 +446,6 @@
       <DependentUpon>StartPage.aspx</DependentUpon>
     </Compile>
     <Compile Include="Startup.cs" />
-    <Compile Include="TestClass.cs" />
-    <Compile Include="TestWebForm_stopwatch.aspx.cs">
-      <DependentUpon>TestWebForm_stopwatch.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="TestWebForm_stopwatch.aspx.designer.cs">
-      <DependentUpon>TestWebForm_stopwatch.aspx</DependentUpon>
-    </Compile>
     <Compile Include="ViewSwitcher.ascx.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -488,11 +462,6 @@
       <Project>{d5bb7d50-7c9e-4312-aec5-86d6f575ea93}</Project>
       <Name>DiverLibrary</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Migrations\201705141502337_init.resx">
-      <DependentUpon>201705141502337_init.cs</DependentUpon>
-    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
