@@ -392,12 +392,22 @@
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="DAL\DivingJournalContext.cs" />
     <Compile Include="DAL\DivingJournalInitializer.cs" />
+    <Compile Include="Migrations\201705160040046_intital.cs" />
+    <Compile Include="Migrations\201705160040046_intital.Designer.cs">
+      <DependentUpon>201705160040046_intital.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Diver_Compression.cs" />
+    <Compile Include="Models\Diver_Compression_Cache.cs" />
     <Compile Include="Models\Diver_Pressurechamber.cs" />
+    <Compile Include="Models\Diver_Pressurechamber_Cache.cs" />
     <Compile Include="Models\Diver_Standard.cs" />
+    <Compile Include="Models\Diver_Standard_Cache.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\Journal.cs" />
+    <Compile Include="Models\Journal_Cache.cs" />
     <Compile Include="Models\Journal_Pressurechamber.cs" />
+    <Compile Include="Models\User.cs" />
     <Compile Include="New_Journal.aspx.cs">
       <DependentUpon>New_Journal.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -462,6 +472,11 @@
       <Project>{d5bb7d50-7c9e-4312-aec5-86d6f575ea93}</Project>
       <Name>DiverLibrary</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201705160040046_intital.resx">
+      <DependentUpon>201705160040046_intital.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

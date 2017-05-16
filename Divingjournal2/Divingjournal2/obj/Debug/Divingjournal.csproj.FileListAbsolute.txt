@@ -162,8 +162,8 @@ C:\Users\Ørjan Magnus Eide\Source\Repos\DivingJournal22\Divingjournal2\Divingjo
 C:\Users\Ørjan Magnus Eide\Source\Repos\DivingJournal22\Divingjournal2\Divingjournal2\obj\Debug\Divingjournal2.dll
 C:\Users\Ørjan Magnus Eide\Source\Repos\DivingJournal22\Divingjournal2\Divingjournal2\obj\Debug\Divingjournal2.pdb
 C:\Users\Ørjan Magnus Eide\Source\Repos\DivingJournal23\Divingjournal2\Divingjournal2\obj\Debug\Divingjournal.csprojResolveAssemblyReference.cache
-C:\Users\Ørjan Magnus Eide\Source\Repos\DivingJournal23\Divingjournal2\Divingjournal2\obj\Debug\Divingjournal2.dll
-C:\Users\Ørjan Magnus Eide\Source\Repos\DivingJournal23\Divingjournal2\Divingjournal2\obj\Debug\Divingjournal2.pdb
+C:\Users\Ørjan Magnus Eide\Source\Repos\DivingJournal23\Divingjournal2\Divingjournal2\obj\Debug\Divingjournal2.Migrations.intital.resources
+C:\Users\Ørjan Magnus Eide\Source\Repos\DivingJournal23\Divingjournal2\Divingjournal2\obj\Debug\Divingjournal.csproj.GenerateResource.Cache
 C:\Users\Ørjan Magnus Eide\Source\Repos\DivingJournal23\Divingjournal2\Divingjournal2\bin\ApplicationInsights.config
 C:\Users\Ørjan Magnus Eide\Source\Repos\DivingJournal23\Divingjournal2\Divingjournal2\bin\roslyn\csc.exe
 C:\Users\Ørjan Magnus Eide\Source\Repos\DivingJournal23\Divingjournal2\Divingjournal2\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
@@ -242,5 +242,5 @@ C:\Users\Ørjan Magnus Eide\Source\Repos\DivingJournal23\Divingjournal2\Divingjo
 C:\Users\Ørjan Magnus Eide\Source\Repos\DivingJournal23\Divingjournal2\Divingjournal2\bin\Microsoft.Owin.Security.Twitter.xml
 C:\Users\Ørjan Magnus Eide\Source\Repos\DivingJournal23\Divingjournal2\Divingjournal2\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
 C:\Users\Ørjan Magnus Eide\Source\Repos\DivingJournal23\Divingjournal2\Divingjournal2\bin\Microsoft.Owin.Security.OAuth.xml
-C:\Users\Ørjan Magnus Eide\Source\Repos\DivingJournal23\Divingjournal2\Divingjournal2\obj\Debug\Divingjournal2.Migrations.init.resources
-C:\Users\Ørjan Magnus Eide\Source\Repos\DivingJournal23\Divingjournal2\Divingjournal2\obj\Debug\Divingjournal.csproj.GenerateResource.Cache
+C:\Users\Ørjan Magnus Eide\Source\Repos\DivingJournal23\Divingjournal2\Divingjournal2\obj\Debug\Divingjournal2.dll
+C:\Users\Ørjan Magnus Eide\Source\Repos\DivingJournal23\Divingjournal2\Divingjournal2\obj\Debug\Divingjournal2.pdb
