@@ -244,3 +244,5 @@ C:\Users\Ørjan Magnus Eide\Source\Repos\DivingJournal23\Divingjournal2\Divingjo
 C:\Users\Ørjan Magnus Eide\Source\Repos\DivingJournal23\Divingjournal2\Divingjournal2\bin\Microsoft.Owin.Security.OAuth.xml
 C:\Users\Ørjan Magnus Eide\Source\Repos\DivingJournal23\Divingjournal2\Divingjournal2\obj\Debug\Divingjournal2.dll
 C:\Users\Ørjan Magnus Eide\Source\Repos\DivingJournal23\Divingjournal2\Divingjournal2\obj\Debug\Divingjournal2.pdb
+C:\Users\Jonas\Desktop\DivingJournalGithub\DivingJournal2\Divingjournal2\Divingjournal2\obj\Debug\Divingjournal2.Migrations.intital.resources
+C:\Users\Jonas\Desktop\DivingJournalGithub\DivingJournal2\Divingjournal2\Divingjournal2\obj\Debug\Divingjournal.csproj.GenerateResource.Cache

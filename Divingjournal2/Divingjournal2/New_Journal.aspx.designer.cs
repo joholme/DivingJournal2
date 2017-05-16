@@ -121,6 +121,33 @@ namespace Divingjournal2 {
         protected global::System.Web.UI.WebControls.TextBox CourseNrTextBox;
         
         /// <summary>
+        /// SubjectRow control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TableRow SubjectRow;
+        
+        /// <summary>
+        /// SubjectCell control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TableCell SubjectCell;
+        
+        /// <summary>
+        /// SubjectDropDownList control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList SubjectDropDownList;
+        
+        /// <summary>
         /// Calendar1 control.
         /// </summary>
         /// <remarks>
@@ -229,33 +256,6 @@ namespace Divingjournal2 {
         protected global::System.Web.UI.WebControls.TextBox DivingSpotTextBox;
         
         /// <summary>
-        /// SubjectRow control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TableRow SubjectRow;
-        
-        /// <summary>
-        /// SubjectCell control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TableCell SubjectCell;
-        
-        /// <summary>
-        /// SubjectDropDownList control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList SubjectDropDownList;
-        
-        /// <summary>
         /// TableRow1 control.
         /// </summary>
         /// <remarks>
@@ -281,6 +281,15 @@ namespace Divingjournal2 {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox OtherTextBox;
+        
+        /// <summary>
+        /// TableRow42 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TableRow TableRow42;
         
         /// <summary>
         /// TableRow4 control.
@@ -578,6 +587,15 @@ namespace Divingjournal2 {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox OthersTextBox;
+        
+        /// <summary>
+        /// SecondaryInfoTable control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Table SecondaryInfoTable;
         
         /// <summary>
         /// TableRow15 control.
@@ -3928,6 +3946,15 @@ namespace Divingjournal2 {
         protected global::System.Web.UI.WebControls.Label Label1;
         
         /// <summary>
+        /// NotesTextBox control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox NotesTextBox;
+        
+        /// <summary>
         /// PopupPanel_AlwaysVisibleControlExtender control.
         /// </summary>
         /// <remarks>
@@ -3962,23 +3989,5 @@ namespace Divingjournal2 {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button SubmitButton;
-        
-        /// <summary>
-        /// NotesTextBox control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox NotesTextBox;
-        
-        /// <summary>
-        /// NotesTextBox_ResizableControlExtender control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::AjaxControlToolkit.ResizableControlExtender NotesTextBox_ResizableControlExtender;
     }
 }
