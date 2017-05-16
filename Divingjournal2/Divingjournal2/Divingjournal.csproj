@@ -254,6 +254,7 @@
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Site.Master" />
+    <Content Include="Standard_Journal_View.aspx" />
     <Content Include="StartPage.aspx" />
     <Content Include="Stopwatch.js" />
     <Content Include="StopWatch2.js" />
@@ -394,9 +395,9 @@
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="DAL\DivingJournalContext.cs" />
     <Compile Include="DAL\DivingJournalInitializer.cs" />
-    <Compile Include="Migrations\201705141502337_init.cs" />
-    <Compile Include="Migrations\201705141502337_init.Designer.cs">
-      <DependentUpon>201705141502337_init.cs</DependentUpon>
+    <Compile Include="Migrations\201705160040046_intital.cs" />
+    <Compile Include="Migrations\201705160040046_intital.Designer.cs">
+      <DependentUpon>201705160040046_intital.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Diver_Compression.cs" />
@@ -415,6 +416,13 @@
     </Compile>
     <Compile Include="New_Journal_Test.aspx.designer.cs">
       <DependentUpon>New_Journal_Test.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Standard_Journal_View.aspx.cs">
+      <DependentUpon>Standard_Journal_View.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Standard_Journal_View.aspx.designer.cs">
+      <DependentUpon>Standard_Journal_View.aspx</DependentUpon>
     </Compile>
     <Compile Include="TableMaker.cs" />
     <Compile Include="New_Journal.aspx.cs">
@@ -490,8 +498,8 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201705141502337_init.resx">
-      <DependentUpon>201705141502337_init.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201705160040046_intital.resx">
+      <DependentUpon>201705160040046_intital.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

@@ -7,13 +7,13 @@ namespace Divingjournal2.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.3-40302")]
-    public sealed partial class init : IMigrationMetadata
+    public sealed partial class intital : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(init));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(intital));
         
         string IMigrationMetadata.Id
         {
-            get { return "201705141502337_init"; }
+            get { return "201705160040046_intital"; }
         }
         
         string IMigrationMetadata.Source
