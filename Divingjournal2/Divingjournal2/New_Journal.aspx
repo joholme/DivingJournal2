@@ -21,7 +21,7 @@
                 <asp:Button ID="PressureChamberDiveButton" runat="server" Text="Trykkammer" Width ="25%" OnClick="PressureChamberDiveButton_Click"/>
 
             </asp:Panel>
-            
+            <div style="text-align:right; padding:0px; height: 22px; width: auto;">
                 <asp:Table ID="FirstInfoTable" runat="server" BorderStyle="None" CellPadding="1" CellSpacing="1" HorizontalAlign="Right" Font-Size="X-Large">
                     <asp:TableRow ID="JournalIDRow" runat="server" >
 
@@ -36,15 +36,36 @@
                     <asp:TableRow ID="CourseNrRow" runat="server">
 
                         <asp:TableCell runat="server" >Kurs nr</asp:TableCell>
-                        <asp:TableCell ID="CourseNrCell" runat="server" >
-                            <asp:TextBox ID="CourseNrTextBox" runat="server"  ></asp:TextBox>
+                        <asp:TableCell ID="CourseNrCell" runat="server" HorizontalAlign="Right" >
+                            <asp:TextBox ID="CourseNrTextBox" runat="server" Width="100%"></asp:TextBox>
                         
 </asp:TableCell>
 
                     </asp:TableRow>
+
+                    <asp:TableRow ID="SubjectRow" runat="server" Font-Size="Large">
+                        <asp:TableCell runat="server">Fag</asp:TableCell>
+                        <asp:TableCell ID="SubjectCell" runat="server" ColumnSpan="2">
+                            <asp:DropDownList ID="SubjectDropDownList" runat="server">
+                                <asp:ListItem>DYK600 - Sikkerhetsopplæring i dykking</asp:ListItem>
+
+                                <asp:ListItem>DYK601 - Fagopplæring i anlegg</asp:ListItem>
+
+                                <asp:ListItem>DYK601 - Fagopplæring i rørlegging</asp:ListItem>
+
+                                <asp:ListItem>DYK601 - Fagopplæring i berging</asp:ListItem>
+
+                                <asp:ListItem>RED110 - Redningsdykking</asp:ListItem>
+
+                            </asp:DropDownList>
+
+                        </asp:TableCell>
+
+                    </asp:TableRow>
+
                     
                 </asp:Table>
-
+            </div>
 
                 
 
@@ -61,7 +82,7 @@
 
                 <div style="text-align:right; padding:0px; height: 22px; width: auto;">
 
-                   <asp:Table ID="MainInfoTable" runat="server" Visible="True" HorizontalAlign="Left">
+                   <asp:Table ID="MainInfoTable" runat="server" Visible="True" HorizontalAlign="Left" Font-Size="Large">
                 
 
                 
@@ -100,25 +121,7 @@
 
                     </asp:TableRow>
 
-                    <asp:TableRow ID="SubjectRow" runat="server">
-                        <asp:TableCell runat="server" >Fag</asp:TableCell>
-                        <asp:TableCell ID="SubjectCell" runat="server" >
-                            <asp:DropDownList ID="SubjectDropDownList" runat="server" >
-                                <asp:ListItem>DYK600 - Sikkerhetsopplæring i dykking</asp:ListItem>
-                                
-<asp:ListItem>DYK601 - Fagopplæring i anlegg</asp:ListItem>
-                                
-<asp:ListItem>DYK601 - Fagopplæring i rørlegging</asp:ListItem>
-                                
-<asp:ListItem>DYK601 - Fagopplæring i berging</asp:ListItem>
-                                
-<asp:ListItem>RED110 - Redningsdykking</asp:ListItem>
-                            
-</asp:DropDownList>
-                        
-</asp:TableCell>
-
-                    </asp:TableRow>
+                    
 
                     <asp:TableRow ID="TableRow1" runat="server">
                         <asp:TableCell runat="server" >Annet</asp:TableCell>
@@ -129,6 +132,10 @@
 </asp:TableCell>
 
                     </asp:TableRow>
+
+                        <asp:TableRow ID="TableRow42" runat="server">
+                <asp:TableHeaderCell ColumnSpan="2">Personell</asp:TableHeaderCell>
+            </asp:TableRow>
                 
            
 
@@ -272,13 +279,17 @@
                 
             
 
-            
-            
-      
-    
+                 </asp:Table>
 
-          
-                    <asp:TableRow ID="TableRow15" runat="server" >
+                    </div>
+            </asp:Panel>
+    
+      <asp:Panel runat="server">
+
+                <div style="text-align:right; padding:0px; height: 22px; width: auto;">
+
+    <asp:Table runat="server" ID="SecondaryInfoTable" HorizontalAlign="Center" Font-Size="Large">
+         <asp:TableRow ID="TableRow15" runat="server" >
 
                         <asp:TableHeaderCell CssClass="tableCellHeaderStyle">Luftsystem</asp:TableHeaderCell>
 
@@ -366,15 +377,11 @@
 </asp:TableCell>
 
                     </asp:TableRow>
-                 </asp:Table>
+    </asp:Table>
 
-                    </div>
-            </asp:Panel>
-    </ContentTemplate></asp:UpdatePanel>
-
-
-
-
+</div>
+          </asp:Panel>
+        </ContentTemplate></asp:UpdatePanel>
 
     <asp:Panel runat="server">
 
@@ -1695,14 +1702,15 @@
 
     <asp:UpdatePanel runat="server"><ContentTemplate>
 
-    <asp:Panel ID="PopupPanel" runat="server" BackColor="White" Width="50%" Height="75%">
+    <asp:Panel ID="PopupPanel" runat="server" BackColor="White" Width="50%" Height="75%" HorizontalAlign="Left">
         <asp:Button ID="SaveToDatabaseButton" runat="server" Text="Lagre til database" OnClick="SaveToDatabaseButton_Click" />
         <asp:Button ID="CancelPopupButton" runat="server" Text="Avbryt" OnClientClick="" />
         <asp:Label ID="Label1" runat="server" Text="Label">Sikker?</asp:Label>
-    </asp:Panel>
+    
 
-
-
+        Merknader
+                <asp:TextBox  ID="NotesTextBox" runat="server" Text="Her skal det stå tekst"></asp:TextBox>
+        </asp:Panel>
 
     <ajaxToolkit:AlwaysVisibleControlExtender runat="server" BehaviorID="PopupPanel_AlwaysVisibleControlExtender" UseAnimation="true" HorizontalSide="Center" VerticalSide="Middle" TargetControlID="PopupPanel" ID="PopupPanel_AlwaysVisibleControlExtender"></ajaxToolkit:AlwaysVisibleControlExtender>
     <ajaxToolkit:DropShadowExtender runat="server" BehaviorID="PopupPanel_DropShadowExtender" TargetControlID="PopupPanel" ID="PopupPanel_DropShadowExtender"></ajaxToolkit:DropShadowExtender>
@@ -1710,11 +1718,10 @@
     <asp:Button ID="SubmitButton" runat="server" Text="Forhåndsvis og lagre" OnClick="SubmitButton_Click" />
         </ContentTemplate> </asp:UpdatePanel>
 
-            <div>
-                Merknader
-                <asp:TextBox ID="NotesTextBox" runat="server"></asp:TextBox>
-                <ajaxToolkit:ResizableControlExtender HandleCssClass="handlecss" runat="server" BehaviorID="NotesTextBox_ResizableControlExtender" TargetControlID="NotesTextBox" ID="NotesTextBox_ResizableControlExtender"></ajaxToolkit:ResizableControlExtender>
-            </div>
+            
+                
+               
+            
 
 
 </asp:Content>
