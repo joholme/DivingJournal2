@@ -434,7 +434,7 @@ namespace DiverLibrary
         int ascensionTime;
         int totalDivingTime;
         char N2GroupAfterDive; //perhaps string
-
+        //branchestest igjen!!!
         public Diver_Standard(string _name) : base(_name)
         {
         }

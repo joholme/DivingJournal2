@@ -21,4 +21,34 @@
 
 
 
+    <asp:Table ID="Table1" runat="server">
+        <asp:TableRow>
+            <asp:TableCell>
+                <!-- Lag til klokke her! -->
+
+                <div>
+
+                </div>
+
+
+            </asp:TableCell>
+
+        </asp:TableRow>
+         <asp:TableRow>
+            <asp:TableCell>
+                <!-- Lag til klokke her! -->
+
+                <div>
+
+                </div>
+
+
+            </asp:TableCell>
+
+        </asp:TableRow>
+    </asp:Table>
+
+    <script src="Stopwatch.js"></script>
+
+
 </asp:Content>
