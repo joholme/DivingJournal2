@@ -20,6 +20,7 @@ namespace Divingjournal2
         Diver sb = new Diver();
 
         Models.Journal j = new Models.Journal();
+        Models.Journal_Pressurechamber pc = new Models.Journal_Pressurechamber();
 
         
         protected override void OnInit(EventArgs e)
@@ -625,21 +626,25 @@ namespace Divingjournal2
         protected void StandardDiveButton_Click(object sender, EventArgs e)
         {
             j.journalType = Models.JournalType.direct;
-            checkJournalID(j.journalType);
+            writeHeader("Standarddykk");
+            showTables(true, false, false);
+            
         }
 
         protected void SurfaceCompressionDiveButton_Click(object sender, EventArgs e)
         {
             j.journalType = Models.JournalType.surfaceCompression;
-            checkJournalID(j.journalType);
+            writeHeader("Overflatekompresjon");
+            showTables(false, true, false);
+            
 
         }
 
         protected void PressureChamberDiveButton_Click(object sender, EventArgs e)
         {
-            j.journalType = Models.JournalType.pressurechamber;
-            checkJournalID(j.journalType);
-
+            
+            writeHeader("Trykkammer");
+            showTables(false, false, true);
 
         }
 
@@ -648,55 +653,49 @@ namespace Divingjournal2
             HeaderLabel.Text = string.Format("<h1>{0}</h1>", "Dykkerjournal - " + diveType);
         }
 
-        public void checkJournalID(Models.JournalType journaltype) 
+        public void showTables(bool standard, bool surface, bool chamber)
         {
-            if (journaltype == Models.JournalType.direct)
-            {
-                StandardDiveTable.Visible = true;
-                SurfaceCompressionDiveTable.Visible = false;
+            StandardDiveTable.Visible = standard;
+            SurfaceCompressionDiveTable.Visible = surface;
+            PressureChamberDiveTable.Visible = chamber;
 
-                StandardDiveButton.Enabled = false;
-                SurfaceCompressionDiveButton.Enabled = true;
-                PressureChamberDiveButton.Enabled = true;
+            StandardDiveButton.Enabled = !standard;
+            SurfaceCompressionDiveButton.Enabled = !surface;
+            PressureChamberDiveButton.Enabled = !chamber;
 
-                D1DirectDropDownList.Items[2].Enabled = true;
-                D2DirectDropDownList.Items[2].Enabled = true;
-                SBDirectDropDownList.Items[2].Enabled = true;
+            D1DirectDropDownList.Items[2].Enabled = !chamber;
+            D2DirectDropDownList.Items[2].Enabled = !chamber;
+            SBDirectDropDownList.Items[2].Enabled = !chamber;
 
-                writeHeader("Standarddykk");
+            //Only disabled for pressurechamber:
+            CourseNrRow.Visible = !chamber;
+            DiversTable.Visible = !chamber;
+            DivingSpotRow.Visible = !chamber;
+            OtherRow.Visible = !chamber;
+            Divingleader_studentRow.Visible = !chamber;
+            diver_1Row.Visible = !chamber;
+            diver_2Row.Visible = !chamber;
+            StandbyRow.Visible = !chamber;
+            HelpmanRow.Visible = !chamber;
+            Helpman_assistingRow.Visible = !chamber;
+            Lineman_1Row.Visible = !chamber;
+            Lineman_2Row.Visible = !chamber;
+            OthersRow.Visible = !chamber;
+            TransportRow.Visible = !chamber;
 
-            } else if (journaltype == Models.JournalType.surfaceCompression) {
-
-                StandardDiveTable.Visible = false;
-                SurfaceCompressionDiveTable.Visible = true;
-
-                StandardDiveButton.Enabled = true;
-                SurfaceCompressionDiveButton.Enabled = false;
-                PressureChamberDiveButton.Enabled = true;
-
-                D1DirectDropDownList.Items[2].Enabled = true;
-                D2DirectDropDownList.Items[2].Enabled = true;
-                SBDirectDropDownList.Items[2].Enabled = true;
-
-                writeHeader("Overflatekompresjon");
-
-            } else //Pressurechamber dive
-            {
-                StandardDiveTable.Visible = false;
-                SurfaceCompressionDiveTable.Visible = false;
-                //PressurechamberDiveTable.Visible = true, when made.
-
-                StandardDiveButton.Enabled = true;
-                SurfaceCompressionDiveButton.Enabled = true;
-                PressureChamberDiveButton.Enabled = false;
-
-                D1DirectDropDownList.Items[2].Enabled = false; //Disables OD-02 for pressurechamber dive
-                D2DirectDropDownList.Items[2].Enabled = false;
-                SBDirectDropDownList.Items[2].Enabled = false;
-
-                writeHeader("Trykkammer");
-            }
+            //Only enabled for pressurechamber:
+            PurposeRow.Visible = chamber;
+            chamberoperatorRow.Visible = chamber;
+            chamberassistentRow.Visible = chamber;
+            isChamberClearRow.Visible = chamber;
+            isOxygenClearRow.Visible = chamber;
+            treatmentRow.Visible = chamber;
+            doctorRow.Visible = chamber;
+            PressureChamberDiversTable.Visible = chamber;
+            
         }
+
+   
 
         protected void DateButton_Click(object sender, EventArgs e)
         {

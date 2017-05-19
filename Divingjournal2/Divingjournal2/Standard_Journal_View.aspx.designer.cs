@@ -139,6 +139,15 @@ namespace Divingjournal2 {
         protected global::System.Web.UI.WebControls.SqlDataSource Diver_2;
         
         /// <summary>
+        /// GridView12 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.GridView GridView12;
+        
+        /// <summary>
         /// Diver_Standby control.
         /// </summary>
         /// <remarks>
