@@ -3,7 +3,7 @@ namespace Divingjournal2.Migrations
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class intital : DbMigration
+    public partial class test213 : DbMigration
     {
         public override void Up()
         {
@@ -106,12 +106,12 @@ namespace Divingjournal2.Migrations
                         Id = c.Int(nullable: false, identity: true),
                         JournalID = c.Int(nullable: false),
                         name = c.String(),
-                        transport = c.Int(nullable: false),
                         of_type = c.Int(nullable: false),
                         direct = c.Int(nullable: false),
                         airType = c.Int(nullable: false),
                         nitroxType = c.String(),
-                        repeatedAir = c.String(),
+                        repeatedAir = c.Boolean(nullable: false),
+                        N2GroupBeforeDive = c.String(),
                         breathingGear = c.String(),
                         volume = c.String(),
                         pressure = c.String(),
@@ -130,7 +130,8 @@ namespace Divingjournal2.Migrations
                         tableUsed_Minutes = c.String(),
                         ascensionToFirstStop = c.String(),
                         timeAtSafetyStop = c.String(),
-                        isEverythingOK = c.String(),
+                        N2GroupAfterDive = c.String(),
+                        isEverythingOK = c.Boolean(nullable: false),
                         left18m = c.String(),
                         left15m = c.String(),
                         left12m = c.String(),
@@ -164,6 +165,7 @@ namespace Divingjournal2.Migrations
                         Id = c.Int(nullable: false, identity: true),
                         subject = c.Int(nullable: false),
                         journalType = c.Int(nullable: false),
+                        transport = c.Int(nullable: false),
                         courseNumber = c.String(),
                         other = c.String(),
                         date = c.String(),
@@ -214,12 +216,12 @@ namespace Divingjournal2.Migrations
                         Id = c.Int(nullable: false, identity: true),
                         JournalID = c.Int(nullable: false),
                         name = c.String(),
-                        transport = c.Int(nullable: false),
                         of_type = c.Int(nullable: false),
                         direct = c.Int(nullable: false),
                         airType = c.Int(nullable: false),
                         nitroxType = c.String(),
-                        repeatedAir = c.String(),
+                        repeatedAir = c.Boolean(nullable: false),
+                        N2GroupBeforeDive = c.String(),
                         breathingGear = c.String(),
                         volume = c.String(),
                         pressure = c.String(),
@@ -238,7 +240,7 @@ namespace Divingjournal2.Migrations
                         tableUsed_Minutes = c.String(),
                         ascensionToFirstStop = c.String(),
                         timeAtSafetyStop = c.String(),
-                        isEverythingOK = c.String(),
+                        isEverythingOK = c.Boolean(nullable: false),
                         arrived9m = c.String(),
                         left9m = c.String(),
                         arrived6m = c.String(),
