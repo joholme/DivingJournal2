@@ -10,6 +10,8 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Configuration;
 
+// Hei
+
 namespace Divingjournal2.Account
 {
     public partial class Login : System.Web.UI.Page
