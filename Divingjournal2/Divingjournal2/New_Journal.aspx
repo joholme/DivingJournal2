@@ -20,6 +20,7 @@
                 <asp:Button ID="SurfaceCompressionDiveButton" runat="server" Text="Overflatekompresjon" Width ="25%" OnClick="SurfaceCompressionDiveButton_Click" />
                 <asp:Button ID="PressureChamberDiveButton" runat="server" Text="Trykkammer" Width ="25%" OnClick="PressureChamberDiveButton_Click"/>
 
+                 <asp:Button ID="Local_Save" runat="server" Text="Lagre" />
             </asp:Panel>
         
             <div style="text-align:right; padding:0px; height: 22px; width: auto;">
@@ -958,7 +959,21 @@
         
 
   <script src="Stopwatch3.js"></script>
+      <script src ="Scripts/jquery-3.1.1.js"></script>
+        <script>
+            var storage = window.localStorage;
 
+            var what = "#<%=Local_Save.ClientID %>";
+                alert(what);
+                $(document).on("click", "#<%=Local_Save.ClientID %>", function (evt) {
+                    var text = $("#<%=DateTextBox.ClientID %>").val();
+
+                    alert(text);
+
+                });
+
+
+        </script>
 
 
 
