@@ -848,7 +848,13 @@ namespace Divingjournal2
         {
             return Models.JournalType.direct;
         }
-        
+
+        protected void Local_Save_Click(object sender, EventArgs e)
+        {
+              
+
+
+        }
     }
         
     }

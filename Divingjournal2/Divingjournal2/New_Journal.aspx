@@ -10,8 +10,11 @@
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
 
+     
+
     <asp:UpdatePanel runat="server"><ContentTemplate>
         
+       
             <asp:Label ID="HeaderLabel" runat="server"></asp:Label>
             <h1 id = "h1Title"></h1>
             <asp:Panel ID="JournalTypeButtonPanel" runat="server">
@@ -20,7 +23,13 @@
                 <asp:Button ID="SurfaceCompressionDiveButton" runat="server" Text="Overflatekompresjon" Width ="25%" OnClick="SurfaceCompressionDiveButton_Click" />
                 <asp:Button ID="PressureChamberDiveButton" runat="server" Text="Trykkammer" Width ="25%" OnClick="PressureChamberDiveButton_Click"/>
 
+                <asp:Button ID="Local_Save" runat="server" Text="Lagre" />
+
             </asp:Panel>
+       
+  
+     
+
             <div style="text-align:right; padding:0px; height: 22px; width: auto;">
                 <asp:Table ID="FirstInfoTable" runat="server" BorderStyle="None" CellPadding="1" CellSpacing="1" HorizontalAlign="Right" Font-Size="X-Large">
                     <asp:TableRow ID="JournalIDRow" runat="server" >
@@ -835,6 +844,20 @@
         
 
   <script src="Stopwatch3.js"></script>
+    <script src ="Scripts/jquery-3.1.1.js"></script>
+        <script>
+                var storage = window.localStorage;
+                var what = "#<%=Local_Save.ClientID %>";
+                alert(what);
+                $(document).on("click", "#<%=Local_Save.ClientID %>" , function (evt) {
+                var text = $("#<%=DateTextBox.ClientID %>").val();
+
+                alert(text);
+
+            });
+
+
+        </script>
 
 
 
