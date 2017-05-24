@@ -6,8 +6,7 @@ using DiverLibrary;
 
 namespace Divingjournal2.Models
 {
-  //branch test
-  //branch branch
+//en til branch test
 
     public class Diver_Compression
     {
