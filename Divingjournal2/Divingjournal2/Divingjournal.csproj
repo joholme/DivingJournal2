@@ -51,6 +51,9 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\..\..\Documents\ASP.NET AJAX Control Toolkit\Bin\AjaxControlToolkit.dll</HintPath>
     </Reference>
+    <Reference Include="AspNet.ScriptManager.jQuery, Version=3.1.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\AspNet.ScriptManager.jQuery.3.1.1\lib\net45\AspNet.ScriptManager.jQuery.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.AI.Agent.Intercept, Version=2.0.6.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.ApplicationInsights.Agent.Intercept.2.0.6\lib\net45\Microsoft.AI.Agent.Intercept.dll</HintPath>
       <Private>True</Private>
@@ -106,9 +109,6 @@
     </Reference>
     <Reference Include="AspNet.ScriptManager.bootstrap">
       <HintPath>..\packages\AspNet.ScriptManager.bootstrap.3.0.0\lib\net45\AspNet.ScriptManager.bootstrap.dll</HintPath>
-    </Reference>
-    <Reference Include="AspNet.ScriptManager.jQuery">
-      <HintPath>..\packages\AspNet.ScriptManager.jQuery.1.10.2\lib\net45\AspNet.ScriptManager.jQuery.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.ScriptManager.MSAjax">
       <HintPath>..\packages\Microsoft.AspNet.ScriptManager.MSAjax.5.0.0\lib\net45\Microsoft.ScriptManager.MSAjax.dll</HintPath>
@@ -739,7 +739,6 @@
     <Content Include="Scripts\AdminLTE\plugins\ckeditor\plugins\scayt\LICENSE.md" />
     <Content Include="Scripts\AdminLTE\plugins\ckeditor\LICENSE.md" />
     <Content Include="Scripts\AdminLTE\plugins\ckeditor\CHANGES.md" />
-    <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="MainPage.aspx" />
     <Content Include="New_Journal.aspx" />
     <Content Include="Scripts\AdminLTE\plugins\input-mask\phone-codes\readme.txt" />
@@ -770,8 +769,11 @@
     <Content Include="Scripts\AdminLTE\plugins\timepicker\bootstrap-timepicker.min.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
-    <Content Include="Scripts\jquery-1.10.2.js" />
-    <Content Include="Scripts\jquery-1.10.2.min.js" />
+    <None Include="Scripts\jquery-3.1.1.intellisense.js" />
+    <Content Include="Scripts\jquery-3.1.1.js" />
+    <Content Include="Scripts\jquery-3.1.1.min.js" />
+    <Content Include="Scripts\jquery-3.1.1.slim.js" />
+    <Content Include="Scripts\jquery-3.1.1.slim.min.js" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
@@ -801,6 +803,7 @@
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Site.Master" />
+    <Content Include="Standard_Journal_View.aspx" />
     <Content Include="StartPage.aspx" />
     <Content Include="Stopwatch.js" />
     <Content Include="StopWatch2.js" />
@@ -812,7 +815,6 @@
     <Content Include="Bundle.config" />
     <Content Include="packages.config" />
     <None Include="Project_Readme.html" />
-    <Content Include="Scripts\jquery-1.10.2.min.map" />
     <Content Include="Site.Mobile.Master" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_AdminLteTopMenu.cshtml" />
@@ -824,6 +826,8 @@
     <Content Include="Views\Shared\_AdminLteBreadcrumb.cshtml" />
     <Content Include="Views\AdminLte\Index.cshtml" />
     <Content Include="Views\AdminLte\Colors.cshtml" />
+    <Content Include="Scripts\jquery-3.1.1.slim.min.map" />
+    <Content Include="Scripts\jquery-3.1.1.min.map" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -873,9 +877,9 @@
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="DAL\DivingJournalContext.cs" />
     <Compile Include="DAL\DivingJournalInitializer.cs" />
-    <Compile Include="Migrations\201705160040046_intital.cs" />
-    <Compile Include="Migrations\201705160040046_intital.Designer.cs">
-      <DependentUpon>201705160040046_intital.cs</DependentUpon>
+    <Compile Include="Migrations\201705161224489_test213.cs" />
+    <Compile Include="Migrations\201705161224489_test213.Designer.cs">
+      <DependentUpon>201705161224489_test213.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Diver_Compression.cs" />
@@ -895,6 +899,13 @@
     </Compile>
     <Compile Include="New_Journal.aspx.designer.cs">
       <DependentUpon>New_Journal.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Standard_Journal_View.aspx.cs">
+      <DependentUpon>Standard_Journal_View.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Standard_Journal_View.aspx.designer.cs">
+      <DependentUpon>Standard_Journal_View.aspx</DependentUpon>
     </Compile>
     <Compile Include="TableMaker.cs" />
     <Compile Include="Default.aspx.cs">
@@ -956,8 +967,8 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201705160040046_intital.resx">
-      <DependentUpon>201705160040046_intital.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201705161224489_test213.resx">
+      <DependentUpon>201705161224489_test213.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

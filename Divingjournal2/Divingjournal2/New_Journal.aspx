@@ -20,7 +20,9 @@
                 <asp:Button ID="SurfaceCompressionDiveButton" runat="server" Text="Overflatekompresjon" Width ="25%" OnClick="SurfaceCompressionDiveButton_Click" />
                 <asp:Button ID="PressureChamberDiveButton" runat="server" Text="Trykkammer" Width ="25%" OnClick="PressureChamberDiveButton_Click"/>
 
+                 <asp:Button ID="Local_Save" runat="server" Text="Lagre" />
             </asp:Panel>
+        
             <div style="text-align:right; padding:0px; height: 22px; width: auto;">
                 <asp:Table ID="FirstInfoTable" runat="server" BorderStyle="None" CellPadding="1" CellSpacing="1" HorizontalAlign="Right" Font-Size="X-Large">
                     <asp:TableRow ID="JournalIDRow" runat="server" >
@@ -69,13 +71,15 @@
 
                 
 
-                <asp:Calendar ID="Calendar1" runat="server" OnSelectionChanged="Calendar1_SelectionChanged" BackColor="White" BorderColor="White" BorderWidth="1px" Font-Names="Verdana" Font-Size="9pt" ForeColor="Black" Height="190px" Width="350px" NextPrevFormat="FullMonth">
-                    <DayHeaderStyle Font-Bold="True" Font-Size="8pt" />
-                    <NextPrevStyle Font-Size="8pt" ForeColor="#333333" Font-Bold="True" VerticalAlign="Bottom" />
+                <asp:Calendar ID="Calendar1" runat="server" OnSelectionChanged="Calendar1_SelectionChanged" BackColor="White" BorderColor="#3366CC" BorderWidth="1px" Font-Names="Verdana" Font-Size="8pt" ForeColor="#003399" Height="200px" Width="220px" CellPadding="1" DayNameFormat="Shortest">
+                    <DayHeaderStyle BackColor="#99CCCC" ForeColor="#336666" Height="1px" />
+                    <NextPrevStyle Font-Size="8pt" ForeColor="#CCCCFF" />
                     <OtherMonthDayStyle ForeColor="#999999" />
-                    <SelectedDayStyle BackColor="#333399" ForeColor="White" />
-                    <TitleStyle BackColor="White" Font-Bold="True" Font-Size="12pt" ForeColor="#333399" BorderColor="Black" BorderWidth="4px" />
-                    <TodayDayStyle BackColor="#CCCCCC" />
+                    <SelectedDayStyle BackColor="#009999" ForeColor="#CCFF99" Font-Bold="True" />
+                    <SelectorStyle BackColor="#99CCCC" ForeColor="#336666" />
+                    <TitleStyle BackColor="#003399" Font-Bold="True" Font-Size="10pt" ForeColor="#CCCCFF" BorderColor="#3366CC" BorderWidth="1px" Height="25px" />
+                    <TodayDayStyle BackColor="#99CCCC" ForeColor="White" />
+                    <WeekendDayStyle BackColor="#CCCCFF" />
                 </asp:Calendar>
 
        <asp:Panel runat="server">
@@ -111,7 +115,7 @@
 </asp:TableCell>
 
                     </asp:TableRow>
-                    <asp:TableRow ID="TableRow3" runat="server">
+                    <asp:TableRow ID="DivingSpotRow" runat="server">
                         <asp:TableCell runat="server" >Dykkepost</asp:TableCell>
                         <asp:TableCell ID="DivingSpotCell" runat="server" >
                             <asp:TextBox ID="DivingSpotTextBox" runat="server" ></asp:TextBox>
@@ -123,7 +127,7 @@
 
                     
 
-                    <asp:TableRow ID="TableRow1" runat="server">
+                    <asp:TableRow ID="OtherRow" runat="server">
                         <asp:TableCell runat="server" >Annet</asp:TableCell>
                         <asp:TableCell ID="OtherCell" runat="server" >
                             <asp:TextBox ID="OtherTextBox" runat="server" ></asp:TextBox>
@@ -133,9 +137,7 @@
 
                     </asp:TableRow>
 
-                        <asp:TableRow ID="TableRow42" runat="server">
-                <asp:TableHeaderCell ColumnSpan="2">Personell</asp:TableHeaderCell>
-            </asp:TableRow>
+                       
                 
            
 
@@ -168,7 +170,7 @@
 </asp:TableCell>
 
                     </asp:TableRow>
-                    <asp:TableRow ID="TableRow6" runat="server">
+                    <asp:TableRow ID="Divingleader_studentRow" runat="server">
                         <asp:TableCell runat="server" >Dykkeleder (student)</asp:TableCell>
                         <asp:TableCell ID="Divingleader_studentCell" runat="server" >
                             <asp:TextBox ID="Divingleader_studentTextBox" runat="server" ></asp:TextBox>
@@ -180,7 +182,7 @@
 
                     </asp:TableRow>
 
-                    <asp:TableRow ID="TableRow7" runat="server">
+                    <asp:TableRow ID="diver_1Row" runat="server">
                         <asp:TableCell runat="server" >Dykker 1</asp:TableCell>
                         <asp:TableCell ID="diver_1Cell" runat="server" >
                             <asp:TextBox ID="Diver_1TextBox" runat="server" ></asp:TextBox>
@@ -192,7 +194,7 @@
 
                     </asp:TableRow>
 
-                    <asp:TableRow ID="TableRow8" runat="server" >
+                    <asp:TableRow ID="diver_2Row" runat="server" >
 
                         <asp:TableCell runat="server" >Dykker 2</asp:TableCell>
                         <asp:TableCell ID="TableCell5" runat="server" >
@@ -205,7 +207,7 @@
 
                     </asp:TableRow>
 
-                    <asp:TableRow ID="TableRow9" runat="server">
+                    <asp:TableRow ID="StandbyRow" runat="server">
 
                         <asp:TableCell runat="server" >Standby-/beredskapsdykker</asp:TableCell>
                         <asp:TableCell ID="TableCell6" runat="server" >
@@ -217,7 +219,7 @@
 </asp:TableCell>
 
                     </asp:TableRow>
-                    <asp:TableRow ID="TableRow10" runat="server">
+                    <asp:TableRow ID="HelpmanRow" runat="server">
                         <asp:TableCell runat="server" >Hjelpemann</asp:TableCell>
                         <asp:TableCell ID="TableCell7" runat="server" >
                             <asp:TextBox ID="HelpmanTextBox" runat="server" ></asp:TextBox>
@@ -229,7 +231,7 @@
 
                     </asp:TableRow>
 
-                    <asp:TableRow ID="TableRow11" runat="server">
+                    <asp:TableRow ID="Helpman_assistingRow" runat="server">
                         <asp:TableCell runat="server" >Assisterende hjelpemann</asp:TableCell>
                         <asp:TableCell ID="TableCell8" runat="server" >
                             <asp:TextBox ID="Helpman_assistingTextBox" runat="server" ></asp:TextBox>
@@ -241,7 +243,7 @@
 
                     </asp:TableRow>
 
-                    <asp:TableRow ID="TableRow12" runat="server">
+                    <asp:TableRow ID="Lineman_1Row" runat="server">
 
                         <asp:TableCell runat="server" >Linemann 1</asp:TableCell>
                         <asp:TableCell ID="TableCell9" runat="server" >
@@ -253,7 +255,7 @@
 </asp:TableCell>
 
                     </asp:TableRow>
-                    <asp:TableRow ID="TableRow13" runat="server">
+                    <asp:TableRow ID="Lineman_2Row" runat="server">
                         <asp:TableCell runat="server" >Linemann 2</asp:TableCell>
                         <asp:TableCell ID="TableCell10" runat="server" >
                             <asp:TextBox ID="Lineman_2TextBox" runat="server" ></asp:TextBox>
@@ -265,13 +267,83 @@
 
                     </asp:TableRow>
 
-                    <asp:TableRow ID="TableRow14" runat="server">
+                    <asp:TableRow ID="OthersRow" runat="server">
                         <asp:TableCell runat="server">Andre</asp:TableCell>
                         <asp:TableCell ID="TableCell11" runat="server" >
                             <asp:TextBox ID="OthersTextBox" runat="server" ></asp:TextBox>
                         
 
 
+
+</asp:TableCell>
+
+                    </asp:TableRow>
+
+                       <asp:TableRow ID="PurposeRow" runat="server">
+                        <asp:TableCell runat="server" >Formål</asp:TableCell>
+                        <asp:TableCell ID="TableCell14" runat="server" >
+                            <asp:TextBox ID="PurposeTextBox" runat="server" ></asp:TextBox>
+                        
+
+</asp:TableCell>
+
+                    </asp:TableRow>
+
+                       <asp:TableRow ID="chamberoperatorRow" runat="server">
+                        <asp:TableCell runat="server" >Kammeroperatør</asp:TableCell>
+                        <asp:TableCell ID="TableCell15" runat="server" >
+                            <asp:TextBox ID="chamberoperatorTextBox" runat="server" ></asp:TextBox>
+                        
+
+</asp:TableCell>
+
+                    </asp:TableRow>
+
+                       <asp:TableRow ID="chamberassistentRow" runat="server">
+                        <asp:TableCell runat="server" >Kammerassistent</asp:TableCell>
+                        <asp:TableCell ID="TableCell16" runat="server" >
+                            <asp:TextBox ID="chamberassistentTextBox" runat="server" ></asp:TextBox>
+                        
+
+</asp:TableCell>
+
+                    </asp:TableRow>
+
+                       <asp:TableRow ID="isChamberClearRow" runat="server">
+                        <asp:TableCell runat="server" >Kammer OK?</asp:TableCell>
+                        <asp:TableCell ID="TableCell17" runat="server" >
+                          
+                        
+
+</asp:TableCell>
+
+                    </asp:TableRow>
+
+                       <asp:TableRow ID="isOxygenClearRow" runat="server">
+                        <asp:TableCell runat="server" >Oksygen OK?</asp:TableCell>
+                        <asp:TableCell ID="TableCell18" runat="server" >
+                            
+                        
+
+</asp:TableCell>
+
+                    </asp:TableRow>
+
+                       <asp:TableRow ID="treatmentRow" runat="server">
+                        <asp:TableCell runat="server" >Behandling</asp:TableCell>
+                        <asp:TableCell ID="TableCell19" runat="server" >
+                            
+                        
+
+</asp:TableCell>
+
+                    </asp:TableRow>
+
+                       <asp:TableRow ID="doctorRow" runat="server">
+                        <asp:TableCell runat="server" >Lege</asp:TableCell>
+                        <asp:TableCell ID="TableCell20" runat="server" >
+                            <asp:TextBox ID="doctorTextBox" runat="server" ></asp:TextBox>
+                        
 
 </asp:TableCell>
 
@@ -287,8 +359,7 @@
       <asp:Panel runat="server">
 
                 <div style="text-align:right; padding:0px; height: 22px; width: auto;">
-
-    <asp:Table runat="server" ID="SecondaryInfoTable" HorizontalAlign="Center" Font-Size="Large">
+    <asp:Table runat="server" ID="SecondaryInfoTable" Visible="True" HorizontalAlign="Left" Font-Size="Large">
          <asp:TableRow ID="TableRow15" runat="server" >
 
                         <asp:TableHeaderCell CssClass="tableCellHeaderStyle">Luftsystem</asp:TableHeaderCell>
@@ -341,7 +412,7 @@
 
                     </asp:TableRow>
 
-                       <asp:TableHeaderRow>
+                       <asp:TableHeaderRow ID="TransportRow">
                            <asp:TableHeaderCell>
                                <asp:CheckBoxList ID="TransportCheckBoxList" AutoPostBack="true" RepeatDirection="Horizontal" runat="server" OnSelectedIndexChanged="TransportCheckBoxList_SelectedIndexChanged">
         
@@ -381,9 +452,64 @@
 
 </div>
           </asp:Panel>
-        </ContentTemplate></asp:UpdatePanel>
+        
+
 
     <asp:Panel runat="server">
+
+        <div style="text-align: right; padding: 0px; height: 22px; width: auto;">
+
+            <asp:Table ID="PressureChamberDiversTable" runat="server" HorizontalAlign="Left" Font-Size="Large">
+
+
+
+                <asp:TableHeaderRow ID="TableHeaderRow1" runat="server">
+                    <asp:TableHeaderCell runat="server" ColumnSpan="2">
+                       Dykkere
+                    </asp:TableHeaderCell>
+                </asp:TableHeaderRow>
+                <asp:TableRow ID="TableRow1" runat="server">
+                    <asp:TableCell ID="TableCell22" runat="server">
+                        <asp:TextBox ID="TextBox2" runat="server"></asp:TextBox>
+                    </asp:TableCell>
+                    <asp:TableCell ID="TableCell21" runat="server">
+                        <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
+                    </asp:TableCell>
+                </asp:TableRow>
+                <asp:TableRow ID="TableRow3" runat="server">
+                    <asp:TableCell ID="TableCell23" runat="server">
+                        <asp:TextBox ID="TextBox3" runat="server"></asp:TextBox>
+                    </asp:TableCell>
+                    <asp:TableCell ID="TableCell24" runat="server">
+                        <asp:TextBox ID="TextBox4" runat="server"></asp:TextBox>
+                    </asp:TableCell>
+                </asp:TableRow>
+                <asp:TableRow ID="TableRow6" runat="server">
+                    <asp:TableCell ID="TableCell25" runat="server">
+                        <asp:TextBox ID="TextBox5" runat="server"></asp:TextBox>
+                    </asp:TableCell>
+                    <asp:TableCell ID="TableCell26" runat="server">
+                        <asp:TextBox ID="TextBox6" runat="server"></asp:TextBox>
+                    </asp:TableCell>
+                </asp:TableRow>
+                <asp:TableRow ID="TableRow7" runat="server">
+                    <asp:TableCell ID="TableCell27" runat="server">
+                        <asp:TextBox ID="TextBox7" runat="server"></asp:TextBox>
+                    </asp:TableCell>
+                    <asp:TableCell ID="TableCell28" runat="server">
+                        <asp:TextBox ID="TextBox8" runat="server"></asp:TextBox>
+                    </asp:TableCell>
+                </asp:TableRow>
+                
+
+                </asp:Table>
+            </div>
+        </asp:Panel>
+    </ContentTemplate></asp:UpdatePanel>
+
+
+    <asp:UpdatePanel runat="server"><ContentTemplate>
+    <asp:Panel ID="DiversPanel" runat="server">
 
     <div style="width:auto;">
 
@@ -391,7 +517,7 @@
         <asp:TableRow runat="server">
             <asp:TableCell ID="Diver1Cell" runat="server">
 
-<asp:UpdatePanel runat="server"><ContentTemplate>
+
                  
         <h4>Dykker 1</h4>
         <asp:DropDownList ID="D1OF_TypeDropDownList" runat="server">
@@ -456,7 +582,6 @@
 
                 
                 
-        </ContentTemplate></asp:UpdatePanel>
 
         <asp:Table ID="D1VolumeTable" runat="server">
 
@@ -525,7 +650,7 @@
             <asp:TableCell ID="Diver2Cell" runat="server">
                  
 
-<asp:UpdatePanel runat="server"><ContentTemplate>
+
                  
         <h4>Dykker 2</h4>
         <asp:DropDownList ID="D2OF_TypeDropDownList" runat="server">
@@ -591,7 +716,7 @@
 
                 
                 
-        </ContentTemplate></asp:UpdatePanel>
+        
 
         <asp:Table ID="Table4" runat="server">
 
@@ -658,7 +783,6 @@
             </asp:TableCell>
             <asp:TableCell ID="StandbyCell" runat="server">
 
-                <asp:UpdatePanel runat="server"><ContentTemplate>
                  
         <h4>Standby</h4>
         <asp:DropDownList ID="SBOF_TypeDropDownList" runat="server">
@@ -722,8 +846,7 @@
           </asp:Table>
 
                 
-                
-        </ContentTemplate></asp:UpdatePanel>
+               
 
         <asp:Table ID="Table7" runat="server">
 
@@ -795,6 +918,7 @@
 
         </div>
         </asp:Panel>
+        </ContentTemplate></asp:UpdatePanel>
 
     <!-- Stopwatches -->
 
@@ -835,7 +959,21 @@
         
 
   <script src="Stopwatch3.js"></script>
+      <script src ="Scripts/jquery-3.1.1.js"></script>
+        <script>
+            var storage = window.localStorage;
 
+            var what = "#<%=Local_Save.ClientID %>";
+                alert(what);
+                $(document).on("click", "#<%=Local_Save.ClientID %>", function (evt) {
+                    var text = $("#<%=DateTextBox.ClientID %>").val();
+
+                    alert(text);
+
+                });
+
+
+        </script>
 
 
 
@@ -1683,16 +1821,159 @@
    </asp:UpdatePanel>
 
 
-    <asp:UpdatePanel ID="UpdatePanel2" runat="server"><ContentTemplate>
+    <asp:UpdatePanel runat="server">
+        <ContentTemplate>
+            <div style="text-align: center; padding: 0px; height: 22px; width: auto;">
 
-        <div style="text-align:left; padding:0px; height:22px; width:auto;">
+                <asp:Table ID="PressureChamberDiveTable" runat="server" Visible="False" GridLines="Both" HorizontalAlign="Left">
+                    <asp:TableRow>
+                        <asp:TableCell>
+                            Dato
+                        </asp:TableCell>
+                        <asp:TableCell runat="server">
 
-            <asp:Table ID="PressureChamberDiveTable" runat="server"></asp:Table>
+                        </asp:TableCell>
+                    </asp:TableRow>
+                    <asp:TableRow runat="server">
+                        <asp:TableCell runat="server">
+                            Sted
+                        </asp:TableCell>
+                        <asp:TableCell runat="server"></asp:TableCell>
+                    </asp:TableRow>
+                    <asp:TableRow runat="server">
+                        <asp:TableCell runat="server">
+                            Kammer
+                        </asp:TableCell>
+                        <asp:TableCell runat="server"></asp:TableCell>
+                    </asp:TableRow>
+                    <asp:TableRow runat="server">
+                        <asp:TableCell runat="server">
+                            Formål
+                        </asp:TableCell>
+                        <asp:TableCell runat="server"></asp:TableCell>
+                    </asp:TableRow>
+                    <asp:TableRow runat="server">
+                        <asp:TableCell runat="server">
+                            Dykkesjef
+                        </asp:TableCell>
+                        <asp:TableCell runat="server"></asp:TableCell>
+                    </asp:TableRow>
+                    <asp:TableRow runat="server">
+                        <asp:TableCell runat="server">
+                            Dykkeleder
+                        </asp:TableCell>
+                        <asp:TableCell runat="server"></asp:TableCell>
+                    </asp:TableRow>
+                    <asp:TableRow runat="server">
+                        <asp:TableCell runat="server">
+                            Kammeroperatør
+                        </asp:TableCell>
+                        <asp:TableCell runat="server"></asp:TableCell>
+                    </asp:TableRow>
+                    <asp:TableRow runat="server">
+                        <asp:TableCell runat="server">
+                            Kammerassistent
+                        </asp:TableCell>
+                        <asp:TableCell runat="server"></asp:TableCell>
+                    </asp:TableRow>
+                    <asp:TableRow runat="server">
+                        <asp:TableCell runat="server">
+                            Lege
+                        </asp:TableCell>
+                        <asp:TableCell runat="server"></asp:TableCell>
+                    </asp:TableRow>
+                    <asp:TableRow ID="PCDiverTitleRow" runat="server">
+                        <asp:TableCell runat="server">
+
+                        </asp:TableCell>
+                        <asp:TableCell runat="server"></asp:TableCell>
+                    </asp:TableRow>
+                    <asp:TableRow runat="server">
+                        <asp:TableCell runat="server"></asp:TableCell>
+                        <asp:TableCell runat="server"></asp:TableCell>
+                    </asp:TableRow>
+                    <asp:TableRow runat="server">
+                        <asp:TableCell runat="server"></asp:TableCell>
+                        <asp:TableCell runat="server"></asp:TableCell>
+                    </asp:TableRow>
+                    <asp:TableRow runat="server">
+                        <asp:TableCell runat="server"></asp:TableCell>
+                        <asp:TableCell runat="server"></asp:TableCell>
+                    </asp:TableRow>
+                    <asp:TableRow runat="server">
+                        <asp:TableCell runat="server"></asp:TableCell>
+                        <asp:TableCell runat="server"></asp:TableCell>
+                    </asp:TableRow>
+                    <asp:TableRow runat="server">
+                        <asp:TableCell runat="server"></asp:TableCell>
+                        <asp:TableCell runat="server"></asp:TableCell>
+                    </asp:TableRow>
+                    <asp:TableRow runat="server">
+                        <asp:TableCell runat="server"></asp:TableCell>
+                        <asp:TableCell runat="server"></asp:TableCell>
+                    </asp:TableRow>
+                    <asp:TableRow runat="server">
+                        <asp:TableCell runat="server"></asp:TableCell>
+                        <asp:TableCell runat="server"></asp:TableCell>
+                    </asp:TableRow>
+                    <asp:TableRow runat="server">
+                        <asp:TableCell runat="server"></asp:TableCell>
+                        <asp:TableCell runat="server"></asp:TableCell>
+                    </asp:TableRow>
+                    <asp:TableRow runat="server">
+                        <asp:TableCell runat="server"></asp:TableCell>
+                        <asp:TableCell runat="server"></asp:TableCell>
+                    </asp:TableRow>
+                    <asp:TableRow runat="server">
+                        <asp:TableCell runat="server"></asp:TableCell>
+                        <asp:TableCell runat="server"></asp:TableCell>
+                    </asp:TableRow>
+                    <asp:TableRow runat="server">
+                        <asp:TableCell runat="server"></asp:TableCell>
+                        <asp:TableCell runat="server"></asp:TableCell>
+                    </asp:TableRow>
+                    <asp:TableRow runat="server">
+                        <asp:TableCell runat="server"></asp:TableCell>
+                        <asp:TableCell runat="server"></asp:TableCell>
+                    </asp:TableRow>
+                    <asp:TableRow runat="server">
+                        <asp:TableCell runat="server"></asp:TableCell>
+                        <asp:TableCell runat="server"></asp:TableCell>
+                    </asp:TableRow>
+                    <asp:TableRow runat="server">
+                        <asp:TableCell runat="server"></asp:TableCell>
+                        <asp:TableCell runat="server"></asp:TableCell>
+                    </asp:TableRow>
+                    <asp:TableRow runat="server">
+                        <asp:TableCell runat="server"></asp:TableCell>
+                        <asp:TableCell runat="server"></asp:TableCell>
+                    </asp:TableRow>
+                    <asp:TableRow runat="server">
+                        <asp:TableCell runat="server"></asp:TableCell>
+                        <asp:TableCell runat="server"></asp:TableCell>
+                    </asp:TableRow>
+                    <asp:TableRow runat="server">
+                        <asp:TableCell runat="server"></asp:TableCell>
+                        <asp:TableCell runat="server"></asp:TableCell>
+                    </asp:TableRow>
+                    <asp:TableRow runat="server">
+                        <asp:TableCell runat="server"></asp:TableCell>
+                        <asp:TableCell runat="server"></asp:TableCell>
+                    </asp:TableRow>
+
+                
+                
+                
+                
+                
+                
+                </asp:Table>
+            </div>
+
+        </ContentTemplate>
+    </asp:UpdatePanel>
 
 
-
-        </div>
-  </ContentTemplate></asp:UpdatePanel>
 
 
 
