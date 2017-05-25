@@ -6,6 +6,7 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using DiverLibrary;
 using Divingjournal2.DAL;
+using System.Web.Services;
 
 namespace Divingjournal2
 {
@@ -843,11 +844,23 @@ namespace Divingjournal2
             }
         }
 
+        [WebMethod]
+        public static string SaveData(Models.UserData data)
+        {
+            //return "Thank you " + data.subject + "(" + data.courseNumber + ")";
+            return "hei";
+        }
+
         public Models.JournalType checkJournalType()
         {
             return Models.JournalType.direct;
         }
+
+        protected void AJAX_Button_Click(object sender, EventArgs e)
+        {
         
+    }
     }
         
     }
+
