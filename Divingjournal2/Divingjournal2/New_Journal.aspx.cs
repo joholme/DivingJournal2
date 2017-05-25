@@ -6,6 +6,7 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using DiverLibrary;
 using Divingjournal2.DAL;
+using System.Web.Services;
 
 namespace Divingjournal2
 {
@@ -917,5 +918,7 @@ namespace Divingjournal2
             calculateTime(P1ClockTextBox1, P1ClockTextBox2, P1NumberOfMinsTextBox);
         }
     }
+    }
         
     }
+
