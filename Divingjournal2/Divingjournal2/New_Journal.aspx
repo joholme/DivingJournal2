@@ -22,7 +22,7 @@
                 <asp:Button ID="PressureChamberDiveButton" runat="server" Text="Trykkammer" Width="25%" OnClick="PressureChamberDiveButton_Click" />
 
                  <asp:Button ID="Local_Save" runat="server" Text="Lagre" />
-                <asp:Button ID="AJAX_Button" runat="server" OnClick="AJAX_Button_Click" Text="Laste" />
+                <asp:Button ID="AJAX_Button" runat="server" Text="Laste" />
                 <asp:Button ID="Dummy_button" runat="server" Text="Dummy" />
             </asp:Panel>
 
