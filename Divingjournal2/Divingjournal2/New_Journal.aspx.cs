@@ -681,7 +681,16 @@ namespace Divingjournal2
             Lineman_1Row.Visible = !chamber;
             Lineman_2Row.Visible = !chamber;
             OthersRow.Visible = !chamber;
+            
             TransportRow.Visible = !chamber;
+            if (chamber)
+            {
+                setTransportCheckBoxList(!chamber);
+            }
+
+            
+                
+            
 
             //Only enabled for pressurechamber:
             PurposeRow.Visible = chamber;
@@ -729,18 +738,37 @@ namespace Divingjournal2
             if (button.CommandArgument != null)
             {
                 TextBox textbox = (TextBox)FindControlRecursive(Page, button.CommandArgument);
-                textbox.Text = "Kl " + DateTime.Now.ToShortTimeString();
+                textbox.Text = DateTime.Now.ToShortTimeString();
             }
         }
 
+        protected void TimeButtonWithExtraFunction_Click(object sender, EventArgs e)
+        {
+            Button button = (Button)sender;
+            if (button.CommandArgument != null)
+            {
+                TextBox textbox = (TextBox)FindControlRecursive(Page, button.CommandArgument);
+                textbox.Text = DateTime.Now.ToShortTimeString();
+            }
+        }
+
+
+
+
         protected void TransportCheckBoxList_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            TransportCheckBoxListChanged();
+        }
+
+        public void TransportCheckBoxListChanged()
         {
             checkTransportCheckboxList(TransportCheckBoxList.SelectedIndex);
             //if neither divingbasket or divingbell is chosen, hide emergency gas rows
-            if (TransportCheckBoxList.Items[0].Selected==false && TransportCheckBoxList.Items[1].Selected == false)
+            if (TransportCheckBoxList.Items[0].Selected == false && TransportCheckBoxList.Items[1].Selected == false)
             {
                 EmergencyGasRow1.Visible = EmergencyGasRow2.Visible = EmergencyGasRow3.Visible = false;
-            } else
+            }
+            else
             {
                 EmergencyGasRow1.Visible = EmergencyGasRow2.Visible = EmergencyGasRow3.Visible = true;
             }
@@ -761,6 +789,15 @@ namespace Divingjournal2
                 }
             }
         }
+
+        public void setTransportCheckBoxList(bool value)
+        {
+            TransportCheckBoxList.Items[0].Selected = value;
+            TransportCheckBoxList.Items[1].Selected = value;
+            TransportCheckBoxListChanged();
+        }
+
+
 
         public Models.Transport returnTransportCheckBoxList()
         {
@@ -815,6 +852,7 @@ namespace Divingjournal2
 
         }
 
+
         protected void ChamberSealedButton_Click(object sender, EventArgs e)
         {
             if (ChamberSealedButton.Text == "Forsegl kammer")
@@ -847,7 +885,37 @@ namespace Divingjournal2
         {
             return Models.JournalType.direct;
         }
-        
+
+        public void calculateTime(TextBox startTimeTextBox, TextBox stopTimeTextBox, TextBox resultTextBox)
+        {
+            TimeSpan startTimeSpan, stopTimeSpan;
+            
+            if (startTimeTextBox != null && stopTimeTextBox != null)
+                
+            {
+                try {
+                    startTimeSpan = TimeSpan.Parse(startTimeTextBox.Text);
+                    stopTimeSpan = TimeSpan.Parse(stopTimeTextBox.Text);
+                    resultTextBox.Text = ((int)stopTimeSpan.TotalMinutes - (int)startTimeSpan.TotalMinutes).ToString();
+                } catch (FormatException)
+                {
+                    System.Web.HttpContext.Current.Response.Write("<SCRIPT LANGUAGE='JavaScript'>alert('Feil format. Kl som hh:mm')</SCRIPT>");
+                    
+                } catch (OverflowException)
+                {
+                    Response.Write("OverflowException");
+                }
+                
+
+                
+
+            }
+        }
+
+        protected void P1NumberOfMinsButton_Click(object sender, EventArgs e)
+        {
+            calculateTime(P1ClockTextBox1, P1ClockTextBox2, P1NumberOfMinsTextBox);
+        }
     }
         
     }
