@@ -18,17 +18,17 @@ namespace Divingjournal2.Account
     {
         protected void Button_Login_Click(object sender, EventArgs e)
         {
-            SqlConnection con = new SqlConnection("Data Source = (LocalDB)\\MSSQLLocalDB; AttachDbFilename = |DataDirectory|\\Login.mdf ; Integrated Security = True");
-            SqlDataAdapter sda = new SqlDataAdapter("Select count(*) From Log_Table Where UserName = '" + TextBoxUserName.Text + "' and Password = '" + TextBoxPassword.Text + "' ",con);
+            SqlConnection con = new SqlConnection("Data Source=(LocalDB)\\MSSQLLocalDB;Initial Catalog=DivingJournal;Integrated Security=True;Connect Timeout=15;Encrypt=False;TrustServerCertificate=True;ApplicationIntent=ReadWrite;MultiSubnetFailover=False");
+            SqlDataAdapter sda = new SqlDataAdapter("Select count(*) From UserData Where UserName = '" + TextBoxUserName.Text + "' and Password = '" + TextBoxPassword.Text + "' ",con);
             DataTable dt = new DataTable();
             sda.Fill(dt);
             if(dt.Rows[0][0].ToString()== "1")
             {
-                Response.Redirect("Default.aspx");
+                Response.Redirect("~/Default.aspx");
             }
             else
             {
-                PasswordError.Visible = true;
+                Response.Write("Password is Not correct");
             }
         }
     }
