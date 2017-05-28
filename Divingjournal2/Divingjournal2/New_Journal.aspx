@@ -24,6 +24,7 @@
                  <asp:Button ID="Local_Save" runat="server" Text="Lagre" />
                 <asp:Button ID="AJAX_Button" runat="server" Text="Laste" />
                 <asp:Button ID="Dummy_button" runat="server" Text="Dummy" />
+                 <asp:Button ID="Button166" runat="server" Text="Lagre til DB" OnClick="SubmitButton_Click" />
             </asp:Panel>
 
 

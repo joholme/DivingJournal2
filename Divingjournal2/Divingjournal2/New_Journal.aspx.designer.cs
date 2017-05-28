@@ -85,6 +85,15 @@ namespace Divingjournal2 {
         protected global::System.Web.UI.WebControls.Button Dummy_button;
         
         /// <summary>
+        /// Button166 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button Button166;
+        
+        /// <summary>
         /// FirstInfoTable control.
         /// </summary>
         /// <remarks>

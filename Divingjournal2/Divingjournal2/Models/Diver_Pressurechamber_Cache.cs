@@ -10,16 +10,6 @@ namespace Divingjournal2.Models
         //PK
         public int Id { get; set; }
 
-        //FK
-        public int Journal_CacheID { get; set; }
-
-        public string name { get; set; }
-        public OF_Type of_type { get; set; }
-
-
-
-        //Links - to one
-        public virtual Journal_Cache Journal_Cache { get; set; }
 
     }
 }

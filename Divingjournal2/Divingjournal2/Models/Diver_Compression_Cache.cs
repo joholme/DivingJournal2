@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Web;
 
@@ -13,7 +14,7 @@ namespace Divingjournal2.Models
         //FK
         public int Journal_CacheID { get; set; }
 
-        public string name { get; set; }
+        public string diver_name { get; set; }
         public Transport transport { get; set; }
         public OF_Type of_type { get; set; }
         public Direct direct { get; set; }
@@ -58,7 +59,6 @@ namespace Divingjournal2.Models
         public string timeAtSea { get; set; }
         public string totalDecompression { get; set; }
         public string totalDivingTime { get; set; }
-
 
 
         //Links - to one
