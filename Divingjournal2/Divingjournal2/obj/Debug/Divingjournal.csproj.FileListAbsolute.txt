@@ -329,3 +329,5 @@ C:\Users\Jonas\GitHub\DivingJournal2\Divingjournal2\Divingjournal2\obj\Debug\Div
 C:\Users\Jonas\GitHub\DivingJournal2\Divingjournal2\Divingjournal2\obj\Debug\Divingjournal.csproj.GenerateResource.Cache
 C:\Users\Jonas\GitHub\DivingJournal2\Divingjournal2\Divingjournal2\obj\Debug\Divingjournal2.dll
 C:\Users\Jonas\GitHub\DivingJournal2\Divingjournal2\Divingjournal2\obj\Debug\Divingjournal2.pdb
+C:\Users\Jonas\GitHub\DivingJournal2\Divingjournal2\Divingjournal2\bin\Divingjournal2.dll.CodeAnalysisLog.xml
+C:\Users\Jonas\GitHub\DivingJournal2\Divingjournal2\Divingjournal2\bin\Divingjournal2.dll.lastcodeanalysissucceeded
