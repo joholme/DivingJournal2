@@ -48,7 +48,5 @@ namespace Divingjournal2.Models
         public virtual ICollection<Diver_Compression> Diver_Compressions { get; set; }
         public virtual ICollection<Diver_Pressurechamber> Diver_Pressurechambers { get; set; }
 
-
-
     }
 }

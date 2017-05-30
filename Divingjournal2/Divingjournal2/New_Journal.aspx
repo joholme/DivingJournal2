@@ -22,8 +22,9 @@
                 <asp:Button ID="PressureChamberDiveButton" runat="server" Text="Trykkammer" Width="25%" OnClick="PressureChamberDiveButton_Click" />
 
                  <asp:Button ID="Local_Save" runat="server" Text="Lagre" />
-                <asp:Button ID="AJAX_Button" runat="server" Text="Laste" />
+                <asp:Button ID="AJAX_Button" runat="server" Text="Load" />
                 <asp:Button ID="Dummy_button" runat="server" Text="Dummy" />
+                <asp:Button ID="DB_button" runat="server" Text="SaveDB" OnClick="SubmitButton_Click" />
             </asp:Panel>
 
 
@@ -1167,7 +1168,9 @@
       $("#<%=D1reachedSurface.ClientID %>").val("Kl 8:06 PM");
       $("#<%=D1ascensionTime.ClientID %>").val("5 min");
 
-});
+      });
+
+ 
   </script>
        
 
@@ -2813,6 +2816,7 @@
             <ajaxToolkit:DropShadowExtender runat="server" BehaviorID="PopupPanel_DropShadowExtender" TargetControlID="PopupPanel" ID="PopupPanel_DropShadowExtender"></ajaxToolkit:DropShadowExtender>
             <ajaxToolkit:PopupControlExtender runat="server" PopupControlID="PopupPanel" ExtenderControlID="" BehaviorID="PopupPanel_PopupControlExtender" TargetControlID="SubmitButton" ID="PopupPanel_PopupControlExtender"></ajaxToolkit:PopupControlExtender>
             <asp:Button ID="SubmitButton" runat="server" Text="Forhåndsvis og lagre" OnClick="SubmitButton_Click" />
+            <asp:Button ID="Button166" runat="server" Text="Forhåndsvis og lagre2" OnClick="SubmitButton_Click" />
         </ContentTemplate>
     </asp:UpdatePanel>
 

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using DiverLibrary;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Divingjournal2.Models
 {
@@ -21,7 +22,7 @@ namespace Divingjournal2.Models
         public int JournalID { get; set; }
 
 
-        public string name { get; set; }
+        public string diver_name { get; set; }
         public OF_Type of_type { get; set; }
         public Direct direct { get; set; }
         public AirType airType { get; set; }
