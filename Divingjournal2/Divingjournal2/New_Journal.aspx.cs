@@ -6,6 +6,7 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using DiverLibrary;
 using Divingjournal2.DAL;
+using System.Web.Services;
 
 namespace Divingjournal2
 {
@@ -335,7 +336,7 @@ namespace Divingjournal2
                 var diver1 = new Models.Diver_Standard
                 {
                     //map data fra webform til diver_standard
-                    name = Diver_1TextBox.Text,
+                    diver_name = Diver_1TextBox.Text,
                     of_type = D1checkOf_TypeDropDownList(),
                     direct = D1checkDirectDropDownList(),
                     airType = D1checkAirTypeDropDownList(),
@@ -375,7 +376,7 @@ namespace Divingjournal2
 
                 var diver2 = new Models.Diver_Standard
                 {
-                    name = Diver_2TextBox.Text,
+                    diver_name = Diver_2TextBox.Text,
                     of_type = D2checkOf_TypeDropDownList(),
                     direct = D2checkDirectDropDownList(),
                     airType = D2checkAirTypeDropDownList(),
@@ -414,7 +415,7 @@ namespace Divingjournal2
 
                 var standby = new Models.Diver_Standard
                 {
-                    name = StandbyTextBox.Text,
+                    diver_name = StandbyTextBox.Text,
                     of_type = SBcheckOf_TypeDropDownList(),
                     direct = SBcheckDirectDropDownList(),
                     airType = SBcheckAirTypeDropDownList(),
@@ -457,7 +458,7 @@ namespace Divingjournal2
                 var diver1 = new Models.Diver_Compression
                 {
                     //map data fra webform til diver_standard
-                    name = Diver_1TextBox.Text,
+                    diver_name = Diver_1TextBox.Text,
                     of_type = D1checkOf_TypeDropDownList(),
                     direct = D1checkDirectDropDownList(),
                     airType = D1checkAirTypeDropDownList(),
@@ -508,7 +509,7 @@ namespace Divingjournal2
 
                 var diver2 = new Models.Diver_Compression
                 {
-                    name = Diver_2TextBox.Text,
+                    diver_name = Diver_2TextBox.Text,
                     of_type = D2checkOf_TypeDropDownList(),
                     direct = D2checkDirectDropDownList(),
                     airType = D2checkAirTypeDropDownList(),
@@ -917,5 +918,7 @@ namespace Divingjournal2
             calculateTime(P1ClockTextBox1, P1ClockTextBox2, P1NumberOfMinsTextBox);
         }
     }
-        
     }
+        
+    
+
