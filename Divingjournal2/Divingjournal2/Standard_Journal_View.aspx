@@ -5,42 +5,86 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title></title>
+    <style type="text/css">
+        .auto-style1 {
+            height: 438px;
+        }
+    </style>
 </head>
 <body>
     <form id="form1" runat="server">
+        
         <div style="padding: 2px; border-style: hidden; font-size: x-large; color: #FFFFFF; font-weight: bold; font-family: Arial; background-color: #336699;">
-            <table style="width:100%;">
+            
+            <table style="width:100%;" id="MainTable">
                 <tr>
-                    <td>&nbsp;</td>
-                    <td>&nbsp;</td>
+                    <td colspan="1">
+                        <img alt="" src="images/hvl_logo.jpg" /></td>
+                    <td colspan="2">
+            <h1 style="text-align: center;">
+                        DYKKEJOURNAL</h1>
+                    </td>
                     <td>&nbsp;</td>
                 </tr>
                 <tr>
-                    <td>&nbsp;</td>
-                    <td>&nbsp;</td>
-                    <td>&nbsp;</td>
-                </tr>
-                <tr>
-                    <td>&nbsp;</td>
-                    <td>&nbsp;</td>
-                    <td>&nbsp;</td>
-                </tr>
-            </table>
-            <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="Id" DataSourceID="SqlDataSource1" Width="769px" CellPadding="3" Height="16px" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" OnSelectedIndexChanged="GridView1_SelectedIndexChanged">
+                    <td>
+                        &nbsp;</td>
+                    <td colspan="2">
+                        <table style="width:100%;">
+                            <tr>
+                                <td>
+            <asp:GridView ID="SubjectGridView" runat="server" AutoGenerateColumns="False" DataKeyNames="Id" DataSourceID="SqlDataSource1" Width="603px" CellPadding="3" Height="16px" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" OnSelectedIndexChanged="GridView1_SelectedIndexChanged">
                 <Columns>
                    
-                    <asp:TemplateField SortExpression="Id">
-                        <EditItemTemplate>
-                            <asp:Label ID="Label1" runat="server" Text='<%# Eval("Id") %>'></asp:Label>
-                        </EditItemTemplate>
-                        <ItemTemplate>
-                           <asp:Image ID="Image2" runat="server" Height="116px" ImageUrl="~/images/hvl_logo.jpg" Width="133px" />
-                        </ItemTemplate>
-                    </asp:TemplateField>
+                    <asp:BoundField DataField="subject" HeaderText="Fag" SortExpression="subject" />
                    
-                    <asp:BoundField DataField="subject" HeaderText="subject" SortExpression="subject" />
-                    <asp:BoundField DataField="journalType" HeaderText="journalType" SortExpression="journalType" />
-                    <asp:BoundField DataField="courseNumber" HeaderText="courseNumber" SortExpression="courseNumber" />
+                </Columns>
+                <EditRowStyle Width="50px" />
+                <FooterStyle BackColor="White" ForeColor="#000066" />
+                <HeaderStyle BackColor="#006699" Font-Bold="True" ForeColor="White" />
+                <PagerStyle BackColor="White" ForeColor="#000066" HorizontalAlign="Left" />
+                <RowStyle ForeColor="#000066" />
+                <SelectedRowStyle BackColor="#669999" Font-Bold="True" ForeColor="White" />
+                <SortedAscendingCellStyle BackColor="#F1F1F1" />
+                <SortedAscendingHeaderStyle BackColor="#007DBB" />
+                <SortedDescendingCellStyle BackColor="#CAC9C9" />
+                <SortedDescendingHeaderStyle BackColor="#00547E" />
+            </asp:GridView>
+                        </td>
+                                </tr>
+                            <tr>
+                        
+                                <td>
+            <asp:GridView ID="DateLocationGridView" runat="server" AutoGenerateColumns="False" DataKeyNames="Id" DataSourceID="SqlDataSource1" Width="603px" CellPadding="3" Height="16px" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" OnSelectedIndexChanged="GridView1_SelectedIndexChanged">
+                <Columns>
+                   
+                    <asp:BoundField DataField="date" HeaderText="Dato" SortExpression="date" />
+                    <asp:BoundField DataField="location" HeaderText="Sted" SortExpression="location" />
+                    <asp:BoundField DataField="divingSpot" HeaderText="Dykkepost" SortExpression="divingSpot" />
+                   
+                </Columns>
+                <EditRowStyle Width="50px" />
+                <FooterStyle BackColor="White" ForeColor="#000066" />
+                <HeaderStyle BackColor="#006699" Font-Bold="True" ForeColor="White" />
+                <PagerStyle BackColor="White" ForeColor="#000066" HorizontalAlign="Left" />
+                <RowStyle ForeColor="#000066" />
+                <SelectedRowStyle BackColor="#669999" Font-Bold="True" ForeColor="White" />
+                <SortedAscendingCellStyle BackColor="#F1F1F1" />
+                <SortedAscendingHeaderStyle BackColor="#007DBB" />
+                <SortedDescendingCellStyle BackColor="#CAC9C9" />
+                <SortedDescendingHeaderStyle BackColor="#00547E" />
+            </asp:GridView>
+
+                               </td>
+                            </tr>
+                        </table>
+
+                    </td>
+                    <td>
+            <asp:GridView ID="JournalIDGridView" runat="server" AutoGenerateColumns="False" DataKeyNames="Id" DataSourceID="SqlDataSource1" Width="603px" CellPadding="3" Height="16px" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" OnSelectedIndexChanged="GridView1_SelectedIndexChanged">
+                <Columns>
+                   
+                    <asp:BoundField DataField="courseNumber" HeaderText="Kurs nr" SortExpression="courseNumber" />
                    
                     <asp:BoundField DataField="Id" HeaderText="Journal nr" ReadOnly="True" SortExpression="Id" />
                    
@@ -56,6 +100,231 @@
                 <SortedDescendingCellStyle BackColor="#CAC9C9" />
                 <SortedDescendingHeaderStyle BackColor="#00547E" />
             </asp:GridView>
+
+            <asp:GridView ID="OtherGridView" runat="server" AutoGenerateColumns="False" DataKeyNames="Id" DataSourceID="SqlDataSource1" Width="603px" CellPadding="3" Height="16px" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" OnSelectedIndexChanged="GridView1_SelectedIndexChanged">
+                <Columns>
+                   
+                    <asp:BoundField DataField="other" HeaderText="Annet" SortExpression="other" />
+                   
+                </Columns>
+                <EditRowStyle Width="50px" />
+                <FooterStyle BackColor="White" ForeColor="#000066" />
+                <HeaderStyle BackColor="#006699" Font-Bold="True" ForeColor="White" />
+                <PagerStyle BackColor="White" ForeColor="#000066" HorizontalAlign="Left" />
+                <RowStyle ForeColor="#000066" />
+                <SelectedRowStyle BackColor="#669999" Font-Bold="True" ForeColor="White" />
+                <SortedAscendingCellStyle BackColor="#F1F1F1" />
+                <SortedAscendingHeaderStyle BackColor="#007DBB" />
+                <SortedDescendingCellStyle BackColor="#CAC9C9" />
+                <SortedDescendingHeaderStyle BackColor="#00547E" />
+            </asp:GridView>
+
+                    </td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td id="JournalTypeGridView">STANDARDDYKK</td>
+                    <td colspan="2">&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td class="auto-style1" colspan="4">
+            <asp:GridView ID="DivingCrewGridView" runat="server" AutoGenerateColumns="False" DataKeyNames="Id" DataSourceID="SqlDataSource1" Width="100%" CellPadding="3" Height="16px" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" OnSelectedIndexChanged="GridView1_SelectedIndexChanged">
+                <Columns>
+                   
+                    <asp:BoundField DataField="divingchief" HeaderText="Dykkesjef (avdelingsleder)" SortExpression="divingchief" />
+                    <asp:BoundField DataField="divingleader_teacher" HeaderText="Dykker 1" SortExpression="divingleader_teacher" />
+                    <asp:BoundField DataField="divingleader_student" HeaderText="Linemann 1" SortExpression="divingleader_student" />
+                   
+                </Columns>
+                <EditRowStyle Width="50px" />
+                <FooterStyle BackColor="White" ForeColor="#000066" />
+                <HeaderStyle BackColor="#006699" Font-Bold="True" ForeColor="White" />
+                <PagerStyle BackColor="White" ForeColor="#000066" HorizontalAlign="Left" />
+                <RowStyle ForeColor="#000066" />
+                <SelectedRowStyle BackColor="#669999" Font-Bold="True" ForeColor="White" />
+                <SortedAscendingCellStyle BackColor="#F1F1F1" />
+                <SortedAscendingHeaderStyle BackColor="#007DBB" />
+                <SortedDescendingCellStyle BackColor="#CAC9C9" />
+                <SortedDescendingHeaderStyle BackColor="#00547E" />
+            </asp:GridView>
+
+            <asp:GridView ID="DivingCrewGridView2" runat="server" AutoGenerateColumns="False" DataKeyNames="Id" DataSourceID="SqlDataSource1" Width="100%" CellPadding="3" Height="16px" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" OnSelectedIndexChanged="GridView1_SelectedIndexChanged">
+                <Columns>
+                   
+                    <asp:BoundField DataField="divingleader_student" HeaderText="Dykkeleder (student)" SortExpression="divingleader_student" />
+                    <asp:BoundField DataField="standby" HeaderText="Standby-/beredskapsdykker" SortExpression="standby" />
+                   
+                    <asp:BoundField DataField="helpman" HeaderText="Hjelpemann" SortExpression="helpman" />
+                   
+                </Columns>
+                <EditRowStyle Width="50px" />
+                <FooterStyle BackColor="White" ForeColor="#000066" />
+                <HeaderStyle BackColor="#006699" Font-Bold="True" ForeColor="White" />
+                <PagerStyle BackColor="White" ForeColor="#000066" HorizontalAlign="Left" />
+                <RowStyle ForeColor="#000066" />
+                <SelectedRowStyle BackColor="#669999" Font-Bold="True" ForeColor="White" />
+                <SortedAscendingCellStyle BackColor="#F1F1F1" />
+                <SortedAscendingHeaderStyle BackColor="#007DBB" />
+                <SortedDescendingCellStyle BackColor="#CAC9C9" />
+                <SortedDescendingHeaderStyle BackColor="#00547E" />
+            </asp:GridView>
+
+            <asp:GridView ID="DivingCrewGridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="Id" DataSourceID="SqlDataSource1" Width="100%" CellPadding="3" Height="16px" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" OnSelectedIndexChanged="GridView1_SelectedIndexChanged">
+                <Columns>
+                   
+                    <asp:BoundField DataField="others" HeaderText="Andre" SortExpression="others" />
+                    <asp:BoundField DataField="helpman_assisting" HeaderText="Assisterende hjelpemann" SortExpression="helpman_assisting" />
+                   
+                </Columns>
+                <EditRowStyle Width="50px" />
+                <FooterStyle BackColor="White" ForeColor="#000066" />
+                <HeaderStyle BackColor="#006699" Font-Bold="True" ForeColor="White" />
+                <PagerStyle BackColor="White" ForeColor="#000066" HorizontalAlign="Left" />
+                <RowStyle ForeColor="#000066" />
+                <SelectedRowStyle BackColor="#669999" Font-Bold="True" ForeColor="White" />
+                <SortedAscendingCellStyle BackColor="#F1F1F1" />
+                <SortedAscendingHeaderStyle BackColor="#007DBB" />
+                <SortedDescendingCellStyle BackColor="#CAC9C9" />
+                <SortedDescendingHeaderStyle BackColor="#00547E" />
+            </asp:GridView>
+
+            <asp:GridView ID="DivingCrewGridView0" runat="server" AutoGenerateColumns="False" DataKeyNames="Id" DataSourceID="SqlDataSource1" Width="100%" CellPadding="3" Height="16px" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" OnSelectedIndexChanged="GridView1_SelectedIndexChanged">
+                <Columns>
+                   
+                    <asp:BoundField DataField="divingleader_teacher" HeaderText="Dykkeleder (instruktør)" SortExpression="divingleader_teacher" />
+                    <asp:BoundField DataField="diver_2" HeaderText="Dykker 2" SortExpression="divingleader_student" />
+                   
+                    <asp:BoundField DataField="lineman_2" HeaderText="Linemann 2" SortExpression="lineman_2" />
+                   
+                </Columns>
+                <EditRowStyle Width="50px" />
+                <FooterStyle BackColor="White" ForeColor="#000066" />
+                <HeaderStyle BackColor="#006699" Font-Bold="True" ForeColor="White" />
+                <PagerStyle BackColor="White" ForeColor="#000066" HorizontalAlign="Left" />
+                <RowStyle ForeColor="#000066" />
+                <SelectedRowStyle BackColor="#669999" Font-Bold="True" ForeColor="White" />
+                <SortedAscendingCellStyle BackColor="#F1F1F1" />
+                <SortedAscendingHeaderStyle BackColor="#007DBB" />
+                <SortedDescendingCellStyle BackColor="#CAC9C9" />
+                <SortedDescendingHeaderStyle BackColor="#00547E" />
+            </asp:GridView>
+
+                               </td>
+                    <td class="auto-style1"></td>
+                </tr>
+                <tr>
+                    <td class="auto-style1" colspan="4">
+                        &nbsp;</td>
+                    <td class="auto-style1">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>
+                        <div style="text-align:center">Luftsystem</div>
+            <asp:GridView ID="AirSystemGridView" runat="server" AutoGenerateColumns="False" DataKeyNames="Id" DataSourceID="SqlDataSource1" Width="603px" CellPadding="3" Height="16px" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" OnSelectedIndexChanged="GridView1_SelectedIndexChanged">
+                <Columns>
+                   
+                    <asp:BoundField DataField="airsystem_main" HeaderText="Hovedforsyning" SortExpression="airsystem_main" />
+                    <asp:BoundField DataField="airsystem_secondary" HeaderText="Sekundær-" SortExpression="airsystem_secondary" />
+                   
+                </Columns>
+                <EditRowStyle Width="50px" />
+                <FooterStyle BackColor="White" ForeColor="#000066" />
+                <HeaderStyle BackColor="#006699" Font-Bold="True" ForeColor="White" />
+                <PagerStyle BackColor="White" ForeColor="#000066" HorizontalAlign="Left" />
+                <RowStyle ForeColor="#000066" />
+                <SelectedRowStyle BackColor="#669999" Font-Bold="True" ForeColor="White" />
+                <SortedAscendingCellStyle BackColor="#F1F1F1" />
+                <SortedAscendingHeaderStyle BackColor="#007DBB" />
+                <SortedDescendingCellStyle BackColor="#CAC9C9" />
+                <SortedDescendingHeaderStyle BackColor="#00547E" />
+            </asp:GridView>
+
+                               </td>
+                    <td colspan="2">
+                        <div style="text-align:center">Oksygen til kammer</div>
+            <asp:GridView ID="OxygenForChamberGridView" runat="server" AutoGenerateColumns="False" DataKeyNames="Id" DataSourceID="SqlDataSource1" Width="603px" CellPadding="3" Height="16px" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" OnSelectedIndexChanged="GridView1_SelectedIndexChanged">
+                <Columns>
+                   
+                    <asp:BoundField DataField="oxygenForChamber_inUse" HeaderText="I bruk" SortExpression="oxygenForChamber_inUse" />
+                    <asp:BoundField DataField="oxygenForChamber_readyForUse" HeaderText="Klar til bruk" SortExpression="oxygenForChamber_readyForUse" />
+                   
+                </Columns>
+                <EditRowStyle Width="50px" />
+                <FooterStyle BackColor="White" ForeColor="#000066" />
+                <HeaderStyle BackColor="#006699" Font-Bold="True" ForeColor="White" />
+                <PagerStyle BackColor="White" ForeColor="#000066" HorizontalAlign="Left" />
+                <RowStyle ForeColor="#000066" />
+                <SelectedRowStyle BackColor="#669999" Font-Bold="True" ForeColor="White" />
+                <SortedAscendingCellStyle BackColor="#F1F1F1" />
+                <SortedAscendingHeaderStyle BackColor="#007DBB" />
+                <SortedDescendingCellStyle BackColor="#CAC9C9" />
+                <SortedDescendingHeaderStyle BackColor="#00547E" />
+            </asp:GridView>
+
+                               </td>
+                    <td>
+                        <div style="text-align:center">Nødgass</div>
+            <asp:GridView ID="EmergencyGasGridView0" runat="server" AutoGenerateColumns="False" DataKeyNames="Id" DataSourceID="SqlDataSource1" Width="603px" CellPadding="3" Height="16px" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" OnSelectedIndexChanged="GridView1_SelectedIndexChanged">
+                <Columns>
+                   
+                    <asp:BoundField DataField="emergencyGas_divingBell" HeaderText="Våtklokke" SortExpression="emergencyGas_divingBell" />
+                    <asp:BoundField DataField="emergencyGas_divingBasket" HeaderText="Dykkekurv" SortExpression="emergencyGas_divingBasket" />
+                   
+                </Columns>
+                <EditRowStyle Width="50px" />
+                <FooterStyle BackColor="White" ForeColor="#000066" />
+                <HeaderStyle BackColor="#006699" Font-Bold="True" ForeColor="White" />
+                <PagerStyle BackColor="White" ForeColor="#000066" HorizontalAlign="Left" />
+                <RowStyle ForeColor="#000066" />
+                <SelectedRowStyle BackColor="#669999" Font-Bold="True" ForeColor="White" />
+                <SortedAscendingCellStyle BackColor="#F1F1F1" />
+                <SortedAscendingHeaderStyle BackColor="#007DBB" />
+                <SortedDescendingCellStyle BackColor="#CAC9C9" />
+                <SortedDescendingHeaderStyle BackColor="#00547E" />
+            </asp:GridView>
+
+                               </td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td colspan="2">&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td colspan="2">&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td colspan="2">&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td colspan="2">&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td colspan="2">&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td colspan="2">&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                </tr>
+            </table>
 
             <asp:GridView ID="GridView2" runat="server" AutoGenerateColumns="False" CellPadding="4" DataKeyNames="Id" DataSourceID="SqlDataSource1" ForeColor="#333333" GridLines="None" Width="994px">
                 <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
@@ -76,7 +345,7 @@
                 <SortedDescendingCellStyle BackColor="#FFFDF8" />
                 <SortedDescendingHeaderStyle BackColor="#6F8DAE" />
             </asp:GridView>
-            <br />
+            
 
             <br />
             DIREKTE DYKK<asp:GridView ID="GridView3" runat="server" AutoGenerateColumns="False" CellPadding="4" DataKeyNames="Id" DataSourceID="SqlDataSource1" ForeColor="#333333" GridLines="None" Width="991px">
