@@ -22,8 +22,9 @@
                 <asp:Button ID="PressureChamberDiveButton" runat="server" Text="Trykkammer" Width="25%" OnClick="PressureChamberDiveButton_Click" />
 
                  <asp:Button ID="Local_Save" runat="server" Text="Lagre" />
-                <asp:Button ID="AJAX_Button" runat="server" Text="Laste" />
+                <asp:Button ID="AJAX_Button" runat="server" Text="Load" />
                 <asp:Button ID="Dummy_button" runat="server" Text="Dummy" />
+                <asp:Button ID="DB_button" runat="server" Text="SaveDB" OnClick="SubmitButton_Click" />
             </asp:Panel>
 
 
@@ -1167,7 +1168,9 @@
       $("#<%=D1reachedSurface.ClientID %>").val("Kl 8:06 PM");
       $("#<%=D1ascensionTime.ClientID %>").val("5 min");
 
-});
+      });
+
+ 
   </script>
        
 

@@ -882,9 +882,9 @@
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="DAL\DivingJournalContext.cs" />
     <Compile Include="DAL\DivingJournalInitializer.cs" />
-    <Compile Include="Migrations\201705161224489_test213.cs" />
-    <Compile Include="Migrations\201705161224489_test213.Designer.cs">
-      <DependentUpon>201705161224489_test213.cs</DependentUpon>
+    <Compile Include="Migrations\201705262055390_Initial.cs" />
+    <Compile Include="Migrations\201705262055390_Initial.Designer.cs">
+      <DependentUpon>201705262055390_Initial.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Diver_Compression.cs" />
@@ -897,8 +897,6 @@
     <Compile Include="Models\Journal.cs" />
     <Compile Include="Models\Journal_Cache.cs" />
     <Compile Include="Models\Journal_Pressurechamber.cs" />
-    <Compile Include="Models\User.cs" />
-    <Compile Include="Models\UserData.cs" />
     <Compile Include="New_Journal.aspx.cs">
       <DependentUpon>New_Journal.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -974,8 +972,8 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201705161224489_test213.resx">
-      <DependentUpon>201705161224489_test213.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201705262055390_Initial.resx">
+      <DependentUpon>201705262055390_Initial.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
@@ -993,7 +991,7 @@
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>58179</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:58180/</IISUrl>
+          <IISUrl>http://localhost:58181/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>
