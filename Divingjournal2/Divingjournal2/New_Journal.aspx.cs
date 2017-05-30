@@ -34,8 +34,8 @@ namespace Divingjournal2
             
 
             writeHeader("Standarddykk");
+            showTables(true, false, false);
 
-            
 
 
             base.OnInit(e);

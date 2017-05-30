@@ -9,7 +9,24 @@
 <body>
     <form id="form1" runat="server">
         <div style="padding: 2px; border-style: hidden; font-size: x-large; color: #FFFFFF; font-weight: bold; font-family: Arial; background-color: #336699;">
-            <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="Id" DataSourceID="SqlDataSource1" Width="993px" CellPadding="3" Height="16px" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" OnSelectedIndexChanged="GridView1_SelectedIndexChanged">
+            <table style="width:100%;">
+                <tr>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                </tr>
+            </table>
+            <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="Id" DataSourceID="SqlDataSource1" Width="769px" CellPadding="3" Height="16px" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" OnSelectedIndexChanged="GridView1_SelectedIndexChanged">
                 <Columns>
                    
                     <asp:TemplateField SortExpression="Id">
@@ -28,6 +45,7 @@
                     <asp:BoundField DataField="Id" HeaderText="Journal nr" ReadOnly="True" SortExpression="Id" />
                    
                 </Columns>
+                <EditRowStyle Width="50px" />
                 <FooterStyle BackColor="White" ForeColor="#000066" />
                 <HeaderStyle BackColor="#006699" Font-Bold="True" ForeColor="White" />
                 <PagerStyle BackColor="White" ForeColor="#000066" HorizontalAlign="Left" />
@@ -165,7 +183,45 @@
                         <asp:GridView ID="GridView9" runat="server" AutoGenerateColumns="False" CellPadding="4" DataKeyNames="Id" DataSourceID="Diver_1" ForeColor="#333333" GridLines="None" Width="364px">
                             <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
                             <Columns>
+                                <asp:BoundField DataField="Id" HeaderText="Id" InsertVisible="False" ReadOnly="True" SortExpression="Id" />
+                                <asp:BoundField DataField="Journal_CacheID" HeaderText="Journal_CacheID" SortExpression="Journal_CacheID" />
+                                <asp:BoundField DataField="name" HeaderText="name" SortExpression="name" />
+                                <asp:BoundField DataField="transport" HeaderText="transport" SortExpression="transport" />
+                                <asp:BoundField DataField="of_type" HeaderText="of_type" SortExpression="of_type" />
+                                <asp:BoundField DataField="direct" HeaderText="direct" SortExpression="direct" />
+                                <asp:BoundField DataField="airType" HeaderText="airType" SortExpression="airType" />
+                                <asp:BoundField DataField="nitroxType" HeaderText="nitroxType" SortExpression="nitroxType" />
+                                <asp:BoundField DataField="repeatedAir" HeaderText="repeatedAir" SortExpression="repeatedAir" />
                                 <asp:BoundField DataField="breathingGear" HeaderText="breathingGear" SortExpression="breathingGear" />
+                                <asp:BoundField DataField="volume" HeaderText="volume" SortExpression="volume" />
+                                <asp:BoundField DataField="pressure" HeaderText="pressure" SortExpression="pressure" />
+                                <asp:BoundField DataField="plannedDepth" HeaderText="plannedDepth" SortExpression="plannedDepth" />
+                                <asp:BoundField DataField="plannedTime" HeaderText="plannedTime" SortExpression="plannedTime" />
+                                <asp:BoundField DataField="courseDive" HeaderText="courseDive" SortExpression="courseDive" />
+                                <asp:BoundField DataField="leftSurface" HeaderText="leftSurface" SortExpression="leftSurface" />
+                                <asp:BoundField DataField="reachedBottom" HeaderText="reachedBottom" SortExpression="reachedBottom" />
+                                <asp:BoundField DataField="leftBottom_Depth" HeaderText="leftBottom_Depth" SortExpression="leftBottom_Depth" />
+                                <asp:BoundField DataField="leftBottom_Time" HeaderText="leftBottom_Time" SortExpression="leftBottom_Time" />
+                                <asp:BoundField DataField="bottomTime" HeaderText="bottomTime" SortExpression="bottomTime" />
+                                <asp:BoundField DataField="maxDepth" HeaderText="maxDepth" SortExpression="maxDepth" />
+                                <asp:BoundField DataField="ELD" HeaderText="ELD" SortExpression="ELD" />
+                                <asp:BoundField DataField="additionToBottomTime" HeaderText="additionToBottomTime" SortExpression="additionToBottomTime" />
+                                <asp:BoundField DataField="tableUsed_Meter" HeaderText="tableUsed_Meter" SortExpression="tableUsed_Meter" />
+                                <asp:BoundField DataField="tableUsed_Minutes" HeaderText="tableUsed_Minutes" SortExpression="tableUsed_Minutes" />
+                                <asp:BoundField DataField="ascensionToFirstStop" HeaderText="ascensionToFirstStop" SortExpression="ascensionToFirstStop" />
+                                <asp:BoundField DataField="timeAtSafetyStop" HeaderText="timeAtSafetyStop" SortExpression="timeAtSafetyStop" />
+                                <asp:BoundField DataField="isEverythingOK" HeaderText="isEverythingOK" SortExpression="isEverythingOK" />
+                                <asp:BoundField DataField="arrived9m" HeaderText="arrived9m" SortExpression="arrived9m" />
+                                <asp:BoundField DataField="left9m" HeaderText="left9m" SortExpression="left9m" />
+                                <asp:BoundField DataField="arrived6m" HeaderText="arrived6m" SortExpression="arrived6m" />
+                                <asp:BoundField DataField="left6m" HeaderText="left6m" SortExpression="left6m" />
+                                <asp:BoundField DataField="arrived3m" HeaderText="arrived3m" SortExpression="arrived3m" />
+                                <asp:BoundField DataField="left3m" HeaderText="left3m" SortExpression="left3m" />
+                                <asp:BoundField DataField="reachedSurface" HeaderText="reachedSurface" SortExpression="reachedSurface" />
+                                <asp:BoundField DataField="ascensionTime" HeaderText="ascensionTime" SortExpression="ascensionTime" />
+                                <asp:BoundField DataField="totalDivingTime" HeaderText="totalDivingTime" SortExpression="totalDivingTime" />
+                                <asp:BoundField DataField="N2GroupAfterDive" HeaderText="N2GroupAfterDive" SortExpression="N2GroupAfterDive" />
+                                <asp:BoundField DataField="test" HeaderText="test" SortExpression="test" />
                             </Columns>
                             <EditRowStyle BackColor="#999999" />
                             <FooterStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />
@@ -183,7 +239,45 @@
                         <asp:GridView ID="GridView10" runat="server" AutoGenerateColumns="False" CellPadding="4" DataKeyNames="Id" DataSourceID="Diver_2" ForeColor="#333333" GridLines="None" Width="367px">
                             <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
                             <Columns>
+                                <asp:BoundField DataField="Id" HeaderText="Id" SortExpression="Id" InsertVisible="False" ReadOnly="True" />
+                                <asp:BoundField DataField="Journal_CacheID" HeaderText="Journal_CacheID" SortExpression="Journal_CacheID" />
+                                <asp:BoundField DataField="name" HeaderText="name" SortExpression="name" />
+                                <asp:BoundField DataField="transport" HeaderText="transport" SortExpression="transport" />
+                                <asp:BoundField DataField="of_type" HeaderText="of_type" SortExpression="of_type" />
+                                <asp:BoundField DataField="direct" HeaderText="direct" SortExpression="direct" />
+                                <asp:BoundField DataField="airType" HeaderText="airType" SortExpression="airType" />
+                                <asp:BoundField DataField="nitroxType" HeaderText="nitroxType" SortExpression="nitroxType" />
+                                <asp:BoundField DataField="repeatedAir" HeaderText="repeatedAir" SortExpression="repeatedAir" />
                                 <asp:BoundField DataField="breathingGear" HeaderText="breathingGear" SortExpression="breathingGear" />
+                                <asp:BoundField DataField="volume" HeaderText="volume" SortExpression="volume" />
+                                <asp:BoundField DataField="pressure" HeaderText="pressure" SortExpression="pressure" />
+                                <asp:BoundField DataField="plannedDepth" HeaderText="plannedDepth" SortExpression="plannedDepth" />
+                                <asp:BoundField DataField="plannedTime" HeaderText="plannedTime" SortExpression="plannedTime" />
+                                <asp:BoundField DataField="courseDive" HeaderText="courseDive" SortExpression="courseDive" />
+                                <asp:BoundField DataField="leftSurface" HeaderText="leftSurface" SortExpression="leftSurface" />
+                                <asp:BoundField DataField="reachedBottom" HeaderText="reachedBottom" SortExpression="reachedBottom" />
+                                <asp:BoundField DataField="leftBottom_Depth" HeaderText="leftBottom_Depth" SortExpression="leftBottom_Depth" />
+                                <asp:BoundField DataField="leftBottom_Time" HeaderText="leftBottom_Time" SortExpression="leftBottom_Time" />
+                                <asp:BoundField DataField="bottomTime" HeaderText="bottomTime" SortExpression="bottomTime" />
+                                <asp:BoundField DataField="maxDepth" HeaderText="maxDepth" SortExpression="maxDepth" />
+                                <asp:BoundField DataField="ELD" HeaderText="ELD" SortExpression="ELD" />
+                                <asp:BoundField DataField="additionToBottomTime" HeaderText="additionToBottomTime" SortExpression="additionToBottomTime" />
+                                <asp:BoundField DataField="tableUsed_Meter" HeaderText="tableUsed_Meter" SortExpression="tableUsed_Meter" />
+                                <asp:BoundField DataField="tableUsed_Minutes" HeaderText="tableUsed_Minutes" SortExpression="tableUsed_Minutes" />
+                                <asp:BoundField DataField="ascensionToFirstStop" HeaderText="ascensionToFirstStop" SortExpression="ascensionToFirstStop" />
+                                <asp:BoundField DataField="timeAtSafetyStop" HeaderText="timeAtSafetyStop" SortExpression="timeAtSafetyStop" />
+                                <asp:BoundField DataField="isEverythingOK" HeaderText="isEverythingOK" SortExpression="isEverythingOK" />
+                                <asp:BoundField DataField="arrived9m" HeaderText="arrived9m" SortExpression="arrived9m" />
+                                <asp:BoundField DataField="left9m" HeaderText="left9m" SortExpression="left9m" />
+                                <asp:BoundField DataField="arrived6m" HeaderText="arrived6m" SortExpression="arrived6m" />
+                                <asp:BoundField DataField="left6m" HeaderText="left6m" SortExpression="left6m" />
+                                <asp:BoundField DataField="arrived3m" HeaderText="arrived3m" SortExpression="arrived3m" />
+                                <asp:BoundField DataField="left3m" HeaderText="left3m" SortExpression="left3m" />
+                                <asp:BoundField DataField="reachedSurface" HeaderText="reachedSurface" SortExpression="reachedSurface" />
+                                <asp:BoundField DataField="ascensionTime" HeaderText="ascensionTime" SortExpression="ascensionTime" />
+                                <asp:BoundField DataField="totalDivingTime" HeaderText="totalDivingTime" SortExpression="totalDivingTime" />
+                                <asp:BoundField DataField="N2GroupAfterDive" HeaderText="N2GroupAfterDive" SortExpression="N2GroupAfterDive" />
+                                <asp:BoundField DataField="test" HeaderText="test" SortExpression="test" />
                             </Columns>
                             <EditRowStyle BackColor="#999999" />
                             <FooterStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />
@@ -201,7 +295,45 @@
                         <asp:GridView ID="GridView11" runat="server" AutoGenerateColumns="False" CellPadding="4" DataKeyNames="Id" DataSourceID="Diver_Standby" ForeColor="#333333" GridLines="None" Width="387px">
                             <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
                             <Columns>
+                                <asp:BoundField DataField="Id" HeaderText="Id" SortExpression="Id" InsertVisible="False" ReadOnly="True" />
+                                <asp:BoundField DataField="Journal_CacheID" HeaderText="Journal_CacheID" SortExpression="Journal_CacheID" />
+                                <asp:BoundField DataField="name" HeaderText="name" SortExpression="name" />
+                                <asp:BoundField DataField="transport" HeaderText="transport" SortExpression="transport" />
+                                <asp:BoundField DataField="of_type" HeaderText="of_type" SortExpression="of_type" />
+                                <asp:BoundField DataField="direct" HeaderText="direct" SortExpression="direct" />
+                                <asp:BoundField DataField="airType" HeaderText="airType" SortExpression="airType" />
+                                <asp:BoundField DataField="nitroxType" HeaderText="nitroxType" SortExpression="nitroxType" />
+                                <asp:BoundField DataField="repeatedAir" HeaderText="repeatedAir" SortExpression="repeatedAir" />
                                 <asp:BoundField DataField="breathingGear" HeaderText="breathingGear" SortExpression="breathingGear" />
+                                <asp:BoundField DataField="volume" HeaderText="volume" SortExpression="volume" />
+                                <asp:BoundField DataField="pressure" HeaderText="pressure" SortExpression="pressure" />
+                                <asp:BoundField DataField="plannedDepth" HeaderText="plannedDepth" SortExpression="plannedDepth" />
+                                <asp:BoundField DataField="plannedTime" HeaderText="plannedTime" SortExpression="plannedTime" />
+                                <asp:BoundField DataField="courseDive" HeaderText="courseDive" SortExpression="courseDive" />
+                                <asp:BoundField DataField="leftSurface" HeaderText="leftSurface" SortExpression="leftSurface" />
+                                <asp:BoundField DataField="reachedBottom" HeaderText="reachedBottom" SortExpression="reachedBottom" />
+                                <asp:BoundField DataField="leftBottom_Depth" HeaderText="leftBottom_Depth" SortExpression="leftBottom_Depth" />
+                                <asp:BoundField DataField="leftBottom_Time" HeaderText="leftBottom_Time" SortExpression="leftBottom_Time" />
+                                <asp:BoundField DataField="bottomTime" HeaderText="bottomTime" SortExpression="bottomTime" />
+                                <asp:BoundField DataField="maxDepth" HeaderText="maxDepth" SortExpression="maxDepth" />
+                                <asp:BoundField DataField="ELD" HeaderText="ELD" SortExpression="ELD" />
+                                <asp:BoundField DataField="additionToBottomTime" HeaderText="additionToBottomTime" SortExpression="additionToBottomTime" />
+                                <asp:BoundField DataField="tableUsed_Meter" HeaderText="tableUsed_Meter" SortExpression="tableUsed_Meter" />
+                                <asp:BoundField DataField="tableUsed_Minutes" HeaderText="tableUsed_Minutes" SortExpression="tableUsed_Minutes" />
+                                <asp:BoundField DataField="ascensionToFirstStop" HeaderText="ascensionToFirstStop" SortExpression="ascensionToFirstStop" />
+                                <asp:BoundField DataField="timeAtSafetyStop" HeaderText="timeAtSafetyStop" SortExpression="timeAtSafetyStop" />
+                                <asp:BoundField DataField="isEverythingOK" HeaderText="isEverythingOK" SortExpression="isEverythingOK" />
+                                <asp:BoundField DataField="arrived9m" HeaderText="arrived9m" SortExpression="arrived9m" />
+                                <asp:BoundField DataField="left9m" HeaderText="left9m" SortExpression="left9m" />
+                                <asp:BoundField DataField="arrived6m" HeaderText="arrived6m" SortExpression="arrived6m" />
+                                <asp:BoundField DataField="left6m" HeaderText="left6m" SortExpression="left6m" />
+                                <asp:BoundField DataField="arrived3m" HeaderText="arrived3m" SortExpression="arrived3m" />
+                                <asp:BoundField DataField="left3m" HeaderText="left3m" SortExpression="left3m" />
+                                <asp:BoundField DataField="reachedSurface" HeaderText="reachedSurface" SortExpression="reachedSurface" />
+                                <asp:BoundField DataField="ascensionTime" HeaderText="ascensionTime" SortExpression="ascensionTime" />
+                                <asp:BoundField DataField="totalDivingTime" HeaderText="totalDivingTime" SortExpression="totalDivingTime" />
+                                <asp:BoundField DataField="N2GroupAfterDive" HeaderText="N2GroupAfterDive" SortExpression="N2GroupAfterDive" />
+                                <asp:BoundField DataField="test" HeaderText="test" SortExpression="test" />
                             </Columns>
                             <EditRowStyle BackColor="#999999" />
                             <FooterStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />
