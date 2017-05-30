@@ -7,6 +7,7 @@ using System.Web.UI.WebControls;
 using DiverLibrary;
 using Divingjournal2.DAL;
 using System.Web.Services;
+using System.Diagnostics;
 
 namespace Divingjournal2
 {
@@ -42,51 +43,53 @@ namespace Divingjournal2
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            
+           
+
+
         }
 
-       
-        
-     /*   public void writeJournal()
-        {
-            
-
-            j.CourseNumber = CourseNrTextBox.Text;
-            j.Date = DateTextBox.Text;
-            j.Location = LocationTextBox.Text;
-            j.DivingSpot = DivingSpotTextBox.Text;
-           // j.Subject = checkSubjectDropDownList();
-            j.Other = OtherTextBox.Text;
-
-            j.Divingchief = DivingChiefTextBox.Text;
-            j.Divingleader_teacher = Divingleader_teacherTextBox.Text;
-            j.Divingleader_student = Divingleader_studentTextBox.Text;
-            j.Diver_1 = d1.Name = Diver_1TextBox.Text;
-            j.Diver_2 = d2.Name = Diver_2TextBox.Text;
-            j.Standby = sb.Name = StandbyTextBox.Text;
-            j.Helpman = HelpmanTextBox.Text;
-            j.Helpman_assisting = Helpman_assistingTextBox.Text;
-            j.Lineman_1 = Lineman_1TextBox.Text;
-            j.Lineman_2 = Lineman_2TextBox.Text;
-            j.Others = OthersTextBox.Text;
-            j.Airsystem_main = airsystem_mainTextBox.Text;
-            j.Airsystem_secondary = airsystem_secondaryTextBox.Text;
-            j.OxygenForChamber_inUse = oxygenForChamber_inUseTextBox.Text;
-            j.OxygenForChamber_readyForUse = oxygenForChamber_readyForUseTextBox.Text;
-            j.EmergencyGas_divingBell = emergencyGas_divingBellTextBox.Text;
-            j.EmergencyGas_divingBasket = emergencyGas_divingBasketTextBox.Text;
-
-            
-            
-            Session["journal"] = j; 
 
 
-            
+        /*   public void writeJournal()
+           {
 
 
-        } */
+               j.CourseNumber = CourseNrTextBox.Text;
+               j.Date = DateTextBox.Text;
+               j.Location = LocationTextBox.Text;
+               j.DivingSpot = DivingSpotTextBox.Text;
+              // j.Subject = checkSubjectDropDownList();
+               j.Other = OtherTextBox.Text;
 
-        
+               j.Divingchief = DivingChiefTextBox.Text;
+               j.Divingleader_teacher = Divingleader_teacherTextBox.Text;
+               j.Divingleader_student = Divingleader_studentTextBox.Text;
+               j.Diver_1 = d1.Name = Diver_1TextBox.Text;
+               j.Diver_2 = d2.Name = Diver_2TextBox.Text;
+               j.Standby = sb.Name = StandbyTextBox.Text;
+               j.Helpman = HelpmanTextBox.Text;
+               j.Helpman_assisting = Helpman_assistingTextBox.Text;
+               j.Lineman_1 = Lineman_1TextBox.Text;
+               j.Lineman_2 = Lineman_2TextBox.Text;
+               j.Others = OthersTextBox.Text;
+               j.Airsystem_main = airsystem_mainTextBox.Text;
+               j.Airsystem_secondary = airsystem_secondaryTextBox.Text;
+               j.OxygenForChamber_inUse = oxygenForChamber_inUseTextBox.Text;
+               j.OxygenForChamber_readyForUse = oxygenForChamber_readyForUseTextBox.Text;
+               j.EmergencyGas_divingBell = emergencyGas_divingBellTextBox.Text;
+               j.EmergencyGas_divingBasket = emergencyGas_divingBasketTextBox.Text;
+
+
+
+               Session["journal"] = j; 
+
+
+
+
+
+           } */
+
+
 
         public Models.Subject checkSubjectDropDownList()
         {
@@ -292,14 +295,16 @@ namespace Divingjournal2
             return a;
         }
 
-        protected void SubmitButton_Click(object sender, EventArgs e)
+        public void SubmitButton_Click(object sender, EventArgs e)
         {
+           
             WriteToDatabase();
         }
 
 
         private void WriteToDatabase()
         {
+            Debug.WriteLine("WRITE TO DATABASE CALLED!");
             DivingJournalContext db = new DivingJournalContext();
 
             j.subject = checkSubjectDropDownList();
@@ -336,7 +341,7 @@ namespace Divingjournal2
                 var diver1 = new Models.Diver_Standard
                 {
                     //map data fra webform til diver_standard
-                    diver_name = Diver_1TextBox.Text,
+                    JournalID = j.Id,
                     of_type = D1checkOf_TypeDropDownList(),
                     direct = D1checkDirectDropDownList(),
                     airType = D1checkAirTypeDropDownList(),
@@ -376,7 +381,7 @@ namespace Divingjournal2
 
                 var diver2 = new Models.Diver_Standard
                 {
-                    diver_name = Diver_2TextBox.Text,
+                    JournalID = j.Id,
                     of_type = D2checkOf_TypeDropDownList(),
                     direct = D2checkDirectDropDownList(),
                     airType = D2checkAirTypeDropDownList(),
@@ -415,7 +420,7 @@ namespace Divingjournal2
 
                 var standby = new Models.Diver_Standard
                 {
-                    diver_name = StandbyTextBox.Text,
+                    JournalID = j.Id,
                     of_type = SBcheckOf_TypeDropDownList(),
                     direct = SBcheckDirectDropDownList(),
                     airType = SBcheckAirTypeDropDownList(),
@@ -453,12 +458,14 @@ namespace Divingjournal2
                 };
 
                 db.Diver_Standards.Add(diver1);
+                db.Diver_Standards.Add(diver2);
+                db.Diver_Standards.Add(standby);
             } else     
             {
                 var diver1 = new Models.Diver_Compression
                 {
                     //map data fra webform til diver_standard
-                    diver_name = Diver_1TextBox.Text,
+                    
                     of_type = D1checkOf_TypeDropDownList(),
                     direct = D1checkDirectDropDownList(),
                     airType = D1checkAirTypeDropDownList(),
@@ -509,7 +516,7 @@ namespace Divingjournal2
 
                 var diver2 = new Models.Diver_Compression
                 {
-                    diver_name = Diver_2TextBox.Text,
+                    
                     of_type = D2checkOf_TypeDropDownList(),
                     direct = D2checkDirectDropDownList(),
                     airType = D2checkAirTypeDropDownList(),
@@ -561,7 +568,7 @@ namespace Divingjournal2
 
                 var standby = new Models.Diver_Compression
                 {
-                    name = Diver_1TextBox.Text,
+                    
                     of_type = SBcheckOf_TypeDropDownList(),
                     direct = SBcheckDirectDropDownList(),
                     airType = SBcheckAirTypeDropDownList(),

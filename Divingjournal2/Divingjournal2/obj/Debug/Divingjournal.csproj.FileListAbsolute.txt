@@ -413,8 +413,8 @@ C:\Users\Ørjan Magnus Eide\Source\Repos\DivingJournal25\Divingjournal2\Divingjo
 C:\Users\Ørjan Magnus Eide\Source\Repos\DivingJournal25\Divingjournal2\Divingjournal2\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
 C:\Users\Ørjan Magnus Eide\Source\Repos\DivingJournal25\Divingjournal2\Divingjournal2\bin\Microsoft.Owin.Security.OAuth.xml
 C:\Users\Ørjan Magnus Eide\Source\Repos\DivingJournal25\Divingjournal2\Divingjournal2\obj\Debug\Divingjournal.csprojResolveAssemblyReference.cache
-C:\Users\Ørjan Magnus Eide\Source\Repos\DivingJournal25\Divingjournal2\Divingjournal2\obj\Debug\Divingjournal2.Migrations.test213.resources
-C:\Users\Ørjan Magnus Eide\Source\Repos\DivingJournal25\Divingjournal2\Divingjournal2\obj\Debug\Divingjournal.csproj.GenerateResource.Cache
 C:\Users\Ørjan Magnus Eide\Source\Repos\DivingJournal25\Divingjournal2\Divingjournal2\obj\Debug\Divingjournal2.dll
 C:\Users\Ørjan Magnus Eide\Source\Repos\DivingJournal25\Divingjournal2\Divingjournal2\obj\Debug\Divingjournal2.pdb
 C:\Users\Nils Terje\Documents\Visual Studio 2015\Projects\DivingAppGithub\Divingjournal2\Divingjournal2\obj\Debug\Divingjournal2.Migrations.test213.resources
+C:\Users\Ørjan Magnus Eide\Source\Repos\DivingJournal25\Divingjournal2\Divingjournal2\obj\Debug\Divingjournal2.Migrations.Initial.resources
+C:\Users\Ørjan Magnus Eide\Source\Repos\DivingJournal25\Divingjournal2\Divingjournal2\obj\Debug\Divingjournal.csproj.GenerateResource.Cache

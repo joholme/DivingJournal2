@@ -10,8 +10,6 @@ namespace Divingjournal2.Models
         //PK
         public int Id { get; set; }
 
-        //FK
-        public int UserId { get; set; }
 
         public Subject subject { get; set; }
         public JournalType journalType { get; set; }
@@ -45,8 +43,5 @@ namespace Divingjournal2.Models
         public virtual ICollection<Diver_Standard> Diver_Standard_Caches { get; set; }
         public virtual ICollection<Diver_Compression> Diver_Compression_Caches { get; set; }
         public virtual ICollection<Diver_Pressurechamber> Diver_Pressurechambers_Caches { get; set; }
-
-        //Link - to one
-        public virtual User User { get; set; }
     }
 }
