@@ -2813,6 +2813,7 @@
             <ajaxToolkit:DropShadowExtender runat="server" BehaviorID="PopupPanel_DropShadowExtender" TargetControlID="PopupPanel" ID="PopupPanel_DropShadowExtender"></ajaxToolkit:DropShadowExtender>
             <ajaxToolkit:PopupControlExtender runat="server" PopupControlID="PopupPanel" ExtenderControlID="" BehaviorID="PopupPanel_PopupControlExtender" TargetControlID="SubmitButton" ID="PopupPanel_PopupControlExtender"></ajaxToolkit:PopupControlExtender>
             <asp:Button ID="SubmitButton" runat="server" Text="Forhåndsvis og lagre" OnClick="SubmitButton_Click" />
+            <asp:Button ID="Button166" runat="server" Text="Forhåndsvis og lagre2" OnClick="SubmitButton_Click" />
         </ContentTemplate>
     </asp:UpdatePanel>
 

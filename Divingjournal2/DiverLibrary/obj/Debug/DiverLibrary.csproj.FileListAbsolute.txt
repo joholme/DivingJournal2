@@ -21,3 +21,8 @@ C:\Users\Ørjan Magnus Eide\Source\Repos\DivingJournal25\Divingjournal2\DiverLib
 C:\Users\Ørjan Magnus Eide\Source\Repos\DivingJournal25\Divingjournal2\DiverLibrary\bin\Debug\DiverLibrary.pdb
 C:\Users\Ørjan Magnus Eide\Source\Repos\DivingJournal25\Divingjournal2\DiverLibrary\obj\Debug\DiverLibrary.dll
 C:\Users\Ørjan Magnus Eide\Source\Repos\DivingJournal25\Divingjournal2\DiverLibrary\obj\Debug\DiverLibrary.pdb
+C:\Users\Jonas\GitHub\DivingJournal2\Divingjournal2\DiverLibrary\bin\Debug\DiverLibrary.dll
+C:\Users\Jonas\GitHub\DivingJournal2\Divingjournal2\DiverLibrary\bin\Debug\DiverLibrary.pdb
+C:\Users\Jonas\GitHub\DivingJournal2\Divingjournal2\DiverLibrary\obj\Debug\DiverLibrary.csprojResolveAssemblyReference.cache
+C:\Users\Jonas\GitHub\DivingJournal2\Divingjournal2\DiverLibrary\obj\Debug\DiverLibrary.dll
+C:\Users\Jonas\GitHub\DivingJournal2\Divingjournal2\DiverLibrary\obj\Debug\DiverLibrary.pdb
