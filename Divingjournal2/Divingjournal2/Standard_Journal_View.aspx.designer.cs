@@ -58,67 +58,193 @@ namespace Divingjournal2 {
         protected global::System.Web.UI.WebControls.GridView OtherGridView;
         
         /// <summary>
-        /// DivingCrewGridView control.
+        /// DivingCrewGridView3 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView DivingCrewGridView;
+        protected global::System.Web.UI.WebControls.GridView DivingCrewGridView3;
         
         /// <summary>
-        /// DivingCrewGridView2 control.
+        /// DivingCrewGridView4 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView DivingCrewGridView2;
+        protected global::System.Web.UI.WebControls.GridView DivingCrewGridView4;
         
         /// <summary>
-        /// DivingCrewGridView1 control.
+        /// DivingCrewGridView5 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView DivingCrewGridView1;
+        protected global::System.Web.UI.WebControls.GridView DivingCrewGridView5;
         
         /// <summary>
-        /// DivingCrewGridView0 control.
+        /// GridView1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView DivingCrewGridView0;
+        protected global::System.Web.UI.WebControls.GridView GridView1;
         
         /// <summary>
-        /// AirSystemGridView control.
+        /// GridView13 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView AirSystemGridView;
+        protected global::System.Web.UI.WebControls.GridView GridView13;
         
         /// <summary>
-        /// OxygenForChamberGridView control.
+        /// GridView14 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView OxygenForChamberGridView;
+        protected global::System.Web.UI.WebControls.GridView GridView14;
         
         /// <summary>
-        /// EmergencyGasGridView0 control.
+        /// GridView15 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView EmergencyGasGridView0;
+        protected global::System.Web.UI.WebControls.GridView GridView15;
+        
+        /// <summary>
+        /// GridView16 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.GridView GridView16;
+        
+        /// <summary>
+        /// GridView17 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.GridView GridView17;
+        
+        /// <summary>
+        /// GridView18 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.GridView GridView18;
+        
+        /// <summary>
+        /// GridView19 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.GridView GridView19;
+        
+        /// <summary>
+        /// GridView20 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.GridView GridView20;
+        
+        /// <summary>
+        /// GridView21 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.GridView GridView21;
+        
+        /// <summary>
+        /// GridView22 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.GridView GridView22;
+        
+        /// <summary>
+        /// DetailsView1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DetailsView DetailsView1;
+        
+        /// <summary>
+        /// DetailsView2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DetailsView DetailsView2;
+        
+        /// <summary>
+        /// GridView23 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.GridView GridView23;
+        
+        /// <summary>
+        /// GridView24 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.GridView GridView24;
+        
+        /// <summary>
+        /// GridView25 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.GridView GridView25;
+        
+        /// <summary>
+        /// DetailsView3 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DetailsView DetailsView3;
+        
+        /// <summary>
+        /// DetailsView4 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DetailsView DetailsView4;
         
         /// <summary>
         /// GridView2 control.
@@ -148,6 +274,24 @@ namespace Divingjournal2 {
         protected global::System.Web.UI.WebControls.GridView GridView4;
         
         /// <summary>
+        /// DetailsView5 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DetailsView DetailsView5;
+        
+        /// <summary>
+        /// DetailsView6 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DetailsView DetailsView6;
+        
+        /// <summary>
         /// GridView5 control.
         /// </summary>
         /// <remarks>
@@ -175,6 +319,60 @@ namespace Divingjournal2 {
         protected global::System.Web.UI.WebControls.GridView GridView7;
         
         /// <summary>
+        /// Diver1DetailsView control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DetailsView Diver1DetailsView;
+        
+        /// <summary>
+        /// Diver1DetailsView0 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DetailsView Diver1DetailsView0;
+        
+        /// <summary>
+        /// Diver2DetailsView control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DetailsView Diver2DetailsView;
+        
+        /// <summary>
+        /// StandbyDetailsView control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DetailsView StandbyDetailsView;
+        
+        /// <summary>
+        /// GridView26 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.GridView GridView26;
+        
+        /// <summary>
+        /// GridView27 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.GridView GridView27;
+        
+        /// <summary>
         /// SqlDataSource1 control.
         /// </summary>
         /// <remarks>
@@ -182,33 +380,6 @@ namespace Divingjournal2 {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSource1;
-        
-        /// <summary>
-        /// GridView9 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView GridView9;
-        
-        /// <summary>
-        /// GridView10 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView GridView10;
-        
-        /// <summary>
-        /// GridView11 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView GridView11;
         
         /// <summary>
         /// Diver_1 control.
@@ -229,15 +400,6 @@ namespace Divingjournal2 {
         protected global::System.Web.UI.WebControls.SqlDataSource Diver_2;
         
         /// <summary>
-        /// GridView12 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView GridView12;
-        
-        /// <summary>
         /// Diver_Standby control.
         /// </summary>
         /// <remarks>
@@ -245,15 +407,6 @@ namespace Divingjournal2 {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.SqlDataSource Diver_Standby;
-        
-        /// <summary>
-        /// GridView8 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView GridView8;
         
         /// <summary>
         /// PDF_Button control.
