@@ -36,7 +36,7 @@ namespace Divingjournal2
 
         }
 
-        protected void GridView4_SelectedIndexChanged(object sender, EventArgs e)
+        protected void DetailsView1_PageIndexChanging(object sender, DetailsViewPageEventArgs e)
         {
 
         }
