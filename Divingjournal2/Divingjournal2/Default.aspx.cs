@@ -27,6 +27,7 @@ namespace Divingjournal2
 
         protected void GetJournalButton_Click(object sender, EventArgs e)
         {
+            Response.Redirect("/my_journals.aspx");
 
         }
 

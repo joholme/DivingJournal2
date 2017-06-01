@@ -21,18 +21,44 @@
                 <asp:Button ID="SurfaceCompressionDiveButton" runat="server" Text="Overflatekompresjon" Width="25%" OnClick="SurfaceCompressionDiveButton_Click" />
                 <asp:Button ID="PressureChamberDiveButton" runat="server" Text="Trykkammer" Width="25%" OnClick="PressureChamberDiveButton_Click" />
 
-                 <asp:Button ID="Local_Save" runat="server" Text="Lagre" />
-                <asp:Button ID="AJAX_Button" runat="server" Text="Load" />
+                 <asp:Button ID="Local_Save" runat="server" Text="Mellomlagre" />
+                <asp:Button ID="AJAX_Button" runat="server" Text="Hent" />
                 <asp:Button ID="Dummy_button" runat="server" Text="Dummy" />
-                <asp:Button ID="DB_button" runat="server" Text="SaveDB" OnClick="SubmitButton_Click" />
+                <asp:Button ID="DB_button" runat="server" Text="Lagre til DB" />
             </asp:Panel>
 
+               <ajaxToolkit:PopupControlExtender ID="PopupControlExtender1" runat="server" BehaviorID="PopupPanel_PopupControlExtender" PopupControlID="Local_save_panel" ExtenderControlID="" TargetControlID="Local_Save">
+        </ajaxToolkit:PopupControlExtender>
 
 
+        <asp:Panel ID="Local_save_panel" runat="server" BackColor="White" BorderWidth="2" BorderStyle="Solid" BorderColor="Black">
+            <h1>Gi et navn journalen skal lagres som</h1>
+            <asp:Label ID="PopupLabel" runat="server" Text="Navn:"></asp:Label>
+            <asp:TextBox ID="PopupTextBox" runat="server"></asp:TextBox>
+            <asp:Button ID="PopupSubmitButton" Text="Lagre midlertidig" runat="server" OnClick="Local_Save_Click" />
+        </asp:Panel>
+
+                      <ajaxToolkit:PopupControlExtender ID="PopupControlExtender2" runat="server" BehaviorID="PopupPanel_PopupControlExtender" PopupControlID="Confirm_save_panel" ExtenderControlID="" TargetControlID="DB_button">
+        </ajaxToolkit:PopupControlExtender>
 
 
+        <asp:Panel ID="Confirm_save_panel" runat="server" BackColor="White" BorderWidth="2" BorderStyle="Solid" BorderColor="Black">
+            <h3>Du er i ferd med å lagre journalen til det offisielle akrivet. </h3>
+            <p>Bekreft handlingen ved å trykke "Lagre".</p>
+            <asp:Button ID="Save_to_Db_button" Text="Lagre" runat="server"  OnClick="SubmitButton_Click" />
+        </asp:Panel> 
+
+            <ajaxToolkit:PopupControlExtender ID="PopupControlExtender3" runat="server" BehaviorID="PopupPanel_PopupControlExtender" PopupControlID="Print_panel" ExtenderControlID="" TargetControlID="Save_to_Db_button">
+        </ajaxToolkit:PopupControlExtender>
 
 
+        <asp:Panel ID="Print_panel" runat="server" BackColor="White" BorderWidth="2" BorderStyle="Solid" BorderColor="Black" Width="900" Height="300" HorizontalAlign="Center" >
+          <br /> <br /> <br />  <br />
+            <h3>Journalen er lagret. Ønsker du å skrive den ut?. </h3>
+            <p>Trykk på "Utskrift" for å åpne i utskriftsformat</p>
+            <asp:Button ID="Button166" Text="Utskrift" runat="server"  OnClick="Print_Journal" />
+             
+        </asp:Panel> 
 
             <div style="text-align: right; padding: 0px; height: 22px; width: auto;">
                 <asp:Table ID="FirstInfoTable" runat="server" BorderStyle="None" CellPadding="1" CellSpacing="1" HorizontalAlign="Right" Font-Size="X-Large">
@@ -369,13 +395,8 @@
                     </asp:Table>
 
                 </div>
+
             </asp:Panel>
-
-
-
-
-
-
 
             <asp:Panel runat="server" ID="SecondaryInfoPanel">
 
@@ -949,155 +970,169 @@
             </asp:UpdatePanel>
 
 
+            <!-- hidden fields to store modal result in -->
+<input type="hidden" id="journal_name_hidden">
 
-
-
-
+            
 
 
   <script src="Stopwatch3.js"></script>
   <script src ="Scripts/jquery-3.1.1.js"></script>
+
   <script >
-
       var storage = window.localStorage;
+      var local_journals = [];
 
+      
       //Save data to LocalStorage
       $(document).on("click", "#<%=Local_Save.ClientID %>", function (evt) {
+          
+          if (!navigator.onLine) {
+              var journal_name = prompt("Gi journalen et navn. Vitkig at du husker dette navnet, fordi du vil bli spurt om det når du skal hente journalen frem igjen.");
+              var new_local_journal = {
+                  subject: $("#<%=SubjectDropDownList.ClientID %>").val(),
+                  courseNumber: $("#<%=CourseNrTextBox.ClientID %>").val(),
+                  other: $("#<%=OtherTextBox.ClientID %>").val(),
+                  date: $("#<%=DateTextBox.ClientID %>").val(),
+                  location: $("#<%=LocationTextBox.ClientID %>").val(),
+                  divingSpot: $("#<%=DivingSpotTextBox.ClientID %>").val(),
+                  divingchief: $("#<%=DivingChiefTextBox.ClientID %>").val(),
+                  divingleader_teacher: $("#<%=Divingleader_teacherTextBox.ClientID %>").val(),
+                  divingleader_student: $("#<%=Divingleader_studentTextBox.ClientID %>").val(),
+                  diver_1: $("#<%=Diver_1TextBox.ClientID %>").val(),
+                  diver_2: $("#<%=Diver_2TextBox.ClientID %>").val(),
+                  standby: $("#<%=StandbyTextBox.ClientID %>").val(),
+                  lineman_1: $("#<%=Lineman_1TextBox.ClientID %>").val(),
+                  lineman_2: $("#<%=Lineman_2TextBox.ClientID %>").val(),
+                  helpman: $("#<%=HelpmanTextBox.ClientID %>").val(),
+                  helpman_assisting: $("#<%=Helpman_assistingTextBox.ClientID %>").val(),
+                  others: $("#<%=OthersTextBox.ClientID %>").val(),
+                  airsystem_main: $("#<%=airsystem_mainTextBox.ClientID %>").val(),
+                  airsystem_secondary: $("#<%=airsystem_secondaryTextBox.ClientID %>").val(),
+                  oxygenForChamber_inUse: $("#<%=oxygenForChamber_inUseTextBox.ClientID %>").val(),
+                  oxygenForChamber_readyForUse: $("#<%=oxygenForChamber_readyForUseTextBox.ClientID %>").val(),
+                  emergencyGas_divingBell: $("#<%=emergencyGas_divingBellTextBox.ClientID %>").val(),
+                  emergencyGas_divingBasket: $("#<%=emergencyGas_divingBasketTextBox.ClientID %>").val(),
+                  purpose: $("#<%=PurposeTextBox.ClientID %>").val(),
+                  chamberoperator: $("#<%=chamberoperatorTextBox.ClientID %>").val(),
+                  chamberassistent: $("#<%=chamberassistentTextBox.ClientID %>").val(),
+                  doctor: $("#<%=doctorTextBox.ClientID %>").val(),
 
-          storage.setItem("subject", $("#<%=SubjectDropDownList.ClientID %>").val());
-    storage.setItem("courseNumber", $("#<%=CourseNrTextBox.ClientID %>").val());
-      storage.setItem("other", $("#<%=OtherTextBox.ClientID %>").val());
-      storage.setItem("date", $("#<%=DateTextBox.ClientID %>").val());
-      storage.setItem("location", $("#<%=LocationTextBox.ClientID %>").val());
-      storage.setItem("divingSpot", $("#<%=DivingSpotTextBox.ClientID %>").val());
-      storage.setItem("divingchief", $("#<%=DivingChiefTextBox.ClientID %>").val());
-      storage.setItem("divingleader_teacher", $("#<%=Divingleader_teacherTextBox.ClientID %>").val());
-      storage.setItem("divingleader_student", $("#<%=Divingleader_studentTextBox.ClientID %>").val());
-      storage.setItem("diver_1", $("#<%=Diver_1TextBox.ClientID %>").val());
-      storage.setItem("diver_2", $("#<%=Diver_2TextBox.ClientID %>").val());
-      storage.setItem("standby", $("#<%=StandbyTextBox.ClientID %>").val());
-      storage.setItem("lineman_1", $("#<%=Lineman_1TextBox.ClientID %>").val());
-      storage.setItem("lineman_2", $("#<%=Lineman_2TextBox.ClientID %>").val());
-      storage.setItem("helpman", $("#<%=HelpmanTextBox.ClientID %>").val());
-      storage.setItem("helpman_assisting", $("#<%=Helpman_assistingTextBox.ClientID %>").val());
-      storage.setItem("others", $("#<%=OthersTextBox.ClientID %>").val());
-      storage.setItem("airsystem_main", $("#<%=airsystem_mainTextBox.ClientID %>").val());
-      storage.setItem("airsystem_secondary", $("#<%=airsystem_secondaryTextBox.ClientID %>").val());
-      storage.setItem("oxygenForChamber_inUse", $("#<%=oxygenForChamber_inUseTextBox.ClientID %>").val());
-      storage.setItem("oxygenForChamber_readyForUse", $("#<%=oxygenForChamber_readyForUseTextBox.ClientID %>").val());
-      storage.setItem("emergencyGas_divingBell", $("#<%=emergencyGas_divingBellTextBox.ClientID %>").val());
-      storage.setItem("emergencyGas_divingBasket", $("#<%=emergencyGas_divingBasketTextBox.ClientID %>").val());
-      storage.setItem("purpose", $("#<%=PurposeTextBox.ClientID %>").val());
-      storage.setItem("chamberoperator", $("#<%=chamberoperatorTextBox.ClientID %>").val());
-      storage.setItem("chamberassistent", $("#<%=chamberassistentTextBox.ClientID %>").val());
-      storage.setItem("doctor", $("#<%=doctorTextBox.ClientID %>").val());
+                  //diver1 - Standard
+                  of_type: $("#<%=D1OF_TypeDropDownList.ClientID %>").val(),
+                  direct: $("#<%=D1DirectDropDownList.ClientID %>").val(),
+                  airType: $("#<%=D1AirTypeDropDownList.ClientID %>").val(),
+                  nitroxType: $("#<%=D1NitroxPercentTextbox.ClientID %>").val(),
+                  repeatedAir: $("#<%=D1RepeatedAirCheckBox.ClientID %>").val(),
+                  N2GroupBeforeDive: $("#<%=D1N2GroupBeforeDiveTextBox.ClientID %>").val(),
+                  breathingGear: $("#<%=D1BreathingGearTextBox.ClientID %>").val(),
+                  volume: $("#<%=D1VolumeTextBox.ClientID %>").val(),
+                  pressure: $("#<%=D1PressureTextBox.ClientID %>").val(),
+                  plannedDepth: $("#<%=D1PlannedDepthTextBox.ClientID %>").val(),
+                  plannedTime: $("#<%=D1PlannedTimeTextBox.ClientID %>").val(),
+                  courseDive: $("#<%=D1CourseDiveTextBox.ClientID %>").val(),
+                  leftSurface: $("#<%=D1LeftSurface.ClientID %>").val(),
+                  reachedBottom: $("#<%=D1ReachedBottom.ClientID %>").val(),
+                  leftBottom_Depth: $("#<%=D1leftBottom_Depth.ClientID %>").val(),
+                  leftBottom_Time: $("#<%=D1leftBottom_Time.ClientID %>").val(),
+                  bottomTime: $("#<%=D1bottomTime.ClientID %>").val(),
+                  maxDepth: $("#<%=D1maxDepth.ClientID %>").val(),
+                  ELD: $("#<%=D1ELD.ClientID %>").val(),
+                  additionToBottomTime: $("#<%=D1additionToBottomTime.ClientID %>").val(),
+                  tableUsed_Meter: $("#<%=D1tableUsed_Meter.ClientID %>").val(),
+                  tableUsed_Minutes: $("#<%=D1tableUsed_Minutes.ClientID %>").val(),
+                  ascensionToFirstStop: $("#<%=D1ascensionToFirstStop.ClientID %>").val(),
+                  timeAtSafetyStop: $("#<%=D1timeAtSafetyStop.ClientID %>").val(),
+                  totalDivingTime: $("#<%=D1totalDivingTime.ClientID %>").val(),
+                  N2GroupAfterDive: $("#<%=D1N2GroupAfterDive.ClientID %>").val(),
+                  isEverythingOK: $("#<%=D1isEverythingOKDropDownList.ClientID %>").val(),
+                  arrived9m: $("#<%=D1arrived9m.ClientID %>").val(),
+                  arrived6m: $("#<%=D1arrived6m.ClientID %>").val(),
+                  arrived3m: $("#<%=D1arrived3m.ClientID %>").val(),
+                  left9m: $("#<%=D1left9m.ClientID %>").val(),
+                  left6m: $("#<%=D1left6m.ClientID %>").val(),
+                  left3m: $("#<%=D1left3m.ClientID %>").val(),
+                  reachedSurface: $("#<%=D1reachedSurface.ClientID %>").val(),
+                  ascensionTime: $("#<%=D1ascensionTime.ClientID %>").val()
 
-      //diver1 - Standard
-      storage.setItem("of_type", $("#<%=D1OF_TypeDropDownList.ClientID %>").val());
-      storage.setItem("direct", $("#<%=D1DirectDropDownList.ClientID %>").val());
-      storage.setItem("airType", $("#<%=D1AirTypeDropDownList.ClientID %>").val());
-      storage.setItem("nitroxType", $("#<%=D1NitroxPercentTextbox.ClientID %>").val());
-      storage.setItem("repeatedAir", $("#<%=D1RepeatedAirCheckBox.ClientID %>").val());
-      storage.setItem("N2GroupBeforeDive", $("#<%=D1N2GroupBeforeDiveTextBox.ClientID %>").val());
-      storage.setItem("breathingGear", $("#<%=D1BreathingGearTextBox.ClientID %>").val());
-      storage.setItem("volume", $("#<%=D1VolumeTextBox.ClientID %>").val());
-      storage.setItem("pressure", $("#<%=D1PressureTextBox.ClientID %>").val());
-      storage.setItem("plannedDepth", $("#<%=D1PlannedDepthTextBox.ClientID %>").val());
-      storage.setItem("plannedTime", $("#<%=D1PlannedTimeTextBox.ClientID %>").val());
-      storage.setItem("courseDive", $("#<%=D1CourseDiveTextBox.ClientID %>").val());
-      storage.setItem("leftSurface", $("#<%=D1LeftSurface.ClientID %>").val());
-      storage.setItem("reachedBottom", $("#<%=D1ReachedBottom.ClientID %>").val());
-      storage.setItem("leftBottom_Depth", $("#<%=D1leftBottom_Depth.ClientID %>").val());
-      storage.setItem("leftBottom_Time", $("#<%=D1leftBottom_Time.ClientID %>").val());
-      storage.setItem("bottomTime", $("#<%=D1bottomTime.ClientID %>").val());
-      storage.setItem("maxDepth", $("#<%=D1maxDepth.ClientID %>").val());
-      storage.setItem("ELD", $("#<%=D1ELD.ClientID %>").val());
-      storage.setItem("additionToBottomTime", $("#<%=D1additionToBottomTime.ClientID %>").val());
-      storage.setItem("tableUsed_Meter", $("#<%=D1tableUsed_Meter.ClientID %>").val());
-      storage.setItem("tableUsed_Minutes", $("#<%=D1tableUsed_Minutes.ClientID %>").val());
-      storage.setItem("ascensionToFirstStop", $("#<%=D1ascensionToFirstStop.ClientID %>").val());
-      storage.setItem("timeAtSafetyStop", $("#<%=D1timeAtSafetyStop.ClientID %>").val());
-      storage.setItem("totalDivingTime", $("#<%=D1totalDivingTime.ClientID %>").val());
-      storage.setItem("N2GroupAfterDive", $("#<%=D1N2GroupAfterDive.ClientID %>").val());
-      storage.setItem("isEverythingOK", $("#<%=D1isEverythingOKDropDownList.ClientID %>").val());
-      storage.setItem("arrived9m", $("#<%=D1arrived9m.ClientID %>").val());
-      storage.setItem("arrived6m", $("#<%=D1arrived6m.ClientID %>").val());
-      storage.setItem("arrived3m", $("#<%=D1arrived3m.ClientID %>").val());
-      storage.setItem("left9m", $("#<%=D1left9m.ClientID %>").val());
-      storage.setItem("left6m", $("#<%=D1left6m.ClientID %>").val());
-      storage.setItem("left3m", $("#<%=D1left3m.ClientID %>").val());
-      storage.setItem("reachedSurface", $("#<%=D1reachedSurface.ClientID %>").val());
-      storage.setItem("ascensionTime", $("#<%=D1ascensionTime.ClientID %>").val());
+              };
+
+              storage.setItem(journal_name, JSON.stringify(new_local_journal));
+          }
+             
+          
       });
 
       //Retreive data from LocalStorage
       $(document).on("click", "#<%=AJAX_Button.ClientID %>", function (evt) {
-          $("#<%=SubjectDropDownList.ClientID %>").val(storage.getItem("subject"));
-    $("#<%=CourseNrTextBox.ClientID %>").val(storage.getItem("courseNumber"));
-      $("#<%=OtherTextBox.ClientID %>").val(storage.getItem("other"));
-      $("#<%=DateTextBox.ClientID %>").val(storage.getItem("date"));
-      $("#<%=LocationTextBox.ClientID %>").val(storage.getItem("location"));
-      $("#<%=DivingSpotTextBox.ClientID %>").val(storage.getItem("divingSpot"));
-      $("#<%=DivingChiefTextBox.ClientID %>").val(storage.getItem("divingchief"));
-      $("#<%=Divingleader_teacherTextBox.ClientID %>").val(storage.getItem("divingleader_teacher"));
-      $("#<%=Divingleader_studentTextBox.ClientID %>").val(storage.getItem("divingleader_student"));
-      $("#<%=Diver_1TextBox.ClientID %>").val(storage.getItem("diver_1"));
-      $("#<%=Diver_2TextBox.ClientID %>").val(storage.getItem("diver_2"));
-      $("#<%=StandbyTextBox.ClientID %>").val(storage.getItem("standby"));
-      $("#<%=Lineman_1TextBox.ClientID %>").val(storage.getItem("lineman_1"));
-      $("#<%=Lineman_2TextBox.ClientID %>").val(storage.getItem("lineman_2"));
-      $("#<%=HelpmanTextBox.ClientID %>").val(storage.getItem("helpman"));
-      $("#<%=Helpman_assistingTextBox.ClientID %>").val(storage.getItem("helpman_assisting"));
-      $("#<%=OthersTextBox.ClientID %>").val(storage.getItem("others"));
-      $("#<%=airsystem_mainTextBox.ClientID %>").val(storage.getItem("airsystem_main"));
-      $("#<%=airsystem_secondaryTextBox.ClientID %>").val(storage.getItem("airsystem_secondary"));
-      $("#<%=oxygenForChamber_inUseTextBox.ClientID %>").val(storage.getItem("oxygenForChamber_inUse"));
-      $("#<%=oxygenForChamber_readyForUseTextBox.ClientID %>").val(storage.getItem("oxygenForChamber_readyForUse"));
-      $("#<%=emergencyGas_divingBellTextBox.ClientID %>").val(storage.getItem("emergencyGas_divingBell"));
-      $("#<%=emergencyGas_divingBasketTextBox.ClientID %>").val(storage.getItem("emergencyGas_divingBasket"));
-      $("#<%=PurposeTextBox.ClientID %>").val(storage.getItem("purpose"));
-      $("#<%=chamberoperatorTextBox.ClientID %>").val(storage.getItem("chamberoperator"));
-      $("#<%=chamberassistentTextBox.ClientID %>").val(storage.getItem("chamberassistent"));
-      $("#<%=doctorTextBox.ClientID %>").val(storage.getItem("doctor"));
+          var get_local_name = prompt("Skriv inn navn på journalen du ønsker å hente");
+          var local_journal = JSON.parse(localStorage.getItem(get_local_name));
+          $("#<%=CourseNrTextBox.ClientID %>").val(local_journal.courseNumber);
+          $("#<%=SubjectDropDownList.ClientID %>").val(local_journal.subject);
+          $("#<%=OtherTextBox.ClientID %>").val(local_journal.other);
+      $("#<%=DateTextBox.ClientID %>").val(local_journal.date);
+      $("#<%=LocationTextBox.ClientID %>").val(local_journal.location);
+      $("#<%=DivingSpotTextBox.ClientID %>").val(local_journal.divingSpot);
+      $("#<%=DivingChiefTextBox.ClientID %>").val(local_journal.divingchief);
+      $("#<%=Divingleader_teacherTextBox.ClientID %>").val(local_journal.divingleader_teacher);
+      $("#<%=Divingleader_studentTextBox.ClientID %>").val(local_journal.divingleader_student);
+      $("#<%=Diver_1TextBox.ClientID %>").val(local_journal.diver_1);
+      $("#<%=Diver_2TextBox.ClientID %>").val(local_journal.diver_2);
+      $("#<%=StandbyTextBox.ClientID %>").val(local_journal.standby);
+      $("#<%=Lineman_1TextBox.ClientID %>").val(local_journal.lineman_1);
+      $("#<%=Lineman_2TextBox.ClientID %>").val(local_journal.lineman_2);
+      $("#<%=HelpmanTextBox.ClientID %>").val(local_journal.helpman);
+      $("#<%=Helpman_assistingTextBox.ClientID %>").val(local_journal.helpman_assisting);
+      $("#<%=OthersTextBox.ClientID %>").val(local_journal.others);
+      $("#<%=airsystem_mainTextBox.ClientID %>").val(local_journal.airsystem_main);
+      $("#<%=airsystem_secondaryTextBox.ClientID %>").val(local_journal.airsystem_secondary);
+      $("#<%=oxygenForChamber_inUseTextBox.ClientID %>").val(local_journal.oxygenForChamber_inUse);
+      $("#<%=oxygenForChamber_readyForUseTextBox.ClientID %>").val(local_journal.oxygenForChamber_readyForUse);
+      $("#<%=emergencyGas_divingBellTextBox.ClientID %>").val(local_journal.emergencyGas_divingBell);
+      $("#<%=emergencyGas_divingBasketTextBox.ClientID %>").val(local_journal.emergencyGas_divingBasket);
+      $("#<%=PurposeTextBox.ClientID %>").val(local_journal.purpose);
+      $("#<%=chamberoperatorTextBox.ClientID %>").val(local_journal.chamberoperator);
+      $("#<%=chamberassistentTextBox.ClientID %>").val(local_journal.chamberassistent);
+      $("#<%=doctorTextBox.ClientID %>").val(local_journal.doctor);
 
       //diver1 - Standard
 
 
-      $("#<%=D1OF_TypeDropDownList.ClientID %>").val(storage.getItem("of_type"));
-      $("#<%=D1DirectDropDownList.ClientID %>").val(storage.getItem("direct"));
-      $("#<%=D1AirTypeDropDownList.ClientID %>").val(storage.getItem("airType"));
-      $("#<%=D1NitroxPercentTextbox.ClientID %>").val(storage.getItem("nitroxType"));
-      $("#<%=D1RepeatedAirCheckBox.ClientID %>").val(storage.getItem("repeatedAir"));
-      $("#<%=D1N2GroupBeforeDiveTextBox.ClientID %>").val(storage.getItem("N2GroupBeforeDive"));
-      $("#<%=D1BreathingGearTextBox.ClientID %>").val(storage.getItem("breathingGear"));
-      $("#<%=D1VolumeTextBox.ClientID %>").val(storage.getItem("volume"));
-      $("#<%=D1PressureTextBox.ClientID %>").val(storage.getItem("pressure"));
-      $("#<%=D1PlannedDepthTextBox.ClientID %>").val(storage.getItem("plannedDepth"));
-      $("#<%=D1PlannedTimeTextBox.ClientID %>").val(storage.getItem("plannedTime"));
-      $("#<%=D1CourseDiveTextBox.ClientID %>").val(storage.getItem("courseDive"));
-      $("#<%=D1LeftSurface.ClientID %>").val(storage.getItem("leftSurface"));
-      $("#<%=D1ReachedBottom.ClientID %>").val(storage.getItem("reachedBottom"));
-      $("#<%=D1leftBottom_Depth.ClientID %>").val(storage.getItem("leftBottom_Depth"));
-      $("#<%=D1leftBottom_Time.ClientID %>").val(storage.getItem("leftBottom_Time"));
-      $("#<%=D1bottomTime.ClientID %>").val(storage.getItem("bottomTime"));
-      $("#<%=D1maxDepth.ClientID %>").val(storage.getItem("maxDepth"));
-      $("#<%=D1ELD.ClientID %>").val(storage.getItem("ELD"));
-      $("#<%=D1additionToBottomTime.ClientID %>").val(storage.getItem("additionToBottomTime"));
-      $("#<%=D1tableUsed_Meter.ClientID %>").val(storage.getItem("tableUsed_Meter"));
-      $("#<%=D1tableUsed_Minutes.ClientID %>").val(storage.getItem("tableUsed_Minutes"));
-      $("#<%=D1ascensionToFirstStop.ClientID %>").val(storage.getItem("ascensionToFirstStop"));
-      $("#<%=D1timeAtSafetyStop.ClientID %>").val(storage.getItem("timeAtSafetyStop"));
-      $("#<%=D1totalDivingTime.ClientID %>").val(storage.getItem("totalDivingTime"));
-      $("#<%=D1N2GroupAfterDive.ClientID %>").val(storage.getItem("N2GroupAfterDive"));
-      $("#<%=D1isEverythingOKDropDownList.ClientID %>").val(storage.getItem("isEverythingOK"));
-      $("#<%=D1arrived9m.ClientID %>").val(storage.getItem("arrived9m"));
-      $("#<%=D1arrived6m.ClientID %>").val(storage.getItem("arrived6m"));
-      $("#<%=D1arrived3m.ClientID %>").val(storage.getItem("arrived3m"));
-      $("#<%=D1left9m.ClientID %>").val(storage.getItem("left9m"));
-      $("#<%=D1left6m.ClientID %>").val(storage.getItem("left6m"));
-      $("#<%=D1left3m.ClientID %>").val(storage.getItem("left3m"));
-      $("#<%=D1reachedSurface.ClientID %>").val(storage.getItem("reachedSurface"));
-      $("#<%=D1ascensionTime.ClientID %>").val(storage.getItem("ascensionTime"));
+      $("#<%=D1OF_TypeDropDownList.ClientID %>").val(local_journal.of_type);
+      $("#<%=D1DirectDropDownList.ClientID %>").val(local_journal.direct);
+      $("#<%=D1AirTypeDropDownList.ClientID %>").val(local_journal.airType);
+      $("#<%=D1NitroxPercentTextbox.ClientID %>").val(local_journal.nitroxType);
+      $("#<%=D1RepeatedAirCheckBox.ClientID %>").val(local_journal.repeatedAir);
+      $("#<%=D1N2GroupBeforeDiveTextBox.ClientID %>").val(local_journal.N2GroupBeforeDive);
+      $("#<%=D1BreathingGearTextBox.ClientID %>").val(local_journal.breathingGear);
+      $("#<%=D1VolumeTextBox.ClientID %>").val(local_journal.volume);
+      $("#<%=D1PressureTextBox.ClientID %>").val(local_journal.pressure);
+      $("#<%=D1PlannedDepthTextBox.ClientID %>").val(local_journal.plannedDepth);
+      $("#<%=D1PlannedTimeTextBox.ClientID %>").val(local_journal.plannedTime);
+      $("#<%=D1CourseDiveTextBox.ClientID %>").val(local_journal.courseDive);
+      $("#<%=D1LeftSurface.ClientID %>").val(local_journal.leftSurface);
+      $("#<%=D1ReachedBottom.ClientID %>").val(local_journal.reachedBottom);
+      $("#<%=D1leftBottom_Depth.ClientID %>").val(local_journal.leftBottom_Depth);
+      $("#<%=D1leftBottom_Time.ClientID %>").val(local_journal.leftBottom_Time);
+      $("#<%=D1bottomTime.ClientID %>").val(local_journal.bottomTime);
+      $("#<%=D1maxDepth.ClientID %>").val(local_journal.maxDepth);
+      $("#<%=D1ELD.ClientID %>").val(local_journal.ELD);
+      $("#<%=D1additionToBottomTime.ClientID %>").val(local_journal.additionToBottomTime);
+      $("#<%=D1tableUsed_Meter.ClientID %>").val(local_journal.tableUsed_Meter);
+      $("#<%=D1tableUsed_Minutes.ClientID %>").val(local_journal.tableUsed_Minutes);
+      $("#<%=D1ascensionToFirstStop.ClientID %>").val(local_journal.ascensionToFirstStop);
+      $("#<%=D1timeAtSafetyStop.ClientID %>").val(local_journal.timeAtSafetyStop);
+      $("#<%=D1totalDivingTime.ClientID %>").val(local_journal.totalDivingTime);
+      $("#<%=D1N2GroupAfterDive.ClientID %>").val(local_journal.N2GroupAfterDive);
+      $("#<%=D1isEverythingOKDropDownList.ClientID %>").val(local_journal.isEverythingOK);
+      $("#<%=D1arrived9m.ClientID %>").val(local_journal.arrived9m);
+      $("#<%=D1arrived6m.ClientID %>").val(local_journal.arrived6m);
+      $("#<%=D1arrived3m.ClientID %>").val(local_journal.arrived3m);
+      $("#<%=D1left9m.ClientID %>").val(local_journal.left9m);
+      $("#<%=D1left6m.ClientID %>").val(local_journal.left6m);
+      $("#<%=D1left3m.ClientID %>").val(local_journal.left3m);
+      $("#<%=D1reachedSurface.ClientID %>").val(local_journal.reachedSurface);
+      $("#<%=D1ascensionTime.ClientID %>").val(local_journal.ascensionTime);
 
       });
 
@@ -2794,31 +2829,6 @@
     </asp:UpdatePanel>
 
 
-
-
-
-
-
-    <asp:UpdatePanel runat="server">
-        <ContentTemplate>
-
-            <asp:Panel ID="PopupPanel" runat="server" BackColor="White" Width="50%" Height="75%" HorizontalAlign="Left">
-                <asp:Button ID="SaveToDatabaseButton" runat="server" Text="Lagre til database" OnClick="SaveToDatabaseButton_Click" />
-
-                <asp:Label ID="Label1" runat="server" Text="Label">Sikker?</asp:Label>
-
-
-                Merknader
-                <textarea id="NotesTextArea" cols="20" rows="2"></textarea>
-            </asp:Panel>
-
-            <ajaxToolkit:AlwaysVisibleControlExtender runat="server" BehaviorID="PopupPanel_AlwaysVisibleControlExtender" UseAnimation="true" HorizontalSide="Center" VerticalSide="Middle" TargetControlID="PopupPanel" ID="PopupPanel_AlwaysVisibleControlExtender"></ajaxToolkit:AlwaysVisibleControlExtender>
-            <ajaxToolkit:DropShadowExtender runat="server" BehaviorID="PopupPanel_DropShadowExtender" TargetControlID="PopupPanel" ID="PopupPanel_DropShadowExtender"></ajaxToolkit:DropShadowExtender>
-            <ajaxToolkit:PopupControlExtender runat="server" PopupControlID="PopupPanel" ExtenderControlID="" BehaviorID="PopupPanel_PopupControlExtender" TargetControlID="SubmitButton" ID="PopupPanel_PopupControlExtender"></ajaxToolkit:PopupControlExtender>
-            <asp:Button ID="SubmitButton" runat="server" Text="Forhåndsvis og lagre" OnClick="SubmitButton_Click" />
-            <asp:Button ID="Button166" runat="server" Text="Forhåndsvis og lagre2" OnClick="SubmitButton_Click" />
-        </ContentTemplate>
-    </asp:UpdatePanel>
 
 
 
