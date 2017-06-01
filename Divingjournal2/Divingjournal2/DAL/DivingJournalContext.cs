@@ -21,7 +21,6 @@ namespace Divingjournal2.DAL
         public DbSet<Diver_Standard> Diver_Standards { get; set; }
         public DbSet<Diver_Compression> Diver_Compressions { get; set; }
         public DbSet<Diver_Pressurechamber> Diver_Pressurechambers { get; set; }
-      
 
         //Cache
        

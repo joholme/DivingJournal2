@@ -10,9 +10,11 @@ namespace Divingjournal2.Models
         //PK
         public int Id { get; set; }
 
-
+        public string journal_name { get; set; }
+        public string username { get; set; }
         public Subject subject { get; set; }
         public JournalType journalType { get; set; }
+        public Transport transport { get; set; }
         public string courseNumber { get; set; }
         public string other { get; set; }
         public string date { get; set; }

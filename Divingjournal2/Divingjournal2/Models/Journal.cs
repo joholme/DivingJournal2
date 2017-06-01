@@ -13,6 +13,8 @@ namespace Divingjournal2.Models
     {
         //PK
         public int Id { get; set; }
+        //Bruker som skriver journalen
+        public string username { get; set; }
 
         public Subject subject { get; set; }
         public JournalType journalType { get; set; }
