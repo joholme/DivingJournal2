@@ -5,7 +5,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using System;
-
+using System.Diagnostics;
 
 namespace Divingjournal2
 {
@@ -15,6 +15,11 @@ namespace Divingjournal2
         public MainPage()
         {
 
+        }
+
+        protected void PopupSubmitButton_Click(object sender, EventArgs e)
+        {
+            Debug.WriteLine(PopupTextBox.Text);
         }
     }
 }
