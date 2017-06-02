@@ -54,52 +54,23 @@ namespace Divingjournal2
            if(isLoaded)
             {
                 Debug.WriteLine("ER DET MULIG??" );
-                DateTextBox.Text = local_jc.journal_name;
+                DateTextBox.Text = local_jc.date;
+                CourseNrTextBox.Text = local_jc.courseNumber;
+                OtherTextBox.Text = local_jc.other;
+                LocationTextBox.Text = local_jc.location;
+                DivingSpotTextBox.Text = local_jc.divingSpot;
+                DivingChiefTextBox.Text = local_jc.divingchief;
+                Divingleader_teacherTextBox.Text = local_jc.divingleader_teacher;
+                Divingleader_studentTextBox.Text = local_jc.divingleader_student;
+                Diver_1TextBox.Text = local_jc.diver_1;
+                Diver_2TextBox.Text = local_jc.diver_2;
+                StandbyTextBox.Text = local_jc.standby;
+                isLoaded = false;
             }
 
 
         }
 
-
-
-        /*   public void writeJournal()
-           {
-
-
-               j.CourseNumber = CourseNrTextBox.Text;
-               j.Date = DateTextBox.Text;
-               j.Location = LocationTextBox.Text;
-               j.DivingSpot = DivingSpotTextBox.Text;
-              // j.Subject = checkSubjectDropDownList();
-               j.Other = OtherTextBox.Text;
-
-               j.Divingchief = DivingChiefTextBox.Text;
-               j.Divingleader_teacher = Divingleader_teacherTextBox.Text;
-               j.Divingleader_student = Divingleader_studentTextBox.Text;
-               j.Diver_1 = d1.Name = Diver_1TextBox.Text;
-               j.Diver_2 = d2.Name = Diver_2TextBox.Text;
-               j.Standby = sb.Name = StandbyTextBox.Text;
-               j.Helpman = HelpmanTextBox.Text;
-               j.Helpman_assisting = Helpman_assistingTextBox.Text;
-               j.Lineman_1 = Lineman_1TextBox.Text;
-               j.Lineman_2 = Lineman_2TextBox.Text;
-               j.Others = OthersTextBox.Text;
-               j.Airsystem_main = airsystem_mainTextBox.Text;
-               j.Airsystem_secondary = airsystem_secondaryTextBox.Text;
-               j.OxygenForChamber_inUse = oxygenForChamber_inUseTextBox.Text;
-               j.OxygenForChamber_readyForUse = oxygenForChamber_readyForUseTextBox.Text;
-               j.EmergencyGas_divingBell = emergencyGas_divingBellTextBox.Text;
-               j.EmergencyGas_divingBasket = emergencyGas_divingBasketTextBox.Text;
-
-
-
-               Session["journal"] = j; 
-
-
-
-
-
-           } */
 
 
 
@@ -307,7 +278,7 @@ namespace Divingjournal2
             return a;
         }
 
-        public void Print_Journal(object sender, EventArgs e)
+        public void PrintJournal(object sender, EventArgs e)
         {
             Response.Redirect("~/Standard_Journal_View.aspx");
 
@@ -315,9 +286,7 @@ namespace Divingjournal2
 
         public void SubmitButton_Click(object sender, EventArgs e)
         {
-           
-            Session["something"] = j.Id;
-            //WriteToDatabase();
+            WriteToDatabase();
         }
 
 
@@ -328,7 +297,7 @@ namespace Divingjournal2
           
             DivingJournalContext db = new DivingJournalContext();
 
-            //j.username = HttpContext.Current.Session["Username"].ToString();
+            j.username = HttpContext.Current.Session["Username"].ToString();
             j.subject = checkSubjectDropDownList();
             j.transport = returnTransportCheckBoxList();
             j.courseNumber = CourseNrTextBox.Text;
@@ -671,7 +640,6 @@ namespace Divingjournal2
 
         public void Local_Save_Click(object sender, EventArgs e)
         {
-            Debug.WriteLine("LOCAL SAVE BUTTON CLICKED");
             /*
             if (CheckForInternetConnection())
             { WriteToLocalDatabase(); }
@@ -680,7 +648,6 @@ namespace Divingjournal2
         }
         private void WriteToLocalDatabase()
         {
-            Debug.WriteLine("WRITE TO LOCALDATABASE CALLED!");
             DivingJournalContext db = new DivingJournalContext();
             jc.username = HttpContext.Current.Session["Username"].ToString();
             jc.journal_name = PopupTextBox.Text;
@@ -713,6 +680,8 @@ namespace Divingjournal2
 
             db.Journal_Caches.Add(jc);
             db.SaveChanges();
+
+            //Response.Redirect("~/New_Journal.aspx");
             /*
             if (j.journalType == Models.JournalType.direct)
             {

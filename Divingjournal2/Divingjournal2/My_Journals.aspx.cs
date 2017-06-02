@@ -33,7 +33,18 @@ namespace Divingjournal2
             if(reader.Read())
             {
                 //New_Journal.local_jc.date = reader["date"].ToString();
-                New_Journal.local_jc.journal_name = reader["journal_name"].ToString();
+                //New_Journal.local_jc.subject = ;
+                New_Journal.local_jc.courseNumber = reader["courseNumber"].ToString();
+                New_Journal.local_jc.other = reader["other"].ToString();
+                New_Journal.local_jc.date = reader["date"].ToString();
+                New_Journal.local_jc.location = reader["location"].ToString();
+                New_Journal.local_jc.divingSpot = reader["divingSpot"].ToString();
+                New_Journal.local_jc.divingchief = reader["divingchief"].ToString();
+                New_Journal.local_jc.divingleader_teacher = reader["divingleader_teacher"].ToString();
+                New_Journal.local_jc.divingleader_student = reader["divingleader_student"].ToString();
+                New_Journal.local_jc.diver_1 = reader["diver_1"].ToString();
+                New_Journal.local_jc.diver_2 = reader["diver_2"].ToString();
+                New_Journal.local_jc.standby = reader["standby"].ToString();
                 New_Journal.isLoaded = true;
               
                 reader.Close();

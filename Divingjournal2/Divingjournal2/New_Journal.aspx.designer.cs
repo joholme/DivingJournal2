@@ -58,13 +58,13 @@ namespace Divingjournal2 {
         protected global::System.Web.UI.WebControls.Button PressureChamberDiveButton;
         
         /// <summary>
-        /// Local_Save control.
+        /// Local_Save_button control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Local_Save;
+        protected global::System.Web.UI.WebControls.Button Local_Save_button;
         
         /// <summary>
         /// AJAX_Button control.
@@ -92,6 +92,15 @@ namespace Divingjournal2 {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button DB_button;
+        
+        /// <summary>
+        /// Print_Button control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button Print_Button;
         
         /// <summary>
         /// PopupControlExtender1 control.
@@ -130,67 +139,13 @@ namespace Divingjournal2 {
         protected global::System.Web.UI.WebControls.TextBox PopupTextBox;
         
         /// <summary>
-        /// PopupSubmitButton control.
+        /// submit_local_save_button control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button PopupSubmitButton;
-        
-        /// <summary>
-        /// PopupControlExtender2 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::AjaxControlToolkit.PopupControlExtender PopupControlExtender2;
-        
-        /// <summary>
-        /// Confirm_save_panel control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Panel Confirm_save_panel;
-        
-        /// <summary>
-        /// Save_to_Db_button control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Save_to_Db_button;
-        
-        /// <summary>
-        /// PopupControlExtender3 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::AjaxControlToolkit.PopupControlExtender PopupControlExtender3;
-        
-        /// <summary>
-        /// Print_panel control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Panel Print_panel;
-        
-        /// <summary>
-        /// Button166 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button166;
+        protected global::System.Web.UI.WebControls.Button submit_local_save_button;
         
         /// <summary>
         /// FirstInfoTable control.

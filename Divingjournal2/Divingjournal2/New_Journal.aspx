@@ -21,44 +21,30 @@
                 <asp:Button ID="SurfaceCompressionDiveButton" runat="server" Text="Overflatekompresjon" Width="25%" OnClick="SurfaceCompressionDiveButton_Click" />
                 <asp:Button ID="PressureChamberDiveButton" runat="server" Text="Trykkammer" Width="25%" OnClick="PressureChamberDiveButton_Click" />
 
-                 <asp:Button ID="Local_Save" runat="server" Text="Mellomlagre" />
+                 <asp:Button ID="Local_Save_button" runat="server" Text="Mellomlagre" />
                 <asp:Button ID="AJAX_Button" runat="server" Text="Hent" />
                 <asp:Button ID="Dummy_button" runat="server" Text="Dummy" />
                 <asp:Button ID="DB_button" runat="server" Text="Lagre til DB" />
+                <asp:Button ID="Print_Button" runat="server" Text="Skriv ut" OnClick="PrintJournal" />
             </asp:Panel>
 
-               <ajaxToolkit:PopupControlExtender ID="PopupControlExtender1" runat="server" BehaviorID="PopupPanel_PopupControlExtender" PopupControlID="Local_save_panel" ExtenderControlID="" TargetControlID="Local_Save">
-        </ajaxToolkit:PopupControlExtender>
+       
 
+            
 
-        <asp:Panel ID="Local_save_panel" runat="server" BackColor="White" BorderWidth="2" BorderStyle="Solid" BorderColor="Black">
+             <div>
+                 <ajaxToolkit:PopupControlExtender ID="PopupControlExtender1" runat="server" BehaviorID="PopupPanel_PopupControlExtender" PopupControlID="Local_save_panel" ExtenderControlID="" TargetControlID="Local_Save_button">
+                   </ajaxToolkit:PopupControlExtender>
+            <asp:Panel ID="Local_save_panel" runat="server" BackColor="White" BorderWidth="2" BorderStyle="Solid" BorderColor="Black">
             <h1>Gi et navn journalen skal lagres som</h1>
             <asp:Label ID="PopupLabel" runat="server" Text="Navn:"></asp:Label>
             <asp:TextBox ID="PopupTextBox" runat="server"></asp:TextBox>
-            <asp:Button ID="PopupSubmitButton" Text="Lagre midlertidig" runat="server" OnClick="Local_Save_Click" />
+            <asp:Button  ID="submit_local_save_button" Text="Lagre midlertidig" runat="server" OnClick="Local_Save_Click" />
         </asp:Panel>
+            </div>
 
-                      <ajaxToolkit:PopupControlExtender ID="PopupControlExtender2" runat="server" BehaviorID="PopupPanel_PopupControlExtender" PopupControlID="Confirm_save_panel" ExtenderControlID="" TargetControlID="DB_button">
-        </ajaxToolkit:PopupControlExtender>
+                      
 
-
-        <asp:Panel ID="Confirm_save_panel" runat="server" BackColor="White" BorderWidth="2" BorderStyle="Solid" BorderColor="Black">
-            <h3>Du er i ferd med å lagre journalen til det offisielle akrivet. </h3>
-            <p>Bekreft handlingen ved å trykke "Lagre".</p>
-            <asp:Button ID="Save_to_Db_button" Text="Lagre" runat="server"  OnClick="SubmitButton_Click" />
-        </asp:Panel> 
-
-            <ajaxToolkit:PopupControlExtender ID="PopupControlExtender3" runat="server" BehaviorID="PopupPanel_PopupControlExtender" PopupControlID="Print_panel" ExtenderControlID="" TargetControlID="Save_to_Db_button">
-        </ajaxToolkit:PopupControlExtender>
-
-
-        <asp:Panel ID="Print_panel" runat="server" BackColor="White" BorderWidth="2" BorderStyle="Solid" BorderColor="Black" Width="900" Height="300" HorizontalAlign="Center" >
-          <br /> <br /> <br />  <br />
-            <h3>Journalen er lagret. Ønsker du å skrive den ut?. </h3>
-            <p>Trykk på "Utskrift" for å åpne i utskriftsformat</p>
-            <asp:Button ID="Button166" Text="Utskrift" runat="server"  OnClick="Print_Journal" />
-             
-        </asp:Panel> 
 
             <div style="text-align: right; padding: 0px; height: 22px; width: auto;">
                 <asp:Table ID="FirstInfoTable" runat="server" BorderStyle="None" CellPadding="1" CellSpacing="1" HorizontalAlign="Right" Font-Size="X-Large">
@@ -985,7 +971,7 @@
 
       
       //Save data to LocalStorage
-      $(document).on("click", "#<%=Local_Save.ClientID %>", function (evt) {
+      $(document).on("click", "#<%=Local_Save_button.ClientID %>", function (evt) {
           
           if (!navigator.onLine) {
               var journal_name = prompt("Gi journalen et navn. Vitkig at du husker dette navnet, fordi du vil bli spurt om det når du skal hente journalen frem igjen.");
