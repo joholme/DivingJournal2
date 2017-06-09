@@ -815,7 +815,6 @@
     <Content Include="Global.asax" />
     <Content Include="Site.Master" />
     <Content Include="Standard_Journal_View.aspx" />
-    <Content Include="StartPage.aspx" />
     <Content Include="Stopwatch.js" />
     <Content Include="StopWatch2.js" />
     <Content Include="Stopwatch3.js" />
@@ -964,12 +963,6 @@
     </Compile>
     <Compile Include="Site.Mobile.Master.designer.cs">
       <DependentUpon>Site.Mobile.Master</DependentUpon>
-    </Compile>
-    <Compile Include="StartPage.aspx.cs">
-      <DependentUpon>StartPage.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="StartPage.aspx.designer.cs">
-      <DependentUpon>StartPage.aspx</DependentUpon>
     </Compile>
     <Compile Include="Startup.cs" />
     <Compile Include="ViewSwitcher.ascx.cs">
