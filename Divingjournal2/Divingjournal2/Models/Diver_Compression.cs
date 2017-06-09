@@ -51,10 +51,13 @@ namespace Divingjournal2.Models
         public string left12m { get; set; }
         public string time12_0m { get; set; }
         public string reached15mInChamber { get; set; }
+        public string surfaceInterval { get; set; }
+        public string left15mInChamber { get; set; }
+        public string reached12mInChamber { get; set; }
         public string o2_1 { get; set; }
         public string o2_2 { get; set; }
         public string o2_3 { get; set; }
-        public string surfaceInterval { get; set; }
+        
         public string air_1 { get; set; }
         public string air_2 { get; set; }
         public string air_3 { get; set; }

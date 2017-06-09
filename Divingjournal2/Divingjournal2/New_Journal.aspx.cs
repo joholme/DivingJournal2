@@ -17,7 +17,7 @@ namespace Divingjournal2
 
     public partial class New_Journal : System.Web.UI.Page
     {
-        TableMaker tm = new TableMaker();
+        
         
         Diver d1 = new Diver();
         Diver d2 = new Diver();
@@ -41,7 +41,7 @@ namespace Divingjournal2
             StandardDiveTable.Visible = true;
             Calendar1.Visible = false;
 
-            tm.journalTableMaster(MainInfoPanel);
+            
 
             writeHeader("Standarddykk");
             showTables(true, false, false);
@@ -312,7 +312,7 @@ namespace Divingjournal2
             j.divingleader_student = Divingleader_studentTextBox.Text;
             j.diver_1 = Diver_1TextBox.Text;
             j.diver_2=Diver_2TextBox.Text;
-            j.standby=StandbyTextBox.Text;
+            j.diver_3=StandbyTextBox.Text;
             j.lineman_1=Lineman_1TextBox.Text;
             j.lineman_2=Lineman_2TextBox.Text;
             j.helpman=HelpmanTextBox.Text;
