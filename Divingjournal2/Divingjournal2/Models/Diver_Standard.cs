@@ -60,7 +60,7 @@ namespace Divingjournal2.Models
         public string ascensionTime { get; set; }
         public string totalDivingTime { get; set; }
         public string N2GroupAfterDive { get; set; }
-        public string tes { get; set; }
+        
 
 
 
