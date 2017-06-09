@@ -76,6 +76,8 @@ namespace Divingjournal2
         {
             Context.GetOwinContext().Authentication.SignOut(DefaultAuthenticationTypes.ApplicationCookie);
         }
+
+        
     }
 
 }
