@@ -18,6 +18,7 @@ namespace Divingjournal2.Account
     {
         protected void Button_Login_Click(object sender, EventArgs e)
         {
+
             SqlConnection con = new SqlConnection("Data Source=(LocalDB)\\MSSQLLocalDB;Initial Catalog=DivingJournal;Integrated Security=True;Connect Timeout=15;Encrypt=False;TrustServerCertificate=True;ApplicationIntent=ReadWrite;MultiSubnetFailover=False");
             SqlDataAdapter sda = new SqlDataAdapter("Select count(*) From UserData Where UserName = '" + TextBoxUserName.Text + "' and Password = '" + TextBoxPassword.Text + "' ",con);
             DataTable dt = new DataTable();
@@ -28,9 +29,10 @@ namespace Divingjournal2.Account
             }
             else
             {
-                Response.Write("Password is Not correct");
+                Response.Write("Username or Password is incorrect");
             }
         }
     }
     
 }
+
