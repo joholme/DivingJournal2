@@ -967,7 +967,6 @@
     </Compile>
     <Compile Include="StartPage.aspx.cs">
       <DependentUpon>StartPage.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="StartPage.aspx.designer.cs">
       <DependentUpon>StartPage.aspx</DependentUpon>
