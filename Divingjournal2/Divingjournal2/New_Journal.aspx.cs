@@ -15,7 +15,7 @@ namespace Divingjournal2
 
     public partial class New_Journal : System.Web.UI.Page
     {
-        
+        TableMaker tm = new TableMaker();
         
         Diver d1 = new Diver();
         Diver d2 = new Diver();
@@ -27,11 +27,13 @@ namespace Divingjournal2
         
         protected override void OnInit(EventArgs e)
         {
+            DateTextBox.Text = DateTime.Now.ToLocalTime().ToShortDateString();
             JournalIDLabel.Text = j.Id.ToString();
             StandardDiveButton.Enabled = false;
             StandardDiveTable.Visible = true;
             Calendar1.Visible = false;
-            
+
+            tm.journalTableMaster(MainInfoPanel);
 
             writeHeader("Standarddykk");
             showTables(true, false, false);
@@ -642,7 +644,7 @@ namespace Divingjournal2
         protected void SurfaceCompressionDiveButton_Click(object sender, EventArgs e)
         {
             j.journalType = Models.JournalType.surfaceCompression;
-            writeHeader("Overflatekompresjon");
+            writeHeader("Overflatedekompresjon");
             showTables(false, true, false);
             
 
@@ -716,7 +718,7 @@ namespace Divingjournal2
 
         protected void DateButton_Click(object sender, EventArgs e)
         {
-            Calendar1.Visible = true;
+            DateTextBox.Text = DateTime.Now.ToLocalTime().ToShortDateString();
         }
 
         protected void Calendar1_SelectionChanged(object sender, EventArgs e)
