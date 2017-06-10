@@ -10,6 +10,7 @@ using System.Web.Services;
 using System.Diagnostics;
 using System.Net;
 using Divingjournal2.Models;
+using System.Data.SqlClient;
 
 namespace Divingjournal2
 {
@@ -18,7 +19,9 @@ namespace Divingjournal2
     public partial class New_Journal : System.Web.UI.Page
     {
         TableMaker tm = new TableMaker();
-        
+
+        public SqlConnection conn = new SqlConnection(@"Data Source=divingjournal.database.windows.net;Initial Catalog=DivingJournalDB;Integrated Security=False;User ID=djadmin;Password=DykkerUtdanningDB!5;Connect Timeout=15;Encrypt=False;TrustServerCertificate=True;ApplicationIntent=ReadWrite;MultiSubnetFailover=False");
+
         Diver d1 = new Diver();
         Diver d2 = new Diver();
         Diver sb = new Diver();
@@ -30,9 +33,8 @@ namespace Divingjournal2
         public static Models.Journal_Cache local_jc = new Models.Journal_Cache();
 
         public string localJournalName;
-        public static bool isLoaded = false;
+        private string str;
 
-        
         protected override void OnInit(EventArgs e)
         {
             DateTextBox.Text = DateTime.Now.ToLocalTime().ToShortDateString();
@@ -53,28 +55,34 @@ namespace Divingjournal2
 
         protected void Page_Load(object sender, EventArgs e )
         {
-           if(isLoaded)
-            {
-                Debug.WriteLine("ER DET MULIG??" );
-                DateTextBox.Text = local_jc.date;
-                CourseNrTextBox.Text = local_jc.courseNumber;
-                OtherTextBox.Text = local_jc.other;
-                LocationTextBox.Text = local_jc.location;
-                DivingSpotTextBox.Text = local_jc.divingSpot;
-                DivingChiefTextBox.Text = local_jc.divingchief;
-                Divingleader_teacherTextBox.Text = local_jc.divingleader_teacher;
-                Divingleader_studentTextBox.Text = local_jc.divingleader_student;
-                Diver_1TextBox.Text = local_jc.diver_1;
-                Diver_2TextBox.Text = local_jc.diver_2;
-                StandbyTextBox.Text = local_jc.standby;
-                isLoaded = false;
-            }
+            Debug.WriteLine(Request.QueryString["journal_name"]);
+            LoadData(Request.QueryString["journal_name"]);
 
 
         }
 
+        private void LoadData(string journal_name)
+        {
+            System.Data.SqlClient.SqlCommand com;
+            conn.Open();
+            str = "SELECT * from dbo.Journal_Cache WHERE journal_name='" + journal_name + "'";
+            com = new SqlCommand(str, conn);
+            SqlDataReader reader = com.ExecuteReader();
 
-
+            if (reader.Read())
+            {
+                CourseNrTextBox.Text = reader["journal_name"].ToString();
+                OtherTextBox.Text = reader["other"].ToString();
+                LocationTextBox.Text = reader["location"].ToString();
+                DivingSpotTextBox.Text = reader["divingSpot"].ToString();
+                DivingChiefTextBox.Text = reader["divingchief"].ToString();
+                Divingleader_teacherTextBox.Text = reader["divingleader_teacher"].ToString();
+                Divingleader_studentTextBox.Text = reader["divingleader_student"].ToString();
+                Diver_1TextBox.Text = reader["diver_1"].ToString();
+                Diver_2TextBox.Text = reader["diver_2"].ToString();
+                StandbyTextBox.Text = reader["standby"].ToString();
+            }
+            }
 
         public Models.Subject checkSubjectDropDownList()
         {

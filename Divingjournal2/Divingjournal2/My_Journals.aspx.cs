@@ -22,12 +22,13 @@ namespace Divingjournal2
 
         protected void Button1_Click(object sender, EventArgs e)
         {
+            /*
            
             System.Data.SqlClient.SqlCommand com;
             string str;
 
             conn.Open();
-            str = "SELECT * from dbo.Journal_Cache WHERE journal_name='" + journal_name_textbox.Text + "'";
+            str = "SELECT * from dbo.Journal_Cache WHERE journal_name='" + Request.QueryString["journal_name"] + "'";
             com = new SqlCommand(str, conn);
             SqlDataReader reader = com.ExecuteReader();
             if(reader.Read())
@@ -52,6 +53,8 @@ namespace Divingjournal2
                 Response.Redirect("~/New_Journal.aspx");
 
             }
+            */
         }
+        
     }
 }

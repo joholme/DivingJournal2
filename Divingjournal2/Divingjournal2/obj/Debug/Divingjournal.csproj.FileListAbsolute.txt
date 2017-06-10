@@ -613,3 +613,4 @@ C:\Users\Ørjan Magnus Eide\Source\Repos\DivingJournal27\Divingjournal2\Divingjo
 C:\Users\Ørjan Magnus Eide\Source\Repos\DivingJournal27\Divingjournal2\Divingjournal2\bin\DiverLibrary.pdb
 C:\Users\Ørjan Magnus Eide\Source\Repos\DivingJournal27\Divingjournal2\Divingjournal2\obj\Debug\Divingjournal2.dll
 C:\Users\Ørjan Magnus Eide\Source\Repos\DivingJournal27\Divingjournal2\Divingjournal2\obj\Debug\Divingjournal2.pdb
+C:\Users\Ørjan Magnus Eide\Source\Repos\DivingJournal27\Divingjournal2\Divingjournal2\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
