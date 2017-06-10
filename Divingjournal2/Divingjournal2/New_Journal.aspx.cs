@@ -35,10 +35,12 @@ namespace Divingjournal2
         
         protected override void OnInit(EventArgs e)
         {
+            DateTextBox.Text = DateTime.Now.ToLocalTime().ToShortDateString();
             JournalIDLabel.Text = j.Id.ToString();
             StandardDiveButton.Enabled = false;
             StandardDiveTable.Visible = true;
             Calendar1.Visible = false;
+
             
 
             writeHeader("Standarddykk");
@@ -310,7 +312,7 @@ namespace Divingjournal2
             j.divingleader_student = Divingleader_studentTextBox.Text;
             j.diver_1 = Diver_1TextBox.Text;
             j.diver_2=Diver_2TextBox.Text;
-            j.standby=StandbyTextBox.Text;
+            j.diver_3=StandbyTextBox.Text;
             j.lineman_1=Lineman_1TextBox.Text;
             j.lineman_2=Lineman_2TextBox.Text;
             j.helpman=HelpmanTextBox.Text;
@@ -828,7 +830,7 @@ namespace Divingjournal2
         protected void SurfaceCompressionDiveButton_Click(object sender, EventArgs e)
         {
             j.journalType = Models.JournalType.surfaceCompression;
-            writeHeader("Overflatekompresjon");
+            writeHeader("Overflatedekompresjon");
             showTables(false, true, false);
             
 
@@ -902,7 +904,7 @@ namespace Divingjournal2
 
         protected void DateButton_Click(object sender, EventArgs e)
         {
-            Calendar1.Visible = true;
+            DateTextBox.Text = DateTime.Now.ToLocalTime().ToShortDateString();
         }
 
         protected void Calendar1_SelectionChanged(object sender, EventArgs e)
