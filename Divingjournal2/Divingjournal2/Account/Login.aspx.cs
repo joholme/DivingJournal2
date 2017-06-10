@@ -22,9 +22,10 @@ namespace Divingjournal2.Account
             SqlDataAdapter sda = new SqlDataAdapter("Select count(*) From UserData Where UserName = '" + TextBoxUserName.Text + "' and Password = '" + TextBoxPassword.Text + "' ",con);
             DataTable dt = new DataTable();
             sda.Fill(dt);
-            if(dt.Rows[0][0].ToString()== "1")
+
+            if(dt.Rows[0][0].ToString() == "1")
             {
-                Session["Username"] = TextBoxUserName.Text;
+                Session["New"] = TextBoxUserName.Text;
                 Response.Redirect("~/Default.aspx");
             }
             else

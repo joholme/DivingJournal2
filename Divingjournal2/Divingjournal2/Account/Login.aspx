@@ -63,7 +63,6 @@
                 <tr>
                     <td class="auto-style5">&nbsp;</td>
                     <td>&nbsp;</td>
-                    <td>&nbsp;</td>
                 </tr>
             </table>
             <br />

@@ -54,22 +54,11 @@
                         <li><a runat="server" href="~/About">About</a></li>
                         <li><a runat="server" href="~/New_Journal">Ny Journal</a></li>
                     </ul>
-                    <asp:LoginView runat="server" ViewStateMode="Disabled">
-                        <AnonymousTemplate>
+                        
                             <ul class="nav navbar-nav navbar-right">
-                                <li><a runat="server" href="~/Account/Register">Register</a></li>
-                                <li><a runat="server" href="~/Account/Login">Log out</a></li>
+                                <asp:Label ID="Label_welcome" runat="server" Text="Du er logget inn som "></asp:Label>
+                                <li><a ID="B_Logout" runat="server" href="~/Account/Login">Log out</a></li>
                             </ul>
-                        </AnonymousTemplate>
-                        <LoggedInTemplate>
-                            <ul class="nav navbar-nav navbar-right">
-                                <li><a runat="server" href="~/Account/Manage" title="Manage your account">Hello, <%: Context.User.Identity.GetUserName()  %> !</a></li>
-                                <li>
-                                    <asp:LoginStatus runat="server" LogoutAction="Redirect" LogoutText="Log off" LogoutPageUrl="~/" OnLoggingOut="Unnamed_LoggingOut" />
-                                </li>
-                            </ul>
-                        </LoggedInTemplate>
-                    </asp:LoginView>
                 </div>
             </div>
         </div>

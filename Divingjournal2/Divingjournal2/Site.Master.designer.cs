@@ -13,6 +13,24 @@ namespace Divingjournal2 {
     public partial class SiteMaster {
         
         /// <summary>
+        /// Label_welcome control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Label_welcome;
+        
+        /// <summary>
+        /// B_Logout control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlAnchor B_Logout;
+        
+        /// <summary>
         /// MainContent control.
         /// </summary>
         /// <remarks>
