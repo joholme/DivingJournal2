@@ -7,6 +7,7 @@ using System.Web.Security;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using Microsoft.AspNet.Identity;
+using System.Web.Providers.Entities;
 
 namespace Divingjournal2
 {
@@ -69,12 +70,20 @@ namespace Divingjournal2
 
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (Session["New"] != null)
+            {
+                // Label_welcome.Text += Session["New]"].ToString();
+            }
+            else
+            {
+                Response.Redirect("Login.aspx");
+            }
         }
 
-        protected void Unnamed_LoggingOut(object sender, LoginCancelEventArgs e)
+        protected void B_Logout_Click(object sender, EventArgs e)
         {
-            Context.GetOwinContext().Authentication.SignOut(DefaultAuthenticationTypes.ApplicationCookie);
+            Session["New"] = null;
+            Response.Redirect("Login.aspx");
         }
 
         

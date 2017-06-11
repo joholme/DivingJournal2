@@ -1822,13 +1822,13 @@ namespace Divingjournal2 {
         protected global::System.Web.UI.WebControls.Button Button81;
         
         /// <summary>
-        /// Button6 control.
+        /// D1ascensionToFirstStopButton control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button6;
+        protected global::System.Web.UI.WebControls.Button D1ascensionToFirstStopButton;
         
         /// <summary>
         /// D1ascensionToFirstStop control.
@@ -1840,13 +1840,13 @@ namespace Divingjournal2 {
         protected global::System.Web.UI.WebControls.TextBox D1ascensionToFirstStop;
         
         /// <summary>
-        /// Button7 control.
+        /// D2ascensionToFirstStopButton control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button7;
+        protected global::System.Web.UI.WebControls.Button D2ascensionToFirstStopButton;
         
         /// <summary>
         /// D2ascensionToFirstStop control.
@@ -1858,13 +1858,13 @@ namespace Divingjournal2 {
         protected global::System.Web.UI.WebControls.TextBox D2ascensionToFirstStop;
         
         /// <summary>
-        /// Button8 control.
+        /// D3ascensionToFirstStopButton control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button8;
+        protected global::System.Web.UI.WebControls.Button D3ascensionToFirstStopButton;
         
         /// <summary>
         /// D3ascensionToFirstStop control.
@@ -1894,13 +1894,13 @@ namespace Divingjournal2 {
         protected global::System.Web.UI.WebControls.Button Button82;
         
         /// <summary>
-        /// Button9 control.
+        /// D1timeAtSafetyStopBtn control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button9;
+        protected global::System.Web.UI.WebControls.Button D1timeAtSafetyStopBtn;
         
         /// <summary>
         /// D1timeAtSafetyStop control.
@@ -1912,13 +1912,13 @@ namespace Divingjournal2 {
         protected global::System.Web.UI.WebControls.TextBox D1timeAtSafetyStop;
         
         /// <summary>
-        /// Button10 control.
+        /// D2timeAtSafetyStopBtn control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button10;
+        protected global::System.Web.UI.WebControls.Button D2timeAtSafetyStopBtn;
         
         /// <summary>
         /// D2timeAtSafetyStop control.
@@ -1930,13 +1930,13 @@ namespace Divingjournal2 {
         protected global::System.Web.UI.WebControls.TextBox D2timeAtSafetyStop;
         
         /// <summary>
-        /// Button11 control.
+        /// D3timeAtSafetyStopBtn control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button11;
+        protected global::System.Web.UI.WebControls.Button D3timeAtSafetyStopBtn;
         
         /// <summary>
         /// D3timeAtSafetyStop control.
@@ -2407,13 +2407,13 @@ namespace Divingjournal2 {
         protected global::System.Web.UI.WebControls.Button Button33;
         
         /// <summary>
-        /// D1Comp_left18m control.
+        /// D1left18m control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox D1Comp_left18m;
+        protected global::System.Web.UI.WebControls.TextBox D1left18m;
         
         /// <summary>
         /// Button34 control.
@@ -2425,13 +2425,13 @@ namespace Divingjournal2 {
         protected global::System.Web.UI.WebControls.Button Button34;
         
         /// <summary>
-        /// D2Comp_left18m control.
+        /// D2left18m control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox D2Comp_left18m;
+        protected global::System.Web.UI.WebControls.TextBox D2left18m;
         
         /// <summary>
         /// Button35 control.
@@ -2443,13 +2443,13 @@ namespace Divingjournal2 {
         protected global::System.Web.UI.WebControls.Button Button35;
         
         /// <summary>
-        /// D3Comp_left18m control.
+        /// D3left18m control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox D3Comp_left18m;
+        protected global::System.Web.UI.WebControls.TextBox D3left18m;
         
         /// <summary>
         /// left15mRow control.
@@ -2479,13 +2479,13 @@ namespace Divingjournal2 {
         protected global::System.Web.UI.WebControls.Button Button36;
         
         /// <summary>
-        /// D1Comp_left15m control.
+        /// D1left15m control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox D1Comp_left15m;
+        protected global::System.Web.UI.WebControls.TextBox D1left15m;
         
         /// <summary>
         /// Button37 control.
@@ -2497,13 +2497,13 @@ namespace Divingjournal2 {
         protected global::System.Web.UI.WebControls.Button Button37;
         
         /// <summary>
-        /// D2Comp_left15m control.
+        /// D2left15m control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox D2Comp_left15m;
+        protected global::System.Web.UI.WebControls.TextBox D2left15m;
         
         /// <summary>
         /// Button38 control.
@@ -2515,13 +2515,13 @@ namespace Divingjournal2 {
         protected global::System.Web.UI.WebControls.Button Button38;
         
         /// <summary>
-        /// D3Comp_left15m control.
+        /// D3left15m control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox D3Comp_left15m;
+        protected global::System.Web.UI.WebControls.TextBox D3left15m;
         
         /// <summary>
         /// left12mRow control.
@@ -2551,13 +2551,13 @@ namespace Divingjournal2 {
         protected global::System.Web.UI.WebControls.Button Button39;
         
         /// <summary>
-        /// D1Comp_left12m control.
+        /// D1left12m control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox D1Comp_left12m;
+        protected global::System.Web.UI.WebControls.TextBox D1left12m;
         
         /// <summary>
         /// Button40 control.
@@ -2569,13 +2569,13 @@ namespace Divingjournal2 {
         protected global::System.Web.UI.WebControls.Button Button40;
         
         /// <summary>
-        /// D2Comp_left12m control.
+        /// D2left12m control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox D2Comp_left12m;
+        protected global::System.Web.UI.WebControls.TextBox D2left12m;
         
         /// <summary>
         /// Button41 control.
@@ -2587,13 +2587,13 @@ namespace Divingjournal2 {
         protected global::System.Web.UI.WebControls.Button Button41;
         
         /// <summary>
-        /// D3Comp_left12m control.
+        /// D3left12m control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox D3Comp_left12m;
+        protected global::System.Web.UI.WebControls.TextBox D3left12m;
         
         /// <summary>
         /// time12_0mRow control.
@@ -2623,13 +2623,13 @@ namespace Divingjournal2 {
         protected global::System.Web.UI.WebControls.Button Button42;
         
         /// <summary>
-        /// D1Comp_time12_0m control.
+        /// D1time12_0m control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox D1Comp_time12_0m;
+        protected global::System.Web.UI.WebControls.TextBox D1time12_0m;
         
         /// <summary>
         /// Button43 control.
@@ -2641,13 +2641,13 @@ namespace Divingjournal2 {
         protected global::System.Web.UI.WebControls.Button Button43;
         
         /// <summary>
-        /// D2Comp_time12_0m control.
+        /// D2time12_0m control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox D2Comp_time12_0m;
+        protected global::System.Web.UI.WebControls.TextBox D2time12_0m;
         
         /// <summary>
         /// Button44 control.
@@ -2659,13 +2659,13 @@ namespace Divingjournal2 {
         protected global::System.Web.UI.WebControls.Button Button44;
         
         /// <summary>
-        /// D3Comp_time12_0m control.
+        /// D3time12_0m control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox D3Comp_time12_0m;
+        protected global::System.Web.UI.WebControls.TextBox D3time12_0m;
         
         /// <summary>
         /// chamberSealedRow control.
@@ -2713,13 +2713,13 @@ namespace Divingjournal2 {
         protected global::System.Web.UI.WebControls.Button Button45;
         
         /// <summary>
-        /// D1Comp_reached15mInChamber control.
+        /// D1reached15mInChamber control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox D1Comp_reached15mInChamber;
+        protected global::System.Web.UI.WebControls.TextBox D1reached15mInChamber;
         
         /// <summary>
         /// Button46 control.
@@ -2731,13 +2731,13 @@ namespace Divingjournal2 {
         protected global::System.Web.UI.WebControls.Button Button46;
         
         /// <summary>
-        /// D2Comp_reached15mInChamber control.
+        /// D2reached15mInChamber control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox D2Comp_reached15mInChamber;
+        protected global::System.Web.UI.WebControls.TextBox D2reached15mInChamber;
         
         /// <summary>
         /// Button47 control.
@@ -2749,13 +2749,13 @@ namespace Divingjournal2 {
         protected global::System.Web.UI.WebControls.Button Button47;
         
         /// <summary>
-        /// D3Comp_reached15mInChamber control.
+        /// D3reached15mInChamber control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox D3Comp_reached15mInChamber;
+        protected global::System.Web.UI.WebControls.TextBox D3reached15mInChamber;
         
         /// <summary>
         /// surfaceIntervalRow control.
@@ -2785,13 +2785,13 @@ namespace Divingjournal2 {
         protected global::System.Web.UI.WebControls.Button Button48;
         
         /// <summary>
-        /// D1Comp_surfaceInterval control.
+        /// D1surfaceInterval control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox D1Comp_surfaceInterval;
+        protected global::System.Web.UI.WebControls.TextBox D1surfaceInterval;
         
         /// <summary>
         /// Button49 control.
@@ -2803,13 +2803,13 @@ namespace Divingjournal2 {
         protected global::System.Web.UI.WebControls.Button Button49;
         
         /// <summary>
-        /// D2Comp_surfaceInterval control.
+        /// D2surfaceInterval control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox D2Comp_surfaceInterval;
+        protected global::System.Web.UI.WebControls.TextBox D2surfaceInterval;
         
         /// <summary>
         /// Button50 control.
@@ -2821,13 +2821,13 @@ namespace Divingjournal2 {
         protected global::System.Web.UI.WebControls.Button Button50;
         
         /// <summary>
-        /// D3Comp_surfaceInterval control.
+        /// D3surfaceInterval control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox D3Comp_surfaceInterval;
+        protected global::System.Web.UI.WebControls.TextBox D3surfaceInterval;
         
         /// <summary>
         /// left15mInChamberRow control.
@@ -3001,13 +3001,13 @@ namespace Divingjournal2 {
         protected global::System.Web.UI.WebControls.Button Button57;
         
         /// <summary>
-        /// D1Comp_o2_1 control.
+        /// D1o2_1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox D1Comp_o2_1;
+        protected global::System.Web.UI.WebControls.TextBox D1o2_1;
         
         /// <summary>
         /// Button58 control.
@@ -3019,13 +3019,13 @@ namespace Divingjournal2 {
         protected global::System.Web.UI.WebControls.Button Button58;
         
         /// <summary>
-        /// D2Comp_o2_1 control.
+        /// D2o2_1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox D2Comp_o2_1;
+        protected global::System.Web.UI.WebControls.TextBox D2o2_1;
         
         /// <summary>
         /// Button59 control.
@@ -3037,13 +3037,13 @@ namespace Divingjournal2 {
         protected global::System.Web.UI.WebControls.Button Button59;
         
         /// <summary>
-        /// D3Comp_o2_1 control.
+        /// D3o2_1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox D3Comp_o2_1;
+        protected global::System.Web.UI.WebControls.TextBox D3o2_1;
         
         /// <summary>
         /// air_1Row control.
@@ -3073,13 +3073,13 @@ namespace Divingjournal2 {
         protected global::System.Web.UI.WebControls.Button Button60;
         
         /// <summary>
-        /// D1Comp_air_1 control.
+        /// D1air_1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox D1Comp_air_1;
+        protected global::System.Web.UI.WebControls.TextBox D1air_1;
         
         /// <summary>
         /// Button61 control.
@@ -3091,13 +3091,13 @@ namespace Divingjournal2 {
         protected global::System.Web.UI.WebControls.Button Button61;
         
         /// <summary>
-        /// D2Comp_air_1 control.
+        /// D2air_1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox D2Comp_air_1;
+        protected global::System.Web.UI.WebControls.TextBox D2air_1;
         
         /// <summary>
         /// Button62 control.
@@ -3109,13 +3109,13 @@ namespace Divingjournal2 {
         protected global::System.Web.UI.WebControls.Button Button62;
         
         /// <summary>
-        /// D3Comp_air_1 control.
+        /// D3air_1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox D3Comp_air_1;
+        protected global::System.Web.UI.WebControls.TextBox D3air_1;
         
         /// <summary>
         /// o2_2Row control.
@@ -3145,13 +3145,13 @@ namespace Divingjournal2 {
         protected global::System.Web.UI.WebControls.Button Button63;
         
         /// <summary>
-        /// D1Comp_o2_2 control.
+        /// D1o2_2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox D1Comp_o2_2;
+        protected global::System.Web.UI.WebControls.TextBox D1o2_2;
         
         /// <summary>
         /// Button64 control.
@@ -3163,13 +3163,13 @@ namespace Divingjournal2 {
         protected global::System.Web.UI.WebControls.Button Button64;
         
         /// <summary>
-        /// D2Comp_o2_2 control.
+        /// D2o2_2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox D2Comp_o2_2;
+        protected global::System.Web.UI.WebControls.TextBox D2o2_2;
         
         /// <summary>
         /// Button65 control.
@@ -3181,13 +3181,13 @@ namespace Divingjournal2 {
         protected global::System.Web.UI.WebControls.Button Button65;
         
         /// <summary>
-        /// D3Comp_o2_2 control.
+        /// D3o2_2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox D3Comp_o2_2;
+        protected global::System.Web.UI.WebControls.TextBox D3o2_2;
         
         /// <summary>
         /// air_2Row control.
@@ -3217,13 +3217,13 @@ namespace Divingjournal2 {
         protected global::System.Web.UI.WebControls.Button Button66;
         
         /// <summary>
-        /// D1Comp_air_2 control.
+        /// D1air_2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox D1Comp_air_2;
+        protected global::System.Web.UI.WebControls.TextBox D1air_2;
         
         /// <summary>
         /// Button67 control.
@@ -3235,13 +3235,13 @@ namespace Divingjournal2 {
         protected global::System.Web.UI.WebControls.Button Button67;
         
         /// <summary>
-        /// D2Comp_air_2 control.
+        /// D2air_2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox D2Comp_air_2;
+        protected global::System.Web.UI.WebControls.TextBox D2air_2;
         
         /// <summary>
         /// Button68 control.
@@ -3253,13 +3253,13 @@ namespace Divingjournal2 {
         protected global::System.Web.UI.WebControls.Button Button68;
         
         /// <summary>
-        /// D3Comp_air_2 control.
+        /// D3air_2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox D3Comp_air_2;
+        protected global::System.Web.UI.WebControls.TextBox D3air_2;
         
         /// <summary>
         /// o2_3Row control.
@@ -3289,13 +3289,13 @@ namespace Divingjournal2 {
         protected global::System.Web.UI.WebControls.Button Button69;
         
         /// <summary>
-        /// D1Comp_o2_3 control.
+        /// D1o2_3 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox D1Comp_o2_3;
+        protected global::System.Web.UI.WebControls.TextBox D1o2_3;
         
         /// <summary>
         /// Button70 control.
@@ -3307,13 +3307,13 @@ namespace Divingjournal2 {
         protected global::System.Web.UI.WebControls.Button Button70;
         
         /// <summary>
-        /// D2Comp_o2_3 control.
+        /// D2o2_3 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox D2Comp_o2_3;
+        protected global::System.Web.UI.WebControls.TextBox D2o2_3;
         
         /// <summary>
         /// Button71 control.
@@ -3325,13 +3325,13 @@ namespace Divingjournal2 {
         protected global::System.Web.UI.WebControls.Button Button71;
         
         /// <summary>
-        /// D3Comp_o2_3 control.
+        /// D3o2_3 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox D3Comp_o2_3;
+        protected global::System.Web.UI.WebControls.TextBox D3o2_3;
         
         /// <summary>
         /// air_3Row control.
@@ -3361,13 +3361,13 @@ namespace Divingjournal2 {
         protected global::System.Web.UI.WebControls.Button Button72;
         
         /// <summary>
-        /// D1Comp_air_3 control.
+        /// D1air_3 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox D1Comp_air_3;
+        protected global::System.Web.UI.WebControls.TextBox D1air_3;
         
         /// <summary>
         /// Button73 control.
@@ -3379,13 +3379,13 @@ namespace Divingjournal2 {
         protected global::System.Web.UI.WebControls.Button Button73;
         
         /// <summary>
-        /// D2Comp_air_3 control.
+        /// D2air_3 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox D2Comp_air_3;
+        protected global::System.Web.UI.WebControls.TextBox D2air_3;
         
         /// <summary>
         /// Button74 control.
@@ -3397,13 +3397,13 @@ namespace Divingjournal2 {
         protected global::System.Web.UI.WebControls.Button Button74;
         
         /// <summary>
-        /// D3Comp_air_3 control.
+        /// D3air_3 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox D3Comp_air_3;
+        protected global::System.Web.UI.WebControls.TextBox D3air_3;
         
         /// <summary>
         /// left12mWithoutO2Row control.
@@ -3433,13 +3433,13 @@ namespace Divingjournal2 {
         protected global::System.Web.UI.WebControls.Button Button75;
         
         /// <summary>
-        /// D1Comp_left12mWithoutO2 control.
+        /// D1left12mWithoutO2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox D1Comp_left12mWithoutO2;
+        protected global::System.Web.UI.WebControls.TextBox D1left12mWithoutO2;
         
         /// <summary>
         /// Button76 control.
@@ -3451,13 +3451,13 @@ namespace Divingjournal2 {
         protected global::System.Web.UI.WebControls.Button Button76;
         
         /// <summary>
-        /// D2Comp_left12mWithoutO2 control.
+        /// D2left12mWithoutO2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox D2Comp_left12mWithoutO2;
+        protected global::System.Web.UI.WebControls.TextBox D2left12mWithoutO2;
         
         /// <summary>
         /// Button77 control.
@@ -3469,13 +3469,13 @@ namespace Divingjournal2 {
         protected global::System.Web.UI.WebControls.Button Button77;
         
         /// <summary>
-        /// D3Comp_left12mWithoutO2 control.
+        /// D3left12mWithoutO2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox D3Comp_left12mWithoutO2;
+        protected global::System.Web.UI.WebControls.TextBox D3left12mWithoutO2;
         
         /// <summary>
         /// reachedSurfaceRow control.
@@ -3496,13 +3496,13 @@ namespace Divingjournal2 {
         protected global::System.Web.UI.WebControls.Button Button104;
         
         /// <summary>
-        /// Button30 control.
+        /// D1reachedSurfaceBtn control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button30;
+        protected global::System.Web.UI.WebControls.Button D1reachedSurfaceBtn;
         
         /// <summary>
         /// D1reachedSurface control.
@@ -3514,13 +3514,13 @@ namespace Divingjournal2 {
         protected global::System.Web.UI.WebControls.TextBox D1reachedSurface;
         
         /// <summary>
-        /// Button31 control.
+        /// D2reachedSurfaceBtn control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button31;
+        protected global::System.Web.UI.WebControls.Button D2reachedSurfaceBtn;
         
         /// <summary>
         /// D2reachedSurface control.
@@ -3532,13 +3532,13 @@ namespace Divingjournal2 {
         protected global::System.Web.UI.WebControls.TextBox D2reachedSurface;
         
         /// <summary>
-        /// Button32 control.
+        /// D3reachedSurfaceBtn control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button32;
+        protected global::System.Web.UI.WebControls.Button D3reachedSurfaceBtn;
         
         /// <summary>
         /// D3reachedSurface control.
@@ -3595,31 +3595,31 @@ namespace Divingjournal2 {
         protected global::System.Web.UI.WebControls.TableRow timeInChamberRow;
         
         /// <summary>
-        /// D1Comp_timeInChamber control.
+        /// D1timeInChamber control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox D1Comp_timeInChamber;
+        protected global::System.Web.UI.WebControls.TextBox D1timeInChamber;
         
         /// <summary>
-        /// D2Comp_timeInChamber control.
+        /// D2timeInChamber control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox D2Comp_timeInChamber;
+        protected global::System.Web.UI.WebControls.TextBox D2timeInChamber;
         
         /// <summary>
-        /// D3Comp_timeInChamber control.
+        /// D3timeInChamber control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox D3Comp_timeInChamber;
+        protected global::System.Web.UI.WebControls.TextBox D3timeInChamber;
         
         /// <summary>
         /// timeAtSeaRow control.
@@ -3631,31 +3631,31 @@ namespace Divingjournal2 {
         protected global::System.Web.UI.WebControls.TableRow timeAtSeaRow;
         
         /// <summary>
-        /// D1Comp_timeAtSea control.
+        /// D1timeAtSea control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox D1Comp_timeAtSea;
+        protected global::System.Web.UI.WebControls.TextBox D1timeAtSea;
         
         /// <summary>
-        /// D2Comp_timeAtSea control.
+        /// D2timeAtSea control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox D2Comp_timeAtSea;
+        protected global::System.Web.UI.WebControls.TextBox D2timeAtSea;
         
         /// <summary>
-        /// D3Comp_timeAtSea control.
+        /// D3timeAtSea control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox D3Comp_timeAtSea;
+        protected global::System.Web.UI.WebControls.TextBox D3timeAtSea;
         
         /// <summary>
         /// totalDecompressionRow control.
@@ -3667,31 +3667,31 @@ namespace Divingjournal2 {
         protected global::System.Web.UI.WebControls.TableRow totalDecompressionRow;
         
         /// <summary>
-        /// D1Comp_totalDecompression control.
+        /// D1totalDecompression control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox D1Comp_totalDecompression;
+        protected global::System.Web.UI.WebControls.TextBox D1totalDecompression;
         
         /// <summary>
-        /// D2Comp_totalDecompression control.
+        /// D2totalDecompression control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox D2Comp_totalDecompression;
+        protected global::System.Web.UI.WebControls.TextBox D2totalDecompression;
         
         /// <summary>
-        /// D3Comp_totalDecompression control.
+        /// D3totalDecompression control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox D3Comp_totalDecompression;
+        protected global::System.Web.UI.WebControls.TextBox D3totalDecompression;
         
         /// <summary>
         /// totalDivingTimeRow control.

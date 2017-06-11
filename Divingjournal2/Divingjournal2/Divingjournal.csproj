@@ -873,6 +873,8 @@
     <Content Include="Default.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
+    <Content Include="Search_Journal.aspx" />
+    <Content Include="Search_Journal_Results.aspx" />
     <Content Include="Site.Master" />
     <Content Include="Standard_Journal_View.aspx" />
     <Content Include="Stopwatch.js" />
@@ -1001,6 +1003,20 @@
     <Compile Include="obj\Debug\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
     <Compile Include="obj\Debug\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
     <Compile Include="obj\Debug\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
+    <Compile Include="Search_Journal.aspx.cs">
+      <DependentUpon>Search_Journal.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Search_Journal.aspx.designer.cs">
+      <DependentUpon>Search_Journal.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Search_Journal_Results.aspx.cs">
+      <DependentUpon>Search_Journal_Results.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Search_Journal_Results.aspx.designer.cs">
+      <DependentUpon>Search_Journal_Results.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Standard_Journal_View.aspx.cs">
       <DependentUpon>Standard_Journal_View.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
