@@ -474,6 +474,7 @@ namespace Divingjournal2
                 }
                 db.SaveChanges();
             } */
+            /*
 
                     arrived9m = D1arrived9m.Text,
                     arrived6m = D1arrived6m.Text,
