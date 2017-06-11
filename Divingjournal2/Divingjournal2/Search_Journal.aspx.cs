@@ -16,7 +16,7 @@ namespace Divingjournal2
 
         protected void Search_button_Click(object sender, EventArgs e)
         {
-            
+
             Session["Dykkeleder"] = Dykkeleder_textbox.Text;
             Session["Dato"] = Dato_textbox.Text;
             Session["Dykker"] = Dykker_textbox.Text;
