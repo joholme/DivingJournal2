@@ -9,15 +9,11 @@ using System.Net;
 using Divingjournal2.DAL;
 using DiverLibrary;
 
-using System.Data.SqlClient;
-
 namespace Divingjournal2
 {
     public partial class New_Journal_Rebuilt : System.Web.UI.Page
     {
         List<Watch> watchList = new List<Watch>();
-
-        public SqlConnection conn = new SqlConnection(@"Data Source=divingjournal.database.windows.net;Initial Catalog=DivingJournalDB;Integrated Security=False;User ID=djadmin;Password=DykkerUtdanningDB!5;Connect Timeout=15;Encrypt=False;TrustServerCertificate=True;ApplicationIntent=ReadWrite;MultiSubnetFailover=False");
 
         Diver d1 = new Diver();
         Diver d2 = new Diver();
@@ -30,7 +26,7 @@ namespace Divingjournal2
         public static Models.Journal_Cache local_jc = new Models.Journal_Cache();
 
         public string localJournalName;
-        private string str;
+        public static bool isLoaded = false;
 
         protected override void OnInit(EventArgs e)
         {
@@ -48,32 +44,7 @@ namespace Divingjournal2
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            LoadData(Request.QueryString["journal_name"]);
-        }
 
-        private void LoadData(string journal_name)
-        {
-            System.Data.SqlClient.SqlCommand com;
-            conn.Open();
-            str = "SELECT * from dbo.Journal_Cache WHERE journal_name='" + journal_name + "'";
-            com = new SqlCommand(str, conn);
-            SqlDataReader reader = com.ExecuteReader();
-
-            if (reader.Read())
-            {
-                /*
-                CourseNrTextBox.Text = reader["journal_name"].ToString();
-                OtherTextBox.Text = reader["other"].ToString();
-                LocationTextBox.Text = reader["location"].ToString();
-                DivingSpotTextBox.Text = reader["divingSpot"].ToString();
-                DivingChiefTextBox.Text = reader["divingchief"].ToString();
-                Divingleader_teacherTextBox.Text = reader["divingleader_teacher"].ToString();
-                Divingleader_studentTextBox.Text = reader["divingleader_student"].ToString();
-                Diver_1TextBox.Text = reader["diver_1"].ToString();
-                Diver_2TextBox.Text = reader["diver_2"].ToString();
-                StandbyTextBox.Text = reader["standby"].ToString();
-                */
-            }
         }
 
         protected void StandardDiveButton_Click(object sender, EventArgs e)
