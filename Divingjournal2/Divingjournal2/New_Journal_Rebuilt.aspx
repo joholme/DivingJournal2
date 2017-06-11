@@ -807,25 +807,25 @@
                     </asp:TableRow>
                     <asp:TableRow ID="leftBottom_TimeRow">
                         <asp:TableCell Width="4%">
-                            <asp:Button ID="Button80" OnClick="TimeButton_Click" runat="server" CssClass=" btn-primary form-control" Text="Sett inn alle" />
+                            <asp:Button ID="Button80" OnClick="TimeButtonWithExtraFunction_Click" runat="server" CssClass=" btn-primary form-control" Text="Sett inn alle" />
                         </asp:TableCell>
                         <asp:TableCell Width="30%">
                             <div class="form-control-static text-info">Forlot bunn (tid)</div>
                         </asp:TableCell>
                         <asp:TableCell Width="5%">
-                            <asp:Button ID="D1leftBottom_TimeButton" OnClick="TimeButton_Click" CommandArgument="D1leftBottom_Time" runat="server" CssClass="btn-default form-control" Text="Sett inn" />
+                            <asp:Button ID="D1leftBottom_TimeButton" OnClick="TimeButtonWithExtraFunction_Click" CommandArgument="D1leftBottom_Time" runat="server" CssClass="btn-default form-control" Text="Sett inn" />
                         </asp:TableCell>
                         <asp:TableCell Width="15%">
                              <asp:TextBox runat="server" CssClass="form-group form-control" ID="D1leftBottom_Time"></asp:TextBox>
                         </asp:TableCell>
                         <asp:TableCell Width="5%">
-                            <asp:Button ID="D2leftBottom_TimeButton" OnClick="TimeButton_Click" CommandArgument="D2leftBottom_Time"  runat="server" CssClass="btn-default form-control" Text="Sett inn" />
+                            <asp:Button ID="D2leftBottom_TimeButton" OnClick="TimeButtonWithExtraFunction_Click" CommandArgument="D2leftBottom_Time"  runat="server" CssClass="btn-default form-control" Text="Sett inn" />
                         </asp:TableCell>
                         <asp:TableCell Width="15%">
                              <asp:TextBox runat="server" CssClass="form-group form-control" ID="D2leftBottom_Time"></asp:TextBox>
                         </asp:TableCell>
                         <asp:TableCell Width="5%">
-                            <asp:Button ID="D3leftBottom_TimeButton" OnClick="TimeButton_Click" CommandArgument="D3leftBottom_Time"  runat="server" CssClass="btn-default form-control" Text="Sett inn" />
+                            <asp:Button ID="D3leftBottom_TimeButton" OnClick="TimeButtonWithExtraFunction_Click" CommandArgument="D3leftBottom_Time"  runat="server" CssClass="btn-default form-control" Text="Sett inn" />
                         </asp:TableCell>
                         <asp:TableCell Width="15%">
                              <asp:TextBox runat="server" CssClass="form-group form-control" ID="D3leftBottom_Time"></asp:TextBox>
@@ -971,19 +971,19 @@
                             <div class="form-control-static text-info">Oppstigning til 1. stopp</div>
                         </asp:TableCell>
                         <asp:TableCell Width="5%">
-                            <asp:Button ID="Button6" OnClick="TimeButton_Click" CommandArgument="D1ascensionToFirstStop" runat="server" CssClass="btn-default form-control" Text="Sett inn" />
+                            <asp:Button ID="D1ascensionToFirstStopButton" OnClick="TimeButton_Click" CommandArgument="D1ascensionToFirstStop" runat="server" CssClass="btn-default form-control" Text="Sett inn" />
                         </asp:TableCell>
                         <asp:TableCell Width="15%">
                              <asp:TextBox runat="server" CssClass="form-group form-control" ID="D1ascensionToFirstStop"></asp:TextBox>
                         </asp:TableCell>
                         <asp:TableCell Width="5%">
-                            <asp:Button ID="Button7" OnClick="TimeButton_Click" CommandArgument="D2ascensionToFirstStop"  runat="server" CssClass="btn-default form-control" Text="Sett inn" />
+                            <asp:Button ID="D2ascensionToFirstStopButton" OnClick="TimeButton_Click" CommandArgument="D2ascensionToFirstStop"  runat="server" CssClass="btn-default form-control" Text="Sett inn" />
                         </asp:TableCell>
                         <asp:TableCell Width="15%">
                              <asp:TextBox runat="server" CssClass="form-group form-control" ID="D2ascensionToFirstStop"></asp:TextBox>
                         </asp:TableCell>
                         <asp:TableCell Width="5%">
-                            <asp:Button ID="Button8" OnClick="TimeButton_Click" CommandArgument="D3ascensionToFirstStop"  runat="server" CssClass="btn-default form-control" Text="Sett inn" />
+                            <asp:Button ID="D3ascensionToFirstStopButton" OnClick="TimeButton_Click" CommandArgument="D3ascensionToFirstStop"  runat="server" CssClass="btn-default form-control" Text="Sett inn" />
                         </asp:TableCell>
                         <asp:TableCell Width="15%">
                              <asp:TextBox runat="server" CssClass="form-group form-control" ID="D3ascensionToFirstStop"></asp:TextBox>
@@ -991,25 +991,25 @@
                     </asp:TableRow>
                     <asp:TableRow ID="timeAtSafetyStopRow">
                         <asp:TableCell Width="4%">
-                            <asp:Button ID="Button82" OnClick="TimeButton_Click" runat="server" CssClass=" btn-primary form-control" Text="Sett inn alle" />
+                            <asp:Button ID="Button82" OnClick="TimeButtonWithExtraFunction_Click" runat="server" CssClass=" btn-primary form-control" Text="Sett inn alle" />
                         </asp:TableCell>
                         <asp:TableCell Width="30%">
                             <div class="form-control-static text-info">Tid på sikkerhetsstopp</div>
                         </asp:TableCell>
                         <asp:TableCell Width="5%">
-                            <asp:Button ID="Button9" OnClick="TimeButton_Click" CommandArgument="D1timeAtSafetyStop" runat="server" CssClass="btn-default form-control" Text="Sett inn" />
+                            <asp:Button ID="D1timeAtSafetyStopBtn" OnClick="TimeButtonWithExtraFunction_Click" CommandArgument="D1timeAtSafetyStop" runat="server" CssClass="btn-default form-control" Text="Sett inn" />
                         </asp:TableCell>
                         <asp:TableCell Width="15%">
                              <asp:TextBox runat="server" CssClass="form-group form-control" ID="D1timeAtSafetyStop"></asp:TextBox>
                         </asp:TableCell>
                         <asp:TableCell Width="5%">
-                            <asp:Button ID="Button10" OnClick="TimeButton_Click" CommandArgument="D2timeAtSafetyStop"  runat="server" CssClass="btn-default form-control" Text="Sett inn" />
+                            <asp:Button ID="D2timeAtSafetyStopBtn" OnClick="TimeButtonWithExtraFunction_Click" CommandArgument="D2timeAtSafetyStop"  runat="server" CssClass="btn-default form-control" Text="Sett inn" />
                         </asp:TableCell>
                         <asp:TableCell Width="15%">
                              <asp:TextBox runat="server" CssClass="form-group form-control" ID="D2timeAtSafetyStop"></asp:TextBox>
                         </asp:TableCell>
                         <asp:TableCell Width="5%">
-                            <asp:Button ID="Button11" OnClick="TimeButton_Click" CommandArgument="D3timeAtSafetyStop"  runat="server" CssClass="btn-default form-control" Text="Sett inn" />
+                            <asp:Button ID="D3timeAtSafetyStopBtn" OnClick="TimeButtonWithExtraFunction_Click" CommandArgument="D3timeAtSafetyStop"  runat="server" CssClass="btn-default form-control" Text="Sett inn" />
                         </asp:TableCell>
                         <asp:TableCell Width="15%">
                              <asp:TextBox runat="server" CssClass="form-group form-control" ID="D3timeAtSafetyStop"></asp:TextBox>
@@ -1185,22 +1185,22 @@
                             <div class="form-control-static text-info">Forlot 18m stopp</div>
                         </asp:TableCell>
                         <asp:TableCell Width="5%">
-                            <asp:Button ID="Button33" OnClick="TimeButton_Click" CommandArgument="D1Comp_left18m" runat="server" CssClass="btn-default form-control" Text="Sett inn" />
+                            <asp:Button ID="Button33" OnClick="TimeButton_Click" CommandArgument="D1left18m" runat="server" CssClass="btn-default form-control" Text="Sett inn" />
                         </asp:TableCell>
                         <asp:TableCell Width="15%">
-                             <asp:TextBox runat="server" CssClass="form-group form-control" ID="D1Comp_left18m"></asp:TextBox>
+                             <asp:TextBox runat="server" CssClass="form-group form-control" ID="D1left18m"></asp:TextBox>
                         </asp:TableCell>
                         <asp:TableCell Width="5%">
-                            <asp:Button ID="Button34" OnClick="TimeButton_Click" CommandArgument="D2Comp_left18m"  runat="server" CssClass="btn-default form-control" Text="Sett inn" />
+                            <asp:Button ID="Button34" OnClick="TimeButton_Click" CommandArgument="D2left18m"  runat="server" CssClass="btn-default form-control" Text="Sett inn" />
                         </asp:TableCell>
                         <asp:TableCell Width="15%">
-                             <asp:TextBox runat="server" CssClass="form-group form-control" ID="D2Comp_left18m"></asp:TextBox>
+                             <asp:TextBox runat="server" CssClass="form-group form-control" ID="D2left18m"></asp:TextBox>
                         </asp:TableCell>
                         <asp:TableCell Width="5%">
-                            <asp:Button ID="Button35" OnClick="TimeButton_Click" CommandArgument="D3Comp_left18m"  runat="server" CssClass="btn-default form-control" Text="Sett inn" />
+                            <asp:Button ID="Button35" OnClick="TimeButton_Click" CommandArgument="D3left18m"  runat="server" CssClass="btn-default form-control" Text="Sett inn" />
                         </asp:TableCell>
                         <asp:TableCell Width="15%">
-                             <asp:TextBox runat="server" CssClass="form-group form-control" ID="D3Comp_left18m"></asp:TextBox>
+                             <asp:TextBox runat="server" CssClass="form-group form-control" ID="D3left18m"></asp:TextBox>
                         </asp:TableCell>
                     </asp:TableRow>
                     <asp:TableRow ID="left15mRow">
@@ -1211,22 +1211,22 @@
                             <div class="form-control-static text-info">Forlot 15m stopp</div>
                         </asp:TableCell>
                         <asp:TableCell Width="5%">
-                            <asp:Button ID="Button36" OnClick="TimeButton_Click" CommandArgument="D1Comp_left15m" runat="server" CssClass="btn-default form-control" Text="Sett inn" />
+                            <asp:Button ID="Button36" OnClick="TimeButton_Click" CommandArgument="D1left15m" runat="server" CssClass="btn-default form-control" Text="Sett inn" />
                         </asp:TableCell>
                         <asp:TableCell Width="15%">
-                             <asp:TextBox runat="server" CssClass="form-group form-control" ID="D1Comp_left15m"></asp:TextBox>
+                             <asp:TextBox runat="server" CssClass="form-group form-control" ID="D1left15m"></asp:TextBox>
                         </asp:TableCell>
                         <asp:TableCell Width="5%">
-                            <asp:Button ID="Button37" OnClick="TimeButton_Click" CommandArgument="D2Comp_left15m"  runat="server" CssClass="btn-default form-control" Text="Sett inn" />
+                            <asp:Button ID="Button37" OnClick="TimeButton_Click" CommandArgument="D2left15m"  runat="server" CssClass="btn-default form-control" Text="Sett inn" />
                         </asp:TableCell>
                         <asp:TableCell Width="15%">
-                             <asp:TextBox runat="server" CssClass="form-group form-control" ID="D2Comp_left15m"></asp:TextBox>
+                             <asp:TextBox runat="server" CssClass="form-group form-control" ID="D2left15m"></asp:TextBox>
                         </asp:TableCell>
                         <asp:TableCell Width="5%">
-                            <asp:Button ID="Button38" OnClick="TimeButton_Click" CommandArgument="D3Comp_left15m"  runat="server" CssClass="btn-default form-control" Text="Sett inn" />
+                            <asp:Button ID="Button38" OnClick="TimeButton_Click" CommandArgument="D3left15m"  runat="server" CssClass="btn-default form-control" Text="Sett inn" />
                         </asp:TableCell>
                         <asp:TableCell Width="15%">
-                             <asp:TextBox runat="server" CssClass="form-group form-control" ID="D3Comp_left15m"></asp:TextBox>
+                             <asp:TextBox runat="server" CssClass="form-group form-control" ID="D3left15m"></asp:TextBox>
                         </asp:TableCell>
                     </asp:TableRow>
                     <asp:TableRow ID="left12mRow">
@@ -1237,22 +1237,22 @@
                             <div class="form-control-static text-info">Forlot 12m stopp</div>
                         </asp:TableCell>
                         <asp:TableCell Width="5%">
-                            <asp:Button ID="Button39" OnClick="TimeButton_Click" CommandArgument="D1Comp_left12m" runat="server" CssClass="btn-default form-control" Text="Sett inn" />
+                            <asp:Button ID="Button39" OnClick="TimeButton_Click" CommandArgument="D1left12m" runat="server" CssClass="btn-default form-control" Text="Sett inn" />
                         </asp:TableCell>
                         <asp:TableCell Width="15%">
-                             <asp:TextBox runat="server" CssClass="form-group form-control" ID="D1Comp_left12m"></asp:TextBox>
+                             <asp:TextBox runat="server" CssClass="form-group form-control" ID="D1left12m"></asp:TextBox>
                         </asp:TableCell>
                         <asp:TableCell Width="5%">
-                            <asp:Button ID="Button40" OnClick="TimeButton_Click" CommandArgument="D2Comp_left12m"  runat="server" CssClass="btn-default form-control" Text="Sett inn" />
+                            <asp:Button ID="Button40" OnClick="TimeButton_Click" CommandArgument="D2left12m"  runat="server" CssClass="btn-default form-control" Text="Sett inn" />
                         </asp:TableCell>
                         <asp:TableCell Width="15%">
-                             <asp:TextBox runat="server" CssClass="form-group form-control" ID="D2Comp_left12m"></asp:TextBox>
+                             <asp:TextBox runat="server" CssClass="form-group form-control" ID="D2left12m"></asp:TextBox>
                         </asp:TableCell>
                         <asp:TableCell Width="5%">
-                            <asp:Button ID="Button41" OnClick="TimeButton_Click" CommandArgument="D3Comp_left12m"  runat="server" CssClass="btn-default form-control" Text="Sett inn" />
+                            <asp:Button ID="Button41" OnClick="TimeButton_Click" CommandArgument="D3left12m"  runat="server" CssClass="btn-default form-control" Text="Sett inn" />
                         </asp:TableCell>
                         <asp:TableCell Width="15%">
-                             <asp:TextBox runat="server" CssClass="form-group form-control" ID="D3Comp_left12m"></asp:TextBox>
+                             <asp:TextBox runat="server" CssClass="form-group form-control" ID="D3left12m"></asp:TextBox>
                         </asp:TableCell>
                     </asp:TableRow>
                     <asp:TableRow ID="time12_0mRow">
@@ -1263,22 +1263,22 @@
                             <div class="form-control-static text-info">Tid 12-0m</div>
                         </asp:TableCell>
                         <asp:TableCell Width="5%">
-                            <asp:Button ID="Button42" OnClick="TimeButton_Click" CommandArgument="D1Comp_time12_0m" runat="server" CssClass="btn-default form-control" Text="Sett inn" />
+                            <asp:Button ID="Button42" OnClick="TimeButton_Click" CommandArgument="D1time12_0m" runat="server" CssClass="btn-default form-control" Text="Sett inn" />
                         </asp:TableCell>
                         <asp:TableCell Width="15%">
-                             <asp:TextBox runat="server" CssClass="form-group form-control" ID="D1Comp_time12_0m"></asp:TextBox>
+                             <asp:TextBox runat="server" CssClass="form-group form-control" ID="D1time12_0m"></asp:TextBox>
                         </asp:TableCell>
                         <asp:TableCell Width="5%">
-                            <asp:Button ID="Button43" OnClick="TimeButton_Click" CommandArgument="D2Comp_time12_0m"  runat="server" CssClass="btn-default form-control" Text="Sett inn" />
+                            <asp:Button ID="Button43" OnClick="TimeButton_Click" CommandArgument="D2time12_0m"  runat="server" CssClass="btn-default form-control" Text="Sett inn" />
                         </asp:TableCell>
                         <asp:TableCell Width="15%">
-                             <asp:TextBox runat="server" CssClass="form-group form-control" ID="D2Comp_time12_0m"></asp:TextBox>
+                             <asp:TextBox runat="server" CssClass="form-group form-control" ID="D2time12_0m"></asp:TextBox>
                         </asp:TableCell>
                         <asp:TableCell Width="5%">
-                            <asp:Button ID="Button44" OnClick="TimeButton_Click" CommandArgument="D3Comp_time12_0m"  runat="server" CssClass="btn-default form-control" Text="Sett inn" />
+                            <asp:Button ID="Button44" OnClick="TimeButton_Click" CommandArgument="D3time12_0m"  runat="server" CssClass="btn-default form-control" Text="Sett inn" />
                         </asp:TableCell>
                         <asp:TableCell Width="15%">
-                             <asp:TextBox runat="server" CssClass="form-group form-control" ID="D3Comp_time12_0m"></asp:TextBox>
+                             <asp:TextBox runat="server" CssClass="form-group form-control" ID="D3time12_0m"></asp:TextBox>
                         </asp:TableCell>
                     </asp:TableRow>
                     <asp:TableRow ID="chamberSealedRow">
@@ -1310,22 +1310,22 @@
                             <div class="form-control-static text-info">Ankom 15m i kammer</div>
                         </asp:TableCell>
                         <asp:TableCell Width="5%">
-                            <asp:Button ID="Button45" OnClick="TimeButton_Click" CommandArgument="D1Comp_reached15mInChamber" runat="server" CssClass="btn-default form-control" Text="Sett inn" />
+                            <asp:Button ID="Button45" OnClick="TimeButton_Click" CommandArgument="D1reached15mInChamber" runat="server" CssClass="btn-default form-control" Text="Sett inn" />
                         </asp:TableCell>
                         <asp:TableCell Width="15%">
-                             <asp:TextBox runat="server" CssClass="form-group form-control" ID="D1Comp_reached15mInChamber"></asp:TextBox>
+                             <asp:TextBox runat="server" CssClass="form-group form-control" ID="D1reached15mInChamber"></asp:TextBox>
                         </asp:TableCell>
                         <asp:TableCell Width="5%">
-                            <asp:Button ID="Button46" OnClick="TimeButton_Click" CommandArgument="D2Comp_reached15mInChamber"  runat="server" CssClass="btn-default form-control" Text="Sett inn" />
+                            <asp:Button ID="Button46" OnClick="TimeButton_Click" CommandArgument="D2reached15mInChamber"  runat="server" CssClass="btn-default form-control" Text="Sett inn" />
                         </asp:TableCell>
                         <asp:TableCell Width="15%">
-                             <asp:TextBox runat="server" CssClass="form-group form-control" ID="D2Comp_reached15mInChamber"></asp:TextBox>
+                             <asp:TextBox runat="server" CssClass="form-group form-control" ID="D2reached15mInChamber"></asp:TextBox>
                         </asp:TableCell>
                         <asp:TableCell Width="5%">
-                            <asp:Button ID="Button47" OnClick="TimeButton_Click" CommandArgument="D3Comp_reached15mInChamber"  runat="server" CssClass="btn-default form-control" Text="Sett inn" />
+                            <asp:Button ID="Button47" OnClick="TimeButton_Click" CommandArgument="D3reached15mInChamber"  runat="server" CssClass="btn-default form-control" Text="Sett inn" />
                         </asp:TableCell>
                         <asp:TableCell Width="15%">
-                             <asp:TextBox runat="server" CssClass="form-group form-control" ID="D3Comp_reached15mInChamber"></asp:TextBox>
+                             <asp:TextBox runat="server" CssClass="form-group form-control" ID="D3reached15mInChamber"></asp:TextBox>
                         </asp:TableCell>
                     </asp:TableRow>
                     <asp:TableRow ID="surfaceIntervalRow">
@@ -1336,22 +1336,22 @@
                             <div class="form-control-static text-info">Overflateintervall</div>
                         </asp:TableCell>
                         <asp:TableCell Width="5%">
-                            <asp:Button ID="Button48" OnClick="TimeButton_Click" CommandArgument="D1Comp_surfaceInterval" runat="server" CssClass="btn-default form-control" Text="Sett inn" />
+                            <asp:Button ID="Button48" OnClick="TimeButton_Click" CommandArgument="D1surfaceInterval" runat="server" CssClass="btn-default form-control" Text="Sett inn" />
                         </asp:TableCell>
                         <asp:TableCell Width="15%">
-                             <asp:TextBox runat="server" CssClass="form-group form-control" ID="D1Comp_surfaceInterval"></asp:TextBox>
+                             <asp:TextBox runat="server" CssClass="form-group form-control" ID="D1surfaceInterval"></asp:TextBox>
                         </asp:TableCell>
                         <asp:TableCell Width="5%">
-                            <asp:Button ID="Button49" OnClick="TimeButton_Click" CommandArgument="D2Comp_surfaceInterval"  runat="server" CssClass="btn-default form-control" Text="Sett inn" />
+                            <asp:Button ID="Button49" OnClick="TimeButton_Click" CommandArgument="D2surfaceInterval"  runat="server" CssClass="btn-default form-control" Text="Sett inn" />
                         </asp:TableCell>
                         <asp:TableCell Width="15%">
-                             <asp:TextBox runat="server" CssClass="form-group form-control" ID="D2Comp_surfaceInterval"></asp:TextBox>
+                             <asp:TextBox runat="server" CssClass="form-group form-control" ID="D2surfaceInterval"></asp:TextBox>
                         </asp:TableCell>
                         <asp:TableCell Width="5%">
-                            <asp:Button ID="Button50" OnClick="TimeButton_Click" CommandArgument="D3Comp_surfaceInterval"  runat="server" CssClass="btn-default form-control" Text="Sett inn" />
+                            <asp:Button ID="Button50" OnClick="TimeButton_Click" CommandArgument="D3surfaceInterval"  runat="server" CssClass="btn-default form-control" Text="Sett inn" />
                         </asp:TableCell>
                         <asp:TableCell Width="15%">
-                             <asp:TextBox runat="server" CssClass="form-group form-control" ID="D3Comp_surfaceInterval"></asp:TextBox>
+                             <asp:TextBox runat="server" CssClass="form-group form-control" ID="D3surfaceInterval"></asp:TextBox>
                         </asp:TableCell>
                     </asp:TableRow>
                     <asp:TableRow ID="left15mInChamberRow">
@@ -1414,22 +1414,22 @@
                             <div class="form-control-static text-info">O2 - 1</div>
                         </asp:TableCell>
                         <asp:TableCell Width="5%">
-                            <asp:Button ID="Button57" OnClick="TimeButton_Click" CommandArgument="D1Comp_o2_1" runat="server" CssClass="btn-default form-control" Text="Sett inn" />
+                            <asp:Button ID="Button57" OnClick="TimeButton_Click" CommandArgument="D1o2_1" runat="server" CssClass="btn-default form-control" Text="Sett inn" />
                         </asp:TableCell>
                         <asp:TableCell Width="15%">
-                             <asp:TextBox runat="server" CssClass="form-group form-control" ID="D1Comp_o2_1"></asp:TextBox>
+                             <asp:TextBox runat="server" CssClass="form-group form-control" ID="D1o2_1"></asp:TextBox>
                         </asp:TableCell>
                         <asp:TableCell Width="5%">
-                            <asp:Button ID="Button58" OnClick="TimeButton_Click" CommandArgument="D2Comp_o2_1"  runat="server" CssClass="btn-default form-control" Text="Sett inn" />
+                            <asp:Button ID="Button58" OnClick="TimeButton_Click" CommandArgument="D2o2_1"  runat="server" CssClass="btn-default form-control" Text="Sett inn" />
                         </asp:TableCell>
                         <asp:TableCell Width="15%">
-                             <asp:TextBox runat="server" CssClass="form-group form-control" ID="D2Comp_o2_1"></asp:TextBox>
+                             <asp:TextBox runat="server" CssClass="form-group form-control" ID="D2o2_1"></asp:TextBox>
                         </asp:TableCell>
                         <asp:TableCell Width="5%">
-                            <asp:Button ID="Button59" OnClick="TimeButton_Click" CommandArgument="D3Comp_o2_1"  runat="server" CssClass="btn-default form-control" Text="Sett inn" />
+                            <asp:Button ID="Button59" OnClick="TimeButton_Click" CommandArgument="D3o2_1"  runat="server" CssClass="btn-default form-control" Text="Sett inn" />
                         </asp:TableCell>
                         <asp:TableCell Width="15%">
-                             <asp:TextBox runat="server" CssClass="form-group form-control" ID="D3Comp_o2_1"></asp:TextBox>
+                             <asp:TextBox runat="server" CssClass="form-group form-control" ID="D3o2_1"></asp:TextBox>
                         </asp:TableCell>
                     </asp:TableRow>
                     <asp:TableRow ID="air_1Row">
@@ -1440,22 +1440,22 @@
                             <div class="form-control-static text-info">Luft - 1</div>
                         </asp:TableCell>
                         <asp:TableCell Width="5%">
-                            <asp:Button ID="Button60" OnClick="TimeButton_Click" CommandArgument="D1Comp_air_1" runat="server" CssClass="btn-default form-control" Text="Sett inn" />
+                            <asp:Button ID="Button60" OnClick="TimeButton_Click" CommandArgument="D1air_1" runat="server" CssClass="btn-default form-control" Text="Sett inn" />
                         </asp:TableCell>
                         <asp:TableCell Width="15%">
-                             <asp:TextBox runat="server" CssClass="form-group form-control" ID="D1Comp_air_1"></asp:TextBox>
+                             <asp:TextBox runat="server" CssClass="form-group form-control" ID="D1air_1"></asp:TextBox>
                         </asp:TableCell>
                         <asp:TableCell Width="5%">
-                            <asp:Button ID="Button61" OnClick="TimeButton_Click" CommandArgument="D2Comp_air_1"  runat="server" CssClass="btn-default form-control" Text="Sett inn" />
+                            <asp:Button ID="Button61" OnClick="TimeButton_Click" CommandArgument="D2air_1"  runat="server" CssClass="btn-default form-control" Text="Sett inn" />
                         </asp:TableCell>
                         <asp:TableCell Width="15%">
-                             <asp:TextBox runat="server" CssClass="form-group form-control" ID="D2Comp_air_1"></asp:TextBox>
+                             <asp:TextBox runat="server" CssClass="form-group form-control" ID="D2air_1"></asp:TextBox>
                         </asp:TableCell>
                         <asp:TableCell Width="5%">
-                            <asp:Button ID="Button62" OnClick="TimeButton_Click" CommandArgument="D3Comp_air_1"  runat="server" CssClass="btn-default form-control" Text="Sett inn" />
+                            <asp:Button ID="Button62" OnClick="TimeButton_Click" CommandArgument="D3air_1"  runat="server" CssClass="btn-default form-control" Text="Sett inn" />
                         </asp:TableCell>
                         <asp:TableCell Width="15%">
-                             <asp:TextBox runat="server" CssClass="form-group form-control" ID="D3Comp_air_1"></asp:TextBox>
+                             <asp:TextBox runat="server" CssClass="form-group form-control" ID="D3air_1"></asp:TextBox>
                         </asp:TableCell>
                     </asp:TableRow>
                     <asp:TableRow ID="o2_2Row">
@@ -1466,22 +1466,22 @@
                             <div class="form-control-static text-info">O2 - 2</div>
                         </asp:TableCell>
                         <asp:TableCell Width="5%">
-                            <asp:Button ID="Button63" OnClick="TimeButton_Click" CommandArgument="D1Comp_o2_2" runat="server" CssClass="btn-default form-control" Text="Sett inn" />
+                            <asp:Button ID="Button63" OnClick="TimeButton_Click" CommandArgument="D1o2_2" runat="server" CssClass="btn-default form-control" Text="Sett inn" />
                         </asp:TableCell>
                         <asp:TableCell Width="15%">
-                             <asp:TextBox runat="server" CssClass="form-group form-control" ID="D1Comp_o2_2"></asp:TextBox>
+                             <asp:TextBox runat="server" CssClass="form-group form-control" ID="D1o2_2"></asp:TextBox>
                         </asp:TableCell>
                         <asp:TableCell Width="5%">
-                            <asp:Button ID="Button64" OnClick="TimeButton_Click" CommandArgument="D2Comp_o2_2"  runat="server" CssClass="btn-default form-control" Text="Sett inn" />
+                            <asp:Button ID="Button64" OnClick="TimeButton_Click" CommandArgument="D2o2_2"  runat="server" CssClass="btn-default form-control" Text="Sett inn" />
                         </asp:TableCell>
                         <asp:TableCell Width="15%">
-                             <asp:TextBox runat="server" CssClass="form-group form-control" ID="D2Comp_o2_2"></asp:TextBox>
+                             <asp:TextBox runat="server" CssClass="form-group form-control" ID="D2o2_2"></asp:TextBox>
                         </asp:TableCell>
                         <asp:TableCell Width="5%">
-                            <asp:Button ID="Button65" OnClick="TimeButton_Click" CommandArgument="D3Comp_o2_2"  runat="server" CssClass="btn-default form-control" Text="Sett inn" />
+                            <asp:Button ID="Button65" OnClick="TimeButton_Click" CommandArgument="D3o2_2"  runat="server" CssClass="btn-default form-control" Text="Sett inn" />
                         </asp:TableCell>
                         <asp:TableCell Width="15%">
-                             <asp:TextBox runat="server" CssClass="form-group form-control" ID="D3Comp_o2_2"></asp:TextBox>
+                             <asp:TextBox runat="server" CssClass="form-group form-control" ID="D3o2_2"></asp:TextBox>
                         </asp:TableCell>
                     </asp:TableRow>
                     <asp:TableRow ID="air_2Row">
@@ -1492,22 +1492,22 @@
                             <div class="form-control-static text-info">Luft - 2</div>
                         </asp:TableCell>
                         <asp:TableCell Width="5%">
-                            <asp:Button ID="Button66" OnClick="TimeButton_Click" CommandArgument="D1Comp_air_2" runat="server" CssClass="btn-default form-control" Text="Sett inn" />
+                            <asp:Button ID="Button66" OnClick="TimeButton_Click" CommandArgument="D1air_2" runat="server" CssClass="btn-default form-control" Text="Sett inn" />
                         </asp:TableCell>
                         <asp:TableCell Width="15%">
-                             <asp:TextBox runat="server" CssClass="form-group form-control" ID="D1Comp_air_2"></asp:TextBox>
+                             <asp:TextBox runat="server" CssClass="form-group form-control" ID="D1air_2"></asp:TextBox>
                         </asp:TableCell>
                         <asp:TableCell Width="5%">
-                            <asp:Button ID="Button67" OnClick="TimeButton_Click" CommandArgument="D2Comp_air_2"  runat="server" CssClass="btn-default form-control" Text="Sett inn" />
+                            <asp:Button ID="Button67" OnClick="TimeButton_Click" CommandArgument="D2air_2"  runat="server" CssClass="btn-default form-control" Text="Sett inn" />
                         </asp:TableCell>
                         <asp:TableCell Width="15%">
-                             <asp:TextBox runat="server" CssClass="form-group form-control" ID="D2Comp_air_2"></asp:TextBox>
+                             <asp:TextBox runat="server" CssClass="form-group form-control" ID="D2air_2"></asp:TextBox>
                         </asp:TableCell>
                         <asp:TableCell Width="5%">
-                            <asp:Button ID="Button68" OnClick="TimeButton_Click" CommandArgument="D3Comp_air_2"  runat="server" CssClass="btn-default form-control" Text="Sett inn" />
+                            <asp:Button ID="Button68" OnClick="TimeButton_Click" CommandArgument="D3air_2"  runat="server" CssClass="btn-default form-control" Text="Sett inn" />
                         </asp:TableCell>
                         <asp:TableCell Width="15%">
-                             <asp:TextBox runat="server" CssClass="form-group form-control" ID="D3Comp_air_2"></asp:TextBox>
+                             <asp:TextBox runat="server" CssClass="form-group form-control" ID="D3air_2"></asp:TextBox>
                         </asp:TableCell>
                     </asp:TableRow>
                     <asp:TableRow ID="o2_3Row">
@@ -1518,22 +1518,22 @@
                             <div class="form-control-static text-info">O2 - 3</div>
                         </asp:TableCell>
                         <asp:TableCell Width="5%">
-                            <asp:Button ID="Button69" OnClick="TimeButton_Click" CommandArgument="D1Comp_o2_3" runat="server" CssClass="btn-default form-control" Text="Sett inn" />
+                            <asp:Button ID="Button69" OnClick="TimeButton_Click" CommandArgument="D1o2_3" runat="server" CssClass="btn-default form-control" Text="Sett inn" />
                         </asp:TableCell>
                         <asp:TableCell Width="15%">
-                             <asp:TextBox runat="server" CssClass="form-group form-control" ID="D1Comp_o2_3"></asp:TextBox>
+                             <asp:TextBox runat="server" CssClass="form-group form-control" ID="D1o2_3"></asp:TextBox>
                         </asp:TableCell>
                         <asp:TableCell Width="5%">
-                            <asp:Button ID="Button70" OnClick="TimeButton_Click" CommandArgument="D2Comp_o2_3"  runat="server" CssClass="btn-default form-control" Text="Sett inn" />
+                            <asp:Button ID="Button70" OnClick="TimeButton_Click" CommandArgument="D2o2_3"  runat="server" CssClass="btn-default form-control" Text="Sett inn" />
                         </asp:TableCell>
                         <asp:TableCell Width="15%">
-                             <asp:TextBox runat="server" CssClass="form-group form-control" ID="D2Comp_o2_3"></asp:TextBox>
+                             <asp:TextBox runat="server" CssClass="form-group form-control" ID="D2o2_3"></asp:TextBox>
                         </asp:TableCell>
                         <asp:TableCell Width="5%">
-                            <asp:Button ID="Button71" OnClick="TimeButton_Click" CommandArgument="D3Comp_o2_3"  runat="server" CssClass="btn-default form-control" Text="Sett inn" />
+                            <asp:Button ID="Button71" OnClick="TimeButton_Click" CommandArgument="D3o2_3"  runat="server" CssClass="btn-default form-control" Text="Sett inn" />
                         </asp:TableCell>
                         <asp:TableCell Width="15%">
-                             <asp:TextBox runat="server" CssClass="form-group form-control" ID="D3Comp_o2_3"></asp:TextBox>
+                             <asp:TextBox runat="server" CssClass="form-group form-control" ID="D3o2_3"></asp:TextBox>
                         </asp:TableCell>
                     </asp:TableRow>
                     <asp:TableRow ID="air_3Row">
@@ -1544,22 +1544,22 @@
                             <div class="form-control-static text-info">Luft - 3</div>
                         </asp:TableCell>
                         <asp:TableCell Width="5%">
-                            <asp:Button ID="Button72" OnClick="TimeButton_Click" CommandArgument="D1Comp_air_3" runat="server" CssClass="btn-default form-control" Text="Sett inn" />
+                            <asp:Button ID="Button72" OnClick="TimeButton_Click" CommandArgument="D1air_3" runat="server" CssClass="btn-default form-control" Text="Sett inn" />
                         </asp:TableCell>
                         <asp:TableCell Width="15%">
-                             <asp:TextBox runat="server" CssClass="form-group form-control" ID="D1Comp_air_3"></asp:TextBox>
+                             <asp:TextBox runat="server" CssClass="form-group form-control" ID="D1air_3"></asp:TextBox>
                         </asp:TableCell>
                         <asp:TableCell Width="5%">
-                            <asp:Button ID="Button73" OnClick="TimeButton_Click" CommandArgument="D2Comp_air_3"  runat="server" CssClass="btn-default form-control" Text="Sett inn" />
+                            <asp:Button ID="Button73" OnClick="TimeButton_Click" CommandArgument="D2air_3"  runat="server" CssClass="btn-default form-control" Text="Sett inn" />
                         </asp:TableCell>
                         <asp:TableCell Width="15%">
-                             <asp:TextBox runat="server" CssClass="form-group form-control" ID="D2Comp_air_3"></asp:TextBox>
+                             <asp:TextBox runat="server" CssClass="form-group form-control" ID="D2air_3"></asp:TextBox>
                         </asp:TableCell>
                         <asp:TableCell Width="5%">
-                            <asp:Button ID="Button74" OnClick="TimeButton_Click" CommandArgument="D3Comp_air_3"  runat="server" CssClass="btn-default form-control" Text="Sett inn" />
+                            <asp:Button ID="Button74" OnClick="TimeButton_Click" CommandArgument="D3air_3"  runat="server" CssClass="btn-default form-control" Text="Sett inn" />
                         </asp:TableCell>
                         <asp:TableCell Width="15%">
-                             <asp:TextBox runat="server" CssClass="form-group form-control" ID="D3Comp_air_3"></asp:TextBox>
+                             <asp:TextBox runat="server" CssClass="form-group form-control" ID="D3air_3"></asp:TextBox>
                         </asp:TableCell>
                     </asp:TableRow>
                     <asp:TableRow ID="left12mWithoutO2Row">
@@ -1570,22 +1570,22 @@
                             <div class="form-control-static text-info">Start oppstigning til overflaten</div>
                         </asp:TableCell>
                         <asp:TableCell Width="5%">
-                            <asp:Button ID="Button75" OnClick="TimeButton_Click" CommandArgument="D1Comp_left12mWithoutO2" runat="server" CssClass="btn-default form-control" Text="Sett inn" />
+                            <asp:Button ID="Button75" OnClick="TimeButton_Click" CommandArgument="D1left12mWithoutO2" runat="server" CssClass="btn-default form-control" Text="Sett inn" />
                         </asp:TableCell>
                         <asp:TableCell Width="15%">
-                             <asp:TextBox runat="server" CssClass="form-group form-control" ID="D1Comp_left12mWithoutO2"></asp:TextBox>
+                             <asp:TextBox runat="server" CssClass="form-group form-control" ID="D1left12mWithoutO2"></asp:TextBox>
                         </asp:TableCell>
                         <asp:TableCell Width="5%">
-                            <asp:Button ID="Button76" OnClick="TimeButton_Click" CommandArgument="D2Comp_left12mWithoutO2"  runat="server" CssClass="btn-default form-control" Text="Sett inn" />
+                            <asp:Button ID="Button76" OnClick="TimeButton_Click" CommandArgument="D2left12mWithoutO2"  runat="server" CssClass="btn-default form-control" Text="Sett inn" />
                         </asp:TableCell>
                         <asp:TableCell Width="15%">
-                             <asp:TextBox runat="server" CssClass="form-group form-control" ID="D2Comp_left12mWithoutO2"></asp:TextBox>
+                             <asp:TextBox runat="server" CssClass="form-group form-control" ID="D2left12mWithoutO2"></asp:TextBox>
                         </asp:TableCell>
                         <asp:TableCell Width="5%">
-                            <asp:Button ID="Button77" OnClick="TimeButton_Click" CommandArgument="D3Comp_left12mWithoutO2"  runat="server" CssClass="btn-default form-control" Text="Sett inn" />
+                            <asp:Button ID="Button77" OnClick="TimeButton_Click" CommandArgument="D3left12mWithoutO2"  runat="server" CssClass="btn-default form-control" Text="Sett inn" />
                         </asp:TableCell>
                         <asp:TableCell Width="15%">
-                             <asp:TextBox runat="server" CssClass="form-group form-control" ID="D3Comp_left12mWithoutO2"></asp:TextBox>
+                             <asp:TextBox runat="server" CssClass="form-group form-control" ID="D3left12mWithoutO2"></asp:TextBox>
                         </asp:TableCell>
                     </asp:TableRow>
 
@@ -1593,25 +1593,25 @@
 
                     <asp:TableRow ID="reachedSurfaceRow">
                         <asp:TableCell Width="4%">
-                            <asp:Button ID="Button104" OnClick="TimeButton_Click" runat="server" CssClass=" btn-primary form-control" Text="Sett inn alle" />
+                            <asp:Button ID="Button104" OnClick="TimeButtonWithExtraFunction_Click" runat="server" CssClass=" btn-primary form-control" Text="Sett inn alle" />
                         </asp:TableCell>
                         <asp:TableCell Width="30%">
                             <div class="form-control-static text-info">På overflaten</div>
                         </asp:TableCell>
                         <asp:TableCell Width="5%">
-                            <asp:Button ID="Button30" OnClick="TimeButton_Click" CommandArgument="D1reachedSurface" runat="server" CssClass="btn-default form-control" Text="Sett inn" />
+                            <asp:Button ID="D1reachedSurfaceBtn" OnClick="TimeButtonWithExtraFunction_Click" CommandArgument="D1reachedSurface" runat="server" CssClass="btn-default form-control" Text="Sett inn" />
                         </asp:TableCell>
                         <asp:TableCell Width="15%">
                              <asp:TextBox runat="server" CssClass="form-group form-control" ID="D1reachedSurface"></asp:TextBox>
                         </asp:TableCell>
                         <asp:TableCell Width="5%">
-                            <asp:Button ID="Button31" OnClick="TimeButton_Click" CommandArgument="D2reachedSurface"  runat="server" CssClass="btn-default form-control" Text="Sett inn" />
+                            <asp:Button ID="D2reachedSurfaceBtn" OnClick="TimeButtonWithExtraFunction_Click" CommandArgument="D2reachedSurface"  runat="server" CssClass="btn-default form-control" Text="Sett inn" />
                         </asp:TableCell>
                         <asp:TableCell Width="15%">
                              <asp:TextBox runat="server" CssClass="form-group form-control" ID="D2reachedSurface"></asp:TextBox>
                         </asp:TableCell>
                         <asp:TableCell Width="5%">
-                            <asp:Button ID="Button32" OnClick="TimeButton_Click" CommandArgument="D3reachedSurface"  runat="server" CssClass="btn-default form-control" Text="Sett inn" />
+                            <asp:Button ID="D3reachedSurfaceBtn" OnClick="TimeButtonWithExtraFunction_Click" CommandArgument="D3reachedSurface"  runat="server" CssClass="btn-default form-control" Text="Sett inn" />
                         </asp:TableCell>
                         <asp:TableCell Width="15%">
                              <asp:TextBox runat="server" CssClass="form-group form-control" ID="D3reachedSurface"></asp:TextBox>
@@ -1652,17 +1652,17 @@
                         <asp:TableCell Width="5%">
                         </asp:TableCell>
                         <asp:TableCell Width="15%">
-                             <asp:TextBox runat="server" CssClass="form-group form-control" ID="D1Comp_timeInChamber"></asp:TextBox>
+                             <asp:TextBox runat="server" CssClass="form-group form-control" ID="D1timeInChamber"></asp:TextBox>
                         </asp:TableCell>
                         <asp:TableCell Width="5%">
                         </asp:TableCell>
                         <asp:TableCell Width="15%">
-                             <asp:TextBox runat="server" CssClass="form-group form-control" ID="D2Comp_timeInChamber"></asp:TextBox>
+                             <asp:TextBox runat="server" CssClass="form-group form-control" ID="D2timeInChamber"></asp:TextBox>
                         </asp:TableCell>
                         <asp:TableCell Width="5%">
                         </asp:TableCell>
                         <asp:TableCell Width="15%">
-                             <asp:TextBox runat="server" CssClass="form-group form-control" ID="D3Comp_timeInChamber"></asp:TextBox>
+                             <asp:TextBox runat="server" CssClass="form-group form-control" ID="D3timeInChamber"></asp:TextBox>
                         </asp:TableCell>
                     </asp:TableRow>
                     <asp:TableRow ID="timeAtSeaRow">
@@ -1674,17 +1674,17 @@
                         <asp:TableCell Width="5%">
                         </asp:TableCell>
                         <asp:TableCell Width="15%">
-                             <asp:TextBox runat="server" CssClass="form-group form-control" ID="D1Comp_timeAtSea"></asp:TextBox>
+                             <asp:TextBox runat="server" CssClass="form-group form-control" ID="D1timeAtSea"></asp:TextBox>
                         </asp:TableCell>
                         <asp:TableCell Width="5%">
                         </asp:TableCell>
                         <asp:TableCell Width="15%">
-                             <asp:TextBox runat="server" CssClass="form-group form-control" ID="D2Comp_timeAtSea"></asp:TextBox>
+                             <asp:TextBox runat="server" CssClass="form-group form-control" ID="D2timeAtSea"></asp:TextBox>
                         </asp:TableCell>
                         <asp:TableCell Width="5%">
                         </asp:TableCell>
                         <asp:TableCell Width="15%">
-                             <asp:TextBox runat="server" CssClass="form-group form-control" ID="D3Comp_timeAtSea"></asp:TextBox>
+                             <asp:TextBox runat="server" CssClass="form-group form-control" ID="D3timeAtSea"></asp:TextBox>
                         </asp:TableCell>
                     </asp:TableRow>
                     <asp:TableRow ID="totalDecompressionRow">
@@ -1696,17 +1696,17 @@
                         <asp:TableCell Width="5%">
                         </asp:TableCell>
                         <asp:TableCell Width="15%">
-                             <asp:TextBox runat="server" CssClass="form-group form-control" ID="D1Comp_totalDecompression"></asp:TextBox>
+                             <asp:TextBox runat="server" CssClass="form-group form-control" ID="D1totalDecompression"></asp:TextBox>
                         </asp:TableCell>
                         <asp:TableCell Width="5%">
                         </asp:TableCell>
                         <asp:TableCell Width="15%">
-                             <asp:TextBox runat="server" CssClass="form-group form-control" ID="D2Comp_totalDecompression"></asp:TextBox>
+                             <asp:TextBox runat="server" CssClass="form-group form-control" ID="D2totalDecompression"></asp:TextBox>
                         </asp:TableCell>
                         <asp:TableCell Width="5%">
                         </asp:TableCell>
                         <asp:TableCell Width="15%">
-                             <asp:TextBox runat="server" CssClass="form-group form-control" ID="D3Comp_totalDecompression"></asp:TextBox>
+                             <asp:TextBox runat="server" CssClass="form-group form-control" ID="D3totalDecompression"></asp:TextBox>
                         </asp:TableCell>
                     </asp:TableRow>
 
